@@ -8,6 +8,7 @@ import './index.css'
 import { Provider } from "rebass"
 import { injectGlobal } from 'styled-components'
 
+// Inject global styles required by Rebass
 injectGlobal`
   * { box-sizing: border-box; }
   body { margin: 0; }
