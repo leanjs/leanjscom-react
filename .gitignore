@@ -2,6 +2,7 @@
 .cache
 node_modules
 yarn-error.log
+firebase/firebase.js
 
 # Build directory
 /public
