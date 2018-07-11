@@ -1,5 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin')
+const fetch = require('whatwg-fetch')
 
 admin.initializeApp(functions.config().firebase);
 
@@ -8,9 +9,24 @@ admin.initializeApp(functions.config().firebase);
 exports.sendEmail = functions.database
                               .ref('/contactSubmissions/{name}')
                               .onWrite((snap, context) => {
-                              console.log('event', snap.after.val())
+                                console.log('event', snap.after.val())
+                              const slackURL = 'https://hooks.slack.com/services/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'
+                              fetch(slackURL, {
+                                method: 'POST',
+                                headers: {
+                                  'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                  text: "hello slack integration"
+                                })
                               })
 
+                              })
+                              // curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
+
+
+// Slack webhook
+// https://hooks.slack.com/services/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
 
                               // exports.helloWorld = functions.https.onRequest((request, response) => {
                               //  response.send("Hello from Firebase!");
