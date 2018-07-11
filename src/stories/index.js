@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import BenefitBullet from '../components/bullets/BenefitBullet';
 import ValueBullet from '../components/bullets/ValueBullet';
+import LeanJS from '../components/icons/LeanJS';
 
 
 storiesOf('BenefitBullet', module)
@@ -21,4 +22,9 @@ storiesOf('ValueBullet', module)
   ))
   .add('people', () => (
     <ValueBullet image="people" />
+  ))
+
+storiesOf('LeanJSLogo', module)
+  .add('standard logo', () => (
+    <LeanJS />
   ))
