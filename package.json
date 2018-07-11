@@ -25,16 +25,29 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
+    "format": "prettier --write '{src,functions,firebase}/**/*.{js,json,css,md}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
     "@storybook/react": "^3.4.8",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
     "prettier": "^1.12.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

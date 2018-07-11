@@ -1,5 +1,9 @@
 import React from 'react'
-import { Grid, Row as FlexboxRow, Col as FlexboxCol } from 'react-styled-flexboxgrid'
+import {
+  Grid,
+  Row as FlexboxRow,
+  Col as FlexboxCol,
+} from 'react-styled-flexboxgrid'
 import styled from 'styled-components'
 
 const Col = ({ xs, sm, md, lg, center, style = {}, ...rest }) => {
@@ -7,7 +11,7 @@ const Col = ({ xs, sm, md, lg, center, style = {}, ...rest }) => {
     xs: xs || 12,
     sm: sm || xs || 12,
     md: md || sm || xs || 12,
-    lg: lg || md || sm || xs || 12
+    lg: lg || md || sm || xs || 12,
   }
 
   if (center) {

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './index.css'
 
-import { Provider } from "rebass"
+import { Provider } from 'rebass'
 import { injectGlobal } from 'styled-components'
 import theme, { globalStyles } from './rebass-theme'
 
