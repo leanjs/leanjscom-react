@@ -19,4 +19,6 @@ storiesOf('ValueBullet', module)
   .add('caring', () => (
     <ValueBullet image="caring" />
   ))
-
+  .add('people', () => (
+    <ValueBullet image="people" />
+  ))
