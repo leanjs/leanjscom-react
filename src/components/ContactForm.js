@@ -6,50 +6,51 @@ const updateByPropertyName = (propertyName, value) => ({
   [propertyName]: value,
 })
 
-const INITIAL_STATE = {
-  email: '',
-  password: '',
-  error: null,
-}
 
 class SignInForm extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { ...INITIAL_STATE }
+    this.state = {
+      name:'',
+      email: '',
+      message: '',
+      error: null,
+    }
   }
+
 
   onSubmit = (event) => {
     const {
+      name,
       email,
-      password,
+      message,
     } = this.state
 
-    // auth.doSignInWithEmailAndPassword(email, password)
-    //   .then(() => {
-    //     this.setState(() => ({ ...INITIAL_STATE }))
-    //   })
-    //   .catch(error => {
-    //     this.setState(updateByPropertyName('error', error))
-    //   })
-
     event.preventDefault()
-    console.log('asd', db)
+    db.doCreateMessage(name, email, message)
   }
 
   render() {
     const {
+      name,
       email,
-      password,
+      message,
       error,
     } = this.state
 
     const isInvalid =
-      password === '' ||
+      message === '' ||
       email === ''
 
     return (
       <form onSubmit={this.onSubmit}>
+        <input
+          value={name}
+          onChange={event => this.setState(updateByPropertyName('name', event.target.value))}
+          type="text"
+          placeholder="Name"
+        />
         <input
           value={email}
           onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
@@ -57,14 +58,14 @@ class SignInForm extends Component {
           placeholder="Email Address"
         />
         <input
-          value={password}
-          onChange={event => this.setState(updateByPropertyName('password', event.target.value))}
-          type="password"
-          placeholder="Password"
+          value={message}
+          onChange={event => this.setState(updateByPropertyName('message', event.target.value))}
+          type="message"
+          placeholder="Message"
         />
 
         <button disabled={isInvalid} type="submit">
-          Sign In
+          Send
         </button>
 
         { error && <p>{error.message}</p> }
