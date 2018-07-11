@@ -6,3 +6,6 @@ storiesOf('LeanJSLogo', module)
   .add('Standard logo', () => (
     <LeanJS />
   ))
+  .add('Different colours', () => (
+    <LeanJS color="#f8f5e3" />
+  ))
