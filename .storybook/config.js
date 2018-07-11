@@ -18,8 +18,10 @@ addDecorator(ThemeDecorator)
 // Set background colour
 addDecorator(backgroundColor(['#2b2b2b']))
 
+// Load stories dynamically
+const req = require.context('../src/components', true, /\.stories\.js$/)
 function loadStories() {
-  require('../src/stories/index.js')
+  req.keys().forEach((filename) => req(filename))
 }
 
 configure(loadStories, module)
