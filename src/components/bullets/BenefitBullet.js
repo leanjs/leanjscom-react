@@ -9,18 +9,23 @@ import Bullet from './Bullet'
  * l x y => line from current cursor position to x, y away from it
  * h => shorthand for l with y = 0
  */
-const Star = ({ scale = 1 }) => (
-  <svg className="star" width={26 * scale} height={24.5 * scale}>
-	<path fill="black" d={`
-		M ${5.5 * scale} ${23.7 * scale}
-		L ${12.9 * scale} ${.9 * scale}
-		l ${7.4 * scale} ${22.8 * scale}
-		L ${.9 * scale} ${9.6 * scale}
-		h ${24.0 * scale}
-	`}
-	/>
-  </svg>
-)
+const Star = ({ scale = 1 }) => {
+	const point = value => value * scale
+	return (
+	  	<svg className="star" width={point(26)} height={point(24.5)}>
+			<path fill="black" d={`
+				M ${point(5.5)} ${point(23.7)}
+				L ${point(12.9)} ${point(.9)}
+				l ${point(7.4)} ${point(22.8)}
+				L ${point(.9)} ${point(9.6)}
+				h ${point(24.0)}
+			`}
+			/>
+		</svg>
+	)
+
+  
+}
 
 const images = {
 	"quality": Star,
