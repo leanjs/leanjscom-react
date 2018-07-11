@@ -17,7 +17,7 @@ exports.sendEmail = functions.database
                                   'Content-Type': 'application/json'
                                 },
                                 body: JSON.stringify({
-                                  text: "hello slack integration"
+                                  text: `email: ${snap.after.val().email} message: ${snap.after.val().message}`
                                 })
                               })
 
