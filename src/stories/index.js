@@ -1,13 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import RebassTestCard from '../components/RebassTestCard';
 import BenefitBullet from '../components/BenefitBullet';
+import ValueBullet from '../components/ValueBullet';
 
-
-storiesOf('RebassTestCard', module)
-  .add('standard test card', () => (
-    <RebassTestCard />
-  ));
 
 storiesOf('BenefitBullet', module)
   .add('tools', () => (
@@ -15,4 +10,13 @@ storiesOf('BenefitBullet', module)
   ))
   .add('teaching', () => (
     <BenefitBullet image="teaching" />
-  ));
+  ))
+
+storiesOf('ValueBullet', module)
+  .add('learning', () => (
+    <ValueBullet image="learning" />
+  ))
+  .add('caring', () => (
+    <ValueBullet image="caring" />
+  ))
+
