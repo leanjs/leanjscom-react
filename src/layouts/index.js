@@ -7,15 +7,13 @@ import './index.css'
 
 import { Provider } from "rebass"
 import { injectGlobal } from 'styled-components'
+import theme, { globalStyles } from './rebass-theme'
 
 // Inject global styles required by Rebass
-injectGlobal`
-  * { box-sizing: border-box; }
-  body { margin: 0; }
-`
+injectGlobal(globalStyles)
 
 const Layout = ({ children, data }) => (
-  <Provider>
+  <Provider theme={theme}>
     <div>
       <Helmet
         title={data.site.siteMetadata.title}
