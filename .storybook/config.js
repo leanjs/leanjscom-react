@@ -16,7 +16,7 @@ const ThemeDecorator = storyFn => <Provider theme={theme}>{storyFn()}</Provider>
 addDecorator(ThemeDecorator)
 
 // Set background colour
-addDecorator(backgroundColor(['#2b2b2b']))
+addDecorator(backgroundColor(['#2b2b2b', '#ffffff']))
 
 // Load stories dynamically
 const req = require.context('../src/components', true, /\.stories\.js$/)
