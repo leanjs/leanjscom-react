@@ -1,6 +1,6 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin')
-const fetch = require('whatwg-fetch')
+const fetch = require('node-fetch')
 
 admin.initializeApp(functions.config().firebase);
 
