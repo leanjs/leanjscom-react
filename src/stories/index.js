@@ -6,25 +6,25 @@ import LeanJS from '../components/icons/LeanJS';
 
 
 storiesOf('BenefitBullet', module)
-  .add('tools', () => (
+  .add('Tools', () => (
     <BenefitBullet image="tools" />
   ))
-  .add('teaching', () => (
+  .add('Teaching', () => (
     <BenefitBullet image="teaching" />
   ))
 
 storiesOf('ValueBullet', module)
-  .add('learning', () => (
+  .add('Learning', () => (
     <ValueBullet image="learning" />
   ))
-  .add('caring', () => (
+  .add('Caring', () => (
     <ValueBullet image="caring" />
   ))
-  .add('people', () => (
+  .add('People', () => (
     <ValueBullet image="people" />
   ))
 
 storiesOf('LeanJSLogo', module)
-  .add('standard logo', () => (
+  .add('Standard logo', () => (
     <LeanJS />
   ))
