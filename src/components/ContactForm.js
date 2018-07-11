@@ -20,7 +20,7 @@ class SignInForm extends Component {
   }
 
 
-  onSubmit = (event) => {
+  onSubmit = async (event) => {
     const {
       name,
       email,
@@ -28,7 +28,12 @@ class SignInForm extends Component {
     } = this.state
 
     event.preventDefault()
-    db.doCreateMessage(name, email, message)
+    try {
+      await db.doCreateMessage(name, email, message)
+      console.log("Your message was recieved!")
+    } catch (e) {
+      console.log("The following error occured: ", e.message)
+    }
   }
 
   render() {
