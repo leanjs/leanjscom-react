@@ -6,7 +6,8 @@ export const globalStyles = `
 
 const theme = {
   colors: {
-    lightgrey: '#d8d8d8'
+    lightgrey: '#d8d8d8',
+    mediumgrey: '#9b9b9b'
   }
 }
 

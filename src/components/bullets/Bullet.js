@@ -11,8 +11,8 @@ const getSrc = (image, images) => {
 	throw new Error("Unknown image")
 }
 
-const Bullet = ({ image, images, color, bg, size, hasBorder=false }) => (
-	<Circle color={color} bg={bg} size={size} hasBorder={hasBorder}>
+const Bullet = ({ image, images, color, bg, size, borderSize=null, hasBorder=false }) => (
+	<Circle color={color} bg={bg} size={size} hasBorder={hasBorder} borderSize={borderSize||(size/13)}>
 		<NoRepeatBackgroundImage ratio={0.9} src={getSrc(image, images)} backgroundSize="contain" />
 	</Circle>
 )

@@ -12,6 +12,7 @@ const ValueBullet = ({ image }) => (
 		color="lightgrey"
 		bg="black"
 		size={60}
+		borderSize={60/13}
 		hasBorder={true}
 		images={images}
 		image={image}
