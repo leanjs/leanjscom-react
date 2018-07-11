@@ -15,7 +15,7 @@ const ThemeDecorator = storyFn => <Provider theme={theme}>{storyFn()}</Provider>
 addDecorator(ThemeDecorator);
 
 function loadStories() {
-  require('../stories/index.js');
+  require('../src/stories/index.js');
 }
 
 configure(loadStories, module);
