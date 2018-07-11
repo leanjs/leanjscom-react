@@ -15,7 +15,7 @@ const Section = styled.div`
 const MenuText = styled.div`
   height: ${getWidth(0.48)};
   font-family: Barlow, sans;
-  font-size: ${getWidth(0.40)};
+  font-size: ${getWidth(0.3)};
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -23,12 +23,14 @@ const MenuText = styled.div`
   letter-spacing: ${getWidth(0.016)};
   text-align: center;
   color: #ffffff;
+  margin-top:${getWidth(0.18)};
 `
 
 const MenuButtonOuter = styled.button`
 	text-align:center;
-	width: ${getWidth(1.5)};
+	width: ${getWidth()};
 	background:none;
+	padding:0;
 	border:none;
 	cursor:pointer;
 	outline:none;
