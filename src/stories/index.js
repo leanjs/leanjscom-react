@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import BenefitBullet from '../components/bullets/BenefitBullet';
 import ValueBullet from '../components/bullets/ValueBullet';
-import LeanJS from '../components/icons/LeanJS';
+import LeanJS from '../components/logos/LeanJS';
 
 
 storiesOf('BenefitBullet', module)
