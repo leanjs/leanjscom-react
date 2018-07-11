@@ -1,13 +1,7 @@
 import React from 'react'
 
-import {
-  Circle,
-  BackgroundImage
-} from 'rebass'
-
 import NoRepeatBackgroundImage from '../elements/NoRepeatBackgroundImage'
-import CircleWithBorder from '../elements/CircleWithBorder'
-
+import Circle from '../elements/Circle'
 
 const getSrc = (image, images) => {
 	if (images[image]) {
@@ -17,14 +11,10 @@ const getSrc = (image, images) => {
 	throw new Error("Unknown image")
 }
 
-const Bullet = ({ image, images, color, bg, size, hasBorder=false }) => {
-	const Component = (hasBorder?CircleWithBorder:Circle)
-
-	return (
-		<Component color={color} bg={bg} size={size}>
-			<NoRepeatBackgroundImage ratio={1} src={getSrc(image, images)} backgroundSize="contain" />
-		</Component>
-	)
-}
+const Bullet = ({ image, images, color, bg, size, hasBorder=false }) => (
+	<Circle color={color} bg={bg} size={size} hasBorder={hasBorder}>
+		<NoRepeatBackgroundImage ratio={0.9} src={getSrc(image, images)} backgroundSize="contain" />
+	</Circle>
+)
 
 export default Bullet
