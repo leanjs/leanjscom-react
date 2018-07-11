@@ -14,8 +14,6 @@ const getSrc = (image, images) => {
 		return images[image]
 	}
 
-	console.log("image", image)
-
 	throw new Error("Unknown image")
 }
 
