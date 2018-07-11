@@ -5,8 +5,8 @@ import {
   BackgroundImage
 } from 'rebass'
 
-import NoRepeatBackgroundImage from './NoRepeatBackgroundImage'
-import CircleWithBorder from './CircleWithBorder'
+import NoRepeatBackgroundImage from '../elements/NoRepeatBackgroundImage'
+import CircleWithBorder from '../elements/CircleWithBorder'
 
 
 const getSrc = (image, images) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import BenefitBullet from '../components/BenefitBullet';
-import ValueBullet from '../components/ValueBullet';
+import BenefitBullet from '../components/bullets/BenefitBullet';
+import ValueBullet from '../components/bullets/ValueBullet';
 
 
 storiesOf('BenefitBullet', module)
