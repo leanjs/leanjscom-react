@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import Menu from '../components/navigation/Menu'
+import Grid from '../components/layout/Grid'
 import './index.css'
 
 import { Provider } from 'rebass'
@@ -22,6 +24,7 @@ const Layout = ({ children, data }) => (
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
+      <Menu />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{

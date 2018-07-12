@@ -28,7 +28,7 @@ const MenuText = styled.div`
 `
 
 const MenuButtonOuter = styled.button`
-  text-align: center;
+  text-align: right;
   width: ${getWidth()};
   background: none;
   padding: 0;
