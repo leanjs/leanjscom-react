@@ -5,6 +5,7 @@ const grey = '#4a4a4a'
 const darkStyles = `
 	background-color:${grey};
 	color:white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
 
 const lightStyles = `
