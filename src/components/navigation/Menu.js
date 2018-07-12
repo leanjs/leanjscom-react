@@ -2,18 +2,20 @@ import React from 'react'
 import { elastic as SideMenu } from 'react-burger-menu'
 import MenuToggleButton from './MenuToggleButton'
 import styled from 'styled-components'
-import Grid from '../layout/Grid'
+import { Row, Col } from '../layout/Grid'
 
 // import FloatingMenuBtn from '../../../FloatingMenuBtn'
-const Background = styled.div`
+const InteractivesRight = styled(Row)`
   background-color: black;
   display: flex;
   justify-content: flex-end;
 `
 
 const Menu = ({ isOpen, children, pageWrapId, width, toggleMenu }) => (
-  <Background>
-    <MenuToggleButton />
+  <div>
+    <InteractivesRight>
+      <MenuToggleButton />
+    </InteractivesRight>
     <SideMenu right isOpen={isOpen} pageWrapId={pageWrapId || 'page-wrap'}>
       <a id="home" className="menu-item" href="/">
         Home
@@ -25,7 +27,7 @@ const Menu = ({ isOpen, children, pageWrapId, width, toggleMenu }) => (
         Contact
       </a>
     </SideMenu>
-  </Background>
+  </div>
 )
 
 export default Menu
