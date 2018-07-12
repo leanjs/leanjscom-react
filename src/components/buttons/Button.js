@@ -11,6 +11,7 @@ const darkStyles = `
 const lightStyles = `
   	background-color:white;
   	color:${grey};
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.45), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
 
 const Button = styled.button`
