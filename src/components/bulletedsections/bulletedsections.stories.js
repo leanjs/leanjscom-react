@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import LargeLogoAndPoints from './LargeLogoAndPoints'
+import theme from '../../layouts/rebass-theme'
 
 storiesOf('Bulleted sections', module)
   .add('Large logo and points', () => (
@@ -15,6 +16,6 @@ storiesOf('Bulleted sections', module)
     <LargeLogoAndPoints
       image="abinbev"
       points={['Rapid app design and build', '6 week turnaround']}
-      color="black"
+      color={theme.colors.darkgrey}
     />
   ))

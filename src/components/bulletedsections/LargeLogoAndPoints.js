@@ -1,5 +1,4 @@
 import React from 'react'
-import theme from '../../layouts/rebass-theme'
 import styled from 'styled-components'
 
 import Line from '../sections/Line'
