@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import LargeIconAndPoints from './LargeIconAndPoints'
 import SmallIconAndSentence from './SmallIconAndSentence'
 import theme from '../../layouts/rebass-theme'
 

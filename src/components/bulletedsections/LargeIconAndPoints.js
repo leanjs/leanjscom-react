@@ -18,7 +18,7 @@ const Columns = styled.div`
   }
 `
 
-const LargeLogoAndPoints = ({ color, ...props }) => (
+const LargeIconAndPoints = ({ color, ...props }) => (
   <Line verticalCenter>
     <Columns color={color}>
       <CaseStudyBullet className="case-study-bullet" image={props.image} />
@@ -27,4 +27,4 @@ const LargeLogoAndPoints = ({ color, ...props }) => (
   </Line>
 )
 
-export default LargeLogoAndPoints
+export default LargeIconAndPoints
