@@ -15,15 +15,15 @@ exports.sendEmail = functions.database
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        text: `email: ${snap.after.val().email}\n message: ${
+        text: `Email: ${snap.after.val().email}\n Message: ${
           snap.after.val().message
-        }\n interestedInDigitalSolutions: ${
+        }\nInterested In Digital Solutions: ${
           snap.after.val().interestedInDigitalSolutions
-        }\n interestedInTraining: ${
+        }\nInterested In Training: ${
           snap.after.val().interestedInTraining
-        }\n interestedInBothDigitalSolutionsAndTraining: ${
+        }\nInterested In Both Digital Solutions And Training: ${
           snap.after.val().interestedInBothDigitalSolutionsAndTraining
-        }\n allowMarketing: ${snap.after.val().allowMarketing}`,
+        }\nAllow Marketing: ${snap.after.val().allowMarketing}`,
       }),
     })
   })
