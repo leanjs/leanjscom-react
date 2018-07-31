@@ -10,6 +10,7 @@
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
@@ -19,14 +20,13 @@
     "react-styled-flexboxgrid": "^2.4.0",
     "styled-components": "^3.3.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '{src,functions,firebase}/**/*.{js,json,css,md}'",
+    "format":
+      "prettier --write '{src,functions,firebase}/**/*.{js,json,css,md}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
@@ -48,9 +48,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
   }
 }

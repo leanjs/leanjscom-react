@@ -21,16 +21,15 @@ class ContactForm extends Component {
     }
   }
 
-  onSubmit = async event => {
+  onSubmit = event => {
     const { name, email, message } = this.state
 
     event.preventDefault()
-    try {
-      await db.doCreateMessage(name, email, message)
-      console.log('Your message was recieved!')
-    } catch (e) {
-      console.log('The following error occured: ', e.message)
-    }
+
+    return db
+      .doCreateMessage(name, email, message)
+      .then(() => console.log('Your message was recieved!'))
+      .catch(e => console.log('The following error occured: ', e.message))
   }
 
   render() {
