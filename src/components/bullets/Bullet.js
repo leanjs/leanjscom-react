@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Circle from '../elements/Circle'
 
@@ -10,6 +11,11 @@ const getSrc = (image, images) => {
   throw new Error('Unknown image')
 }
 
+const BulletInner = styled.div`
+  display: inline-block;
+  vertical-align: middle;
+`
+
 const Bullet = ({
   image,
   images,
@@ -17,16 +23,18 @@ const Bullet = ({
   bg,
   size,
   borderSize = 4,
-  hasBorder = false,
+  hasBorder = true,
 }) => (
-  <Circle
-    color={color}
-    bg={bg}
-    size={size}
-    hasBorder={hasBorder}
-    borderSize={borderSize}
-    backgroundImage={getSrc(image, images)}
-  />
+  <BulletInner>
+    <Circle
+      color={color}
+      bg={bg}
+      size={size}
+      hasBorder={hasBorder}
+      borderSize={borderSize}
+      backgroundImage={getSrc(image, images)}
+    />
+  </BulletInner>
 )
 
 export default Bullet

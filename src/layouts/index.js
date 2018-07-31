@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import Header from '../components/layout/Header'
+import Footer from '../components/layout/Footer'
 import Menu from '../components/navigation/Menu'
 import Grid from '../components/layout/Grid'
 import './index.css'
@@ -45,6 +46,7 @@ const Layout = ({ children, data }) => (
       >
         {children()}
       </div>
+      <Footer />
     </div>
   </ThemeProvider>
 )

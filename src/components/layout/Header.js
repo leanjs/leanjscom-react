@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Menu from './navigation/Menu'
+import Menu from '../navigation/Menu'
 
 const Header = ({ siteTitle }) => (
   <div
