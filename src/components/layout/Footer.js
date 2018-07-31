@@ -55,20 +55,30 @@ const Footer = () => (
                 </Link>
               </Li>
               <Li>
-                <Link>Email hello@leanjs.com</Link>
-              </Li>
-              <Li>
-                <Link>Tweet us @leanjscom</Link>
-              </Li>
-              <Li>
-                <Link>Instagram us @leanjscom</Link>
-              </Li>
-              <Li>
-                <Link>Chat face to face right now on Google Hangouts</Link>
+                <Link>
+                  <ContactUsBullet image="email" />Email hello@leanjs.com
+                </Link>
               </Li>
               <Li>
                 <Link>
-                  Visit us at: WeWork Moorgate, 1 Fore St Ave, London, EC2Y 9DT
+                  <ContactUsBullet image="twitter" />Tweet us @leanjscom
+                </Link>
+              </Li>
+              <Li>
+                <Link>
+                  <ContactUsBullet image="instagram" />Instagram us @leanjscom
+                </Link>
+              </Li>
+              <Li>
+                <Link>
+                  <ContactUsBullet image="hangouts" />Chat face to face right
+                  now on Google Hangouts
+                </Link>
+              </Li>
+              <Li>
+                <Link>
+                  <ContactUsBullet image="office" />Visit us at: WeWork
+                  Moorgate, 1 Fore St Ave, London, EC2Y 9DT
                 </Link>
               </Li>
             </LinkList>
