@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import { db } from '../../firebase'
+import Ul, { Li } from './layout/Ul'
+import Checkbox from './layout/Checkbox'
+import Link from './navigation/Link'
+import styled from 'styled-components'
 
 const updateByPropertyName = (propertyName, value) => ({
   [propertyName]: value,
 })
 
-class SignInForm extends Component {
+class ContactForm extends Component {
   constructor(props) {
     super(props)
 
@@ -36,30 +40,70 @@ class SignInForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <input
-          value={name}
-          onChange={event =>
-            this.setState(updateByPropertyName('name', event.target.value))
-          }
-          type="text"
-          placeholder="Name"
-        />
-        <input
-          value={email}
-          onChange={event =>
-            this.setState(updateByPropertyName('email', event.target.value))
-          }
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          value={message}
-          onChange={event =>
-            this.setState(updateByPropertyName('message', event.target.value))
-          }
-          type="message"
-          placeholder="Message"
-        />
+        <div>
+          <label>Name</label>
+          <br />
+          <textarea
+            onChange={event =>
+              this.setState(updateByPropertyName('name', event.target.value))
+            }
+            type="text"
+            placeholder="Name"
+          >
+            {name}
+          </textarea>
+        </div>
+        <div>
+          <label>Phone number or email address</label>
+          <br />
+          <textarea
+            onChange={event =>
+              this.setState(updateByPropertyName('email', event.target.value))
+            }
+            type="text"
+            placeholder="Email Address"
+          >
+            {email}
+          </textarea>
+        </div>
+        <div>
+          <label>How can we help you?</label>
+          <br />
+          <Ul unstyled>
+            <Li>
+              <Checkbox /> Digital solutions
+            </Li>
+            <Li>
+              <Checkbox /> Training
+            </Li>
+            <Li>
+              <Checkbox /> Both!
+            </Li>
+          </Ul>
+        </div>
+        <div>
+          <label>Would you like to give more detail? Feel free!</label>
+          <br />
+          <textarea
+            onChange={event =>
+              this.setState(updateByPropertyName('message', event.target.value))
+            }
+            type="message"
+            placeholder="Message"
+          >
+            {message}
+          </textarea>
+        </div>
+
+        <div>
+          <Checkbox />
+          <label>
+            We do not spam - ever. But, if you're up for it, we'd love to tell
+            you about any cool new services or offers that we've got going on.
+            Interested? Tick the box! Not sure, here's our{' '}
+            <Link>Privacy Policy</Link>
+          </label>
+        </div>
 
         <button disabled={isInvalid} type="submit">
           Send
@@ -71,4 +115,4 @@ class SignInForm extends Component {
   }
 }
 
-export default SignInForm
+export default ContactForm

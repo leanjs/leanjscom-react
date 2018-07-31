@@ -12,7 +12,8 @@ import {
 } from '../../config/styles'
 import { SCREEN_XS_MAX } from '../utils'
 import ContactUsBullet from '../bullets/ContactUsBullet'
-import { H2, P } from '../text'
+import { H2, H3, P } from '../text'
+import ContactForm from '../ContactForm'
 import Ul, { Li } from './Ul'
 
 const StyledFooter = styled.div`
@@ -20,7 +21,8 @@ const StyledFooter = styled.div`
     background-color: ${EXTRADARKGREY};
     padding: 50px 0 40px 0;
     color: ${WHITE};
-    h2 {
+    h2,
+    h3 {
       color: ${WHITE};
     }
     ${styleChildLinkColor(WHITE)};
@@ -83,9 +85,14 @@ const Footer = () => (
               </Li>
             </LinkList>
             <P>
-              Want to speak to one of our team about a specific subject?{' '}
+              Want to speak to one of our team about a specific subject?
               <Link>Visit our team page</Link>
             </P>
+          </Col>
+
+          <Col md={6}>
+            <H3>Or fill out our form :)</H3>
+            <ContactForm />
           </Col>
         </Row>
       </Grid>
