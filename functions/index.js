@@ -15,8 +15,9 @@ exports.sendEmail = functions.database
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        title: `New contact :tada:`,
-        text: `Email: ${snap.after.val().email}\n Message: ${
+        text: `:tada: New contact :tada:\n\nEmail: ${
+          snap.after.val().email
+        }\n Message: ${
           snap.after.val().message
         }\nInterested In Digital Solutions: ${
           snap.after.val().interestedInDigitalSolutions
