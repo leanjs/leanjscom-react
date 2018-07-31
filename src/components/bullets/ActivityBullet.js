@@ -1,6 +1,8 @@
 import React from 'react'
 import Bullet from './Bullet'
 
+import { LIGHTGREY } from '../../config/styles'
+
 const images = {
   development:
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA3CAYAAABZ0InLAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gcKDBwKRX1hegAABEVJREFUaN7V2l+IFVUcwPHvcX3YlwVB0J6X6uqa9I/aLc31oWRlwdb+vBUWBEUYC72JLPjki2jhi4iiiE+CooS+qE8RdUvtJci2tNwFW9wt7lYiK67788Hf2LnDzNwzM2dnjgPDvXf+nJnPPf9mzvkZESFpMcY0ou8iMk6gizFmpfXzLxG533aAiDxagQbwIXAO+AO4DVwBDgMvAz328XWvwCvAaeBv4BZwHHih7Rjr4OeAE4CkrDPAJ0AjAFgX8AYwlXCfV4H+NqDmnI37BtgJfATsAaZ1+z1gawDAIc2xtMz4GXjeBn5g7dxn5xLQrcXzJ93/K7CmZmAzAxetR23gOd14CViVkuiwdfK7FYMGFLUF6AVeA37vAJwCepdoa7la25wLIvJLSoN1DZjQ789W3Fh+CfQDx4BngJvANuBGxjndAEv0xwr9bHW40Kx+bjPGbKwQuFuvvSwBOZFyznfRlwbwo2brsbRWElgL3LGKwCSwsaIi2qvFs6XXblnFdYMi4y3+BrsOHtEdc8BmoCuhfzyQUM4ngcHFrnOOyEndfksNPTZwQDvL6IBPtV42gBf1D1hIqcxekXov43FEFlL3DQI/AJvsDIoSXQlsB+atG7+jN7/g0CR7QcZw4ohsZqYZK4YjVn+Xd52Iyr1HXCdkExhwAloXWqV93k7gtyqQHXCJSOe0HR5mFxXpiJN4nfMC1Bt4tQDyhgsyJ05c6lxu4GIhC+LGO9W5QkALec0HsipcLmAJ5Pd14XID9QbX5UBOA0N14QoBLeR1FxzQXReuMNABOa3Pg7XiSgEzkMHgSgMVsN56u54JCecFaCGbba8pAeC8Aevs5yoHhoTzDgwN5xUYIs5nI1MalzQOE0o34Qtnj8O86QsZGs5+sR3xMdETIi5aZ4GtZZGh4mzkW2WQIeOi9Z8yyFq6Asfprzjy7SLIWvo5bSVbOdP6F3gnL7KWTlwHbitB+pxRzfWEUgJ5W+fhp/Q6Z4FRoK8McEuOG3F+/CqBTFpvAu/Hc7fo/Jy/cUu/yHlgV1uMQcaFPwbGooMdkMWH9vwiFzSooicVqDNN5/UEF2T50S+/yBlgbRZwQGNixAHpb4DoYdojDsi7Ou1+SIOThjS8xT5mRxZwd0KiScim9zGU/5H/peA+0yCERoeZsK+zgGl93lgVoVxaRZLuYS4rCCmG/DMLuC+jeIxVFIuWFKp1udMfbM2EzYnIoziZ+HIQ+CK2bR64qAO7VSyzCduudArtFJFvReQpEekGWJpy0Lgx5qD+HAZOAV8BrSpiR0XkvjHmOvB0bNflIonZ2bsJ2B9IyORoQhF9vdTbhAYeiAb9NGoGrtHHr9RY0CLAM1ZihwLIxfdisTtRLKgzMt7IPAGcBD7X6Ka6l0v6bGnHYa8Gjhpj+p1iutOC0gMKOm8ALwF7rahIgKsi0vfYAxXZBfTp7NUw8CSwPOoKspYHd0kIGmJbOGMAAAAASUVORK5CYII=',
@@ -11,7 +13,7 @@ const images = {
 const ActivityBullet = ({ image }) => (
   <Bullet
     color="black"
-    bg="lightgrey"
+    bg={LIGHTGREY}
     size={60}
     images={images}
     image={image}

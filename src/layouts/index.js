@@ -6,16 +6,25 @@ import Header from '../components/header'
 import Menu from '../components/navigation/Menu'
 import Grid from '../components/layout/Grid'
 import './index.css'
+import './reset.css'
 
-import { Provider } from 'rebass'
+import { ThemeProvider } from 'styled-components'
 import { injectGlobal } from 'styled-components'
-import theme, { globalStyles } from './rebass-theme'
 
-// Inject global styles required by Rebass
-injectGlobal(globalStyles)
+const gridTheme = {
+  flexboxgrid: {
+    gutterWidth: 1,
+    outerMargin: 0.5,
+    container: {
+      sm: 46, // rem
+      md: 64, // rem
+      lg: 64, // rem
+    },
+  },
+}
 
 const Layout = ({ children, data }) => (
-  <Provider theme={theme}>
+  <ThemeProvider theme={gridTheme}>
     <div>
       <Helmet
         title={data.site.siteMetadata.title}
@@ -37,7 +46,7 @@ const Layout = ({ children, data }) => (
         {children()}
       </div>
     </div>
-  </Provider>
+  </ThemeProvider>
 )
 
 Layout.propTypes = {
