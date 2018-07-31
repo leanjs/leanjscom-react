@@ -5,10 +5,6 @@ import Checkbox from './layout/Checkbox'
 import Link from './navigation/Link'
 import styled from 'styled-components'
 
-const updateByPropertyName = (propertyName, value) => ({
-  [propertyName]: value,
-})
-
 class ContactForm extends Component {
   constructor(props) {
     super(props)
@@ -17,20 +13,47 @@ class ContactForm extends Component {
       name: '',
       email: '',
       message: '',
+      interestedInDigitalSolutions: false,
+      interestedInTraining: false,
+      interestedInBothDigitalSolutionsAndTraining: false,
+      allowMarketing: false,
       error: null,
     }
   }
 
   onSubmit = event => {
-    const { name, email, message } = this.state
+    const {
+      name,
+      email,
+      message,
+      interestedInDigitalSolutions,
+      interestedInTraining,
+      interestedInBothDigitalSolutionsAndTraining,
+      allowMarketing,
+    } = this.state
 
     event.preventDefault()
 
     return db
-      .doCreateMessage(name, email, message)
+      .doCreateMessage(
+        name,
+        email,
+        message,
+        interestedInDigitalSolutions,
+        interestedInTraining,
+        interestedInBothDigitalSolutionsAndTraining,
+        allowMarketing
+      )
       .then(() => console.log('Your message was recieved!'))
       .catch(e => console.log('The following error occured: ', e.message))
   }
+
+  handleFormFieldChanged = (name, newValue) =>
+    this.setState({ [name]: newValue })
+  handleTextAreaChanged = name => event =>
+    this.handleFormFieldChanged(name, event.target.value)
+  handleCheckboxChanged = name => event =>
+    this.handleFormFieldChanged(name, event.target.checked)
 
   render() {
     const { name, email, message, error } = this.state
@@ -43,9 +66,7 @@ class ContactForm extends Component {
           <label>Name</label>
           <br />
           <textarea
-            onChange={event =>
-              this.setState(updateByPropertyName('name', event.target.value))
-            }
+            onChange={this.handleTextAreaChanged('name')}
             type="text"
             placeholder="Name"
           >
@@ -56,9 +77,7 @@ class ContactForm extends Component {
           <label>Phone number or email address</label>
           <br />
           <textarea
-            onChange={event =>
-              this.setState(updateByPropertyName('email', event.target.value))
-            }
+            onChange={this.handleTextAreaChanged('email')}
             type="text"
             placeholder="Email Address"
           >
@@ -70,13 +89,26 @@ class ContactForm extends Component {
           <br />
           <Ul unstyled>
             <Li>
-              <Checkbox /> Digital solutions
+              <Checkbox
+                onChange={this.handleCheckboxChanged(
+                  'interestedInDigitalSolutions'
+                )}
+              />{' '}
+              Digital solutions
             </Li>
             <Li>
-              <Checkbox /> Training
+              <Checkbox
+                onChange={this.handleCheckboxChanged('interestedInTraining')}
+              />{' '}
+              Training
             </Li>
             <Li>
-              <Checkbox /> Both!
+              <Checkbox
+                onChange={this.handleCheckboxChanged(
+                  'interestedInBothDigitalSolutionsAndTraining'
+                )}
+              />{' '}
+              Both!
             </Li>
           </Ul>
         </div>
@@ -84,9 +116,7 @@ class ContactForm extends Component {
           <label>Would you like to give more detail? Feel free!</label>
           <br />
           <textarea
-            onChange={event =>
-              this.setState(updateByPropertyName('message', event.target.value))
-            }
+            onChange={this.handleTextAreaChanged('message')}
             type="message"
             placeholder="Message"
           >
@@ -95,7 +125,7 @@ class ContactForm extends Component {
         </div>
 
         <div>
-          <Checkbox />
+          <Checkbox onChange={this.handleCheckboxChanged('allowMarketing')} />
           <label>
             We do not spam - ever. But, if you're up for it, we'd love to tell
             you about any cool new services or offers that we've got going on.

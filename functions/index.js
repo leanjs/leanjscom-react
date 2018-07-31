@@ -17,7 +17,13 @@ exports.sendEmail = functions.database
       body: JSON.stringify({
         text: `email: ${snap.after.val().email} message: ${
           snap.after.val().message
-        }`,
+        } interestedInDigitalSolutions: ${
+          snap.after.val().interestedInDigitalSolutions
+        } interestedInTraining: ${
+          snap.after.val().interestedInTraining
+        } interestedInBothDigitalSolutionsAndTraining: ${
+          snap.after.val().interestedInBothDigitalSolutionsAndTraining
+        } allowMarketing: ${snap.after.val().allowMarketing}`,
       }),
     })
   })
