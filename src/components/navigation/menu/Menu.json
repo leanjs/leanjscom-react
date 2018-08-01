@@ -1,7 +1,7 @@
 [
   {
-    "to": "/training",
-    "text": "Training",
+    "to": "/case-studies",
+    "text": "Case Studies",
     "onlyOn": null
   },
   {
@@ -10,13 +10,13 @@
     "onlyOn": null
   },
   {
-    "to": "/case-studies",
-    "text": "Case Studies",
+    "to": "/our-process",
+    "text": "Our Process",
     "onlyOn": null
   },
   {
-    "to": "/our-process",
-    "text": "Our Process",
+    "to": "/training",
+    "text": "Training",
     "onlyOn": null
   },
   {
@@ -25,8 +25,8 @@
     "onlyOn": null
   },
   {
-    "to": "mailto:info@leanjs.com",
-    "text": "info@leanjs.com",
+    "to": "/blog",
+    "text": "blog",
     "onlyOn": null
   }
 ]

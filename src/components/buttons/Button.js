@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { FONT_FAMILY } from '../../config/styles'
 const grey = '#4a4a4a'
 
 const darkStyles = `
@@ -15,7 +15,8 @@ const lightStyles = `
 `
 
 const Button = styled.button`
-  ${props => (props.dark ? darkStyles : lightStyles)} border-radius: 2px;
+  ${FONT_FAMILY} ${props =>
+    props.dark ? darkStyles : lightStyles} border-radius: 2px;
   border: solid 1px transparent;
   padding: 0.5em 1em;
   ${props =>
