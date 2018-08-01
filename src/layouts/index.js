@@ -2,9 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
-import Menu from '../components/navigation/Menu'
+import Menu from '../components/navigation/menu'
 import Grid from '../components/layout/Grid'
 import './index.css'
 import './reset.css'
@@ -35,7 +34,7 @@ const Layout = ({ children, data }) => (
         ]}
       />
       {/*<Menu />*/}
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Menu />
       <div
         style={{
           margin: '0 auto',
