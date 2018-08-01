@@ -12,6 +12,7 @@ const IndexPage = () => (
     />
     <Section>asd</Section>
     <Section xsBgDark>something</Section>
+    <Section>What we do, how we do it</Section>
   </React.Fragment>
 )
 
