@@ -12,7 +12,7 @@ const IndexPage = () => (
       subtitle="We can help you evolve your tech. Quick snap!"
       bgImg="home"
     >
-      <Ul unstyled>
+      <Ul inline>
         <Li>
           <ActivityBullet image="development" />
           We build badass and scalable websites, apps & digital solutions…
