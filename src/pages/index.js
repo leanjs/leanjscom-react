@@ -22,7 +22,7 @@ const IndexPage = () => (
               We build badass and scalable websites, apps & digital solutions…
             </Li>
           </Ul>
-          <Button>Building products >></Button>
+          <Button hasArrows>Building products</Button>
         </Col>
         <Col md={4}>
           <Ul unstyled>
@@ -31,12 +31,17 @@ const IndexPage = () => (
               We also teach innovative tech to your team…
             </Li>
           </Ul>
-          <Button>Training services >></Button>
+          <Button hasArrows>Training services</Button>
         </Col>
       </Row>
     </Header>
-    <Section>asd</Section>
-    <Section xsBgDark>something</Section>
+    <Section>
+      We grab your business needs, align them with users’ intent and cook up
+      solutions in a matter of weeks. Boom.
+    </Section>
+    <Section xsBgDark>
+      We care about you and your people. We value good ethics.
+    </Section>
     <Section>What we do, how we do it</Section>
   </React.Fragment>
 )
