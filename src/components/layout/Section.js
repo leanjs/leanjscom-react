@@ -10,26 +10,9 @@ const Section = styled.section`
     margin-bottom: 0;
     padding-bottom: 0;
   }
-
-  ${props =>
-    props.xsBgDark
-      ? css`
-          @media (max-width: ${SCREEN_XS_MAX}) {
-            background-color: ${EXTRADARKGREY};
-          }
-        `
-      : ''};
+  background-color: ${props => props.xsBgDark && EXTRADARKGREY};
 `
 
 Section.displayName = 'Section'
-
-export const TopSection = styled(Section)`
-  position: relative;
-  @media (min-width: ${SCREEN_SM_MIN}) {
-    margin-top: -125px;
-  }
-`
-
-TopSection.displayName = 'TopSection'
 
 export default Section
