@@ -13,7 +13,7 @@ import { ANCHOR_STYLE } from '../navigation/Link'
 // import { Link as LinkScroll } from 'react-scroll'
 
 const H1 = styled(BaseH1)`
-  font-size: 64px;
+  font-size: 64px !important;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
