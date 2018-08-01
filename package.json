@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "LeanJS",
+  "description": "LeanJS website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "LeanJS <info@leanjs.com>",
   "dependencies": {
     "babel-core": "6.x.x",
     "babel-loader": "^6.4.1",
@@ -30,7 +30,8 @@
     "format":
       "prettier --write '{src,functions,firebase}/**/*.{js,json,css,md}'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "deploy": "firebase deploy --only hosting"
   },
   "devDependencies": {
     "@storybook/react": "^3.4.8",
