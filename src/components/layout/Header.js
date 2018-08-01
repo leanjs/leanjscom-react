@@ -73,6 +73,9 @@ const SubTitleBackground = styled.div`
   a {
     color: ${WHITE};
   }
+  li {
+    color: ${WHITE};
+  }
   ul {
     margin-top: 20px;
   }
@@ -82,7 +85,7 @@ const StyledLinkScroll = styled(LinkScroll)`
   ${ANCHOR_STYLE};
 `
 
-const Header = ({ titleLines = [], subtitle, links = [], bgImg }) => (
+const Header = ({ titleLines = [], subtitle, links = [], bgImg, children }) => (
   <HeaderSection top bgImg={bgImg}>
     <Grid>
       <Row>
@@ -112,6 +115,7 @@ const Header = ({ titleLines = [], subtitle, links = [], bgImg }) => (
               ) : (
                 ''
               )}
+              {children}
             </SubTitleBackground>
           ) : (
             ''

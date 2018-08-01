@@ -17,6 +17,7 @@ const ActivityBullet = ({ image }) => (
     size={60}
     images={images}
     image={image}
+    hasBorder={false}
   />
 )
 
