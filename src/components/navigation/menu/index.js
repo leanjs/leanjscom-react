@@ -2,10 +2,9 @@ import React from 'react'
 import withWidth, { MEDIUM } from 'react-width'
 import styled from 'styled-components'
 
-// import { RJSALogo } from '../../logos'
+import { LeanJSLogo } from '../../logos/LeanJS'
 import DesktopMenu from './DesktopMenu'
 import PhoneMenu from './PhoneMenu'
-import Grid from '../../layout/Grid'
 import { EXTRADARKGREY } from '../../../config/styles'
 
 export { DesktopMenu, PhoneMenu }
@@ -28,16 +27,14 @@ const Menu = ({ width }) => {
   const canIGuessTheScreenSizeUsingJS = typeof window !== 'undefined'
 
   return (
-    <Grid>
-      <MenuContainer>
-        {/* <RJSALogo /> */}
-        {canIGuessTheScreenSizeUsingJS && width < MEDIUM ? (
-          <PhoneMenu />
-        ) : (
-          <DesktopMenu />
-        )}
-      </MenuContainer>
-    </Grid>
+    <MenuContainer>
+      <LeanJSLogo />
+      {canIGuessTheScreenSizeUsingJS && width < MEDIUM ? (
+        <PhoneMenu />
+      ) : (
+        <DesktopMenu />
+      )}
+    </MenuContainer>
   )
 }
 

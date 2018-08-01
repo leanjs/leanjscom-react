@@ -1,6 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
+import Link from '../navigation/Link'
 
-const LeanJS = props => (
+const SvgLogo = props => (
   <svg className="logo" width={225.639} height={212.844} {...props}>
     <path
       fill={props.color || 'white'}
@@ -9,4 +11,18 @@ const LeanJS = props => (
   </svg>
 )
 
-export default LeanJS
+const LinkLogo = styled(Link)`
+  width: 160px;
+  display: inline-block;
+  text-decoration: none;
+
+  svg {
+    width: 100%;
+  }
+`
+
+export const LeanJSLogo = ({ position }) => (
+  <LinkLogo to="/">
+    <SvgLogo />
+  </LinkLogo>
+)

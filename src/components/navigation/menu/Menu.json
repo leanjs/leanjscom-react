@@ -1,22 +1,32 @@
 [
   {
-    "to": "/react-redux-graphql-bootcamp",
-    "text": "Bootcamp",
+    "to": "/training",
+    "text": "Training",
     "onlyOn": null
   },
   {
-    "to": "/react-redux-graphql-part-time-course",
-    "text": "Part-time",
+    "to": "/building-solutions",
+    "text": "Building Solutions",
     "onlyOn": null
   },
   {
-    "to": "/about-us",
-    "text": "About us",
+    "to": "/case-studies",
+    "text": "Case Studies",
     "onlyOn": null
   },
   {
-    "to": "mailto:hello@reactjs.academy",
-    "text": "hello@reactjs.academy",
+    "to": "/our-process",
+    "text": "Our Process",
+    "onlyOn": null
+  },
+  {
+    "to": "/team-principles",
+    "text": "Our team and principles",
+    "onlyOn": null
+  },
+  {
+    "to": "mailto:info@leanjs.com",
+    "text": "info@leanjs.com",
     "onlyOn": null
   }
 ]
