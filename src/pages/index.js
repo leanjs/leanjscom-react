@@ -5,12 +5,17 @@ import Header from '../components/layout/Header'
 import Section from '../components/layout/Section'
 import Ul, { Li } from '../components/layout/Ul'
 import ActivityBullet from '../components/bullets/ActivityBullet'
-import CaseStudyBullet from '../components/bullets/CaseStudyBullet'
+import ValueBullet from '../components/bullets/ValueBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
+import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE } from '../config/styles'
 import Button from '../components/buttons/Button'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
+
+const TitleText = styled(P)`
+  font-size: 24px;
+`
 
 const IndexPage = () => (
   <React.Fragment>
@@ -107,6 +112,29 @@ const IndexPage = () => (
             Whoa, that sounds heavy… Thing is, we have lofty ambitions and want
             to do <br /> ‘good’ in the world through our work and actions.
           </P>
+        </Row>
+        <Row>
+          <TitleText>Our core values</TitleText>
+        </Row>
+        <Row>
+          <Col md={4}>
+            <SmallIconAndSentence
+              icon={<ValueBullet image="learning" />}
+              sentence="Be unafraid to learn from everyone and believe in teaching what we know"
+            />
+          </Col>
+          <Col md={4}>
+            <SmallIconAndSentence
+              icon={<ValueBullet image="caring" />}
+              sentence="Always aim to treat others how we would want to be treated"
+            />
+          </Col>
+          <Col md={4}>
+            <SmallIconAndSentence
+              icon={<ValueBullet image="people" />}
+              sentence="Ensure what we do is meaningful and always people-centred"
+            />
+          </Col>
         </Row>
       </Grid>
     </Section>
