@@ -40,6 +40,7 @@ const IndexPage = () => (
         </Col>
       </Row>
     </Header>
+
     <Section>
       <Grid>
         <Row>
@@ -84,12 +85,12 @@ const IndexPage = () => (
           <Col md={6}>pic here</Col>
         </Row>
         <Row>
-          <Col md={4}>
+          <Col md={5}>
             <Button fullWidth hasArrows dark>
               Read case studies
             </Button>
           </Col>
-          <Col md={4}>
+          <Col md={5}>
             <Button fullWidth hasArrows>
               Working with you
             </Button>
@@ -97,10 +98,18 @@ const IndexPage = () => (
         </Row>
       </Grid>
     </Section>
+
     <Section xsBgDark>
-      We care about you and your people. We value good ethics.
+      <Grid>
+        <H2>We care about you and your people. We value good ethics.</H2>
+      </Grid>
     </Section>
-    <Section>What we do, how we do it</Section>
+
+    <Section>
+      <Grid>
+        <H2>What we do, how we do it</H2>
+      </Grid>
+    </Section>
   </React.Fragment>
 )
 
