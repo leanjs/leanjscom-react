@@ -19,14 +19,15 @@ const Button = styled.button`
     props.dark ? darkStyles : lightStyles} border-radius: 2px;
   border: solid 1px transparent;
   padding: 0.5em 1em;
-  ${props =>
-    props.hasArrows
-      ? `
+  width: ${props => props.fullWidth && `100%;`}
+    ${props =>
+      props.hasArrows
+        ? `
 	  &:after {
 	  	content: " >>"
 	  }
   `
-      : ``};
+        : ``};
 `
 
 export default Button

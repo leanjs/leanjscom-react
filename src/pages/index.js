@@ -83,6 +83,18 @@ const IndexPage = () => (
           </Col>
           <Col md={6}>pic here</Col>
         </Row>
+        <Row>
+          <Col md={4}>
+            <Button fullWidth hasArrows dark>
+              Read case studies
+            </Button>
+          </Col>
+          <Col md={4}>
+            <Button fullWidth hasArrows>
+              Working with you
+            </Button>
+          </Col>
+        </Row>
       </Grid>
     </Section>
     <Section xsBgDark>
