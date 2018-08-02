@@ -101,7 +101,13 @@ const IndexPage = () => (
 
     <Section xsBgDark>
       <Grid>
-        <H2>We care about you and your people. We value good ethics.</H2>
+        <Row>
+          <H2>We care about you and your people. We value good ethics.</H2>
+          <P>
+            Whoa, that sounds heavy… Thing is, we have lofty ambitions and want
+            to do <br /> ‘good’ in the world through our work and actions.
+          </P>
+        </Row>
       </Grid>
     </Section>
 
