@@ -136,6 +136,14 @@ const IndexPage = () => (
             />
           </Col>
         </Row>
+        <Row>
+          <Button hasArrows>Our team and principles</Button>
+        </Row>
+        <Row>
+          <Col center xs={12}>
+            LARGE IMAGE HERE
+          </Col>
+        </Row>
       </Grid>
     </Section>
 
