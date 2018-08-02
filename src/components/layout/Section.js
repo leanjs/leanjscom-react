@@ -7,10 +7,6 @@ const Section = styled.section`
   ${FONT_FAMILY}
   padding-top: ${props => (props.top ? '150px' : '30px')};
   ${props => (props.top ? 'margin-top: -117px;' : '')} padding-bottom: 30px;
-  p:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
   background-color: ${props => props.xsBgDark && EXTRADARKGREY};
   color: ${props => props.xsBgDark && WHITE};
 `
