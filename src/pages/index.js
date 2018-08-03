@@ -170,19 +170,19 @@ const IndexPage = () => (
           <Col md={4}>
             <SmallIconAndSentence
               icon={<BenefitBullet image="quality" />}
-              sentence="Be unafraid to learn from everyone and believe in teaching what we know"
+              sentence="A process that ensures quality is baked in"
             />
           </Col>
           <Col md={4}>
             <SmallIconAndSentence
               icon={<BenefitBullet image="costeffective" />}
-              sentence="Always aim to treat others how we would want to be treated"
+              sentence="Cost effective, tested solutions that you can build upon"
             />
           </Col>
           <Col md={4}>
             <SmallIconAndSentence
               icon={<BenefitBullet image="quick" />}
-              sentence="Ensure what we do is meaningful and always people-centred"
+              sentence="Very quick turnarounds"
             />
           </Col>
         </Row>
