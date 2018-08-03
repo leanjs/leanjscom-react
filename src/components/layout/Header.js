@@ -79,8 +79,8 @@ const BackgroundCircles = styled.div`
   position: absolute;
   z-index: 1;
 
-  top: -${props => backgroundCirclesSize(props) * 0.375}px;
-  right: -${props => backgroundCirclesSize(props) * 0.5}px;
+  top: -${props => backgroundCirclesSize(props) * 0.3}px;
+  right: -${props => backgroundCirclesSize(props) * 0.4}px;
 `
 
 const H2Header = styled(BaseH2)`
