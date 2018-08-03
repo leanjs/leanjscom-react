@@ -56,7 +56,18 @@ class ContactForm extends Component {
     this.handleFormFieldChanged(name, event.target.checked)
 
   render() {
-    const { name, email, message, error } = this.state
+    const {
+      name,
+      email,
+      interestedInDigitalSolutions,
+      interestedInTraining,
+      interestedInBothDigitalSolutionsAndTraining,
+      allowMarketing,
+      message,
+      error,
+    } = this.state
+
+    console.log('state', this.state)
 
     const isInvalid = message === '' || email === ''
 
@@ -93,12 +104,14 @@ class ContactForm extends Component {
                 onChange={this.handleCheckboxChanged(
                   'interestedInDigitalSolutions'
                 )}
+                checked={interestedInDigitalSolutions}
               />{' '}
               Digital solutions
             </Li>
             <Li>
               <Checkbox
                 onChange={this.handleCheckboxChanged('interestedInTraining')}
+                checked={interestedInTraining}
               />{' '}
               Training
             </Li>
@@ -107,6 +120,7 @@ class ContactForm extends Component {
                 onChange={this.handleCheckboxChanged(
                   'interestedInBothDigitalSolutionsAndTraining'
                 )}
+                checked={interestedInBothDigitalSolutionsAndTraining}
               />{' '}
               Both!
             </Li>
@@ -125,7 +139,10 @@ class ContactForm extends Component {
         </div>
 
         <div>
-          <Checkbox onChange={this.handleCheckboxChanged('allowMarketing')} />
+          <Checkbox
+            onChange={this.handleCheckboxChanged('allowMarketing')}
+            checked={allowMarketing}
+          />
           <label>
             We do not spam - ever. But, if you're up for it, we'd love to tell
             you about any cool new services or offers that we've got going on.
