@@ -23,11 +23,14 @@ const CircleInner = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const Circle = props => (
   <CircleOuter {...props}>
-    <CircleInner {...props} />
+    <CircleInner {...props}>{props.children}</CircleInner>
   </CircleOuter>
 )
 
