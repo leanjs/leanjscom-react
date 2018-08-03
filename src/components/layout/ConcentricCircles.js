@@ -6,7 +6,6 @@ import { DARKGREY } from '../../config/styles'
 
 const defaultNumCircles = 6
 const defaultSize = 360
-const defaultStepSize = 60
 const defaultColor = DARKGREY
 
 const ConcentricCircles = props => {

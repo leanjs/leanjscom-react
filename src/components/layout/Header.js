@@ -11,6 +11,7 @@ import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
 import { ANCHOR_STYLE } from '../navigation/Link'
 import Menu from '../navigation/menu'
 import ConcentricCircles from './ConcentricCircles'
+import withWidth from 'react-width'
 
 // import { Link as LinkScroll } from 'react-scroll'
 
@@ -57,11 +58,29 @@ const HeaderSection = styled(Section)`
   }
 `
 
+const HeaderTop = styled.div`
+  position: relative;
+
+  /* Don't let the concentic circles extend below the top part of the header (mobiles only) */
+  @media (max-width: ${SCREEN_SM_MAX}) {
+    overflow: hidden;
+  }
+`
+
+const backgroundCirclesSize = ({ isMobile, windowWidth }) => {
+  if (windowWidth !== null) {
+    return windowWidth * (isMobile ? 0.85 : 0.25) * 2
+  } else {
+    return 2000
+  }
+}
+
 const BackgroundCircles = styled.div`
   position: absolute;
-  top: -750px;
-  right: -1000px;
   z-index: 1;
+
+  top: -${props => backgroundCirclesSize(props) * 0.375}px;
+  right: -${props => backgroundCirclesSize(props) * 0.5}px;
 `
 
 const H2Header = styled(BaseH2)`
@@ -86,53 +105,88 @@ const TitleBackground = styled.span`
   ${TITLE_BACKGROUND};
 `
 
-const SubTitleBackground = styled.div`
-  ${TITLE_BACKGROUND} padding: 15px;
+const WHITE_TEXT = `
   a {
     color: ${WHITE};
   }
   li {
     color: ${WHITE};
   }
+`
+
+const SubTitleBackground = styled.div`
+  ${TITLE_BACKGROUND};
+  ${WHITE_TEXT};
+  padding: 15px;
   ul {
     margin-top: 20px;
   }
 `
 
+const Links = styled.div`
+  ${TITLE_BACKGROUND};
+  ${WHITE_TEXT};
+  padding: 15px;
+`
+
 const Children = styled.div`
-  a {
-    color: ${WHITE};
-  }
-  li {
-    color: ${WHITE};
-  }
+  ${WHITE_TEXT};
 `
 
 const StyledLinkScroll = styled(LinkScroll)`
   ${ANCHOR_STYLE};
 `
 
-const Header = ({ titleLines = [], subtitle, links = [], bgImg, children }) => (
-  <HeaderSection top bgImg={bgImg}>
-    <Menu />
+const Header = ({
+  titleLines = [],
+  subtitle,
+  links = [],
+  bgImg,
+  children,
+  ...props
+}) => {
+  const canIGuessTheScreenSizeUsingJS = typeof window !== 'undefined'
+  const isMobile =
+    canIGuessTheScreenSizeUsingJS &&
+    window.innerWidth <= parseFloat(SCREEN_SM_MAX)
+  const windowWidth = canIGuessTheScreenSizeUsingJS ? window.innerWidth : null
 
-    <BackgroundCircles>
-      <ConcentricCircles size={2000} />
-    </BackgroundCircles>
+  return (
+    <HeaderSection top bgImg={bgImg}>
+      <HeaderTop>
+        <Menu />
 
-    <Grid>
-      <Row>
-        <Col>
-          <H1>
-            {titleLines.map((line, i) => (
-              <TitleBackground key={i} children={line} />
-            ))}
-          </H1>
-          {subtitle || (links && links.length) ? (
-            <SubTitleBackground>
-              <H2Header dangerouslySetInnerHTML={{ __html: subtitle }} />
+        <BackgroundCircles isMobile={isMobile} windowWidth={windowWidth}>
+          <ConcentricCircles
+            size={backgroundCirclesSize({ isMobile, windowWidth })}
+          />
+        </BackgroundCircles>
 
-              {links && links.length ? (
+        <Grid>
+          <Row>
+            <Col>
+              <H1>
+                {titleLines.map((line, i) => (
+                  <TitleBackground key={i} children={line} />
+                ))}
+              </H1>
+              {subtitle ? (
+                <SubTitleBackground>
+                  <H2Header dangerouslySetInnerHTML={{ __html: subtitle }} />
+                </SubTitleBackground>
+              ) : (
+                ''
+              )}
+            </Col>
+          </Row>
+        </Grid>
+      </HeaderTop>
+
+      <Grid>
+        <Row>
+          <Col>
+            {links && links.length ? (
+              <Links>
                 <Ul inline>
                   {links.map((link, i) => (
                     <Li key={i}>
@@ -146,19 +200,18 @@ const Header = ({ titleLines = [], subtitle, links = [], bgImg, children }) => (
                     </Li>
                   ))}
                 </Ul>
-              ) : (
-                ''
-              )}
-            </SubTitleBackground>
-          ) : (
-            ''
-          )}
-          <Children>{children}</Children>
-        </Col>
-      </Row>
-    </Grid>
-  </HeaderSection>
-)
+              </Links>
+            ) : (
+              ''
+            )}
+
+            <Children>{children}</Children>
+          </Col>
+        </Row>
+      </Grid>
+    </HeaderSection>
+  )
+}
 
 Header.propTypes = {
   titleLines: PropTypes.array.isRequired,
