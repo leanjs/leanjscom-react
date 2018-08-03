@@ -12,9 +12,12 @@ const StyledCheckbox = styled.div`
     display: flex;
     align-items: center;
     .displayCheckboxInner {
-      background: transparent
-        url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+)
-        center/contain no-repeat scroll;
+      background-color: transparent;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-scroll: scroll;
       height: 90%;
       width: 90%;
       margin: auto;
@@ -30,7 +33,10 @@ const StyledCheckbox = styled.div`
 
 const Checkbox = props => (
   <StyledCheckbox {...props}>
-    <div className="displayCheckbox">
+    <div
+      className="displayCheckbox"
+      onClick={() => props.onChange({ target: { checked: !props.checked } })}
+    >
       <div className="displayCheckboxInner" />
     </div>
     <input type="hidden" value={props.checked ? '1' : '0'} />
