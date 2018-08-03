@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import LeanJS from './LeanJS'
+import { LeanJSLogo } from './LeanJS'
 
 storiesOf('LeanJS Logo', module)
-  .add('Standard logo', () => <LeanJS />)
-  .add('Different colours', () => <LeanJS color="#f8f5e3" />)
+  .add('Standard logo', () => <LeanJSLogo />)
+  .add('Different colours', () => <LeanJSLogo color="#f8f5e3" />)

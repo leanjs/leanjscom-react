@@ -2,7 +2,7 @@ import React from 'react'
 import withWidth, { MEDIUM } from 'react-width'
 import styled from 'styled-components'
 
-import { LeanJSLogo } from '../../logos/LeanJS'
+import { LinkedLeanJSLogo } from '../../logos/LeanJS'
 import DesktopMenu from './DesktopMenu'
 import PhoneMenu from './PhoneMenu'
 import { EXTRADARKGREY } from '../../../config/styles'
@@ -28,7 +28,7 @@ const Menu = ({ width }) => {
 
   return (
     <MenuContainer>
-      <LeanJSLogo />
+      <LinkedLeanJSLogo />
       {canIGuessTheScreenSizeUsingJS && width < MEDIUM ? (
         <PhoneMenu />
       ) : (
