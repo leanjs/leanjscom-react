@@ -29,7 +29,8 @@ const IndexPage = () => (
           <Ul unstyled>
             <Li>
               <ActivityBullet image="development" />
-              We build badass and scalable websites, apps & digital solutions…
+              We build badass and scalable websites, apps &amp; digital
+              solutions…
             </Li>
           </Ul>
           <Button hasArrows>Building products</Button>
