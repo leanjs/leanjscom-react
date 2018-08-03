@@ -67,8 +67,6 @@ class ContactForm extends Component {
       error,
     } = this.state
 
-    console.log('state', this.state)
-
     const isInvalid = message === '' || email === ''
 
     return (
