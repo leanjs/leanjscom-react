@@ -17,7 +17,6 @@ const MenuContainer = styled.div`
   padding: 20px;
   position: relative;
   z-index: 1;
-  background-color: ${EXTRADARKGREY};
   display: flex;
   align-items: center;
   justify-content: space-between;

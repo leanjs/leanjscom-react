@@ -9,6 +9,8 @@ import { H1 as BaseH1, H2 as BaseH2 } from '../text'
 import { WHITE, EXTRADARKGREY } from '../../config/styles'
 import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
 import { ANCHOR_STYLE } from '../navigation/Link'
+import Menu from '../navigation/menu'
+import ConcentricCircles from './ConcentricCircles'
 
 // import { Link as LinkScroll } from 'react-scroll'
 
@@ -31,6 +33,12 @@ const HeaderSection = styled(Section)`
 
   background-color: ${EXTRADARKGREY}; min-height: 700px;
   position: relative;
+  
+  overflow:hidden;
+  * {
+    z-index:2;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -53,7 +61,6 @@ const H2Header = styled(BaseH2)`
 `
 
 const TITLE_BACKGROUND = `
-  background-color: ${EXTRADARKGREY};
   padding-left: 15px;
   padding-right: 15px;
   display: inline-block;
@@ -85,8 +92,21 @@ const StyledLinkScroll = styled(LinkScroll)`
   ${ANCHOR_STYLE};
 `
 
+const BackgroundCircles = styled.div`
+  position: absolute;
+  top: -750px;
+  right: -1000px;
+  z-index: 1;
+`
+
 const Header = ({ titleLines = [], subtitle, links = [], bgImg, children }) => (
   <HeaderSection top bgImg={bgImg}>
+    <Menu />
+
+    <BackgroundCircles>
+      <ConcentricCircles size={2000} />
+    </BackgroundCircles>
+
     <Grid>
       <Row>
         <Col>

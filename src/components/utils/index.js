@@ -8,6 +8,9 @@ export const SCREEN_MD_MIN = '992px'
 export const SCREEN_MD_MAX = '1199px'
 export const SCREEN_LG_MIN = '1200px'
 
+export const range = (from, to) =>
+  [...Array(to - from + 1).keys()].map(n => n + from)
+
 const UseThisInGatsby2WithReact163ToHidDisplayMultipleComponents = ({
   children,
   ...props

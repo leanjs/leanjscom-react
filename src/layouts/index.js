@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 
 import Footer from '../components/layout/Footer'
-import Menu from '../components/navigation/menu'
 import Grid from '../components/layout/Grid'
 import './index.css'
 import './reset.css'
@@ -33,8 +33,6 @@ const Layout = ({ children, data }) => (
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
-
-      <Menu />
 
       {children()}
 
