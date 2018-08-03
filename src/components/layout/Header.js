@@ -33,8 +33,11 @@ const HeaderSection = styled(Section)`
 
   background-color: ${EXTRADARKGREY}; min-height: 700px;
   position: relative;
-  
+ 
+  /* Don't let the concentic circles extend below the header */ 
   overflow:hidden;
+
+  /* Put text in front of the concentric circles */
   * {
     z-index:2;
   }
@@ -53,6 +56,14 @@ const HeaderSection = styled(Section)`
     padding: 175px 0;
   }
 `
+
+const BackgroundCircles = styled.div`
+  position: absolute;
+  top: -750px;
+  right: -1000px;
+  z-index: 1;
+`
+
 const H2Header = styled(BaseH2)`
   padding: 0 !important;
   margin: 0 !important;
@@ -88,15 +99,17 @@ const SubTitleBackground = styled.div`
   }
 `
 
-const StyledLinkScroll = styled(LinkScroll)`
-  ${ANCHOR_STYLE};
+const Children = styled.div`
+  a {
+    color: ${WHITE};
+  }
+  li {
+    color: ${WHITE};
+  }
 `
 
-const BackgroundCircles = styled.div`
-  position: absolute;
-  top: -750px;
-  right: -1000px;
-  z-index: 1;
+const StyledLinkScroll = styled(LinkScroll)`
+  ${ANCHOR_STYLE};
 `
 
 const Header = ({ titleLines = [], subtitle, links = [], bgImg, children }) => (
@@ -118,6 +131,7 @@ const Header = ({ titleLines = [], subtitle, links = [], bgImg, children }) => (
           {subtitle || (links && links.length) ? (
             <SubTitleBackground>
               <H2Header dangerouslySetInnerHTML={{ __html: subtitle }} />
+
               {links && links.length ? (
                 <Ul inline>
                   {links.map((link, i) => (
@@ -135,11 +149,11 @@ const Header = ({ titleLines = [], subtitle, links = [], bgImg, children }) => (
               ) : (
                 ''
               )}
-              {children}
             </SubTitleBackground>
           ) : (
             ''
           )}
+          <Children>{children}</Children>
         </Col>
       </Row>
     </Grid>
