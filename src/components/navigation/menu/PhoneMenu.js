@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from '../Link'
 import React from 'react'
 import MenuData from './Menu.json'
-import { LeanJSLogo } from '../../logos/LeanJS'
+import { LinkedLeanJSLogo } from '../../logos/LeanJS'
 import './PhoneMenu.css'
 
 const Item = ({ children, ...props }) => <Link {...props}>{children}</Link>
@@ -32,7 +32,7 @@ class PhoneMenu extends React.Component {
 
     return (
       <Menu isOpen={isOpen}>
-        <LeanJSLogo />
+        <LinkedLeanJSLogo />
         {MenuData.map((item, i) => (
           <PhoneMenuItem onClick={closeMenu} key={i} to={item.to}>
             {item.text}

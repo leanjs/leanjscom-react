@@ -22,13 +22,14 @@
     "react-width": "^0.1.8",
     "styled-components": "^3.3.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format":
-      "prettier --write '{src,functions,firebase}/**/*.{js,json,css,md}'",
+    "format": "prettier --write '{src,functions,firebase}/**/*.{js,json,css,md}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy": "firebase deploy --only hosting"
@@ -51,6 +52,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

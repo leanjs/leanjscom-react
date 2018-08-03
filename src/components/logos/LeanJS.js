@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from '../navigation/Link'
 
-const SvgLogo = props => (
+export const LeanJSLogo = props => (
   <svg
     className="logo"
     viewBox="0 0 1000 250"
@@ -26,8 +26,8 @@ const LinkLogo = styled(Link)`
   }
 `
 
-export const LeanJSLogo = ({ position }) => (
+export const LinkedLeanJSLogo = () => (
   <LinkLogo to="/">
-    <SvgLogo />
+    <LeanJSLogo />
   </LinkLogo>
 )
