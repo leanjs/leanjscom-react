@@ -28,9 +28,10 @@ const IndexPage = () => (
         <Col md={4}>
           <Ul unstyled>
             <Li>
-              <ActivityBullet image="development" />
-              We build badass and scalable websites, apps &amp; digital
-              solutions…
+              <SmallIconAndSentence
+                icon={<ActivityBullet image="development" />}
+                sentence="We build badass and scalable websites, apps & digital solutions…"
+              />
             </Li>
           </Ul>
           <Button hasArrows>Building products</Button>
@@ -38,8 +39,10 @@ const IndexPage = () => (
         <Col md={4}>
           <Ul unstyled>
             <Li>
-              <ActivityBullet image="teaching" />
-              We also teach innovative tech to your team…
+              <SmallIconAndSentence
+                icon={<ActivityBullet image="teaching" />}
+                sentence="  We also teach innovative tech to your team…"
+              />
             </Li>
           </Ul>
           <Button hasArrows>Training services</Button>
