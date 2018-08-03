@@ -22,7 +22,7 @@ const StyledCheckbox = styled.div`
       width: 90%;
       margin: auto;
 
-      display: ${props => (props.checked ? 'block' : 'none')};
+      visibility: ${props => (props.checked ? 'visible' : 'hidden')};
     }
   }
   height: ${props => (props.size ? props.size : defaultSize)}em;
