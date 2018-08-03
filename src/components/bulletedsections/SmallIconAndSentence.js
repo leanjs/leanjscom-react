@@ -4,7 +4,6 @@ import styled from 'styled-components'
 const Columns = styled.div`
   display: flex;
   align-items: center;
-  color: white;
 
   div.small-icon-sentence {
     padding-left: 15px;
