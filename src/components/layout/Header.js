@@ -32,16 +32,14 @@ const H1 = styled(BaseH1)`
 `
 const HeaderSection = styled(Section)`
 
-  background-color: ${EXTRADARKGREY}; min-height: 700px;
+  background-color: ${EXTRADARKGREY};
+  min-height: 700px;
   position: relative;
+  z-index:0;
  
   /* Don't let the concentic circles extend below the header */ 
   overflow:hidden;
 
-  /* Put text in front of the concentric circles */
-  * {
-    z-index:2;
-  }
 
   &:before {
     content: '';
@@ -77,7 +75,7 @@ const backgroundCirclesSize = ({ isMobile, windowWidth }) => {
 
 const BackgroundCircles = styled.div`
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 
   top: -${props => backgroundCirclesSize(props) * 0.3}px;
   right: -${props => backgroundCirclesSize(props) * 0.4}px;
