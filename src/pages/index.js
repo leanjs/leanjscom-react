@@ -11,6 +11,7 @@ import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoint
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE } from '../config/styles'
 import Button from '../components/buttons/Button'
+import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
@@ -40,7 +41,9 @@ const IndexPage = () => (
               />
             </Li>
           </Ul>
-          <Button hasArrows>Building products</Button>
+          <LinkButton to="/products" hasArrows>
+            Building products
+          </LinkButton>
         </Col>
         <Col md={5}>
           <Ul unstyled>
@@ -51,7 +54,7 @@ const IndexPage = () => (
               />
             </Li>
           </Ul>
-          <Button hasArrows>Training services</Button>
+          <LinkButton hasArrows>Training services</LinkButton>
         </Col>
       </Row>
     </Header>
@@ -102,14 +105,14 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col md={5}>
-            <Button fullWidth hasArrows dark>
+            <LinkButton fullWidth hasArrows dark>
               Read case studies
-            </Button>
+            </LinkButton>
           </Col>
           <Col md={5}>
-            <Button fullWidth hasArrows>
+            <LinkButton fullWidth hasArrows>
               Working with you
-            </Button>
+            </LinkButton>
           </Col>
         </Row>
       </Grid>
@@ -148,7 +151,7 @@ const IndexPage = () => (
           </Col>
         </Row>
         <Row>
-          <Button hasArrows>Our team and principles</Button>
+          <LinkButton hasArrows>Our team and principles</LinkButton>
         </Row>
         <Row>
           <Col center xs={12}>
@@ -199,25 +202,25 @@ const IndexPage = () => (
             </Line>
             <InlineItems>
               User research, business analysis, competitor audit
-              <Button hasArrows>UX & design services</Button>
+              <LinkButton hasArrows>UX & design services</LinkButton>
             </InlineItems>
             <Line verticalCenter lineWidth={40}>
               Build...
             </Line>
             <InlineItems>
               Prototyping, coding and development
-              <Button hasArrows>Development services</Button>
+              <LinkButton hasArrows>Development services</LinkButton>
             </InlineItems>
             <Line verticalCenter lineWidth={40}>
               Test...
             </Line>
             <InlineItems>
               Usability testing, quality assurance
-              <Button hasArrows>UX & design services</Button>
+              <LinkButton hasArrows>UX & design services</LinkButton>
             </InlineItems>
-            <Button hasArrows dark fullWidth>
+            <LinkButton hasArrows dark fullWidth>
               Working with you
-            </Button>
+            </LinkButton>
           </Col>
         </Row>
       </Grid>
