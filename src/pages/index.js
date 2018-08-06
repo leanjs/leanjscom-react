@@ -10,7 +10,6 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE } from '../config/styles'
-import Button from '../components/buttons/Button'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
@@ -41,7 +40,7 @@ const IndexPage = () => (
               />
             </Li>
           </Ul>
-          <LinkButton to="/products" hasArrows>
+          <LinkButton to="/building-solutions" hasArrows>
             Building products
           </LinkButton>
         </Col>
@@ -54,7 +53,9 @@ const IndexPage = () => (
               />
             </Li>
           </Ul>
-          <LinkButton hasArrows>Training services</LinkButton>
+          <LinkButton to="/training" hasArrows>
+            Training services
+          </LinkButton>
         </Col>
       </Row>
     </Header>
