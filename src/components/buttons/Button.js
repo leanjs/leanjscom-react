@@ -18,6 +18,7 @@ const Button = styled.button`
   ${FONT_FAMILY} ${props =>
     props.dark ? darkStyles : lightStyles} border-radius: 2px;
   border: solid 1px transparent;
+  margin: 1em 0;
   padding: 0.5em 1em;
   width: ${props => props.fullWidth && `100%;`}
     ${props =>

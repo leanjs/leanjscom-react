@@ -215,6 +215,9 @@ const IndexPage = () => (
               Usability testing, quality assurance
               <Button hasArrows>UX & design services</Button>
             </InlineItems>
+            <Button hasArrows dark fullWidth>
+              Working with you
+            </Button>
           </Col>
         </Row>
       </Grid>
