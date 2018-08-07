@@ -5,7 +5,5 @@ import { Topic } from './Topic'
 import { LIGHTGREY } from '../../config/styles'
 
 storiesOf('Labels', module)
-  .add('Topic', () => <Topic type="code" />)
-  .add('Topic (different colours)', () => (
-    <Topic type="code" color={LIGHTGREY} />
-  ))
+  .add('Topic', () => <Topic>Code</Topic>)
+  .add('Topic (different colours)', () => <Topic color={LIGHTGREY}>Code</Topic>)

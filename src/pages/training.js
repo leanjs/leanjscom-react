@@ -15,7 +15,7 @@ import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote } from '../components/text'
-import Iteration from '../components/graphics/Iteration'
+import { Topic } from '../components/labels/Topic'
 
 const TitleText = styled(P)`
   font-size: 24px;
@@ -112,7 +112,35 @@ const IndexPage = () => (
               Training your team in leading edge tech means you can rely on your
               team to get the job done.
             </P>
-            <Line verticalCenter>ReactJS ecosystem</Line>
+
+            <Line verticalCenter>
+              ReactJS ecosystem <Topic>Code</Topic>
+            </Line>
+            <P>Created in 2016, our ReactJS Academy was the first in Europe.</P>
+            <P>
+              TODO:Link up the words 'ReactJS Academy' and add button link to
+              'Visit ReactJS Academy website
+            </P>
+
+            <Line verticalCenter>
+              Product &amp; UX design <Topic>Design</Topic>
+            </Line>
+            <P>
+              Learn how to develop an idea into a working, tested design with
+              design thinking.
+            </P>
+
+            <Line verticalCenter>
+              Lean / Agile <Topic>Process</Topic>
+            </Line>
+            <P>
+              Let us guide you to change your processes to work quicker and more
+              efficiently
+            </P>
+            <P>
+              TODO:And add button link to 'What's your tech training needs?
+              Contact us now!>>'
+            </P>
           </Col>
         </Row>
       </Grid>
