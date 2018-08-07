@@ -1,14 +1,14 @@
 import styled from 'styled-components'
-import { FONT_FAMILY, DARKGREY } from '../../config/styles'
+import { FONT_FAMILY, DARKGREY, WHITE } from '../../config/styles'
 
 export const darkStyles = `
 	background-color:${DARKGREY};
-	color:white;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+	color:${WHITE};
+  	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
 
 export const lightStyles = `
-  	background-color:white;
+  	background-color:${WHITE};
   	color:${DARKGREY};
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.45), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
