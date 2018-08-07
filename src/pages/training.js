@@ -144,8 +144,9 @@ const IndexPage = () => (
               efficiently
             </P>
             <P>
-              TODO:And add button link to 'What's your tech training needs?
-              Contact us now!>>'
+              <LinkButton to="#contact" hasArrows>
+                What's your tech training needs? Contact us now!
+              </LinkButton>
             </P>
           </Col>
         </Row>

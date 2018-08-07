@@ -44,7 +44,9 @@ const Footer = () => (
     <footer>
       <Grid>
         <Row>
-          <H2>We'd love to chat</H2>
+          <H2>
+            <a name="contact" />We'd love to chat
+          </H2>
         </Row>
 
         <Row>
