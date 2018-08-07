@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from '../navigation/Link'
 import { WHITE, DARKGREY } from '../../config/styles'
-import { DEFAULT_BUTTON_STYLES, lightStyles, darkStyles } from './Button.js'
+import { DEFAULT_BUTTON_STYLES } from './Button.js'
 
 const fontColor = color => `
   color: ${color} !important;
@@ -20,19 +20,7 @@ const fontColor = color => `
   }
 `
 const LinkButton = styled(Link)`
-  ${DEFAULT_BUTTON_STYLES} ${props =>
-    props.dark
-      ? `${fontColor(WHITE)}${darkStyles}`
-      : `${fontColor(DARKGREY)}${lightStyles}`};
-  width: ${props => props.fullWidth && `100%;`};
-  ${props =>
-    props.hasArrows
-      ? `
-		&:after {
-			content: " >>"
-		}
-	`
-      : ``};
+  ${DEFAULT_BUTTON_STYLES};
   text-decoration: none;
   display: inline-block;
   font-weight: normal;
