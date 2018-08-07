@@ -33,7 +33,7 @@ const IndexPage = () => (
           <Ul unstyled>
             <Li>
               <SmallIconAndSentence
-                icon={<TrainingAspectBullet image="team" />}
+                icon={<TrainingAspectBullet image="team" dark />}
                 sentence="Take your team and digital solutions further into the future"
               />
             </Li>
@@ -43,7 +43,7 @@ const IndexPage = () => (
           <Ul unstyled>
             <Li>
               <SmallIconAndSentence
-                icon={<TrainingAspectBullet image="react" />}
+                icon={<TrainingAspectBullet image="react" dark />}
                 sentence="Pioneering the first cutting-edge ReactJS training in Europe"
               />
             </Li>
@@ -157,10 +157,25 @@ const IndexPage = () => (
       <Grid>
         <Row>
           <Col>
-            <H2>What we do, how we do it</H2>
+            <H2>
+              Tailored private team team training - tailored for your team's
+              needs
+            </H2>
             <P>
-              We work exclusivity in the iterative, incremental ‘Lean’ way (thus
-              the name!). This ensures:
+              We love diving into an existing team and teaching the latest tech
+              tools and processes.
+            </P>
+            <P>It's intense, fun and very rewarding. Plus, it really works!</P>
+            <P>TODO:Photograph of Alex teaching</P>
+            <P>
+              <SmallIconAndSentence
+                icon={<TrainingAspectBullet image="team" />}
+                sentence="blah"
+              />
+              <SmallIconAndSentence
+                icon={<TrainingAspectBullet image="globe" />}
+                sentence="blah"
+              />
             </P>
           </Col>
         </Row>

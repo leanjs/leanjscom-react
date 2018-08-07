@@ -14,6 +14,7 @@ const Bullet = ({
   color,
   bg,
   size,
+  noPadding = false,
   borderSize = 4,
   hasBorder = true,
 }) => (

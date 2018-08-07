@@ -1,7 +1,7 @@
 import React from 'react'
 import Bullet from './Bullet'
 
-import { DARKGREY } from '../../config/styles'
+import { DARKGREY, WHITE } from '../../config/styles'
 
 const images = {
   quality:
@@ -15,7 +15,7 @@ const images = {
 const BenefitBullet = ({ image }) => (
   <Bullet
     color={DARKGREY}
-    bg="white"
+    bg={WHITE}
     size={60}
     hasBorder={true}
     images={images}
