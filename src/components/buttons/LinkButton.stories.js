@@ -8,3 +8,8 @@ storiesOf('LinkButton', module)
   .add('With arrows', () => (
     <LinkButton hasArrows>Building products</LinkButton>
   ))
+  .add('External link', () => (
+    <LinkButton external to="http://www.example.com">
+      Example.com
+    </LinkButton>
+  ))

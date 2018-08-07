@@ -11,6 +11,7 @@ import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoint
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import Mugshot from '../components/mugshots/Mugshot'
 import { WHITE } from '../config/styles'
+import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
@@ -116,10 +117,15 @@ const IndexPage = () => (
             <Line verticalCenter>
               ReactJS ecosystem <Topic>Code</Topic>
             </Line>
-            <P>Created in 2016, our ReactJS Academy was the first in Europe.</P>
             <P>
-              TODO:Link up the words 'ReactJS Academy' and add button link to
-              'Visit ReactJS Academy website
+              Created in 2016, our{' '}
+              <Link to="https://reactjs.academy/">ReactJS Academy</Link> was the
+              first in Europe.
+            </P>
+            <P>
+              <LinkButton external to="https://reactjs.academy/">
+                Visit ReactJS Academy website
+              </LinkButton>
             </P>
 
             <Line verticalCenter>
