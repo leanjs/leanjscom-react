@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Circle from '../elements/Circle'
-import { range } from '../utils'
 import { DARKGREY } from '../../config/styles'
 
 const defaultNumCircles = 6
