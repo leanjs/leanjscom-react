@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { db } from '../../firebase'
 import Ul, { Li } from './layout/Ul'
-import Checkbox from './layout/Checkbox'
+import Checkbox from './form/Checkbox'
 import Link from './navigation/Link'
 import styled from 'styled-components'
 

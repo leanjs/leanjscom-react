@@ -11,6 +11,14 @@ export const SCREEN_LG_MIN = '1200px'
 export const range = (from, to) =>
   [...Array(to - from + 1).keys()].map(n => n + from)
 
+export const requireFrom = (image, images) => {
+  if (images[image]) {
+    return images[image]
+  }
+
+  throw new Error('Unknown image')
+}
+
 const UseThisInGatsby2WithReact163ToHidDisplayMultipleComponents = ({
   children,
   ...props

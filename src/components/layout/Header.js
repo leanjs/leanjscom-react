@@ -10,7 +10,7 @@ import { WHITE, EXTRADARKGREY } from '../../config/styles'
 import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
 import { ANCHOR_STYLE } from '../navigation/Link'
 import Menu from '../navigation/menu'
-import ConcentricCircles from './ConcentricCircles'
+import ConcentricCircles from '../decoration/ConcentricCircles'
 import withWidth from 'react-width'
 
 // import { Link as LinkScroll } from 'react-scroll'

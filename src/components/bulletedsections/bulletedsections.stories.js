@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import LargeIconAndPoints from './LargeIconAndPoints'
 import SmallIconAndSentence from './SmallIconAndSentence'
 
-import { DARKGREY } from '../../config/styles'
+import { WHITE, DARKGREY } from '../../config/styles'
 
 import ValueBullet from '../bullets/ValueBullet'
 
@@ -13,7 +13,7 @@ storiesOf('Bulleted sections', module)
     <LargeIconAndPoints
       image="abinbev"
       points={['Rapid app design and build', '6 week turnaround']}
-      color="white"
+      color={WHITE}
     />
   ))
   .add('Large icon and points (dark text)', () => (
