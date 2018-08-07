@@ -36,8 +36,8 @@ const HeaderSection = styled(Section)`
   min-height: 700px;
   position: relative;
   z-index:0;
- 
-  /* Don't let the concentic circles extend below the header */ 
+
+  /* Don't let the concentic circles extend below the header */
   overflow:hidden;
 
 
