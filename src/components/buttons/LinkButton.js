@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from '../navigation/Link'
-import { WHITE, DARKGREY } from '../../config/styles'
 import { DEFAULT_BUTTON_STYLES } from './Button.js'
 
 const fontColor = color => `
