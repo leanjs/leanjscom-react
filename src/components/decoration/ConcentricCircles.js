@@ -26,7 +26,7 @@ const ConcentricCircles = props => {
     <Circle
       bg="transparent"
       color={color}
-      hasBorder="true"
+      hasBorder={true}
       borderWidth={2}
       size={thisCircleSize}
     >
