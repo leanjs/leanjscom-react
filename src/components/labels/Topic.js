@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { WHITE } from '../../config/styles'
+import { WHITE, DARKGREY } from '../../config/styles'
 
 const TopicInner = styled.div`
   border:1px solid ${props => (props.color ? props.color : WHITE)};
   color:${props => (props.color ? props.color : WHITE)}
+  background: ${props => props.dark && DARKGREY}
 
   padding:0.5em;
   margin-left:1em;
@@ -17,6 +18,6 @@ const TopicInner = styled.div`
   text-align:center;
 `
 
-export const Topic = props => (
-  <TopicInner {...props}>{props.children}</TopicInner>
-)
+const Topic = props => <TopicInner {...props}>{props.children}</TopicInner>
+
+export default Topic

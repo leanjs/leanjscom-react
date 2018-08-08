@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Topic } from './Topic'
+import Topic from './Topic'
 
 import { LIGHTGREY } from '../../config/styles'
 
