@@ -19,13 +19,6 @@ import Iteration from '../components/graphics/Iteration'
 import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import caseStudies from '../components/caseStudies.json'
 
-const TitleText = styled(P)`
-  font-size: 24px;
-`
-const InlineItems = styled.div`
-  padding-left: 50px;
-`
-
 const CaseStudies = () => (
   <React.Fragment>
     <Header
