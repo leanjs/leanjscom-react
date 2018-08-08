@@ -16,7 +16,7 @@ import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote } from '../components/text'
-import { Topic } from '../components/labels/Topic'
+import Topic from '../components/labels/Topic'
 
 const TitleText = styled(P)`
   font-size: 24px;
@@ -25,7 +25,7 @@ const InlineItems = styled.div`
   padding-left: 50px;
 `
 
-const IndexPage = () => (
+const TrainingPage = () => (
   <React.Fragment>
     <Header titleLines={['Training']} subtitle="" bgImg="training">
       <Row>
@@ -117,10 +117,13 @@ const IndexPage = () => (
             <Line verticalCenter>
               ReactJS ecosystem <Topic>Code</Topic>
             </Line>
+
             <P>
               Created in 2016, our{' '}
-              <Link to="https://reactjs.academy/">ReactJS Academy</Link> was the
-              first in Europe.
+              <Link external to="https://reactjs.academy/">
+                ReactJS Academy
+              </Link>{' '}
+              was the first in Europe.
             </P>
             <P>
               <LinkButton external to="https://reactjs.academy/">
@@ -129,8 +132,9 @@ const IndexPage = () => (
             </P>
 
             <Line verticalCenter>
-              Product &amp; UX design <Topic>Design</Topic>
+              Product and UX design <Topic>Design</Topic>
             </Line>
+
             <P>
               Learn how to develop an idea into a working, tested design with
               design thinking.
@@ -184,4 +188,4 @@ const IndexPage = () => (
   </React.Fragment>
 )
 
-export default IndexPage
+export default TrainingPage
