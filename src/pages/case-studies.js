@@ -49,7 +49,7 @@ const CaseStudies = () => (
           <Ul unstyled>
             <Li>
               <SmallIconAndSentence
-                icon={<ActivityBullet image="development" />}
+                icon={<ActivityBullet image="industry" />}
                 sentence="Digital solutions built and user tested for over 20+ sectors"
               />
             </Li>
