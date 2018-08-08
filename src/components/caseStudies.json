@@ -39,6 +39,94 @@
         "point": "RESULT",
         "description": "90% increase in shopping card value"
       }
+    ],
+    "FingoPay": [
+      {
+        "point": "WHAT",
+        "description": ""
+      },
+      {
+        "point": "HOW",
+        "description": ""
+      },
+      {
+        "point": "WHY",
+        "description": ""
+      },
+      {
+        "point": "TIME",
+        "description": ""
+      },
+      {
+        "point": "RESULT",
+        "description": ""
+      }
+    ],
+    "Boston University": [
+      {
+        "point": "WHAT",
+        "description": ""
+      },
+      {
+        "point": "HOW",
+        "description": ""
+      },
+      {
+        "point": "WHY",
+        "description": ""
+      },
+      {
+        "point": "TIME",
+        "description": ""
+      },
+      {
+        "point": "RESULT",
+        "description": ""
+      }
+    ],
+    "ASOS.com": [
+      {
+        "point": "WHAT",
+        "description": ""
+      },
+      {
+        "point": "HOW",
+        "description": ""
+      },
+      {
+        "point": "WHY",
+        "description": ""
+      },
+      {
+        "point": "TIME",
+        "description": ""
+      },
+      {
+        "point": "RESULT",
+        "description": ""
+      }
+    ],
+    "UpMentoring": [
+      {
+        "point": "WHAT",
+        "description": ""
+      },
+      {
+        "point": "HOW",
+        "description": ""
+      },
+      {
+        "point": "WHY",
+        "description": ""
+      },
+      {
+        "point": "TIME",
+        "description": ""
+      },
+      {
+        "point": "RESULT",
+        "description": ""
+      }
     ]
   }
 }
