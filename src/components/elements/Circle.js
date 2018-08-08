@@ -17,6 +17,7 @@ const CircleOuter = styled.div`
         }px solid ${props.color}`
       : `none`};
   box-sizing: border-box;
+  ${props => props.background && `background: ${props.background};`};
 `
 
 const CircleInner = styled.div`

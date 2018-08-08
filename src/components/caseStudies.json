@@ -1,0 +1,44 @@
+{
+  "CaseStudyLinks": [
+    {
+      "text": "Boston University",
+      "to": "boston"
+    },
+    {
+      "text": "Fingo Pay",
+      "to": "fingo"
+    },
+    {
+      "text": "ABInBev",
+      "to": "abinbev"
+    },
+    {
+      "text": "ASOS.com",
+      "to": "asos"
+    }
+  ],
+  "CaseStudyContent": {
+    "ABInBev": [
+      {
+        "point": "WHAT",
+        "description": "Game app to support a Christmas campaign"
+      },
+      {
+        "point": "HOW",
+        "description": "Rapid prototyping and developement"
+      },
+      {
+        "point": "WHY",
+        "description": "Increasing shopping card value"
+      },
+      {
+        "point": "TIME",
+        "description": "6 week turnaround"
+      },
+      {
+        "point": "RESULT",
+        "description": "90% increase in shopping card value"
+      }
+    ]
+  }
+}
