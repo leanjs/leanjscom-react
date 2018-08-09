@@ -70,14 +70,14 @@ const BuildingSolutions = () => (
         </Col>
       </Row>
       <Row>
-        <Col md={6}>
+        <Col center md={6}>
           <P>
             We know how painful digital projects can be. Our team have many
             years experience in digital and have developed a process that works
             with you - from beginning to end.
           </P>
         </Col>
-        <Col md={6}>
+        <Col center md={6}>
           <Image src={'https://picsum.photos/300/200/?random'} />
         </Col>
       </Row>
@@ -102,14 +102,32 @@ const BuildingSolutions = () => (
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col center>
           <P quote>
             “We never thought it possible! We only had a couple of months until
             Christmas but LeanJS sorted us out.
           </P>
+        </Col>
+        <Col center>
           <P quote>
             They were highly professional yet friendly and very effective.”
           </P>
+        </Col>
+      </Row>
+      <Row>
+        <Col center md={6}>
+          <Mugshot
+            image="james-norton-asos"
+            name="Bill Pierce"
+            jobTitle="Editor, AGNI"
+            company="Boston University"
+            color={DARKGREY}
+          />
+        </Col>
+        <Col center md={6}>
+          <LinkButton dark hasArrows>
+            Read our case studies
+          </LinkButton>
         </Col>
       </Row>
     </Section>
