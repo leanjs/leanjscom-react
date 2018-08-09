@@ -18,6 +18,7 @@ import { H2, P } from '../components/text'
 import Iteration from '../components/graphics/Iteration'
 import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
+import Image from '../components/elements/Image'
 import caseStudies from '../components/caseStudies.json'
 
 const CaseStudies = () => (
@@ -61,11 +62,16 @@ const CaseStudies = () => (
           </Col>
         </Row>
         <Row>
-          <CaseStudyExpoBullets
-            content={caseStudies.CaseStudyContent.ABInBev}
-          />
+          <Col md={6}>
+            <CaseStudyExpoBullets
+              content={caseStudies.CaseStudyContent.ABInBev}
+            />
+          </Col>
+          <Col md={6}>
+            <Image src={'https://picsum.photos/300/200'} />
+          </Col>
         </Row>
-        <Row>PIC HERE</Row>
+
         <Row>
           <Col>
             <P style={{ fontSize: '20px' }}>
@@ -82,18 +88,20 @@ const CaseStudies = () => (
           </Col>
         </Row>
         <Row>
-          <Mugshot
-            image="james-norton-asos"
-            name="Georgina Clarke"
-            jobTitle="Account Manager ABinBev"
-            company="ASOS.com"
-            color={DARKGREY}
-          />
-        </Row>
-        <Row>
-          <LinkButton external to="https://medium.com/leanjs">
-            Blog: How apps increase <br /> shopping value by 90%
-          </LinkButton>
+          <Col md={6}>
+            <Mugshot
+              image="james-norton-asos"
+              name="Georgina Clarke"
+              jobTitle="Account Manager ABinBev"
+              company="ASOS.com"
+              color={DARKGREY}
+            />
+          </Col>
+          <Col md={6}>
+            <LinkButton external to="https://medium.com/leanjs">
+              Blog: How apps increase <br /> shopping value by 90%
+            </LinkButton>
+          </Col>
         </Row>
       </Grid>
     </Section>
