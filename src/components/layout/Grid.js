@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  Grid,
+  Grid as FlexboxGrid,
   Row as FlexboxRow,
   Col as FlexboxCol,
 } from 'react-styled-flexboxgrid'
@@ -25,6 +25,10 @@ const Col = ({ xs, sm, md, lg, center, style = {}, ...rest }) => {
 const Row = styled(FlexboxRow)`
   margin-left: 0;
   margin-right: 0;
+`
+
+const Grid = styled(FlexboxGrid)`
+  ${props => props.border && `border: 1px solid #979797;`};
 `
 
 export { Row, Col, Grid }

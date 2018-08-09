@@ -51,6 +51,7 @@ const CaseStudies = () => (
         </Col>
       </Row>
     </Header>
+
     <Section>
       <Grid>
         <Row>
@@ -100,6 +101,63 @@ const CaseStudies = () => (
           <Col md={6}>
             <LinkButton external to="https://medium.com/leanjs">
               Blog: How apps increase <br /> shopping value by 90%
+            </LinkButton>
+          </Col>
+        </Row>
+      </Grid>
+    </Section>
+
+    <Section>
+      <Grid border>
+        <Row>
+          <Col xs={6}>
+            <H2>FingoPay</H2>
+          </Col>
+          <Col xs={6}>
+            <Topic dark>working mvp</Topic>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <CaseStudyExpoBullets
+              content={caseStudies.CaseStudyContent.FingoPay}
+            />
+          </Col>
+          <Col md={6}>
+            <Image src={'https://picsum.photos/300/200'} />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                “We’d been working on the platform for a while but onboarding
+                was an issue.
+              </i>
+            </P>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                LeanJS came in, discovered the issues in real life and provided
+                a workable solution in a fraction of the time we expected.
+                Amazed.”
+              </i>
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Mugshot
+              image="james-norton-asos"
+              name="Georgina Clarke"
+              jobTitle="Account Manager ABinBev"
+              company="ASOS.com"
+              color={DARKGREY}
+            />
+          </Col>
+          <Col md={6}>
+            <LinkButton external to="https://medium.com/leanjs">
+              Blog: Rapid prototyping <br /> IRL, in a pub
             </LinkButton>
           </Col>
         </Row>

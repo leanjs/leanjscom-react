@@ -43,23 +43,25 @@
     "FingoPay": [
       {
         "point": "WHAT",
-        "description": ""
+        "description": "Biometric payment onboarding MVP"
       },
       {
         "point": "HOW",
-        "description": ""
+        "description":
+          "Rapid prototyping, React Native with Circle CI and card.io integration"
       },
       {
         "point": "WHY",
-        "description": ""
+        "description":
+          "Increase user base, create buzz around alternative payment system"
       },
       {
         "point": "TIME",
-        "description": ""
+        "description": "2 week turnaround"
       },
       {
         "point": "RESULT",
-        "description": ""
+        "description": "To be implemented across 100 pubs in the UK"
       }
     ],
     "Boston University": [
