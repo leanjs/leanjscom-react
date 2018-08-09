@@ -101,6 +101,17 @@ const BuildingSolutions = () => (
           />
         </Col>
       </Row>
+      <Row>
+        <Col>
+          <P quote>
+            “We never thought it possible! We only had a couple of months until
+            Christmas but LeanJS sorted us out.
+          </P>
+          <P quote>
+            They were highly professional yet friendly and very effective.”
+          </P>
+        </Col>
+      </Row>
     </Section>
 
     <Section xsBgDark />
