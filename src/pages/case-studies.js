@@ -17,6 +17,7 @@ import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
 import Iteration from '../components/graphics/Iteration'
 import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
+import Mugshot from '../components/mugshots/Mugshot'
 import caseStudies from '../components/caseStudies.json'
 
 const CaseStudies = () => (
@@ -56,13 +57,43 @@ const CaseStudies = () => (
             <H2>ABInBev</H2>
           </Col>
           <Col xs={6}>
-            <Topic dark>code</Topic>
+            <Topic dark>app</Topic>
           </Col>
         </Row>
         <Row>
           <CaseStudyExpoBullets
             content={caseStudies.CaseStudyContent.ABInBev}
           />
+        </Row>
+        <Row>PIC HERE</Row>
+        <Row>
+          <Col>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                “We never thought it possible! We only had a couple of months
+                until Christmas but LeanJS sorted us out.
+              </i>
+            </P>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                They were highly professional yet friendly and very effective.”
+              </i>
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Mugshot
+            image="james-norton-asos"
+            name="Georgina Clarke"
+            jobTitle="Account Manager ABinBev"
+            company="ASOS.com"
+            color={DARKGREY}
+          />
+        </Row>
+        <Row>
+          <LinkButton external to="https://medium.com/leanjs">
+            Blog: How apps increase <br /> shopping value by 90%
+          </LinkButton>
         </Row>
       </Grid>
     </Section>

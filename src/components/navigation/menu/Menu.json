@@ -25,7 +25,7 @@
     "onlyOn": null
   },
   {
-    "to": "/blog",
+    "to": "https://medium.com/leanjs",
     "text": "blog",
     "onlyOn": null
   }
