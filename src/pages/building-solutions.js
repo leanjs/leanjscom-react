@@ -132,7 +132,44 @@ const BuildingSolutions = () => (
       </Row>
     </Section>
 
-    <Section xsBgDark />
+    <Section xsBgDark>
+      <Row>
+        <Col>
+          <H2>Slick handovers with expert tech training</H2>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <P>
+            Anyone who’s completed a digital project knows how important a good
+            handover is.
+          </P>
+          <P>
+            That’s why we don’t just build but train too. This means that when
+            it comes to a product handover, we’re there for you and your team.
+          </P>
+          <P>We can provide training for:</P>
+          <Ul>
+            <Li>
+              The ReactJS ecosystem
+              <Li>Working with GraphQL</Li>
+              <Li>Lean/Agile processes</Li>
+              <Li>Product & UX design</Li>
+            </Li>
+          </Ul>
+        </Col>
+      </Row>
+      <Row>
+        <Col center>
+          <Image src={'https://picsum.photos/300/200/?random'} />
+        </Col>
+      </Row>
+      <Row>
+        <Col center>
+          <LinkButton hasArrows>Find out more about our training</LinkButton>
+        </Col>
+      </Row>
+    </Section>
 
     <Section />
   </React.Fragment>
