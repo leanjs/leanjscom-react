@@ -10,7 +10,7 @@ const CaseStudyExpoBullets = ({ content }) => (
       <Li>
         <SmallIconAndSentence
           icon={
-            <Circle size={60} background={LIGHTGREY}>
+            <Circle size={60} bg={LIGHTGREY}>
               {item.point}
             </Circle>
           }
