@@ -70,16 +70,12 @@ const CaseStudies = () => (
 
         <Row>
           <Col>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                “We never thought it possible! We only had a couple of months
-                until Christmas but LeanJS sorted us out.
-              </i>
+            <P quote>
+              “We never thought it possible! We only had a couple of months
+              until Christmas but LeanJS sorted us out.
             </P>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                They were highly professional yet friendly and very effective.”
-              </i>
+            <P quote>
+              They were highly professional yet friendly and very effective.”
             </P>
           </Col>
         </Row>
@@ -125,18 +121,13 @@ const CaseStudies = () => (
 
         <Row>
           <Col>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                “We’d been working on the platform for a while but onboarding
-                was an issue.
-              </i>
+            <P quote>
+              “We’d been working on the platform for a while but onboarding was
+              an issue.
             </P>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                LeanJS came in, discovered the issues in real life and provided
-                a workable solution in a fraction of the time we expected.
-                Amazed.”
-              </i>
+            <P quote>
+              LeanJS came in, discovered the issues in real life and provided a
+              workable solution in a fraction of the time we expected. Amazed.”
             </P>
           </Col>
         </Row>
@@ -182,18 +173,13 @@ const CaseStudies = () => (
 
         <Row>
           <Col>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                “We’d been working on the platform for a while but onboarding
-                was an issue.
-              </i>
+            <P quote>
+              “We’d been working on the platform for a while but onboarding was
+              an issue.
             </P>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                LeanJS came in, discovered the issues in real life and provided
-                a workable solution in a fraction of the time we expected.
-                Amazed.”
-              </i>
+            <P quote>
+              LeanJS came in, discovered the issues in real life and provided a
+              workable solution in a fraction of the time we expected. Amazed.”
             </P>
           </Col>
         </Row>
@@ -239,17 +225,13 @@ const CaseStudies = () => (
 
         <Row>
           <Col>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                “Our team had been talking about ReactJS for a while and when I
-                realised how effecient it can be, it was time for a change.
-              </i>
+            <P quote>
+              “Our team had been talking about ReactJS for a while and when I
+              realised how effecient it can be, it was time for a change.
             </P>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                LeanJS tailored training for our needs and now we don’t work any
-                othe way.”
-              </i>
+            <P quote>
+              LeanJS tailored training for our needs and now we don’t work any
+              othe way.”
             </P>
           </Col>
         </Row>
@@ -295,15 +277,11 @@ const CaseStudies = () => (
 
         <Row>
           <Col>
-            <P style={{ fontSize: '20px' }}>
-              <i>
-                “I’ve been used UpMentoring for a while and it really helps with
-                getting class feedback.
-              </i>
+            <P quote>
+              “I’ve been used UpMentoring for a while and it really helps with
+              getting class feedback.
             </P>
-            <P style={{ fontSize: '20px' }}>
-              <i>Using it means I can improve classes and teach better!”</i>
-            </P>
+            <P quote>Using it means I can improve classes and teach</P>
           </Col>
         </Row>
         <Row>
