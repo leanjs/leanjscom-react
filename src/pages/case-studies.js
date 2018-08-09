@@ -69,7 +69,7 @@ const CaseStudies = () => (
             />
           </Col>
           <Col md={6}>
-            <Image src={'https://picsum.photos/300/200'} />
+            <Image src={'https://picsum.photos/300/200/?random'} />
           </Col>
         </Row>
 
@@ -124,7 +124,7 @@ const CaseStudies = () => (
             />
           </Col>
           <Col md={6}>
-            <Image src={'https://picsum.photos/300/200'} />
+            <Image src={'https://picsum.photos/300/200/?random'} />
           </Col>
         </Row>
 
@@ -158,6 +158,172 @@ const CaseStudies = () => (
           <Col md={6}>
             <LinkButton external to="https://medium.com/leanjs">
               Blog: Rapid prototyping <br /> IRL, in a pub
+            </LinkButton>
+          </Col>
+        </Row>
+      </Grid>
+    </Section>
+
+    <Section>
+      <Grid>
+        <Row>
+          <Col xs={6}>
+            <H2>Boston University</H2>
+          </Col>
+          <Col xs={6}>
+            <Topic dark>website</Topic>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <CaseStudyExpoBullets
+              content={caseStudies.CaseStudyContent.BostonUniversity}
+            />
+          </Col>
+          <Col md={6}>
+            <Image src={'https://picsum.photos/300/200/?random'} />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                “We’d been working on the platform for a while but onboarding
+                was an issue.
+              </i>
+            </P>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                LeanJS came in, discovered the issues in real life and provided
+                a workable solution in a fraction of the time we expected.
+                Amazed.”
+              </i>
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Mugshot
+              image="james-norton-asos"
+              name="Bill Pierce"
+              jobTitle="Editor, AGNI"
+              company="Boston University"
+              color={DARKGREY}
+            />
+          </Col>
+          <Col md={6}>
+            <LinkButton external to="https://medium.com/leanjs">
+              Blog: AGNI for Boston University Case Study
+            </LinkButton>
+          </Col>
+        </Row>
+      </Grid>
+    </Section>
+
+    <Section>
+      <Grid border>
+        <Row>
+          <Col xs={6}>
+            <H2>ASOS.com</H2>
+          </Col>
+          <Col xs={6}>
+            <Topic dark>trianing</Topic>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <CaseStudyExpoBullets
+              content={caseStudies.CaseStudyContent.ASOScom}
+            />
+          </Col>
+          <Col md={6}>
+            <Image src={'https://picsum.photos/300/200/?random'} />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                “Our team had been talking about ReactJS for a while and when I
+                realised how effecient it can be, it was time for a change.
+              </i>
+            </P>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                LeanJS tailored training for our needs and now we don’t work any
+                othe way.”
+              </i>
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Mugshot
+              image="james-norton-asos"
+              name="Bill Pierce"
+              jobTitle="Editor, AGNI"
+              company="Boston University"
+              color={DARKGREY}
+            />
+          </Col>
+          <Col md={6}>
+            <LinkButton external to="https://medium.com/leanjs">
+              Blog: How we teach React at LeanJS
+            </LinkButton>
+          </Col>
+        </Row>
+      </Grid>
+    </Section>
+
+    <Section>
+      <Grid>
+        <Row>
+          <Col xs={6}>
+            <H2>UpMentoring</H2>
+          </Col>
+          <Col xs={6}>
+            <Topic dark>web app</Topic>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <CaseStudyExpoBullets
+              content={caseStudies.CaseStudyContent.UpMentoring}
+            />
+          </Col>
+          <Col md={6}>
+            <Image src={'https://picsum.photos/300/200/?random'} />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <P style={{ fontSize: '20px' }}>
+              <i>
+                “I’ve been used UpMentoring for a while and it really helps with
+                getting class feedback.
+              </i>
+            </P>
+            <P style={{ fontSize: '20px' }}>
+              <i>Using it means I can improve classes and teach better!”</i>
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Mugshot
+              image="james-norton-asos"
+              name="Bill Pierce"
+              jobTitle="Editor, AGNI"
+              company="Boston University"
+              color={DARKGREY}
+            />
+          </Col>
+          <Col md={6}>
+            <LinkButton external to="https://upmentoring.com">
+              Visit UpMentoring.com
             </LinkButton>
           </Col>
         </Row>
