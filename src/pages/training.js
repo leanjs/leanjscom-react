@@ -188,7 +188,7 @@ const TrainingPage = () => (
               </Ul>
             </P>
             <P>
-              <LinkButton to="todo" dark hasArrows>
+              <LinkButton to="/case-studies#asos" dark hasArrows>
                 ASOS.com team training case study
               </LinkButton>
             </P>
