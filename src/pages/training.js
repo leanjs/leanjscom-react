@@ -172,14 +172,71 @@ const TrainingPage = () => (
             <P>It's intense, fun and very rewarding. Plus, it really works!</P>
             <P>TODO:Photograph of Alex teaching</P>
             <P>
-              <SmallIconAndSentence
-                icon={<TrainingAspectBullet image="team" />}
-                sentence="Immersive training for groups of max 20 participants"
-              />
-              <SmallIconAndSentence
-                icon={<TrainingAspectBullet image="globe" />}
-                sentence="You choose the date and location - anywhere in the world!"
-              />
+              <Ul unstyled>
+                <Li>
+                  <SmallIconAndSentence
+                    icon={<TrainingAspectBullet image="team" />}
+                    sentence="Immersive training for groups of max 20 participants"
+                  />
+                </Li>
+                <Li>
+                  <SmallIconAndSentence
+                    icon={<TrainingAspectBullet image="globe" />}
+                    sentence="You choose the date and location - anywhere in the world!"
+                  />
+                </Li>
+              </Ul>
+            </P>
+            <P>
+              <LinkButton to="todo" dark hasArrows>
+                ASOS.com team training case study
+              </LinkButton>
+            </P>
+          </Col>
+        </Row>
+      </Grid>
+    </Section>
+
+    <Section xsBgDark>
+      <Grid>
+        <Row>
+          <Col>
+            <H2>Our super passionate trainers &amp; coach community</H2>
+            <P>At LeanJS, we have an overarching aim to help people.</P>
+            <P>
+              We have a core team of trainers with specialisms in development,
+              design, project methodologies.
+            </P>
+            <P>
+              With our ReactJS Academy, we’ve also created our coaching
+              community - passing on knowledge and enriching the tech community
+              at the same time. Read more on the ReactJS Academy website.
+            </P>
+            <LinkButton to="/team-principles" hasArrows>
+              Meet the LeanJS team
+            </LinkButton>
+            <P>TODO:WV:20180810:Photos here (instagram feed?)</P>
+          </Col>
+        </Row>
+      </Grid>
+    </Section>
+
+    <Section>
+      <Grid>
+        <Row>
+          <Col>
+            <H2>Our next bootcamp...</H2>
+            <P>
+              <Link to="https://reactjs.academy/react-redux-graphql-bootcamp">
+                ReactJS Academy bootcamp
+              </Link>
+            </P>
+            <P>London | 20 - 26 August 2018</P>
+            <P>TOOD:WV:20180810:Photograph of London venue / bootcamp here</P>
+            <P>
+              <LinkButton to="https://reactjs.academy" external>
+                Visit ReactJS Academy website
+              </LinkButton>
             </P>
           </Col>
         </Row>
