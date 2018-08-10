@@ -17,6 +17,7 @@ import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
+import YouTube from '../components/videos/YouTube'
 
 const TitleText = styled(P)`
   font-size: 24px;
@@ -69,7 +70,9 @@ const TrainingPage = () => (
         </Row>
         <Row>
           <Col md={12}>
-            <P>(TODO:Video here)</P>
+            <P>
+              <YouTube url="https://www.youtube.com/embed/2-IPT7Plsfc" />
+            </P>
           </Col>
         </Row>
         <Row>
