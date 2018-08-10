@@ -174,11 +174,11 @@ const TrainingPage = () => (
             <P>
               <SmallIconAndSentence
                 icon={<TrainingAspectBullet image="team" />}
-                sentence="blah"
+                sentence="Immersive training for groups of max 20 participants"
               />
               <SmallIconAndSentence
                 icon={<TrainingAspectBullet image="globe" />}
-                sentence="blah"
+                sentence="You choose the date and location - anywhere in the world!"
               />
             </P>
           </Col>
