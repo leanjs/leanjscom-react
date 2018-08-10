@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// Responsive width youtube embed, from
+// https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 const YouTubeInner = styled.div`
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
