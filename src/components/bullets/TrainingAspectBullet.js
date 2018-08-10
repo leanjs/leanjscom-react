@@ -20,6 +20,8 @@ const TrainingAspectBullet = ({ image, dark }) => (
     images={images}
     image={image}
     hasBorder={!dark}
+    hasPadding={image !== 'globe'}
+    backgroundSize={image === 'globe' ? `121%` : null}
   />
 )
 

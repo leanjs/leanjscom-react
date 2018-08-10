@@ -8,7 +8,7 @@ const CircleOuter = styled.div`
   border-radius: 100%;
   height: ${props => (props.size ? props.size : defaultSize)}px;
   width: ${props => (props.size ? props.size : defaultSize)}px;
-  padding: 0.5em;
+  padding: ${props => (props.hasPadding ? `0.5em` : `0`)};
   ${props => (props.bg ? `background: ${props.bg}` : null)};
   border: ${props =>
     props.hasBorder
@@ -26,6 +26,8 @@ const CircleInner = styled.div`
           props.backgroundImage
         }) center/contain no-repeat scroll;`
       : null};
+  ${props =>
+    props.backgroundSize ? `background-size:${props.backgroundSize}` : null};
   width: 100%;
   height: 100%;
   margin: 0 auto;

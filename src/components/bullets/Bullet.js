@@ -14,9 +14,10 @@ const Bullet = ({
   color,
   bg,
   size,
-  noPadding = false,
+  hasPadding = true,
   borderSize = 4,
   hasBorder = true,
+  backgroundSize = null,
 }) => (
   <BulletInner>
     <Circle
@@ -24,8 +25,10 @@ const Bullet = ({
       bg={bg}
       size={size}
       hasBorder={hasBorder}
+      hasPadding={hasPadding}
       borderSize={borderSize}
       backgroundImage={requireFrom(image, images)}
+      backgroundSize={backgroundSize}
     />
   </BulletInner>
 )
