@@ -14,7 +14,7 @@ import { H2, P } from '../components/text'
 import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
-import caseStudies from '../components/caseStudies.json'
+import caseStudies from '../content/caseStudies.json'
 
 const CaseStudies = () => (
   <React.Fragment>
