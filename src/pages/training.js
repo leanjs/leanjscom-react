@@ -19,7 +19,7 @@ import { H2, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
-import { LONDON_BOOTCAMP, ALEX_TEACHING } from '../config/images'
+import { LONDON_BOOTCAMP, ALEX_TEACHING, CLIENTS_LOGOS } from '../config/images'
 import { styleChildLinkColor } from '../components/navigation/Link'
 
 const TitleText = styled(P)`
@@ -70,8 +70,7 @@ const TrainingPage = () => (
         <Row>
           <Col md={12}>
             <P>
-              (TODO:Image here containing logos for asos, trainline, FT,
-              Blockchain, ABInBev)
+              <img src={CLIENTS_LOGOS} />
             </P>
           </Col>
         </Row>

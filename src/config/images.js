@@ -3,3 +3,6 @@ export const LONDON_BOOTCAMP =
 
 export const ALEX_TEACHING =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/companyPitch.png?alt=media'
+
+export const CLIENTS_LOGOS =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/clients-logos.png?alt=media'
