@@ -17,7 +17,7 @@ const TopicInner = styled.div`
   display: inline-block;
 
   text-transform: uppercase;
-  font-family: monospace;
+  font-size: 0.7em;
   letter-spacing: ${letterSpacing};
   text-indent: ${letterSpacing};
   text-align: center;
