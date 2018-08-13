@@ -195,6 +195,38 @@ const BuildingSolutions = () => (
         </P>
       </Col>
     </Row>
+    <Row>
+      <Col md={4}>
+        <SmallIconAndSentence
+          icon={<BenefitBullet image="tools" />}
+          sentence="Tailored, bespoke support packages"
+        />
+      </Col>
+      <Col md={4}>
+        <SmallIconAndSentence
+          icon={<BenefitBullet image="code" />}
+          sentence="Proven, open sourced tech-stack under the hood that gives your team total flexibility"
+        />
+      </Col>
+      <Col md={4}>
+        <SmallIconAndSentence
+          icon={<BenefitBullet image="expand" />}
+          sentence="Robust, scalable technology that will live far into the future"
+        />
+      </Col>
+    </Row>
+    <Row>
+      <Col center md={6}>
+        <LinkButton dark hasArrows to="/case-studies">
+          Read our case studies
+        </LinkButton>
+      </Col>
+      <Col center md={6}>
+        <LinkButton hasArrows to="/development-services">
+          Development services
+        </LinkButton>
+      </Col>
+    </Row>
     <Section />
   </React.Fragment>
 )
