@@ -103,15 +103,15 @@ class ContactForm extends Component {
                   'interestedInDigitalSolutions'
                 )}
                 checked={interestedInDigitalSolutions}
-              />{' '}
-              Digital solutions
+                label="Digital solutions`"
+              />
             </Li>
             <Li>
               <Checkbox
                 onChange={this.handleCheckboxChanged('interestedInTraining')}
                 checked={interestedInTraining}
-              />{' '}
-              Training
+                label="Training"
+              />
             </Li>
             <Li>
               <Checkbox
@@ -119,8 +119,8 @@ class ContactForm extends Component {
                   'interestedInBothDigitalSolutionsAndTraining'
                 )}
                 checked={interestedInBothDigitalSolutionsAndTraining}
-              />{' '}
-              Both!
+                label="Both!"
+              />
             </Li>
           </Ul>
         </div>
@@ -140,13 +140,15 @@ class ContactForm extends Component {
           <Checkbox
             onChange={this.handleCheckboxChanged('allowMarketing')}
             checked={allowMarketing}
+            label={
+              <label>
+                We do not spam - ever. But, if you're up for it, we'd love to
+                tell you about any cool new services or offers that we've got
+                going on. Interested? Tick the box! Not sure, here's our{' '}
+                <Link>Privacy Policy</Link>
+              </label>
+            }
           />
-          <label>
-            We do not spam - ever. But, if you're up for it, we'd love to tell
-            you about any cool new services or offers that we've got going on.
-            Interested? Tick the box! Not sure, here's our{' '}
-            <Link>Privacy Policy</Link>
-          </label>
         </div>
 
         <button disabled={isInvalid} type="submit">

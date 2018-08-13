@@ -11,6 +11,9 @@ const StyledCheckbox = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
+
+    cursor: pointer;
+
     .displayCheckboxInner {
       background-color: transparent;
       background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+);
@@ -37,21 +40,40 @@ const StyledCheckbox = styled.div`
   vertical-align: middle;
 `
 
-const Checkbox = props => (
-  <StyledCheckbox {...props}>
+const onClick = props => () =>
+  props.onChange({ target: { checked: !props.checked } })
+
+const Label = props => {
+  if (!props.label) {
+    return null
+  }
+
+  // Note: have not used a Styled Component for this (and other) divs because they do not fire onClick events
+  return (
     <div
-      className="displayCheckbox"
-      onClick={() => props.onChange({ target: { checked: !props.checked } })}
+      style={{ cursor: 'pointer', display: 'inline' }}
+      onClick={onClick(props)}
     >
-      <div className="displayCheckboxInner" />
+      {props.label}
     </div>
-    <input
-      type="checkbox"
-      checked={props.checked}
-      onClick={props.onChange}
-      className="actualCheckbox"
-    />
-  </StyledCheckbox>
+  )
+}
+
+const Checkbox = props => (
+  <div>
+    <StyledCheckbox {...props}>
+      <div className="displayCheckbox" onClick={onClick(props)}>
+        <div className="displayCheckboxInner" />
+      </div>
+      <input
+        type="checkbox"
+        checked={props.checked}
+        onClick={props.onChange}
+        className="actualCheckbox"
+      />
+    </StyledCheckbox>{' '}
+    <Label {...props} />
+  </div>
 )
 
 export default Checkbox
