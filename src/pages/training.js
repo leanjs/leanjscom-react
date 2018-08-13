@@ -18,6 +18,7 @@ import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
+import Instagram from '../components/feeds/Instagram'
 
 const TitleText = styled(P)`
   font-size: 24px;
@@ -218,7 +219,9 @@ const TrainingPage = () => (
             <LinkButton to="/team-principles" hasArrows>
               Meet the LeanJS team
             </LinkButton>
-            <P>TODO:WV:20180810:Photos here (instagram feed?)</P>
+            <P>
+              <Instagram />
+            </P>
           </Col>
         </Row>
       </Grid>
