@@ -25,6 +25,7 @@ const Col = ({ xs, sm, md, lg, center, style = {}, ...rest }) => {
 const Row = styled(FlexboxRow)`
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 1em;
 `
 
 const Grid = styled(FlexboxGrid)`
