@@ -18,34 +18,13 @@ import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
 
-const OurProcessLinks = [
-  {
-    text: "What is 'Lean'?",
-    to: '#whatislean',
-  },
-  {
-    text: 'Our lean process',
-    to: '#ourleanprocess',
-  },
-  {
-    text: 'How long it takes',
-    to: '#howlongittakes',
-  },
-  {
-    text: 'What is an MVP?',
-    to: '#whatisanmvp',
-  },
-  {
-    text: 'Applying Lean to training',
-    to: '#applyingleantotraining',
-  },
-]
+import ourProcess from '../content/ourProcess.json'
 
 const OurProcess = () => (
   <React.Fragment>
     <Header
       titleLines={['Our process']}
-      links={OurProcessLinks}
+      links={ourProcess.OurProcessLinks}
       bgImg="ourprocess"
     >
       <Row>
@@ -102,62 +81,22 @@ const OurProcess = () => (
               <Iteration />
             </P>
 
-            <Line verticalCenter>Learn</Line>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="We time talking with you  and your team, gauging expectations and business needs"
-            />
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="Speak to users to their core needs and ensure we prioritise how they think"
-            />
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="Look at competitors in the market, and outside your sector, to evaluate how to differentiate your digital solution"
-            />
-            <P>
-              <LinkButton to="/building-solutions" withArrows>
-                Learn more about our design services
-              </LinkButton>
-            </P>
-
-            <Line verticalCenter>Build</Line>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="We start ‘low-fi’ so we can test the core functionality and content against user needs as soon as humanly possible. Minimal viable products (MVPs) first, always."
-            />
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="Design, development and accessibility best practices are baked in to ensure future-friendly MVPs that you (with our help or not) can take further into the  future."
-            />
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="Under the hood, we use the latest ReactJS ecosystem technologies. It’s stable, quick to iterate upon and future proof."
-            />
-            <P>
-              <LinkButton to="/building-solutions" withArrows>
-                Learn more about our dev stack and build process
-              </LinkButton>
-            </P>
-
-            <Line verticalCenter>Test</Line>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="We put digital solutions in front of target users as early as possible. As soon as we have a working prototype, we test."
-            />
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="We actually watch and speak with users in our tests. Qualitative insight helps us understand exactly how people use digital products. "
-            />
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="Quality assurance (QA) is essential for such innovative technologies. We run a myriad of real-world tests to make sure your MVP wont break."
-            />
-            <P>
-              <LinkButton to="/building-solutions" withArrows dark>
-                Read our case studies
-              </LinkButton>
-            </P>
+            {ourProcess.OurProcessContent.HowItWorks.map(section => (
+              <React.Fragment>
+                <Line verticalCenter>{section.heading}</Line>
+                {section.sentences.map(sentence => (
+                  <SmallIconAndSentence
+                    icon={<BenefitBullet image="chat" />}
+                    sentence={sentence}
+                  />
+                ))}
+                <P>
+                  <LinkButton to={section.button.to} withArrows>
+                    {section.button.text}
+                  </LinkButton>
+                </P>
+              </React.Fragment>
+            ))}
           </Col>
         </Row>
       </Grid>
