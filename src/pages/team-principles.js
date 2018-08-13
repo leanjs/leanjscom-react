@@ -7,12 +7,14 @@ import Ul, { Li } from '../components/layout/Ul'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
-import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
+import { WHITE, DARKGREY, LIGHTGREY, EXTRADARKGREY } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
+import Line from '../components/sections/Line'
+import Link, { styleChildLinkColor } from '../components/navigation/Link'
 
 const teamLinks = [
   {
@@ -29,6 +31,10 @@ const teamLinks = [
   },
 ]
 
+const ValueCol = styled(Col)`
+  ${styleChildLinkColor(EXTRADARKGREY)};
+`
+
 const Team = () => (
   <React.Fragment>
     <Header
@@ -36,6 +42,64 @@ const Team = () => (
       links={teamLinks}
       bgImg="home"
     />
+    <Section>
+      <Row>
+        <Col center>
+          <H2>Our values and principles</H2>
+        </Col>
+      </Row>
+      <Row>
+        <Col center>
+          <P>
+            Our team come from various backgrounds, life experiences and
+            countries but all have a shared vision….
+          </P>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Line verticalCenter>Our core values</Line>
+        </Col>
+      </Row>
+      <Row>
+        <ValueCol md={4}>
+          <SmallIconAndSentence
+            icon={<BenefitBullet image="head" />}
+            sentence="Be unafraid to learn from everyone and believe in teaching what we know"
+          />
+          <Link dark>Supporting principles</Link>
+          <Ul>
+            <Li>Keep searching, keep learning</Li>
+            <Li>Share - because sharing is caring</Li>
+            <Li>Build aligned minds, not just teams</Li>
+            <Li>More than the sum of our parts</Li>
+          </Ul>
+        </ValueCol>
+        <ValueCol md={4}>
+          <SmallIconAndSentence
+            icon={<BenefitBullet image="heart" />}
+            sentence="Always aim to treat others how we would want to be treated"
+          />
+          <Link>Supporting principles</Link>
+          <Ul>
+            <Li>Treat others how you want to be treated</Li>
+            <Li>Transparently true to our methodology</Li>
+          </Ul>
+        </ValueCol>
+        <ValueCol md={4}>
+          <SmallIconAndSentence
+            icon={<BenefitBullet image="people" />}
+            sentence="Ensure what we do is meaningful and always people-centred"
+          />
+          <Link dark>Supporting principles</Link>
+          <Ul>
+            <Li>People-centred products - always</Li>
+            <Li>Be unafraid</Li>
+            <Li>Purpose over profits</Li>
+          </Ul>
+        </ValueCol>
+      </Row>
+    </Section>
   </React.Fragment>
 )
 

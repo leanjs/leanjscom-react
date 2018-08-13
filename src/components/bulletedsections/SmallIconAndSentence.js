@@ -16,7 +16,7 @@ const Cell = styled.div`
   padding-left: 15px;
 `
 
-const SmallIconAndSentence = ({ icon, ...props }) => (
+const SmallIconAndSentence = ({ icon, children, ...props }) => (
   <Table>
     <Row>
       <Cell>{icon}</Cell>
