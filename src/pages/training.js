@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Header from '../components/layout/Header'
 import Section from '../components/layout/Section'
 import Ul, { Li } from '../components/layout/Ul'
-import TrainingAspectBullet from '../components/bullets/TrainingAspectBullet'
 import ValueBullet from '../components/bullets/ValueBullet'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
@@ -41,7 +40,7 @@ const TrainingPage = () => (
           <Ul unstyled>
             <Li>
               <SmallIconAndSentence
-                icon={<TrainingAspectBullet image="team" dark />}
+                icon={<BenefitBullet image="team" dark />}
                 sentence="Take your team and digital solutions further into the future"
               />
             </Li>
@@ -51,7 +50,7 @@ const TrainingPage = () => (
           <Ul unstyled>
             <Li>
               <SmallIconAndSentence
-                icon={<TrainingAspectBullet image="react" dark />}
+                icon={<BenefitBullet image="react" dark />}
                 sentence="Pioneering the first cutting-edge ReactJS training in Europe"
               />
             </Li>
@@ -186,13 +185,13 @@ const TrainingPage = () => (
               <Ul unstyled>
                 <Li>
                   <SmallIconAndSentence
-                    icon={<TrainingAspectBullet image="team" />}
+                    icon={<BenefitBullet image="team" />}
                     sentence="Immersive training for groups of max 20 participants"
                   />
                 </Li>
                 <Li>
                   <SmallIconAndSentence
-                    icon={<TrainingAspectBullet image="globe" />}
+                    icon={<BenefitBullet image="globe" />}
                     sentence="You choose the date and location - anywhere in the world!"
                   />
                 </Li>
