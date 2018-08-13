@@ -87,7 +87,7 @@ const Instagram = ({ numPhotos = 6, photosPerRow = 3 }) => (
       {arrayChunk(photos.slice(0, numPhotos), photosPerRow).map(chunk => (
         <Row>
           {chunk.map(photo => (
-            <Col sm={4}>
+            <Col xs={4}>
               <img src={photo.url} />
             </Col>
           ))}
