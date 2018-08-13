@@ -10,7 +10,7 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import Mugshot from '../components/mugshots/Mugshot'
-import { WHITE } from '../config/styles'
+import { WHITE, EXTRADARKGREY } from '../config/styles'
 import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
@@ -20,12 +20,17 @@ import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
 import { LONDON_BOOTCAMP } from '../config/images'
+import { styleChildLinkColor } from '../components/navigation/Link'
 
 const TitleText = styled(P)`
   font-size: 24px;
 `
 const InlineItems = styled.div`
   padding-left: 50px;
+`
+
+const BootcampCol = styled(Col)`
+  ${styleChildLinkColor(EXTRADARKGREY)};
 `
 
 const TrainingPage = () => (
@@ -231,7 +236,7 @@ const TrainingPage = () => (
     <Section>
       <Grid>
         <Row>
-          <Col>
+          <BootcampCol>
             <H2>Our next bootcamp...</H2>
             <P>
               <Link to="https://reactjs.academy/react-redux-graphql-bootcamp">
@@ -247,7 +252,7 @@ const TrainingPage = () => (
                 Visit ReactJS Academy website
               </LinkButton>
             </P>
-          </Col>
+          </BootcampCol>
         </Row>
       </Grid>
     </Section>

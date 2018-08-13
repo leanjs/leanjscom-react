@@ -10,7 +10,6 @@ const Section = styled.section`
   ${props => (props.top ? 'margin-top: -117px;' : '')} padding-bottom: 30px;
   background-color: ${props => props.xsBgDark && EXTRADARKGREY};
   color: ${props => props.xsBgDark && WHITE};
-  ${props => styleChildLinkColor(props.xsBgDark ? WHITE : EXTRADARKGREY)};
 `
 
 Section.displayName = 'Section'
