@@ -19,7 +19,7 @@ import { H2, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
-import { LONDON_BOOTCAMP } from '../config/images'
+import { LONDON_BOOTCAMP, ALEX_TEACHING } from '../config/images'
 import { styleChildLinkColor } from '../components/navigation/Link'
 
 const TitleText = styled(P)`
@@ -180,7 +180,9 @@ const TrainingPage = () => (
               tools and processes.
             </P>
             <P>It's intense, fun and very rewarding. Plus, it really works!</P>
-            <P>TODO:Photograph of Alex teaching</P>
+            <P>
+              <img src={ALEX_TEACHING} />
+            </P>
             <P>
               <Ul unstyled>
                 <Li>
