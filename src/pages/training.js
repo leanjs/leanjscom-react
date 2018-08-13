@@ -19,6 +19,7 @@ import { H2, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
+import { LONDON_BOOTCAMP } from '../config/images'
 
 const TitleText = styled(P)`
   font-size: 24px;
@@ -233,12 +234,17 @@ const TrainingPage = () => (
           <Col>
             <H2>Our next bootcamp...</H2>
             <P>
-              <Link to="https://reactjs.academy/react-redux-graphql-bootcamp">
-                ReactJS Academy bootcamp
+              <Link
+                to="https://reactjs.academy/react-redux-graphql-bootcamp"
+                dark
+              >
+                ReactJS Academy bootcamp: React, Redux, &amp; GraphQL
               </Link>
             </P>
             <P>London | 20 - 26 August 2018</P>
-            <P>TOOD:WV:20180810:Photograph of London venue / bootcamp here</P>
+            <P>
+              <img src={LONDON_BOOTCAMP} />
+            </P>
             <P>
               <LinkButton to="https://reactjs.academy" external>
                 Visit ReactJS Academy website
