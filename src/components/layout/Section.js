@@ -2,7 +2,6 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { SCREEN_SM_MIN, SCREEN_XS_MAX } from '../utils'
 import { EXTRADARKGREY, WHITE, FONT_FAMILY } from '../../config/styles'
-import { styleChildLinkColor } from '../navigation/Link'
 
 const Section = styled.section`
   ${FONT_FAMILY}
