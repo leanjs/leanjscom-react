@@ -206,7 +206,9 @@ const CaseStudies = () => (
       <Grid border>
         <Row>
           <Col xs={6}>
-            <H2>ASOS.com</H2>
+            <H2>
+              <a name="asos" />ASOS.com
+            </H2>
           </Col>
           <Col xs={6}>
             <Topic dark>trianing</Topic>

@@ -19,6 +19,14 @@ export const requireFrom = (image, images) => {
   throw new Error('Unknown image')
 }
 
+export const arrayChunk = (myArray, chunkSize) =>
+  myArray
+    .map(
+      (curr, i) =>
+        i % chunkSize === 0 ? myArray.slice(i, i + chunkSize) : null
+    )
+    .filter(e => e !== null)
+
 const UseThisInGatsby2WithReact163ToHidDisplayMultipleComponents = ({
   children,
   ...props
