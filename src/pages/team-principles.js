@@ -99,6 +99,47 @@ const Team = () => (
           </Ul>
         </ValueCol>
       </Row>
+      <Row>
+        <Col center>
+          <LinkButton external to="https://medium.com/leanjs">
+            Blog: How we created <br /> our brand identity
+          </LinkButton>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+          <Line verticalCenter>Not-for-proft partnerships and discounts</Line>
+        </Col>
+      </Row>
+      <Row>
+        <Col center md={4}>
+          <P>
+            Do you work for a not-for-profit organisation and share our values?
+            Then we’d love to hear from you!
+          </P>
+        </Col>
+        <Col center md={4}>
+          <P>
+            We’d love to partner with you and your team to help change the world
+            for the better.
+          </P>
+        </Col>
+        <Col center md={4}>
+          <P>
+            To that end, we are always open to offering discounts on our
+            training, design and development services - depending on the
+            project.
+          </P>
+        </Col>
+      </Row>
+      <Row>
+        <Col center>
+          <LinkButton hasArrows to="/contact">
+            Contact us and let's work together!
+          </LinkButton>
+        </Col>
+      </Row>
     </Section>
   </React.Fragment>
 )
