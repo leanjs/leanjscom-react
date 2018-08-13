@@ -234,10 +234,7 @@ const TrainingPage = () => (
           <Col>
             <H2>Our next bootcamp...</H2>
             <P>
-              <Link
-                to="https://reactjs.academy/react-redux-graphql-bootcamp"
-                dark
-              >
+              <Link to="https://reactjs.academy/react-redux-graphql-bootcamp">
                 ReactJS Academy bootcamp: React, Redux, &amp; GraphQL
               </Link>
             </P>
