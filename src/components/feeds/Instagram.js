@@ -82,7 +82,7 @@ const InstagramOverlay = styled.div`
 `
 
 const Instagram = ({ numPhotos = 6, photosPerRow = 3 }) => (
-  <InstagramInner photosPerRow={photosPerRow}>
+  <InstagramInner>
     <Grid>
       {arrayChunk(photos.slice(0, numPhotos), photosPerRow).map(chunk => (
         <Row>
