@@ -1,40 +1,35 @@
 import React from 'react'
 import GatsbyLink from 'gatsby-link'
 import styled from 'styled-components'
-import { FONT_FAMILY, WHITE } from '../../config/styles'
+import { FONT_FAMILY, WHITE, EXTRADARKGREY } from '../../config/styles'
 
 export const ANCHOR_STYLE = `
     cursor: pointer;
-    color: blue;
     text-decoration: underline;
     font-size: 18px;
     font-weight: 500;
     font-style: normal;
     line-height: 1.5;
-    color: ${WHITE};
+    color: ${props => (props.dark ? WHITE : EXTRADARKGREY)};
     ${FONT_FAMILY}
 `
 
+const LinkPseudoClasses = ['link', 'visited', 'hover', 'active']
+
+const styleLinks = (selector, styles) => `
+  ${selector}, ${LinkPseudoClasses.map(
+  pseudoclass => `${selector}:${pseudoclass}`
+).join(', ')} {
+    ${ANCHOR_STYLE}
+  }
+`
+
 const BasicLink = styled.a`
-  ${ANCHOR_STYLE};
+  ${styleLinks('&', ANCHOR_STYLE)};
 `
 
 export const styleChildLinkColor = color => `
-  a {
-    color: ${color};
-  }
-  a:link {
-    color: ${color};
-  }
-  a:visited {
-    color: ${color};
-  }
-  a:hover {
-    color: ${color};
-  }
-  a:active {
-    color: ${color};
-  }
+  ${styleLinks('a', `color: ${color};`)}
 `
 
 const RouterLink = styled(GatsbyLink)`
