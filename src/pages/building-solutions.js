@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Header from '../components/layout/Header'
 import Section from '../components/layout/Section'
 import Ul, { Li } from '../components/layout/Ul'
-import Topic from '../components/labels/Topic'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
@@ -12,10 +11,8 @@ import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
-import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
-import caseStudies from '../components/caseStudies.json'
 
 const BuildingSolutionsLinks = [
   {
