@@ -25,6 +25,12 @@ const StyledCheckbox = styled.div`
       visibility: ${props => (props.checked ? 'visible' : 'hidden')};
     }
   }
+
+  .actualCheckbox {
+    position: absolute;
+    left: -9999999px;
+  }
+
   height: ${props => (props.size ? props.size : defaultSize)}em;
   width: ${props => (props.size ? props.size : defaultSize)}em;
   display: inline-block;
@@ -39,7 +45,12 @@ const Checkbox = props => (
     >
       <div className="displayCheckboxInner" />
     </div>
-    <input type="hidden" value={props.checked ? '1' : '0'} />
+    <input
+      type="checkbox"
+      checked={props.checked}
+      onClick={props.onChange}
+      className="actualCheckbox"
+    />
   </StyledCheckbox>
 )
 
