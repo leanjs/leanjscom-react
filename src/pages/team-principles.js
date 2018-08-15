@@ -135,7 +135,7 @@ const Team = () => (
       </Row>
       <Row>
         <Col center>
-          <LinkButton hasArrows to="/contact">
+          <LinkButton hasArrows to="#contact">
             Contact us and let's work together!
           </LinkButton>
         </Col>
