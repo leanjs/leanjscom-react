@@ -54,6 +54,7 @@ const Team = () => (
     <Section>
       <Row>
         <Col center>
+          <a name="ourValues" />
           <H2>Our values and principles</H2>
         </Col>
       </Row>
@@ -118,6 +119,7 @@ const Team = () => (
 
       <Row>
         <Col>
+          <a name="notForProfitDiscounts" />
           <Line verticalCenter>Not-for-proft partnerships and discounts</Line>
         </Col>
       </Row>
@@ -154,6 +156,7 @@ const Team = () => (
       <Grid>
         <Row>
           <Col>
+            <a name="teamMembers" />
             <H2>Our team</H2>
             <P>
               The team all have their specialisms and are always happy to talk
