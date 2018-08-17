@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { MEDIUMGREY } from '../../config/styles'
+import {
+  MEDIUMGREY,
+  SPACING_LARGE,
+  SPACING_EXTRALARGE,
+} from '../../config/styles'
+
+const getLineWidth = props => (props.wide ? SPACING_EXTRALARGE : SPACING_LARGE)
 
 const LineOuter = styled.div`
-  padding-left: ${props => props.lineWidth + 10}px;
+  padding-left: ${props => parseFloat(getLineWidth(props)) + 1}rem;
   position: relative;
 `
 
@@ -11,14 +17,14 @@ const LineInner = styled.div`
   position: absolute;
   left: 0;
   top: ${props => (props.verticalCenter ? `50%` : `0`)};
-  width: ${props => props.lineWidth}px;
+  width: ${props => getLineWidth(props)};
   height: 3px;
   background: ${MEDIUMGREY};
 `
 
-const Line = ({ lineWidth = 35, children, verticalCenter = false }) => (
-  <LineOuter lineWidth={lineWidth}>
-    <LineInner lineWidth={lineWidth} verticalCenter={verticalCenter} />
+const Line = ({ wide = false, children, verticalCenter = false }) => (
+  <LineOuter wide={wide}>
+    <LineInner wide={wide} verticalCenter={verticalCenter} />
     {children}
   </LineOuter>
 )
