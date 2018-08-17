@@ -7,7 +7,7 @@ export const getForegroundColor = props => (props.dark ? WHITE : DARKGREY)
 
 const setColours = props => `
   	background-color:${getBackgroundColor(props)};
-  	color:${getForegroundColor(props)};
+  	color:${getForegroundColor(props)} !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, ${getBoxshadowOpacity(
       props
     )}), 0 0 2px 0 rgba(0, 0, 0, 0.12);

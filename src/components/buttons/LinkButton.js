@@ -7,7 +7,7 @@ const newWindow = `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGl
 
 const LinkButton = styled(Link)`
   ${DEFAULT_BUTTON_STYLES};
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
   font-weight: normal;
   &:link {
