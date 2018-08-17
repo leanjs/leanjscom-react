@@ -22,6 +22,7 @@ export const DEFAULT_BUTTON_STYLES = props => `
 	border: solid 1px transparent;
 	margin: 1em 0;
 	padding: 0.5em 1em;
+	cursor:pointer;
 	${setColours(props)};
 	${allowFullWidth(props)};
 	${allowArrows(props)};
@@ -29,6 +30,9 @@ export const DEFAULT_BUTTON_STYLES = props => `
 
 const Button = styled.button`
   ${DEFAULT_BUTTON_STYLES};
+  &:active {
+    transform: translate(1px, 1px);
+  }
 `
 
 export default Button

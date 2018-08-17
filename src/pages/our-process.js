@@ -163,19 +163,19 @@ const OurProcess = () => (
             <P>
               <img src={RICHARD_TEACHING} />
             </P>
-            <Line>Learn</Line>
+            <Line verticalCenter>Learn</Line>
             <P>
               Trainers are builders, searching for and implementing the latest
               methods and tech. Both in personal and client projects. We’re
               constantly learning too!
             </P>
-            <Line>Build</Line>
+            <Line verticalCenter>Build</Line>
             <P>
               We create and add to our curriculum when research shows to do so.
               We also creating ‘MVP’ meetups to give us a basis on which to test
               effectiveness/need
             </P>
-            <Line>Test</Line>
+            <Line verticalCenter>Test</Line>
             <P>
               Students and coaches provide us with essential qualitiative
               feedback on all trainings
