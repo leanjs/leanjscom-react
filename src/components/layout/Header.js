@@ -6,34 +6,34 @@ import { Link as LinkScroll } from 'react-scroll'
 import Grid, { Col, Row } from '../layout/Grid'
 import Ul, { Li } from '../layout/Ul'
 import { H1 as BaseH1, H2 as BaseH2 } from '../text'
-import { WHITE, EXTRADARKGREY } from '../../config/styles'
+import {
+  WHITE,
+  EXTRADARKGREY,
+  FONT_SIZE_LARGE,
+  FONT_SIZE_EXTRALARGE,
+  SPACING_STANDARD,
+  LAYOUT_SPACING_MEDIUM,
+  LAYOUT_SPACING_LARGE,
+} from '../../config/styles'
 import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
 import { ANCHOR_STYLE } from '../navigation/Link'
 import Menu from '../navigation/menu'
 import ConcentricCircles from '../decoration/ConcentricCircles'
 import withWidth from 'react-width'
 
-// import { Link as LinkScroll } from 'react-scroll'
-
 const H1 = styled(BaseH1)`
-  font-size: 64px !important;
+  font-size: ${FONT_SIZE_EXTRALARGE} !important;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
   color: ${WHITE};
-  @media (max-width: ${SCREEN_SM_MAX}) {
-    font-size: 58px;
-  }
-  @media (max-width: ${SCREEN_XS_MAX}) {
-    font-size: 40px;
-  }
 `
 const HeaderSection = styled(Section)`
 
   background-color: ${EXTRADARKGREY};
-  min-height: 700px;
+  min-height: ${LAYOUT_SPACING_LARGE};
   position: relative;
   z-index:2;
 
@@ -52,7 +52,7 @@ const HeaderSection = styled(Section)`
     background-size: cover;
   @media (min-width: ${SCREEN_SM_MIN}) {
     height: 100vh;
-    padding: 175px 0;
+    padding: ${LAYOUT_SPACING_MEDIUM} 0;
   }
 `
 
@@ -67,9 +67,9 @@ const HeaderTop = styled.div`
 
 const backgroundCirclesSize = ({ isMobile, windowWidth }) => {
   if (windowWidth !== null) {
-    return windowWidth * (isMobile ? 0.85 : 0.25) * 2
+    return (windowWidth * (isMobile ? 0.85 : 0.25) * 2) / 18
   } else {
-    return 2000
+    return 2000 / 18
   }
 }
 
@@ -77,28 +77,28 @@ const BackgroundCircles = styled.div`
   position: absolute;
   z-index: -1;
 
-  top: -${props => backgroundCirclesSize(props) * 0.3}px;
-  right: -${props => backgroundCirclesSize(props) * 0.4}px;
+  top: -${props => backgroundCirclesSize(props) * 0.3}rem;
+  right: -${props => backgroundCirclesSize(props) * 0.4}rem;
 `
 
 const H2Header = styled(BaseH2)`
   padding: 0 !important;
   margin: 0 !important;
-  font-size: 48px !important;
+  font-size: ${FONT_SIZE_LARGE} !important;
   color: ${WHITE};
 `
 
 const TITLE_BACKGROUND = `
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: ${SPACING_STANDARD};
+  padding-right: ${SPACING_STANDARD};
   display: inline-block;
 `
 const TitleBackground = styled.span`
   &:first-child  {
-    padding-top: 15px;
+    padding-top: ${SPACING_STANDARD};
   }
   &:last-child {
-    padding-bottom: 20px;
+    padding-bottom: ${SPACING_STANDARD};
   }
   ${TITLE_BACKGROUND};
 `
@@ -115,16 +115,16 @@ const WHITE_TEXT = `
 const SubTitleBackground = styled.div`
   ${TITLE_BACKGROUND};
   ${WHITE_TEXT};
-  padding: 15px;
+  padding: ${SPACING_STANDARD};
   ul {
-    margin-top: 20px;
+    margin-top: ${SPACING_STANDARD};
   }
 `
 
 const Links = styled.div`
   ${TITLE_BACKGROUND};
   ${WHITE_TEXT};
-  padding: 15px;
+  padding: ${SPACING_STANDARD};
 `
 
 const Children = styled.div`
