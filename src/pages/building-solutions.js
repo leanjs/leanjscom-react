@@ -129,7 +129,7 @@ const BuildingSolutions = () => (
       </Row>
     </Section>
 
-    <Section xsBgDark>
+    <Section dark>
       <Row>
         <Col>
           <H2>Slick handovers with expert tech training</H2>

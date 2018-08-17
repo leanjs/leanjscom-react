@@ -151,7 +151,7 @@ const OurProcess = () => (
       </Grid>
     </Section>
 
-    <Section xsBgDark>
+    <Section dark>
       <Grid>
         <Row>
           <Col>

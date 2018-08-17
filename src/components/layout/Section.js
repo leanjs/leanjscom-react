@@ -7,8 +7,8 @@ const Section = styled.section`
   ${FONT_FAMILY}
   padding-top: ${props => (props.top ? '150px' : '30px')};
   ${props => (props.top ? 'margin-top: -117px;' : '')} padding-bottom: 30px;
-  background-color: ${props => props.xsBgDark && EXTRADARKGREY};
-  color: ${props => props.xsBgDark && WHITE};
+  background-color: ${props => props.dark && EXTRADARKGREY};
+  color: ${props => props.dark && WHITE};
 `
 
 Section.displayName = 'Section'
