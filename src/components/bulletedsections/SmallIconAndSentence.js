@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { SPACING_STANDARD } from '../../config/styles'
 
 const Table = styled.div`
   display: table;
@@ -13,7 +14,7 @@ const Row = styled.div`
 const Cell = styled.div`
   display: table-cell;
   vertical-align: middle;
-  padding-left: 15px;
+  padding-left: ${SPACING_STANDARD};
 `
 
 const SmallIconAndSentence = ({ icon, children, ...props }) => (

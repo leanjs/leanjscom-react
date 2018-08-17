@@ -4,12 +4,12 @@ import React from 'react'
 import Ul, { Li as defaultLi } from '../../layout/Ul'
 import MenuData from './Menu.json'
 import { HideSingleComponentUsingCss } from '../../utils'
-import { WHITE } from '../../../config/styles'
+import { WHITE, SPACING_STANDARD } from '../../../config/styles'
 
 const Li = styled(defaultLi)`
   margin: 0 !important;
   ul > & {
-    padding-right: 18px;
+    padding-right: ${SPACING_STANDARD};
   }
   color: ${WHITE};
   ${styleChildLinkColor(WHITE)};

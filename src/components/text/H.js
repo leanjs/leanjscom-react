@@ -4,6 +4,7 @@ import {
   FONT_FAMILY,
   FONT_SIZE_STANDARD,
   FONT_SIZE_LARGE,
+  SPACING_LARGE,
 } from '../../config/styles'
 
 const REF = `
@@ -32,7 +33,7 @@ export const H2 = styled.h2`
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  margin-bottom: 40px;
+  margin-bottom: ${SPACING_LARGE};
   font-size: ${FONT_SIZE_LARGE};
   a {
     font-size: ${FONT_SIZE_LARGE};

@@ -9,6 +9,7 @@ import {
   DARKGREY,
   EXTRADARKGREY,
   WHITE,
+  SPACING_LARGE,
 } from '../../config/styles'
 import { SCREEN_XS_MAX } from '../utils'
 import ContactUsBullet from '../bullets/ContactUsBullet'
@@ -19,7 +20,7 @@ import Ul, { Li } from './Ul'
 const StyledFooter = styled.div`
   footer {
     background-color: ${EXTRADARKGREY};
-    padding: 50px 0 40px 0;
+    padding: ${SPACING_LARGE} 0 ${SPACING_LARGE} 0;
     color: ${WHITE};
     h2,
     h3 {
