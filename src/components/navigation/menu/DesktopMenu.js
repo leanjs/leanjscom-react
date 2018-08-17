@@ -8,6 +8,9 @@ import { WHITE } from '../../../config/styles'
 
 const Li = styled(defaultLi)`
   margin: 0 !important;
+  ul > & {
+    padding-right: 18px;
+  }
   color: ${WHITE};
   ${styleChildLinkColor(WHITE)};
 `
