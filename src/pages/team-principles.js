@@ -8,7 +8,15 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY, EXTRADARKGREY } from '../config/styles'
-import { ALEX, LENA } from '../config/images'
+import {
+  ALEX,
+  LENA,
+  RICHARD,
+  HORACIO,
+  WILL,
+  LUIS,
+  PAUL,
+} from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
@@ -160,7 +168,7 @@ const Team = () => (
               name="Alex Lobera"
               jobTitle=""
               company="Hometown: Barcelona, Spain"
-              color={DARKGREY}
+              color={WHITE}
             />
             <P>
               <i>Ask me about:</i>
@@ -175,7 +183,7 @@ const Team = () => (
               name="Lena Tregub"
               jobTitle=""
               company="Hometown: Kiev, Ukraine"
-              color={DARKGREY}
+              color={WHITE}
             />
             <P>
               <i>Ask me about:</i>
@@ -187,21 +195,87 @@ const Team = () => (
         <Row>
           <Col md={6}>
             <Mugshot
-              image={ALEX}
-              name="Alex Lobera"
+              image={RICHARD}
+              name="Richard Moss"
               jobTitle=""
-              company="Hometown: Barcelona, Spain"
-              color={DARKGREY}
+              company="Hometown: London, UK"
+              color={WHITE}
             />
+            <P>
+              <i>Ask me about:</i>
+              <br />
+              ReactJS academy trainings, our coaching and coaches, working with
+              LeanJS, Lean/Agile, JavaScript, functional programming, React, any
+              crazy ideas :-)
+            </P>
           </Col>
           <Col md={6}>
             <Mugshot
-              image={LENA}
-              name="Alex Lobera"
+              image={HORACIO}
+              name="Horacio Hererra"
               jobTitle=""
-              company="Hometown: Barcelona, Spain"
-              color={DARKGREY}
+              company="Hometown: Panama City, Panama"
+              color={WHITE}
             />
+            <P>
+              <i>Ask me about:</i>
+              <br />
+              Design Sprints, Technical Analytics, Marketing Attribution,
+              photography, video production, mvps, design systems, branding,
+              typography, teaching, user behaviour, Disney movies, American
+              Football :P
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Mugshot
+              image={WILL}
+              name="Will Voelcker"
+              jobTitle=""
+              company="Hometown: London, UK"
+              color={WHITE}
+            />
+            <P>
+              <i>Ask me about:</i>
+              <br />
+              Workflow strategies, Full stack JS, GraphQL APIs, Severless,
+              teaching methodologies
+            </P>
+          </Col>
+          <Col md={6}>
+            <Mugshot
+              image={LUIS}
+              name="Luis Novella"
+              jobTitle=""
+              company="Hometown: Caracas, Venezuela"
+              color={WHITE}
+            />
+            <P>
+              <i>Ask me about:</i>
+              <br />
+              Digital and business transformation, change management, business
+              strategy, management consultant, start-ups, Lean/Agile.
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Mugshot
+              image={PAUL}
+              name="Paul Woodley"
+              jobTitle=""
+              company="Hometown: Chelmsford, UK"
+              color={WHITE}
+            />
+            <P>
+              <i>Ask me about:</i>
+              <br />
+              User research, rapid prototyping, user testing information
+              architecture, design workshops and sprints, UI, accessibility,
+              print design, branding, social media marketing, badass Spotify
+              playlists
+            </P>
           </Col>
         </Row>
       </Grid>
