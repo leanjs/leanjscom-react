@@ -21,12 +21,12 @@
   },
   {
     "to": "/team-principles",
-    "text": "Our team and principles",
+    "text": "Our Team and Principles",
     "onlyOn": null
   },
   {
     "to": "https://medium.com/leanjs",
-    "text": "blog",
+    "text": "Blog",
     "onlyOn": null
   }
 ]
