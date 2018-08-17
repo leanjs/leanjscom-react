@@ -25,7 +25,7 @@ const Spec = styled.div`
 const Mugshot = ({ image, name, jobTitle, company, ...props }) => (
   <MugshotInner {...props}>
     <PersonImage>
-      <img src={image} />
+      <img style={{ maxHeight: '10em' }} src={image} />
     </PersonImage>
     <PersonSpecs>
       <Spec>
