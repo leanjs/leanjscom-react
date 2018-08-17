@@ -16,7 +16,6 @@ import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
-import Iteration from '../components/graphics/Iteration'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 
