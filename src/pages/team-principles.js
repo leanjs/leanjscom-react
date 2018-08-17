@@ -8,7 +8,7 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY, EXTRADARKGREY } from '../config/styles'
-import { MUGSHOT_JAMES_NORTON, ALEX } from '../config/images'
+import { ALEX, LENA } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
@@ -154,9 +154,49 @@ const Team = () => (
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col md={6}>
             <Mugshot
               image={ALEX}
+              name="Alex Lobera"
+              jobTitle=""
+              company="Hometown: Barcelona, Spain"
+              color={DARKGREY}
+            />
+            <P>
+              <i>Ask me about:</i>
+              <br />
+              React, GraphQL, Lean, UX, Agile, strategy, mentoring,
+              high-performance teams, company culture, latin dance
+            </P>
+          </Col>
+          <Col md={6}>
+            <Mugshot
+              image={LENA}
+              name="Lena Tregub"
+              jobTitle=""
+              company="Hometown: Kiev, Ukraine"
+              color={DARKGREY}
+            />
+            <P>
+              <i>Ask me about:</i>
+              <br />
+              Communication with clients, email marketing, reportage photography
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Mugshot
+              image={ALEX}
+              name="Alex Lobera"
+              jobTitle=""
+              company="Hometown: Barcelona, Spain"
+              color={DARKGREY}
+            />
+          </Col>
+          <Col md={6}>
+            <Mugshot
+              image={LENA}
               name="Alex Lobera"
               jobTitle=""
               company="Hometown: Barcelona, Spain"
