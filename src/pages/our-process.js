@@ -17,6 +17,7 @@ import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
+import { RICHARD_TEACHING } from '../config/images'
 
 import ourProcess from '../content/ourProcess.json'
 
@@ -158,7 +159,9 @@ const OurProcess = () => (
               We don’t just apply our process to our product builds, but to our
               training too!
             </P>
-            <P>TODO:WV:20180813:Photograph of Richard teaching</P>
+            <P>
+              <img src={RICHARD_TEACHING} />
+            </P>
             <Line>Learn</Line>
             <P>
               Trainers are builders, searching for and implementing the latest
