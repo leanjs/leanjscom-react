@@ -58,6 +58,7 @@ const OurProcess = () => (
       <Grid>
         <Row>
           <Col>
+            <a name="whatIsLean" />
             <H2>Working lean, reducing waste - rapidly</H2>
             <P>
               You’re probably thinking, what IS Lean? For that matter, you
@@ -78,7 +79,7 @@ const OurProcess = () => (
                 Looking for Lean / Agile training? We can do that
               </LinkButton>
             </P>
-
+            <a name="ourLeanProcess" />
             <H2>How this works at LeanJS</H2>
             <P>
               <Iteration />
@@ -110,6 +111,7 @@ const OurProcess = () => (
         <Grid>
           <Row>
             <Col>
+              <a name="howLongItTakes" />
               <H2>
                 Whoa there...<br />How long does that take?
               </H2>
@@ -128,6 +130,7 @@ const OurProcess = () => (
                 </LinkButton>
               </P>
 
+              <a name="mvp" />
               <H2>MVP? What does that mean?</H2>
               <P>
                 A minimum viable product (MVP) is a digital product that has
@@ -158,6 +161,7 @@ const OurProcess = () => (
       <Grid>
         <Row>
           <Col>
+            <a name="applyingLeanToTraining" />
             <H2>Applying our process to training as well as products</H2>
             <P>
               We don’t just apply our process to our product builds, but to our

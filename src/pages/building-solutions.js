@@ -64,6 +64,7 @@ const BuildingSolutions = () => (
     <Section>
       <Row>
         <Col>
+          <a name="workingWithYou" />
           <H2>Working in collaboration with YOU</H2>
         </Col>
       </Row>
@@ -133,6 +134,7 @@ const BuildingSolutions = () => (
     <Section dark>
       <Row>
         <Col>
+          <a name="projectHandovers" />
           <H2>Slick handovers with expert tech training</H2>
         </Col>
       </Row>
@@ -170,6 +172,7 @@ const BuildingSolutions = () => (
     </Section>
     <Row>
       <Col>
+        <a name="support" />
         <H2>What happens next? How we support you…</H2>
       </Col>
     </Row>

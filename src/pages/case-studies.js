@@ -53,6 +53,7 @@ const CaseStudies = () => (
       <Grid>
         <Row>
           <Col xs={6}>
+            <a name="abinbev" />
             <H2>ABInBev</H2>
           </Col>
           <Col xs={6}>
@@ -105,6 +106,7 @@ const CaseStudies = () => (
         <Grid>
           <Row>
             <Col xs={6}>
+              <a name="fingo" />
               <H2>FingoPay</H2>
             </Col>
             <Col xs={6}>
@@ -159,6 +161,7 @@ const CaseStudies = () => (
       <Grid>
         <Row>
           <Col xs={6}>
+            <a name="boston" />
             <H2>Boston University</H2>
           </Col>
           <Col xs={6}>
@@ -212,9 +215,8 @@ const CaseStudies = () => (
         <Grid>
           <Row>
             <Col xs={6}>
-              <H2>
-                <a name="asos" />ASOS.com
-              </H2>
+              <a name="asos" />
+              <H2>ASOS.com</H2>
             </Col>
             <Col xs={6}>
               <Topic dark>training</Topic>
@@ -266,6 +268,7 @@ const CaseStudies = () => (
       <Grid>
         <Row>
           <Col xs={6}>
+            <a name="upmentoring" />
             <H2>UpMentoring</H2>
           </Col>
           <Col xs={6}>
