@@ -11,9 +11,9 @@ export const EXTRADARKGREY = '#2b2b2b'
 export const WHITE = '#ffffff'
 export const BLACK = '#000000'
 
-export const TEXT_SIZE = ({ sm = false, lg = false }) => {
-  if (sm) return `font-size: 12px;`
-  if (lg) return `font-size: 18px;`
+export const SPACING_SMALL = '0.5rem'
+export const SPACING_STANDARD = '1rem'
+export const SPACING_LARGE = '2rem'
 
-  return `font-size: 16px;`
-}
+export const FONT_SIZE_STANDARD = '1rem'
+export const FONT_SIZE_LARGE = '2rem'
