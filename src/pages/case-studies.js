@@ -18,6 +18,13 @@ import Image from '../components/elements/Image'
 import caseStudies from '../content/caseStudies.json'
 import HighlightedItem from '../components/decoration/HighlightedItem'
 
+const CaseStudyTitle = styled(H2)`
+  no-wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
 const CaseStudies = () => (
   <React.Fragment>
     <Header
@@ -54,11 +61,12 @@ const CaseStudies = () => (
         <Row>
           <Col xs={6}>
             <a name="abinbev" />
-            <H2>ABInBev</H2>
+            <CaseStudyTitle>
+              ABInBev
+              <Topic dark>app</Topic>
+            </CaseStudyTitle>
           </Col>
-          <Col xs={6}>
-            <Topic dark>app</Topic>
-          </Col>
+          <Col xs={6} />
         </Row>
         <Row>
           <Col md={6}>
@@ -107,10 +115,10 @@ const CaseStudies = () => (
           <Row>
             <Col xs={6}>
               <a name="fingo" />
-              <H2>FingoPay</H2>
-            </Col>
-            <Col xs={6}>
-              <Topic dark>working mvp</Topic>
+              <CaseStudyTitle>
+                FingoPay
+                <Topic dark>working mvp</Topic>
+              </CaseStudyTitle>
             </Col>
           </Row>
           <Row>
@@ -162,10 +170,10 @@ const CaseStudies = () => (
         <Row>
           <Col xs={6}>
             <a name="boston" />
-            <H2>Boston University</H2>
-          </Col>
-          <Col xs={6}>
-            <Topic dark>website</Topic>
+            <CaseStudyTitle>
+              Boston University
+              <Topic dark>website</Topic>
+            </CaseStudyTitle>
           </Col>
         </Row>
         <Row>
@@ -216,10 +224,10 @@ const CaseStudies = () => (
           <Row>
             <Col xs={6}>
               <a name="asos" />
-              <H2>ASOS.com</H2>
-            </Col>
-            <Col xs={6}>
-              <Topic dark>training</Topic>
+              <CaseStudyTitle>
+                ASOS.com
+                <Topic dark>training</Topic>
+              </CaseStudyTitle>
             </Col>
           </Row>
           <Row>
@@ -269,10 +277,10 @@ const CaseStudies = () => (
         <Row>
           <Col xs={6}>
             <a name="upmentoring" />
-            <H2>UpMentoring</H2>
-          </Col>
-          <Col xs={6}>
-            <Topic dark>web app</Topic>
+            <CaseStudyTitle>
+              UpMentoring
+              <Topic dark>web app</Topic>
+            </CaseStudyTitle>
           </Col>
         </Row>
         <Row>

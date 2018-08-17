@@ -10,6 +10,9 @@ export const RICHARD_TEACHING =
 export const CLIENTS_LOGOS =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/clients-logos.png?alt=media'
 
+export const TEAMWORK =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/teamwork_makes_the_dream_work.jpg?alt=media'
+
 // Team pics
 
 export const ALEX =

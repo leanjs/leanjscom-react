@@ -6,7 +6,7 @@ import { NEW_WINDOW } from '../../config/icons'
 
 const LinkButton = styled(Link)`
   ${DEFAULT_BUTTON_STYLES};
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
   font-weight: normal;
   &:link {

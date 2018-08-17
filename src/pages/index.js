@@ -10,12 +10,14 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, SPACING_LARGE, FONT_SIZE_LARGE } from '../config/styles'
+import { TEAMWORK } from '../config/images'
 import { ITERATION_DIAGRAM } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
 import Image from '../components/elements/Image'
+import Instagram from '../components/feeds/Instagram'
 
 const TitleText = styled(P)`
   font-size: ${FONT_SIZE_LARGE};
@@ -103,7 +105,9 @@ const IndexPage = () => (
               </Li>
             </Ul>
           </Col>
-          <Col md={6}>pic here</Col>
+          <Col md={6}>
+            <Image src={TEAMWORK} />
+          </Col>
         </Row>
         <Row>
           <Col md={5}>
@@ -157,7 +161,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col center xs={12}>
-            LARGE IMAGE HERE
+            <Instagram />
           </Col>
         </Row>
       </Grid>
