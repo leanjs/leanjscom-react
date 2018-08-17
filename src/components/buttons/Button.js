@@ -26,7 +26,7 @@ export const DEFAULT_BUTTON_STYLES = props => `
 	${FONT_FAMILY}
 	border-radius: 2px;
 	border: solid 1px transparent;
-	margin: 1em 0;
+	margin: ${SPACING_STANDARD} 0;
 	padding: ${SPACING_SMALL} ${SPACING_STANDARD};
 	cursor:pointer;
 	${setColours(props)};

@@ -6,6 +6,8 @@ import {
 } from 'react-styled-flexboxgrid'
 import styled from 'styled-components'
 
+import { SPACING_STANDARD } from '../../config/styles'
+
 const Col = ({ xs, sm, md, lg, center, style = {}, ...rest }) => {
   const sizes = {
     xs: xs || 12,
@@ -25,7 +27,7 @@ const Col = ({ xs, sm, md, lg, center, style = {}, ...rest }) => {
 const Row = styled(FlexboxRow)`
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 1em;
+  margin-bottom: ${SPACING_STANDARD};
 `
 
 export { Row, Col, Grid }

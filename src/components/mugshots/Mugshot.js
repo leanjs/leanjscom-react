@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { requireFrom } from '../utils'
 
+import { SPACING_STANDARD, SPACING_SMALL } from '../../config/styles'
+
 const MugshotInner = styled.div`
   color: ${props => props.color || 'black'};
   display: flex;
@@ -15,11 +17,11 @@ const PersonSpecs = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-left: 1em;
+  margin-left: ${SPACING_STANDARD};
 `
 
 const Spec = styled.div`
-  margin-top: 0.5em;
+  margin-top: ${SPACING_SMALL};
 `
 
 const Mugshot = ({ image, name, jobTitle, company, ...props }) => (
