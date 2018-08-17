@@ -1,12 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Mugshot from './Mugshot'
+import { MUGSHOT_JAMES_NORTON } from '../../config/images'
 import { WHITE, DARKGREY } from '../../config/styles'
 
 storiesOf('Mugshot', module)
   .add('Name and job title', () => (
     <Mugshot
-      image="james-norton-asos"
+      image={MUGSHOT_JAMES_NORTON}
       name="James Norton"
       jobTitle="Engineering Practise Lead"
       company="ASOS.com"
@@ -15,7 +16,7 @@ storiesOf('Mugshot', module)
   ))
   .add('Name and job title (dark text)', () => (
     <Mugshot
-      image="james-norton-asos"
+      image={MUGSHOT_JAMES_NORTON}
       name="James Norton"
       jobTitle="Engineering Practise Lead"
       company="ASOS.com"

@@ -8,6 +8,7 @@ import Topic from '../components/labels/Topic'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
+import { MUGSHOT_JAMES_NORTON } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
@@ -83,7 +84,7 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <Mugshot
-              image="james-norton-asos"
+              image={MUGSHOT_JAMES_NORTON}
               name="Georgina Clarke"
               jobTitle="Account Manager ABinBev"
               company="ASOS.com"
@@ -137,7 +138,7 @@ const CaseStudies = () => (
           <Row>
             <Col md={6}>
               <Mugshot
-                image="james-norton-asos"
+                image={MUGSHOT_JAMES_NORTON}
                 name="Georgina Clarke"
                 jobTitle="Account Manager ABinBev"
                 company="ASOS.com"
@@ -190,7 +191,7 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <Mugshot
-              image="james-norton-asos"
+              image={MUGSHOT_JAMES_NORTON}
               name="Bill Pierce"
               jobTitle="Editor, AGNI"
               company="Boston University"
@@ -229,7 +230,6 @@ const CaseStudies = () => (
               <Image src={'https://picsum.photos/300/200/?random'} />
             </Col>
           </Row>
-
           <Row>
             <Col>
               <P quote>
@@ -245,7 +245,7 @@ const CaseStudies = () => (
           <Row>
             <Col md={6}>
               <Mugshot
-                image="james-norton-asos"
+                image={MUGSHOT_JAMES_NORTON}
                 name="Bill Pierce"
                 jobTitle="Editor, AGNI"
                 company="Boston University"
@@ -295,7 +295,7 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <Mugshot
-              image="james-norton-asos"
+              image={MUGSHOT_JAMES_NORTON}
               name="Bill Pierce"
               jobTitle="Editor, AGNI"
               company="Boston University"

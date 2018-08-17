@@ -10,6 +10,7 @@ import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoint
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import Mugshot from '../components/mugshots/Mugshot'
 import { WHITE, EXTRADARKGREY } from '../config/styles'
+import { MUGSHOT_JAMES_NORTON } from '../config/images'
 import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
@@ -96,7 +97,7 @@ const TrainingPage = () => (
         <Row>
           <Col>
             <Mugshot
-              image="james-norton-asos"
+              image={MUGSHOT_JAMES_NORTON}
               name="James Norton"
               jobTitle="Engineering Practise Lead"
               company="ASOS.com"

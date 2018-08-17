@@ -8,6 +8,7 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
+import { MUGSHOT_JAMES_NORTON } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
@@ -114,7 +115,7 @@ const BuildingSolutions = () => (
       <Row>
         <Col center md={6}>
           <Mugshot
-            image="james-norton-asos"
+            image={MUGSHOT_JAMES_NORTON}
             name="Bill Pierce"
             jobTitle="Editor, AGNI"
             company="Boston University"
