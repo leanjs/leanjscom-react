@@ -8,6 +8,7 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY, EXTRADARKGREY } from '../config/styles'
+import { MUGSHOT_JAMES_NORTON } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
@@ -140,6 +141,30 @@ const Team = () => (
           </LinkButton>
         </Col>
       </Row>
+    </Section>
+    <Section dark>
+      <Grid>
+        <Row>
+          <Col>
+            <H2>Our team</H2>
+            <P>
+              The team all have their specialisms and are always happy to talk
+              so feel free to contact any of them!
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={3}>
+            <Mugshot
+              image={MUGSHOT_JAMES_NORTON}
+              name="Alex Lobera"
+              jobTitle=""
+              company="Hometown: Barcelona, Spain"
+              color={DARKGREY}
+            />
+          </Col>
+        </Row>
+      </Grid>
     </Section>
   </React.Fragment>
 )
