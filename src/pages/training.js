@@ -103,7 +103,7 @@ const TrainingPage = () => (
       </Grid>
     </Section>
 
-    <Section xsBgDark>
+    <Section dark>
       <Grid>
         <Row>
           <Col>
@@ -207,7 +207,7 @@ const TrainingPage = () => (
       </Grid>
     </Section>
 
-    <Section xsBgDark>
+    <Section dark>
       <Grid>
         <Row>
           <Col>

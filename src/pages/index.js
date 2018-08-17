@@ -119,7 +119,7 @@ const IndexPage = () => (
       </Grid>
     </Section>
 
-    <Section xsBgDark>
+    <Section dark>
       <Grid>
         <Row>
           <H2>We care about you and your people. We value good ethics.</H2>
