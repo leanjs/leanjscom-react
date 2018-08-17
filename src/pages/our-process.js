@@ -13,6 +13,7 @@ import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
+import Hr from '../components/decoration/Hr'
 import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
@@ -184,7 +185,9 @@ const OurProcess = () => (
                 Read more about our training
               </LinkButton>
             </P>
-            <P>TODO:WV:2018083:Grey horizontal line here</P>
+            <P>
+              <Hr />
+            </P>
           </Col>
         </Row>
       </Grid>
