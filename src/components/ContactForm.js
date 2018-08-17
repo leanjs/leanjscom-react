@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { db } from '../../firebase'
 import Ul, { Li } from './layout/Ul'
 import Checkbox from './form/Checkbox'
+import { P } from './text'
 import Link from './navigation/Link'
 import styled from 'styled-components'
+import Button from './buttons/Button'
 
 class ContactForm extends Component {
   constructor(props) {
@@ -18,34 +20,33 @@ class ContactForm extends Component {
       interestedInBothDigitalSolutionsAndTraining: false,
       allowMarketing: false,
       error: null,
+      submitted: false,
     }
   }
 
   onSubmit = event => {
-    const {
-      name,
-      email,
-      message,
-      interestedInDigitalSolutions,
-      interestedInTraining,
-      interestedInBothDigitalSolutionsAndTraining,
-      allowMarketing,
-    } = this.state
-
     event.preventDefault()
 
-    return db
-      .doCreateMessage(
-        name,
-        email,
-        message,
-        interestedInDigitalSolutions,
-        interestedInTraining,
-        interestedInBothDigitalSolutionsAndTraining,
-        allowMarketing
+    return new Promise((resolve, reject) => {
+      this.setState({ error: null }, resolve)
+    })
+      .then(() =>
+        db.doCreateMessage(
+          this.state.name,
+          this.state.email,
+          this.state.message,
+          this.state.interestedInDigitalSolutions,
+          this.state.interestedInTraining,
+          this.state.interestedInBothDigitalSolutionsAndTraining,
+          this.state.allowMarketing
+        )
       )
       .then(() => console.log('Your message was recieved!'))
-      .catch(e => console.log('The following error occured: ', e.message))
+      .then(() => this.setState({ submitted: true }))
+      .catch(e => {
+        console.log('The following error occured: ', e.message)
+        this.setState({ error: e })
+      })
   }
 
   handleFormFieldChanged = (name, newValue) =>
@@ -65,7 +66,12 @@ class ContactForm extends Component {
       allowMarketing,
       message,
       error,
+      submitted,
     } = this.state
+
+    if (submitted) {
+      return <P>Thank you for your submission! We will be in touch shortly.</P>
+    }
 
     const isInvalid = message === '' || email === ''
 
@@ -151,11 +157,11 @@ class ContactForm extends Component {
           />
         </div>
 
-        <button disabled={isInvalid} type="submit">
+        <Button disabled={isInvalid} type="submit">
           Send
-        </button>
+        </Button>
 
-        {error && <p>{error.message}</p>}
+        {error && <p style={{ color: 'red' }}>{error.message}</p>}
       </form>
     )
   }
