@@ -152,7 +152,7 @@ const IndexPage = () => (
           </Col>
         </Row>
         <Row>
-          <LinkButton hasArrows>Our team and principles</LinkButton>
+          <LinkButton hasArrows>Our Team and Principles</LinkButton>
         </Row>
         <Row>
           <Col center xs={12}>
