@@ -1,13 +1,13 @@
 import React from 'react'
 import GatsbyLink from 'gatsby-link'
 import styled from 'styled-components'
-import { FONT_FAMILY, WHITE } from '../../config/styles'
+import { FONT_FAMILY, WHITE, FONT_SIZE_STANDARD } from '../../config/styles'
 
 export const ANCHOR_STYLE = `
     cursor: pointer;
     color: blue;
     text-decoration: underline;
-    font-size: 18px;
+    font-size: ${FONT_SIZE_STANDARD};
     font-weight: 500;
     font-style: normal;
     line-height: 1.5;

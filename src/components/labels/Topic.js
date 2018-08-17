@@ -1,7 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { WHITE, DARKGREY } from '../../config/styles'
+import {
+  WHITE,
+  DARKGREY,
+  FONT_SIZE_SMALL,
+  SPACING_SMALL,
+  SPACING_STANDARD,
+} from '../../config/styles'
 
 // To maintain text centering while using letter-spacing, the text must be offset by the same amount as the letter spacing
 // So store the amounti in a variable so that it can easily be used in both places.
@@ -12,12 +18,12 @@ const TopicInner = styled.div`
   color: ${props => (props.color ? props.color : WHITE)};
   background: ${props => (props.dark ? DARKGREY : `transparent`)};
 
-  padding: 0.5em;
-  margin-left: 1em;
+  padding: ${SPACING_SMALL};
+  margin-left: ${SPACING_STANDARD};
   display: inline-block;
 
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: ${FONT_SIZE_SMALL};
   letter-spacing: ${letterSpacing};
   text-indent: ${letterSpacing};
   text-align: center;

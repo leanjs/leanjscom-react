@@ -15,5 +15,10 @@ export const SPACING_SMALL = '0.5rem'
 export const SPACING_STANDARD = '1rem'
 export const SPACING_LARGE = '2rem'
 
+export const LAYOUT_SPACING_MEDIUM = '9.7rem'
+export const LAYOUT_SPACING_LARGE = '38.9rem'
+
+export const FONT_SIZE_SMALL = '0.7rem'
 export const FONT_SIZE_STANDARD = '1rem'
 export const FONT_SIZE_LARGE = '2rem'
+export const FONT_SIZE_EXTRALARGE = '3.5rem'
