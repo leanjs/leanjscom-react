@@ -27,7 +27,7 @@ const IndexPage = () => (
   <React.Fragment>
     <Header
       titleLines={['LeanJS']}
-      subtitle="We can help you evolve your <br /> tech. Quick snap!"
+      subtitle="We can help you evolve your tech. Quick snap!"
       bgImg="home"
     >
       <Row>
