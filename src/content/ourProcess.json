@@ -2,23 +2,23 @@
   "OurProcessLinks": [
     {
       "text": "What is 'Lean'?",
-      "to": "#whatislean"
+      "to": "whatIsLean"
     },
     {
       "text": "Our lean process",
-      "to": "#ourleanprocess"
+      "to": "ourLeanProcess"
     },
     {
       "text": "How long it takes",
-      "to": "#howlongittakes"
+      "to": "howLongItTakes"
     },
     {
       "text": "What is an MVP?",
-      "to": "#whatisanmvp"
+      "to": "mvp"
     },
     {
       "text": "Applying Lean to training",
-      "to": "#applyingleantotraining"
+      "to": "applyingLeanToTraining"
     }
   ],
   "OurProcessContent": {
