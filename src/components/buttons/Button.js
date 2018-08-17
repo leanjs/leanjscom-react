@@ -7,6 +7,8 @@ import {
   SPACING_STANDARD,
 } from '../../config/styles'
 
+import { SCREEN_SM_MAX } from '../utils'
+
 const getBackgroundColor = props => (props.dark ? DARKGREY : WHITE)
 const getBoxshadowOpacity = props => (props.dark ? `0.24` : `0.45`)
 export const getForegroundColor = props => (props.dark ? WHITE : DARKGREY)
@@ -21,6 +23,16 @@ const setColours = props => `
 const allowArrows = props =>
   props.hasArrows ? `&:after { content: " >>"}` : ``
 const allowFullWidth = props => `width: ${props.fullWidth ? `100%` : `auto`};`
+const allowFullWidthOnMobile = props =>
+  `${
+    props.fullWidthOnMobile
+      ? `
+  @media (max-width:${SCREEN_SM_MAX}) {
+    width:100%;
+  }
+`
+      : null
+  }`
 
 export const DEFAULT_BUTTON_STYLES = props => `
 	${FONT_FAMILY}
@@ -31,6 +43,7 @@ export const DEFAULT_BUTTON_STYLES = props => `
 	cursor:pointer;
 	${setColours(props)};
 	${allowFullWidth(props)};
+  ${allowFullWidthOnMobile(props)};
 	${allowArrows(props)};
 `
 

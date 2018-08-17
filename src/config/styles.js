@@ -14,6 +14,7 @@ export const BLACK = '#000000'
 export const SPACING_SMALL = '0.5rem'
 export const SPACING_STANDARD = '1rem'
 export const SPACING_LARGE = '2rem'
+export const SPACING_EXTRALARGE = '4rem'
 
 export const LAYOUT_SPACING_MEDIUM = '9.7rem'
 export const LAYOUT_SPACING_LARGE = '38.9rem'

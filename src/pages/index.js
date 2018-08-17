@@ -11,6 +11,7 @@ import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoint
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, SPACING_LARGE, FONT_SIZE_LARGE } from '../config/styles'
 import { TEAMWORK } from '../config/images'
+import { ITERATION_DIAGRAM } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
@@ -111,12 +112,12 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col md={5}>
-            <LinkButton fullWidth hasArrows dark>
+            <LinkButton fullWidthOnMobile hasArrows dark>
               Read case studies
             </LinkButton>
           </Col>
           <Col md={5}>
-            <LinkButton fullWidth hasArrows>
+            <LinkButton fullWidthOnMobile hasArrows>
               Working with you
             </LinkButton>
           </Col>
@@ -200,7 +201,7 @@ const IndexPage = () => (
           <Col md={8}>
             <TitleText>Here's how:</TitleText>
             <br />
-            <Iteration />
+            <Image src={ITERATION_DIAGRAM} />
           </Col>
           <Col md={4}>
             <Line verticalCenter lineWidth={40}>
