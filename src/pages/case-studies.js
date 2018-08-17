@@ -217,7 +217,7 @@ const CaseStudies = () => (
               </H2>
             </Col>
             <Col xs={6}>
-              <Topic dark>trianing</Topic>
+              <Topic dark>training</Topic>
             </Col>
           </Row>
           <Row>
