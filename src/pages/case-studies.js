@@ -16,6 +16,7 @@ import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import caseStudies from '../content/caseStudies.json'
+import HighlightedItem from '../components/decoration/HighlightedItem'
 
 const CaseStudies = () => (
   <React.Fragment>
@@ -100,55 +101,58 @@ const CaseStudies = () => (
     </Section>
 
     <Section>
-      <Grid border>
-        <Row>
-          <Col xs={6}>
-            <H2>FingoPay</H2>
-          </Col>
-          <Col xs={6}>
-            <Topic dark>working mvp</Topic>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <CaseStudyExpoBullets
-              content={caseStudies.CaseStudyContent.FingoPay}
-            />
-          </Col>
-          <Col md={6}>
-            <Image src={'https://picsum.photos/300/200/?random'} />
-          </Col>
-        </Row>
+      <HighlightedItem>
+        <Grid>
+          <Row>
+            <Col xs={6}>
+              <H2>FingoPay</H2>
+            </Col>
+            <Col xs={6}>
+              <Topic dark>working mvp</Topic>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <CaseStudyExpoBullets
+                content={caseStudies.CaseStudyContent.FingoPay}
+              />
+            </Col>
+            <Col md={6}>
+              <Image src={'https://picsum.photos/300/200/?random'} />
+            </Col>
+          </Row>
 
-        <Row>
-          <Col>
-            <P quote>
-              “We’d been working on the platform for a while but onboarding was
-              an issue.
-            </P>
-            <P quote>
-              LeanJS came in, discovered the issues in real life and provided a
-              workable solution in a fraction of the time we expected. Amazed.”
-            </P>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <Mugshot
-              image={MUGSHOT_JAMES_NORTON}
-              name="Georgina Clarke"
-              jobTitle="Account Manager ABinBev"
-              company="ASOS.com"
-              color={DARKGREY}
-            />
-          </Col>
-          <Col md={6}>
-            <LinkButton external to="https://medium.com/leanjs">
-              Blog: Rapid prototyping <br /> IRL, in a pub
-            </LinkButton>
-          </Col>
-        </Row>
-      </Grid>
+          <Row>
+            <Col>
+              <P quote>
+                “We’d been working on the platform for a while but onboarding
+                was an issue.
+              </P>
+              <P quote>
+                LeanJS came in, discovered the issues in real life and provided
+                a workable solution in a fraction of the time we expected.
+                Amazed.”
+              </P>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <Mugshot
+                image={MUGSHOT_JAMES_NORTON}
+                name="Georgina Clarke"
+                jobTitle="Account Manager ABinBev"
+                company="ASOS.com"
+                color={DARKGREY}
+              />
+            </Col>
+            <Col md={6}>
+              <LinkButton external to="https://medium.com/leanjs">
+                Blog: Rapid prototyping <br /> IRL, in a pub
+              </LinkButton>
+            </Col>
+          </Row>
+        </Grid>
+      </HighlightedItem>
     </Section>
 
     <Section>
@@ -204,57 +208,58 @@ const CaseStudies = () => (
     </Section>
 
     <Section>
-      <Grid border>
-        <Row>
-          <Col xs={6}>
-            <H2>
-              <a name="asos" />ASOS.com
-            </H2>
-          </Col>
-          <Col xs={6}>
-            <Topic dark>trianing</Topic>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <CaseStudyExpoBullets
-              content={caseStudies.CaseStudyContent.ASOScom}
-            />
-          </Col>
-          <Col md={6}>
-            <Image src={'https://picsum.photos/300/200/?random'} />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <P quote>
-              “Our team had been talking about ReactJS for a while and when I
-              realised how effecient it can be, it was time for a change.
-            </P>
-            <P quote>
-              LeanJS tailored training for our needs and now we don’t work any
-              othe way.”
-            </P>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <Mugshot
-              image={MUGSHOT_JAMES_NORTON}
-              name="Bill Pierce"
-              jobTitle="Editor, AGNI"
-              company="Boston University"
-              color={DARKGREY}
-            />
-          </Col>
-          <Col md={6}>
-            <LinkButton external to="https://medium.com/leanjs">
-              Blog: How we teach React at LeanJS
-            </LinkButton>
-          </Col>
-        </Row>
-      </Grid>
+      <HighlightedItem>
+        <Grid>
+          <Row>
+            <Col xs={6}>
+              <H2>
+                <a name="asos" />ASOS.com
+              </H2>
+            </Col>
+            <Col xs={6}>
+              <Topic dark>trianing</Topic>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <CaseStudyExpoBullets
+                content={caseStudies.CaseStudyContent.ASOScom}
+              />
+            </Col>
+            <Col md={6}>
+              <Image src={'https://picsum.photos/300/200/?random'} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <P quote>
+                “Our team had been talking about ReactJS for a while and when I
+                realised how effecient it can be, it was time for a change.
+              </P>
+              <P quote>
+                LeanJS tailored training for our needs and now we don’t work any
+                othe way.”
+              </P>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <Mugshot
+                image={MUGSHOT_JAMES_NORTON}
+                name="Bill Pierce"
+                jobTitle="Editor, AGNI"
+                company="Boston University"
+                color={DARKGREY}
+              />
+            </Col>
+            <Col md={6}>
+              <LinkButton external to="https://medium.com/leanjs">
+                Blog: How we teach React at LeanJS
+              </LinkButton>
+            </Col>
+          </Row>
+        </Grid>
+      </HighlightedItem>
     </Section>
 
     <Section>

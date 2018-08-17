@@ -14,6 +14,7 @@ import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
 import Hr from '../components/decoration/Hr'
+import HighlightedItem from '../components/decoration/HighlightedItem'
 import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
@@ -105,50 +106,52 @@ const OurProcess = () => (
     </Section>
 
     <Section>
-      <Grid border>
-        <Row>
-          <Col>
-            <H2>
-              Whoa there...<br />How long does that take?
-            </H2>
-            <P>
-              It sounds a lot, we know. However, this process can take as little
-              as 6 weeks
-            </P>
-            <P>
-              Imagine - a fully formed, tested and proven MVP ready to take into
-              the future in only a fraction of the time it may've taken in the
-              past
-            </P>
-            <P>
-              <LinkButton to="/case-studies" hasArrows>
-                Case studies
-              </LinkButton>
-            </P>
+      <HighlightedItem>
+        <Grid>
+          <Row>
+            <Col>
+              <H2>
+                Whoa there...<br />How long does that take?
+              </H2>
+              <P>
+                It sounds a lot, we know. However, this process can take as
+                little as 6 weeks
+              </P>
+              <P>
+                Imagine - a fully formed, tested and proven MVP ready to take
+                into the future in only a fraction of the time it may've taken
+                in the past
+              </P>
+              <P>
+                <LinkButton to="/case-studies" hasArrows>
+                  Case studies
+                </LinkButton>
+              </P>
 
-            <H2>MVP? What does that mean?</H2>
-            <P>
-              A minimum viable product (MVP) is a digital product that has only
-              the core features that a user needs to complete their customer
-              journey.
-            </P>
-            <P>
-              That goal is decided from user and business research with both
-              party’s needs considered.
-            </P>
-            <P>
-              Starting with an MVP means that we can build from the ground
-              upwards. This can apply to new and legacy products as well as we
-              can work iteratively from an existing feature/product. Simple!
-            </P>
-            <P>
-              <LinkButton to="/building-solutions" hasArrows>
-                Learn more about our design services
-              </LinkButton>
-            </P>
-          </Col>
-        </Row>
-      </Grid>
+              <H2>MVP? What does that mean?</H2>
+              <P>
+                A minimum viable product (MVP) is a digital product that has
+                only the core features that a user needs to complete their
+                customer journey.
+              </P>
+              <P>
+                That goal is decided from user and business research with both
+                party’s needs considered.
+              </P>
+              <P>
+                Starting with an MVP means that we can build from the ground
+                upwards. This can apply to new and legacy products as well as we
+                can work iteratively from an existing feature/product. Simple!
+              </P>
+              <P>
+                <LinkButton to="/building-solutions" hasArrows>
+                  Learn more about our design services
+                </LinkButton>
+              </P>
+            </Col>
+          </Row>
+        </Grid>
+      </HighlightedItem>
     </Section>
 
     <Section dark>
