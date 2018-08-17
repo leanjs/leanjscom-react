@@ -168,9 +168,13 @@ const Header = ({
                   <TitleBackground key={i} children={line} />
                 ))}
               </H1>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={8}>
               {subtitle ? (
                 <SubTitleBackground>
-                  <H2Header dangerouslySetInnerHTML={{ __html: subtitle }} />
+                  <H2Header>{subtitle}</H2Header>
                 </SubTitleBackground>
               ) : (
                 ''
