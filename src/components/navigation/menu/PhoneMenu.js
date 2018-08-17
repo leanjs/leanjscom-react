@@ -5,13 +5,14 @@ import React from 'react'
 import MenuData from './Menu.json'
 import { LinkedLeanJSLogo } from '../../logos/LeanJS'
 import './PhoneMenu.css'
+import { SPACING_SMALL } from '../config/styles'
 
 const Item = ({ children, ...props }) => <Link {...props}>{children}</Link>
 
 const PhoneMenuItem = styled(Item)`
   display: block;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: ${SPACING_SMALL};
+  padding-bottom: ${SPACING_SMALL};
   color: white;
 `
 

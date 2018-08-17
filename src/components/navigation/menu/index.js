@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { LinkedLeanJSLogo } from '../../logos/LeanJS'
 import DesktopMenu from './DesktopMenu'
 import PhoneMenu from './PhoneMenu'
-import { WHITE } from '../../../config/styles'
+import { WHITE, SPACING_STANDARD } from '../../../config/styles'
 import { styleChildLinkColor } from '../Link'
 
 export { DesktopMenu, PhoneMenu }
@@ -15,7 +15,7 @@ const MenuContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: ${SPACING_STANDARD};
   position: relative;
   z-index: 3;
   display: flex;

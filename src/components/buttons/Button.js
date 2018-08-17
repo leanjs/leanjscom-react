@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { FONT_FAMILY, DARKGREY, WHITE } from '../../config/styles'
+import {
+  FONT_FAMILY,
+  DARKGREY,
+  WHITE,
+  SPACING_SMALL,
+  SPACING_STANDARD,
+} from '../../config/styles'
 
 const getBackgroundColor = props => (props.dark ? DARKGREY : WHITE)
 const getBoxshadowOpacity = props => (props.dark ? `0.24` : `0.45`)
@@ -21,7 +27,7 @@ export const DEFAULT_BUTTON_STYLES = props => `
 	border-radius: 2px;
 	border: solid 1px transparent;
 	margin: 1em 0;
-	padding: 0.5em 1em;
+	padding: ${SPACING_SMALL} ${SPACING_STANDARD};
 	cursor:pointer;
 	${setColours(props)};
 	${allowFullWidth(props)};

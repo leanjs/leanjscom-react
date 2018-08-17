@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FONT_FAMILY, WHITE } from '../../config/styles'
+import { FONT_FAMILY, WHITE, SPACING_SMALL } from '../../config/styles'
 
 const Ul = styled.ul`
   ${props =>
@@ -18,7 +18,7 @@ const Ul = styled.ul`
           padding: 0;
           > li {
             display: inline-block;
-            padding: 8px;
+            padding: ${SPACING_SMALL};
             margin-bottom:0;
             :first-child {
               padding-left: 0;
