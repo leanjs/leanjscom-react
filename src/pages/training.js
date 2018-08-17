@@ -20,6 +20,7 @@ import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
 import { LONDON_BOOTCAMP, ALEX_TEACHING, CLIENTS_LOGOS } from '../config/images'
 import { styleChildLinkColor } from '../components/navigation/Link'
+import HighlightedItem from '../components/decoration/HighlightedItem'
 
 const TitleText = styled(P)`
   font-size: 24px;
@@ -69,7 +70,9 @@ const TrainingPage = () => (
         <Row>
           <Col md={12}>
             <P>
-              <img src={CLIENTS_LOGOS} />
+              <HighlightedItem>
+                <img src={CLIENTS_LOGOS} />
+              </HighlightedItem>
             </P>
           </Col>
         </Row>
