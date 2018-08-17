@@ -8,7 +8,7 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY, EXTRADARKGREY } from '../config/styles'
-import { MUGSHOT_JAMES_NORTON } from '../config/images'
+import { MUGSHOT_JAMES_NORTON, ALEX } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
@@ -154,9 +154,9 @@ const Team = () => (
           </Col>
         </Row>
         <Row>
-          <Col md={3}>
+          <Col>
             <Mugshot
-              image={MUGSHOT_JAMES_NORTON}
+              image={ALEX}
               name="Alex Lobera"
               jobTitle=""
               company="Hometown: Barcelona, Spain"
