@@ -19,7 +19,7 @@ import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
-import { RICHARD_TEACHING } from '../config/images'
+import { RICHARD_TEACHING, ITERATION_DIAGRAM } from '../config/images'
 
 import ourProcess from '../content/ourProcess.json'
 
@@ -82,7 +82,7 @@ const OurProcess = () => (
             <a name="ourLeanProcess" />
             <H2>How this works at LeanJS</H2>
             <P>
-              <Iteration />
+              <Image src={ITERATION_DIAGRAM} />
             </P>
 
             {ourProcess.OurProcessContent.HowItWorks.map(section => (

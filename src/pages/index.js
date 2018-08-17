@@ -10,11 +10,12 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, SPACING_LARGE, FONT_SIZE_LARGE } from '../config/styles'
+import { ITERATION_DIAGRAM } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
-import Iteration from '../components/graphics/Iteration'
+import Image from '../components/elements/Image'
 
 const TitleText = styled(P)`
   font-size: ${FONT_SIZE_LARGE};
@@ -195,7 +196,7 @@ const IndexPage = () => (
           <Col md={8}>
             <TitleText>Here's how:</TitleText>
             <br />
-            <Iteration />
+            <Image src={ITERATION_DIAGRAM} />
           </Col>
           <Col md={4}>
             <Line verticalCenter lineWidth={40}>
