@@ -5,7 +5,7 @@ import React from 'react'
 import MenuData from './Menu.json'
 import { LinkedLeanJSLogo } from '../../logos/LeanJS'
 import './PhoneMenu.css'
-import { SPACING_SMALL } from '../config/styles'
+import { SPACING_SMALL } from '../../../config/styles'
 
 const Item = ({ children, ...props }) => <Link {...props}>{children}</Link>
 
