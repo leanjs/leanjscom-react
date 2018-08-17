@@ -4,7 +4,7 @@ import Circle from '../elements/Circle'
 import { DARKGREY } from '../../config/styles'
 
 const defaultNumCircles = 6
-const defaultSize = 360
+const defaultSize = 360 / 18
 const defaultColor = DARKGREY
 
 const ConcentricCircles = props => {
@@ -27,7 +27,7 @@ const ConcentricCircles = props => {
       bg="transparent"
       color={color}
       hasBorder={true}
-      borderWidth={2}
+      borderWidth={2 / 18}
       size={thisCircleSize}
     >
       {<ConcentricCircles {...props} nestingLevel={nestingLevel + 1} />}

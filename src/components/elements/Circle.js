@@ -1,20 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const defaultSize = 36
-const defaultBorderWidth = 4
+const defaultSize = 2
+const defaultBorderWidth = 2 / 9
 
 const CircleOuter = styled.div`
   border-radius: 100%;
-  height: ${props => (props.size ? props.size : defaultSize)}px;
-  width: ${props => (props.size ? props.size : defaultSize)}px;
-  padding: ${props => (props.hasPadding ? `0.5em` : `0`)};
+  height: ${props => (props.size ? props.size : defaultSize)}rem;
+  width: ${props => (props.size ? props.size : defaultSize)}rem;
+  padding: ${props => (props.hasPadding ? `0.5rem` : `0`)};
   ${props => (props.bg ? `background: ${props.bg}` : null)};
   border: ${props =>
     props.hasBorder
       ? `${
           props.borderWidth ? props.borderWidth : defaultBorderWidth
-        }px solid ${props.color}`
+        }rem solid ${props.color}`
       : `none`};
   box-sizing: border-box;
 `
@@ -34,7 +34,7 @@ const CircleInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 1rem;
 `
 
 const Circle = props => (

@@ -16,7 +16,7 @@ const ValueBullet = ({ image }) => (
   <Bullet
     color={LIGHTGREY}
     bg="black"
-    size={60}
+    size={60 / 18}
     hasBorder={true}
     images={images}
     image={image}

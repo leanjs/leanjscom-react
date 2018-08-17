@@ -40,7 +40,7 @@ const BenefitBullet = ({ image, dark }) => (
   <Bullet
     color={dark ? BLACK : DARKGREY}
     bg={dark ? LIGHTGREY : WHITE}
-    size={60}
+    size={60 / 18}
     images={images}
     image={image}
     hasBorder={!dark}

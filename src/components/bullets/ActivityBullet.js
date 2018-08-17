@@ -24,7 +24,7 @@ const ActivityBullet = ({ image }) => (
   <Bullet
     color="black"
     bg={LIGHTGREY}
-    size={60}
+    size={60 / 18}
     images={images}
     image={image}
     hasBorder={false}

@@ -22,7 +22,7 @@ const ContactUsBullet = ({ image }) => (
   <Bullet
     color={WHITE}
     bg={EXTRADARKGREY}
-    size={40}
+    size={40 / 18}
     images={images}
     image={image}
     hasBorder={false}
