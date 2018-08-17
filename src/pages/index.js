@@ -107,12 +107,12 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col md={5}>
-            <LinkButton fullWidth hasArrows dark>
+            <LinkButton fullWidthOnMobile hasArrows dark>
               Read case studies
             </LinkButton>
           </Col>
           <Col md={5}>
-            <LinkButton fullWidth hasArrows>
+            <LinkButton fullWidthOnMobile hasArrows>
               Working with you
             </LinkButton>
           </Col>
