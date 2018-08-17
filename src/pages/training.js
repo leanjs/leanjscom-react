@@ -9,7 +9,12 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import Mugshot from '../components/mugshots/Mugshot'
-import { WHITE, EXTRADARKGREY } from '../config/styles'
+import {
+  WHITE,
+  EXTRADARKGREY,
+  FONT_SIZE_LARGE,
+  SPACING_LARGE,
+} from '../config/styles'
 import { MUGSHOT_JAMES_NORTON } from '../config/images'
 import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
@@ -24,10 +29,10 @@ import { styleChildLinkColor } from '../components/navigation/Link'
 import HighlightedItem from '../components/decoration/HighlightedItem'
 
 const TitleText = styled(P)`
-  font-size: 24px;
+  font-size: ${FONT_SIZE_LARGE};
 `
 const InlineItems = styled.div`
-  padding-left: 50px;
+  padding-left: ${SPACING_LARGE};
 `
 
 const BootcampCol = styled(Col)`

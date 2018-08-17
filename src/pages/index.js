@@ -9,7 +9,7 @@ import ValueBullet from '../components/bullets/ValueBullet'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
-import { WHITE } from '../config/styles'
+import { WHITE, SPACING_LARGE, FONT_SIZE_LARGE } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
@@ -17,10 +17,10 @@ import { H2, P } from '../components/text'
 import Iteration from '../components/graphics/Iteration'
 
 const TitleText = styled(P)`
-  font-size: 24px;
+  font-size: ${FONT_SIZE_LARGE};
 `
 const InlineItems = styled.div`
-  padding-left: 50px;
+  padding-left: ${SPACING_LARGE};
 `
 
 const IndexPage = () => (

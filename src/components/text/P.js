@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FONT_FAMILY, TEXT_SIZE } from '../../config/styles'
+import { FONT_FAMILY, TEXT_SIZE, FONT_SIZE_STANDARD } from '../../config/styles'
 
 export default styled.p`
   ${TEXT_SIZE}
-  ${props => props.quote && `font-size: 20px; font-style: italic;`}
+  ${props =>
+    props.quote && `font-size: ${FONT_SIZE_STANDARD}; font-style: italic;`}
   ${FONT_FAMILY}
   text-align: ${props => props.align || 'left'};
   margin: 0;
