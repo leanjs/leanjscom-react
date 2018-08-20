@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link, { styleChildLinkColor } from '../navigation/Link'
 import Grid, { Col, Row } from './Grid'
+import Section from './Section'
 
 import {
   LIGHTGREY,
@@ -17,23 +18,6 @@ import { H2, H3, P } from '../text'
 import ContactForm from '../ContactForm'
 import Ul, { Li } from './Ul'
 
-const StyledFooter = styled.div`
-  footer {
-    background-color: ${EXTRADARKGREY};
-    padding: ${SPACING_LARGE} 0 ${SPACING_LARGE} 0;
-    color: ${WHITE};
-    h2,
-    h3 {
-      color: ${WHITE};
-    }
-    ${styleChildLinkColor(WHITE)};
-  }
-
-  @media (max-width: ${SCREEN_XS_MAX}) {
-    background-color: ${EXTRADARKGREY};
-  }
-`
-
 const LinkList = styled(Ul)`
   padding-left: 0;
   list-style: none;
@@ -41,7 +25,7 @@ const LinkList = styled(Ul)`
 `
 
 const Footer = () => (
-  <StyledFooter>
+  <Section dark>
     <footer>
       <Grid>
         <Row>
@@ -100,7 +84,7 @@ const Footer = () => (
         </Row>
       </Grid>
     </footer>
-  </StyledFooter>
+  </Section>
 )
 
 export default Footer

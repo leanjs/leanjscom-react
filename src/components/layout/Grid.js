@@ -6,7 +6,8 @@ import {
 } from 'react-styled-flexboxgrid'
 import styled from 'styled-components'
 
-import { SPACING_STANDARD } from '../../config/styles'
+import { SPACING_STANDARD, SPACING_LARGE } from '../../config/styles'
+import { SCREEN_SM_MAX } from '../utils'
 
 const Col = ({ xs, sm, md, lg, center, style = {}, ...rest }) => {
   const sizes = {
@@ -27,7 +28,10 @@ const Col = ({ xs, sm, md, lg, center, style = {}, ...rest }) => {
 const Row = styled(FlexboxRow)`
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: ${SPACING_STANDARD};
+  margin-bottom: ${SPACING_LARGE};
+  @media (max-width: ${SCREEN_SM_MAX}) {
+    margin-bottom: ${SPACING_STANDARD};
+  }
 `
 
 export { Row, Col, Grid }

@@ -16,7 +16,7 @@ import { ITERATION_DIAGRAM } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P } from '../components/text'
+import { H2, P, Strong } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 
@@ -128,12 +128,12 @@ const IndexPage = () => (
     <Section dark>
       <Grid>
         <Row>
-          <Col>
+          <Col md={8}>
             <H2>We care about you and your people. We value good ethics.</H2>
             <P>
-              Whoa, that sounds heavy… Thing is, we have lofty ambitions and
-              want to do <br /> ‘good’ in the world through our work and
-              actions.
+              Whoa, that sounds heavy… Thing is,{' '}
+              <Strong>we have lofty ambitions and want to do ‘good’</Strong> in
+              the world through our work and actions.
             </P>
           </Col>
         </Row>
