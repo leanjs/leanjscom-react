@@ -20,11 +20,25 @@ import { H2, P, Strong } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 
-import indexContent from '../content/index.json'
-
 const TitleText = styled(P)`
   font-size: ${FONT_SIZE_LARGE};
 `
+
+const IterationStages = props => (
+  <React.Fragment>
+    {props.items.map(item => (
+      <Line>
+        {item.title}
+        <P>{item.description}</P>
+        <P>
+          <LinkButton to={item.button.to} hasArrows>
+            {item.button.text}
+          </LinkButton>
+        </P>
+      </Line>
+    ))}
+  </React.Fragment>
+)
 
 const IndexPage = () => (
   <React.Fragment>
@@ -214,17 +228,35 @@ const IndexPage = () => (
             <Image src={ITERATION_DIAGRAM} />
           </Col>
           <Col md={4}>
-            {indexContent.IterationStages.map(stage => (
-              <Line>
-                {stage.title}
-                <P>{stage.description}</P>
-                <P>
-                  <LinkButton to={stage.button.to} hasArrows>
-                    {stage.button.text}
-                  </LinkButton>
-                </P>
-              </Line>
-            ))}
+            <IterationStages
+              items={[
+                {
+                  title: 'Learn...',
+                  description:
+                    'User research, business analysis, competitor audit',
+                  button: {
+                    text: 'UX & design services',
+                    to: '/building-solutions',
+                  },
+                },
+                {
+                  title: 'Build...',
+                  description: 'Prototyping, coding and development',
+                  button: {
+                    text: 'Development services',
+                    to: '/building-solutions',
+                  },
+                },
+                {
+                  title: 'Test...',
+                  description: 'Usability testing, quality assurance',
+                  button: {
+                    text: 'UX & design services',
+                    to: '/building-solutions',
+                  },
+                },
+              ]}
+            />
             <LinkButton hasArrows dark fullWidth>
               Working with you
             </LinkButton>
