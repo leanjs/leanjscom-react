@@ -9,6 +9,7 @@ import ValueBullet from '../components/bullets/ValueBullet'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
+import SmallIconAndSentences from '../components/bulletedsections/SmallIconAndSentences'
 import { WHITE, SPACING_LARGE, FONT_SIZE_LARGE } from '../config/styles'
 import { TEAMWORK } from '../config/images'
 import { ITERATION_DIAGRAM } from '../config/images'
@@ -127,40 +128,49 @@ const IndexPage = () => (
     <Section dark>
       <Grid>
         <Row>
-          <H2>We care about you and your people. We value good ethics.</H2>
-          <P>
-            Whoa, that sounds heavy… Thing is, we have lofty ambitions and want
-            to do <br /> ‘good’ in the world through our work and actions.
-          </P>
-        </Row>
-        <Row>
-          <TitleText>Our core values</TitleText>
-        </Row>
-        <Row>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<ValueBullet image="learning" />}
-              sentence="Be unafraid to learn from everyone and believe in teaching what we know"
-            />
-          </Col>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<ValueBullet image="caring" />}
-              sentence="Always aim to treat others how we would want to be treated"
-            />
-          </Col>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<ValueBullet image="people" />}
-              sentence="Ensure what we do is meaningful and always people-centred"
-            />
+          <Col>
+            <H2>We care about you and your people. We value good ethics.</H2>
+            <P>
+              Whoa, that sounds heavy… Thing is, we have lofty ambitions and
+              want to do <br /> ‘good’ in the world through our work and
+              actions.
+            </P>
           </Col>
         </Row>
         <Row>
-          <LinkButton hasArrows>Our Team and Principles</LinkButton>
+          <Col>
+            <TitleText>Our core values</TitleText>
+          </Col>
         </Row>
         <Row>
-          <Col center xs={12}>
+          <SmallIconAndSentences
+            wrapWithCols={true}
+            items={[
+              {
+                image: 'learning',
+                sentence:
+                  'Be unafraid to learn from everyone and believe in teaching what we know',
+              },
+              {
+                image: 'caring',
+                sentence:
+                  'Always aim to treat others how we would want to be treated',
+              },
+              {
+                image: 'people',
+                sentence:
+                  'Ensure what we do is meaningful and always people-centred',
+              },
+            ]}
+          />
+        </Row>
+        <Row>
+          <Col>
+            <LinkButton hasArrows>Our Team and Principles</LinkButton>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <Instagram />
           </Col>
         </Row>
@@ -169,12 +179,13 @@ const IndexPage = () => (
 
     <Section>
       <Grid>
-        <H2>What we do, how we do it</H2>
-        <P>
-          We work exclusivity in the iterative, incremental ‘Lean’ way (thus the
-          name!). This ensures:
-        </P>
-        <br />
+        <Col>
+          <H2>What we do, how we do it</H2>
+          <P>
+            We work exclusivity in the iterative, incremental ‘Lean’ way (thus
+            the name!). This ensures:
+          </P>
+        </Col>
         <Row>
           <Col md={4}>
             <SmallIconAndSentence
@@ -195,7 +206,6 @@ const IndexPage = () => (
             />
           </Col>
         </Row>
-        <br />
         <Row>
           <Col md={8}>
             <TitleText>Here's how:</TitleText>

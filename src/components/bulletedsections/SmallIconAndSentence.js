@@ -14,14 +14,14 @@ const Row = styled.div`
 const Cell = styled.div`
   display: table-cell;
   vertical-align: middle;
-  padding-left: ${SPACING_STANDARD};
+  padding-left: ${props => (props.first ? `0` : SPACING_STANDARD)};
 `
 
-const SmallIconAndSentence = ({ icon, children, ...props }) => (
+const SmallIconAndSentence = props => (
   <Table>
     <Row>
-      <Cell>{icon}</Cell>
-      <Cell>{props.sentence}</Cell>
+      <Cell {...props}>{props.icon}</Cell>
+      <Cell {...props}>{props.sentence}</Cell>
     </Row>
   </Table>
 )
