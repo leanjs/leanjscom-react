@@ -1,13 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { SPACING_STANDARD } from '../utils/index'
+import { SPACING_SMALL, SPACING_STANDARD } from '../../config/styles'
 import TextArea from './TextArea'
 import Checkbox from './Checkbox'
 import Ul, { Li } from '../layout/Ul'
 
 const LabelledFieldInner = styled.div`
   margin-bottom: ${SPACING_STANDARD};
+`
+
+const LabelContainer = styled.div`
+  padding-bottom: ${SPACING_SMALL};
 `
 
 const Field = props => {
@@ -46,9 +50,11 @@ const LabelledField = props => (
       <Field {...props} />
     ) : (
       <React.Fragment>
-        <label for={props.fieldType == 'checkboxes' ? null : props.id}>
-          {props.label}
-        </label>
+        <LabelContainer>
+          <label for={props.fieldType == 'checkboxes' ? null : props.id}>
+            {props.label}
+          </label>
+        </LabelContainer>
         <div>
           <Field {...props} />
         </div>

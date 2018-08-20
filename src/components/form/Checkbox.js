@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { WHITE } from '../../config/styles'
+import { WHITE, SPACING_SMALL } from '../../config/styles'
 
 const defaultSize = 3
 
@@ -51,7 +51,11 @@ const Label = props => {
   // Note: have not used a Styled Component for this (and other) divs because they do not fire onClick events
   return (
     <div
-      style={{ cursor: 'pointer', display: 'inline' }}
+      style={{
+        cursor: 'pointer',
+        display: 'inline',
+        marginLeft: SPACING_SMALL,
+      }}
       onClick={onClick(props)}
     >
       {props.label}
