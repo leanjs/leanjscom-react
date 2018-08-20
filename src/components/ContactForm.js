@@ -3,6 +3,7 @@ import { db } from '../../firebase'
 import Ul, { Li } from './layout/Ul'
 import Checkbox from './form/Checkbox'
 import TextArea from './form/TextArea'
+import LabelledField from './form/LabelledField'
 import { P } from './text'
 import Link from './navigation/Link'
 import styled from 'styled-components'
@@ -78,85 +79,72 @@ class ContactForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <div>
-          <label>Name</label>
-          <br />
-          <TextArea
-            onChange={this.handleTextAreaChanged('name')}
-            type="text"
-            placeholder="Name"
-          >
-            {name}
-          </TextArea>
-        </div>
-        <div>
-          <label>Phone number or email address</label>
-          <br />
-          <TextArea
-            onChange={this.handleTextAreaChanged('email')}
-            type="text"
-            placeholder="Email Address"
-          >
-            {email}
-          </TextArea>
-        </div>
-        <div>
-          <label>How can we help you?</label>
-          <br />
-          <Ul unstyled>
-            <Li>
-              <Checkbox
-                onChange={this.handleCheckboxChanged(
-                  'interestedInDigitalSolutions'
-                )}
-                checked={interestedInDigitalSolutions}
-                label="Digital solutions`"
-              />
-            </Li>
-            <Li>
-              <Checkbox
-                onChange={this.handleCheckboxChanged('interestedInTraining')}
-                checked={interestedInTraining}
-                label="Training"
-              />
-            </Li>
-            <Li>
-              <Checkbox
-                onChange={this.handleCheckboxChanged(
-                  'interestedInBothDigitalSolutionsAndTraining'
-                )}
-                checked={interestedInBothDigitalSolutionsAndTraining}
-                label="Both!"
-              />
-            </Li>
-          </Ul>
-        </div>
-        <div>
-          <label>Would you like to give more detail? Feel free!</label>
-          <br />
-          <TextArea
-            onChange={this.handleTextAreaChanged('message')}
-            type="message"
-            placeholder="Message"
-          >
-            {message}
-          </TextArea>
-        </div>
+        <LabelledField
+          fieldType="textarea"
+          id="contact-form-name"
+          label="Name"
+          onChange={this.handleTextAreaChanged('name')}
+          placeholder="Name"
+          value={name}
+        />
 
-        <div>
-          <Checkbox
-            onChange={this.handleCheckboxChanged('allowMarketing')}
-            checked={allowMarketing}
-            label={
-              <label>
-                We do not spam - ever. But, if you're up for it, we'd love to
-                tell you about any cool new services or offers that we've got
-                going on. Interested? Tick the box! Not sure, here's our{' '}
-                <Link>Privacy Policy</Link>
-              </label>
-            }
-          />
-        </div>
+        <LabelledField
+          fieldType="textarea"
+          id="contact-form-email"
+          label="Phone number or email address"
+          onChange={this.handleTextAreaChanged('email')}
+          placeholder="Email Address"
+          value={email}
+        />
+
+        <LabelledField
+          fieldType="checkboxes"
+          id="contact-form-interests"
+          label="How can we help you?"
+          onChange={this.handleCheckboxChanged}
+          options={[
+            {
+              name: 'interestedInDigitalSolutions',
+              checked: interestedInDigitalSolutions,
+              label: 'Digital solutions',
+            },
+            {
+              name: 'interestedInTraining',
+              checked: interestedInTraining,
+              label: 'Training',
+            },
+            {
+              name: 'interestedInBothDigitalSolutionsAndTraining',
+              checked: interestedInBothDigitalSolutionsAndTraining,
+              label: 'Both!',
+            },
+          ]}
+          onChange={this.handleCheckboxChanged}
+        />
+
+        <LabelledField
+          fieldType="textarea"
+          id="contact-form-message"
+          label="Would you like to give more detail? Feel free!"
+          onChange={this.handleTextAreaChanged('message')}
+          placeholder="Message"
+          value={message}
+        />
+
+        <LabelledField
+          fieldType="singlecheckbox"
+          id="contact-form-allow-marketing"
+          label={
+            <label for="contact-form-allow-marketing">
+              We do not spam - ever. But, if you're up for it, we'd love to tell
+              you about any cool new services or offers that we've got going on.
+              Interested? Tick the box! Not sure, here's our{' '}
+              <Link>Privacy Policy</Link>
+            </label>
+          }
+          checked={allowMarketing}
+          onChange={this.handleCheckboxChanged('allowMarketing')}
+        />
 
         <Button disabled={isInvalid} type="submit">
           Send

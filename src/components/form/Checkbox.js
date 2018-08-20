@@ -67,12 +67,13 @@ const Checkbox = props => (
       </div>
       <input
         type="checkbox"
+        id={props.id}
         checked={props.checked}
         onClick={props.onChange}
         className="actualCheckbox"
       />
     </StyledCheckbox>{' '}
-    <Label {...props} />
+    <Label {...props} for={props.id} />
   </div>
 )
 
