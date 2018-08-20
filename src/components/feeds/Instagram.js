@@ -68,17 +68,6 @@ const photos = [
 
 const InstagramInner = styled.div`
   background: white;
-  position: relative;
-`
-
-const InstagramOverlay = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.5;
-  background: black;
 `
 
 const Instagram = ({ numPhotos = 6, photosPerRow = 3 }) => (
@@ -94,7 +83,6 @@ const Instagram = ({ numPhotos = 6, photosPerRow = 3 }) => (
         </Row>
       ))}
     </Grid>
-    <InstagramOverlay />
   </InstagramInner>
 )
 
