@@ -39,7 +39,6 @@ const Field = props => {
       return <Checkbox {...props} />
 
     default:
-      console.log('bar')
       throw new Error('Unknown field type')
   }
 }
