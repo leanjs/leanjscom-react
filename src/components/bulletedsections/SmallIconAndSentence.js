@@ -20,8 +20,8 @@ const Cell = styled.div`
 const SmallIconAndSentence = props => (
   <Table>
     <Row>
-      <Cell {...props}>{props.icon}</Cell>
-      <Cell {...props}>{props.sentence}</Cell>
+      <Cell first={props.first}>{props.icon}</Cell>
+      <Cell>{props.sentence}</Cell>
     </Row>
   </Table>
 )
