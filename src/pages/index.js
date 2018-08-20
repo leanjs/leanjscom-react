@@ -145,6 +145,7 @@ const IndexPage = () => (
         <Row>
           <SmallIconAndSentences
             wrapWithCols={true}
+            bulletType={ValueBullet}
             items={[
               {
                 image: 'learning',
@@ -187,24 +188,25 @@ const IndexPage = () => (
           </P>
         </Col>
         <Row>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="quality" />}
-              sentence="A process that ensures quality is baked in"
-            />
-          </Col>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="costeffective" />}
-              sentence="Cost effective, tested solutions that you can build upon"
-            />
-          </Col>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="quick" />}
-              sentence="Very quick turnarounds"
-            />
-          </Col>
+          <SmallIconAndSentences
+            wrapWithCols={true}
+            bulletType={BenefitBullet}
+            items={[
+              {
+                image: 'quality',
+                sentence: 'A process that ensures quality is baked in',
+              },
+              {
+                image: 'costeffective',
+                sentence:
+                  'Cost effective, tested solutions that you can build upon',
+              },
+              {
+                image: 'quick',
+                sentence: 'Very quick turnarounds',
+              },
+            ]}
+          />
         </Row>
         <Row>
           <Col md={8}>
