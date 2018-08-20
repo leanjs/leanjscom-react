@@ -40,11 +40,6 @@ const Footer = () => (
             <LinkList>
               <Li>
                 <Link>
-                  <ContactUsBullet image="phone" />Call us up for a chat
-                </Link>
-              </Li>
-              <Li>
-                <Link>
                   <ContactUsBullet image="email" />Email hello@leanjs.com
                 </Link>
               </Li>
@@ -56,12 +51,6 @@ const Footer = () => (
               <Li>
                 <Link>
                   <ContactUsBullet image="instagram" />Instagram us @leanjscom
-                </Link>
-              </Li>
-              <Li>
-                <Link>
-                  <ContactUsBullet image="hangouts" />Chat face to face right
-                  now on Google Hangouts
                 </Link>
               </Li>
               <Li>
