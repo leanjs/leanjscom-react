@@ -10,6 +10,7 @@ const getLineWidth = props => (props.wide ? SPACING_EXTRALARGE : SPACING_LARGE)
 
 const LineOuter = styled.div`
   padding-left: ${props => parseFloat(getLineWidth(props)) + 1}rem;
+  padding-bottom: ${SPACING_LARGE};
   position: relative;
 `
 

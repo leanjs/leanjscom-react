@@ -20,11 +20,10 @@ import { H2, P, Strong } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 
+import indexContent from '../content/index.json'
+
 const TitleText = styled(P)`
   font-size: ${FONT_SIZE_LARGE};
-`
-const InlineItems = styled.div`
-  padding-left: ${SPACING_LARGE};
 `
 
 const IndexPage = () => (
@@ -213,27 +212,17 @@ const IndexPage = () => (
             <Image src={ITERATION_DIAGRAM} />
           </Col>
           <Col md={4}>
-            <Line>
-              Learn...
-              <P>
-                User research, business analysis, competitor audit
-                <LinkButton hasArrows>UX & design services</LinkButton>
-              </P>
-            </Line>
-            <Line>
-              Build...
-              <P>
-                Prototyping, coding and development
-                <LinkButton hasArrows>Development services</LinkButton>
-              </P>
-            </Line>
-            <Line>
-              Test...
-              <P>
-                Usability testing, quality assurance
-                <LinkButton hasArrows>UX & design services</LinkButton>
-              </P>
-            </Line>
+            {indexContent.IterationStages.map(stage => (
+              <Line>
+                {stage.title}
+                <P>{stage.description}</P>
+                <P>
+                  <LinkButton to={stage.button.to} hasArrows>
+                    {stage.button.text}
+                  </LinkButton>
+                </P>
+              </Line>
+            ))}
             <LinkButton hasArrows dark fullWidth>
               Working with you
             </LinkButton>
