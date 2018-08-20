@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { db } from '../../firebase'
 import Ul, { Li } from './layout/Ul'
 import Checkbox from './form/Checkbox'
+import TextArea from './form/TextArea'
 import { P } from './text'
 import Link from './navigation/Link'
 import styled from 'styled-components'
@@ -80,24 +81,24 @@ class ContactForm extends Component {
         <div>
           <label>Name</label>
           <br />
-          <textarea
+          <TextArea
             onChange={this.handleTextAreaChanged('name')}
             type="text"
             placeholder="Name"
           >
             {name}
-          </textarea>
+          </TextArea>
         </div>
         <div>
           <label>Phone number or email address</label>
           <br />
-          <textarea
+          <TextArea
             onChange={this.handleTextAreaChanged('email')}
             type="text"
             placeholder="Email Address"
           >
             {email}
-          </textarea>
+          </TextArea>
         </div>
         <div>
           <label>How can we help you?</label>
@@ -133,13 +134,13 @@ class ContactForm extends Component {
         <div>
           <label>Would you like to give more detail? Feel free!</label>
           <br />
-          <textarea
+          <TextArea
             onChange={this.handleTextAreaChanged('message')}
             type="message"
             placeholder="Message"
           >
             {message}
-          </textarea>
+          </TextArea>
         </div>
 
         <div>
