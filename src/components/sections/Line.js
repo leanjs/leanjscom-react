@@ -9,24 +9,29 @@ import {
 const getLineWidth = props => (props.wide ? SPACING_EXTRALARGE : SPACING_LARGE)
 
 const LineOuter = styled.div`
-  padding-left: ${props => parseFloat(getLineWidth(props)) + 1}rem;
   padding-bottom: ${SPACING_LARGE};
-  position: relative;
 `
 
 const LineInner = styled.div`
+  padding-left: ${props => parseFloat(getLineWidth(props)) + 1}rem;
+  position: relative;
+`
+
+const LineActualLine = styled.div`
   position: absolute;
   left: 0;
-  top: 0.75rem;
+  top: ${props => (props.verticalCenter ? `50%` : `0.75rem`)};
   width: ${props => getLineWidth(props)};
   height: 0.17rem;
   background: ${MEDIUMGREY};
 `
 
-const Line = ({ wide = false, children }) => (
-  <LineOuter wide={wide}>
-    <LineInner wide={wide} />
-    {children}
+const Line = ({ wide = false, verticalCenter = false, children }) => (
+  <LineOuter>
+    <LineInner wide={wide}>
+      <LineActualLine verticalCenter={verticalCenter} wide={wide} />
+      {children}
+    </LineInner>
   </LineOuter>
 )
 
