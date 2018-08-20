@@ -209,31 +209,30 @@ const IndexPage = () => (
         <Row>
           <Col md={8}>
             <TitleText>Here's how:</TitleText>
-            <br />
             <Image src={ITERATION_DIAGRAM} />
           </Col>
           <Col md={4}>
-            <Line verticalCenter lineWidth={40}>
+            <Line>
               Learn...
+              <P>
+                User research, business analysis, competitor audit
+                <LinkButton hasArrows>UX & design services</LinkButton>
+              </P>
             </Line>
-            <InlineItems>
-              User research, business analysis, competitor audit
-              <LinkButton hasArrows>UX & design services</LinkButton>
-            </InlineItems>
-            <Line verticalCenter lineWidth={40}>
+            <Line>
               Build...
+              <P>
+                Prototyping, coding and development
+                <LinkButton hasArrows>Development services</LinkButton>
+              </P>
             </Line>
-            <InlineItems>
-              Prototyping, coding and development
-              <LinkButton hasArrows>Development services</LinkButton>
-            </InlineItems>
-            <Line verticalCenter lineWidth={40}>
+            <Line>
               Test...
+              <P>
+                Usability testing, quality assurance
+                <LinkButton hasArrows>UX & design services</LinkButton>
+              </P>
             </Line>
-            <InlineItems>
-              Usability testing, quality assurance
-              <LinkButton hasArrows>UX & design services</LinkButton>
-            </InlineItems>
             <LinkButton hasArrows dark fullWidth>
               Working with you
             </LinkButton>

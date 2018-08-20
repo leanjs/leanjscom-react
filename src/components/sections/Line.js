@@ -16,15 +16,15 @@ const LineOuter = styled.div`
 const LineInner = styled.div`
   position: absolute;
   left: 0;
-  top: ${props => (props.verticalCenter ? `50%` : `0`)};
+  top: 0.75rem;
   width: ${props => getLineWidth(props)};
-  height: 3px;
+  height: 0.17rem;
   background: ${MEDIUMGREY};
 `
 
-const Line = ({ wide = false, children, verticalCenter = false }) => (
+const Line = ({ wide = false, children }) => (
   <LineOuter wide={wide}>
-    <LineInner wide={wide} verticalCenter={verticalCenter} />
+    <LineInner wide={wide} />
     {children}
   </LineOuter>
 )

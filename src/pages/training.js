@@ -131,7 +131,7 @@ const TrainingPage = () => (
               team to get the job done.
             </P>
 
-            <Line verticalCenter>
+            <Line>
               ReactJS ecosystem <Topic>Code</Topic>
             </Line>
 
@@ -148,7 +148,7 @@ const TrainingPage = () => (
               </LinkButton>
             </P>
 
-            <Line verticalCenter>
+            <Line>
               Product and UX design <Topic>Design</Topic>
             </Line>
 
@@ -157,7 +157,7 @@ const TrainingPage = () => (
               design thinking.
             </P>
 
-            <Line verticalCenter>
+            <Line>
               Lean / Agile <Topic>Process</Topic>
             </Line>
             <P>

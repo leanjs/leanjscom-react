@@ -20,7 +20,7 @@ const Columns = styled.div`
 `
 
 const LargeIconAndPoints = ({ color, ...props }) => (
-  <Line verticalCenter>
+  <Line>
     <Columns color={color}>
       <CaseStudyBullet className="case-study-bullet" image={props.image} />
       <Ul className="points">{props.points.map(point => <Li>{point}</Li>)}</Ul>

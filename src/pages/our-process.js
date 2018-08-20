@@ -86,7 +86,7 @@ const OurProcess = () => (
 
             {ourProcess.OurProcessContent.HowItWorks.map(section => (
               <React.Fragment>
-                <Line verticalCenter>{section.heading}</Line>
+                <Line>{section.heading}</Line>
                 {section.sentences.map(sentence => (
                   <SmallIconAndSentence
                     icon={<BenefitBullet image="chat" />}
@@ -169,19 +169,19 @@ const OurProcess = () => (
             <P>
               <img src={RICHARD_TEACHING} />
             </P>
-            <Line verticalCenter>Learn</Line>
+            <Line>Learn</Line>
             <P>
               Trainers are builders, searching for and implementing the latest
               methods and tech. Both in personal and client projects. We’re
               constantly learning too!
             </P>
-            <Line verticalCenter>Build</Line>
+            <Line>Build</Line>
             <P>
               We create and add to our curriculum when research shows to do so.
               We also creating ‘MVP’ meetups to give us a basis on which to test
               effectiveness/need
             </P>
-            <Line verticalCenter>Test</Line>
+            <Line>Test</Line>
             <P>
               Students and coaches provide us with essential qualitiative
               feedback on all trainings

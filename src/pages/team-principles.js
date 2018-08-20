@@ -68,7 +68,7 @@ const Team = () => (
       </Row>
       <Row>
         <Col>
-          <Line verticalCenter>Our core values</Line>
+          <Line>Our core values</Line>
         </Col>
       </Row>
       <Row>
@@ -120,7 +120,7 @@ const Team = () => (
       <Row>
         <Col>
           <a name="notForProfitDiscounts" />
-          <Line verticalCenter>Not-for-proft partnerships and discounts</Line>
+          <Line>Not-for-proft partnerships and discounts</Line>
         </Col>
       </Row>
       <Row>
