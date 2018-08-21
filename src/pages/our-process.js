@@ -198,6 +198,7 @@ const OurProcess = () => (
         </Row>
       </Grid>
     </Section>
+    <Section />
   </React.Fragment>
 )
 
