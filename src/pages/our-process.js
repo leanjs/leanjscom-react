@@ -114,9 +114,7 @@ const OurProcess = () => (
           <Row>
             <Col md={8}>
               <a name="howLongItTakes" />
-              <H2>
-                Whoa there...<br />How long does that take?
-              </H2>
+              <H2>Whoa there... How long does that take?</H2>
               <P>
                 It sounds a lot, we know. However, this process can take as
                 little as 6 weeks
