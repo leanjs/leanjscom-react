@@ -198,18 +198,14 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col md={6}>
             <Image src={'https://picsum.photos/500/200/?random'} />
           </Col>
-        </Row>
-        <Row>
-          <Col>
+          <Col md={6}>
             <P>
               Building a website or app is scary - we get it. But sometimes the
               real challenges start once the project is launched and live.
             </P>
-          </Col>
-          <Col>
             <P>
               That’s why we promise that you wont be left in the lurch, we’ll be
               there to help you as much as you require. We wont dump you in it
