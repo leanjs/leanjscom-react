@@ -23,7 +23,7 @@ const Field = props => {
       return (
         <Ul unstyled>
           {props.options.map((option, i) => (
-            <Li>
+            <Li key={`field-options-${new Date().getTime()}-${i}`}>
               <Checkbox
                 id={`${props.id}-${i}`}
                 onChange={props.onChange(option.name)}
@@ -50,7 +50,7 @@ const LabelledField = props => (
     ) : (
       <React.Fragment>
         <LabelContainer>
-          <label for={props.fieldType == 'checkboxes' ? null : props.id}>
+          <label htmlFor={props.fieldType == 'checkboxes' ? null : props.id}>
             {props.label}
           </label>
         </LabelContainer>

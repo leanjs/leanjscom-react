@@ -135,7 +135,7 @@ class ContactForm extends Component {
           fieldType="singlecheckbox"
           id="contact-form-allow-marketing"
           label={
-            <label for="contact-form-allow-marketing">
+            <label htmlFor="contact-form-allow-marketing">
               We do not spam - ever. But, if you're up for it, we'd love to tell
               you about any cool new services or offers that we've got going on.
               Interested? Tick the box! Not sure, here's our{' '}

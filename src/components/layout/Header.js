@@ -217,7 +217,7 @@ const Header = ({
 
 Header.propTypes = {
   titleLines: PropTypes.array.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   links: PropTypes.array,
   bgImg: PropTypes.string,
 }
