@@ -53,13 +53,13 @@ const Team = () => (
     />
     <Section>
       <Row>
-        <Col center>
+        <Col>
           <a name="ourValues" />
           <H2>Our values and principles</H2>
         </Col>
       </Row>
       <Row>
-        <Col center>
+        <Col>
           <P>
             Our team come from various backgrounds, life experiences and
             countries but all have a shared vision….
@@ -110,7 +110,7 @@ const Team = () => (
         </ValueCol>
       </Row>
       <Row>
-        <Col center>
+        <Col>
           <LinkButton external to="https://medium.com/leanjs">
             Blog: How we created <br /> our brand identity
           </LinkButton>
@@ -124,19 +124,19 @@ const Team = () => (
         </Col>
       </Row>
       <Row>
-        <Col center md={4}>
+        <Col md={4}>
           <P>
             Do you work for a not-for-profit organisation and share our values?
             Then we’d love to hear from you!
           </P>
         </Col>
-        <Col center md={4}>
+        <Col md={4}>
           <P>
             We’d love to partner with you and your team to help change the world
             for the better.
           </P>
         </Col>
-        <Col center md={4}>
+        <Col md={4}>
           <P>
             To that end, we are always open to offering discounts on our
             training, design and development services - depending on the
@@ -145,7 +145,7 @@ const Team = () => (
         </Col>
       </Row>
       <Row>
-        <Col center>
+        <Col>
           <LinkButton hasArrows to="#contact">
             Contact us and let's work together!
           </LinkButton>
