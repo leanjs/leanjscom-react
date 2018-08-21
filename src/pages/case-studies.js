@@ -8,7 +8,11 @@ import Topic from '../components/labels/Topic'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
-import { MUGSHOT_JAMES_NORTON } from '../config/images'
+import {
+  MUGSHOT_JAMES_NORTON,
+  MUGSHOT_STHALHER,
+  CASE_STUDY_FINGOPAY,
+} from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote2 } from '../components/text'
@@ -126,7 +130,7 @@ const CaseStudies = () => (
               />
             </Col>
             <Col md={6}>
-              <Image src={'https://picsum.photos/300/200/?random'} />
+              <Image src={CASE_STUDY_FINGOPAY} />
             </Col>
           </Row>
 
@@ -143,10 +147,10 @@ const CaseStudies = () => (
           <Row>
             <Col md={6}>
               <Mugshot
-                image={MUGSHOT_JAMES_NORTON}
-                name="Georgina Clarke"
-                jobTitle="Account Manager ABinBev"
-                company="ASOS.com"
+                image={MUGSHOT_STHALHER}
+                name="Stuart Nelmes"
+                jobTitle="Chief Technology Officer"
+                company="Stahler/FingoPay"
                 color={DARKGREY}
               />
             </Col>
