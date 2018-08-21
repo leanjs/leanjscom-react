@@ -5,14 +5,30 @@ import { WHITE, SPACING_SMALL } from '../../config/styles'
 const defaultSize = 3
 
 const StyledCheckbox = styled.div`
+  > div {
+    display: table;
+    > div {
+      display: table-row;
+    }
+  }
+
+  .displayCheckboxOuter,
+  .labelWrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .labelWrapper {
+    padding-left: ${SPACING_SMALL};
+  }
+
   .displayCheckbox {
     background: ${WHITE};
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
 
     cursor: pointer;
+
+    height: ${props => (props.size ? props.size : defaultSize)}em;
+    width: ${props => (props.size ? props.size : defaultSize)}em;
 
     .displayCheckboxInner {
       background-color: transparent;
@@ -34,8 +50,6 @@ const StyledCheckbox = styled.div`
     left: -9999999px;
   }
 
-  height: ${props => (props.size ? props.size : defaultSize)}em;
-  width: ${props => (props.size ? props.size : defaultSize)}em;
   display: inline-block;
   vertical-align: middle;
 `
@@ -54,7 +68,6 @@ const Label = props => {
       style={{
         cursor: 'pointer',
         display: 'inline',
-        marginLeft: SPACING_SMALL,
       }}
       onClick={onClick(props)}
     >
@@ -64,21 +77,27 @@ const Label = props => {
 }
 
 const Checkbox = props => (
-  <div>
-    <StyledCheckbox {...props}>
-      <div className="displayCheckbox" onClick={onClick(props)}>
-        <div className="displayCheckboxInner" />
+  <StyledCheckbox {...props}>
+    <div>
+      <div>
+        <div className="displayCheckboxOuter">
+          <div className="displayCheckbox" onClick={onClick(props)}>
+            <div className="displayCheckboxInner" />
+          </div>
+          <input
+            type="checkbox"
+            id={props.id}
+            checked={props.checked}
+            onClick={props.onChange}
+            className="actualCheckbox"
+          />
+        </div>
+        <div className="labelWrapper">
+          <Label {...props} for={props.id} />
+        </div>
       </div>
-      <input
-        type="checkbox"
-        id={props.id}
-        checked={props.checked}
-        onClick={props.onChange}
-        className="actualCheckbox"
-      />
-    </StyledCheckbox>{' '}
-    <Label {...props} for={props.id} />
-  </div>
+    </div>
+  </StyledCheckbox>
 )
 
 export default Checkbox

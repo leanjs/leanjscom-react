@@ -74,7 +74,7 @@ const OurProcess = () => (
               would you?!
             </P>
             <P>
-              <LinkButton to="/training" withArrows>
+              <LinkButton to="/training" hasArrows>
                 Looking for Lean / Agile training? We can do that
               </LinkButton>
             </P>
@@ -84,20 +84,23 @@ const OurProcess = () => (
               <Image src={ITERATION_DIAGRAM} />
             </P>
 
-            {ourProcess.OurProcessContent.HowItWorks.map(section => (
-              <React.Fragment>
-                <Line>{section.heading}</Line>
-                {section.sentences.map(sentence => (
-                  <SmallIconAndSentence
-                    icon={<BenefitBullet image="chat" />}
-                    sentence={sentence}
-                  />
-                ))}
-                <P>
-                  <LinkButton to={section.button.to} withArrows>
-                    {section.button.text}
-                  </LinkButton>
-                </P>
+            {ourProcess.OurProcessContent.HowItWorks.map((section, j) => (
+              <React.Fragment key={`howitworks-${j}`}>
+                <Line>
+                  {section.heading}
+                  {section.sentences.map((sentence, i) => (
+                    <SmallIconAndSentence
+                      icon={<BenefitBullet image="chat" />}
+                      sentence={sentence}
+                      key={`howitworks-icons-and-sentences-${i}`}
+                    />
+                  ))}
+                  <P>
+                    <LinkButton to={section.button.to} hasArrows>
+                      {section.button.text}
+                    </LinkButton>
+                  </P>
+                </Line>
               </React.Fragment>
             ))}
           </Col>
@@ -169,35 +172,43 @@ const OurProcess = () => (
             <P>
               <img src={RICHARD_TEACHING} />
             </P>
-            <Line>Learn</Line>
-            <P>
-              Trainers are builders, searching for and implementing the latest
-              methods and tech. Both in personal and client projects. We’re
-              constantly learning too!
-            </P>
-            <Line>Build</Line>
-            <P>
-              We create and add to our curriculum when research shows to do so.
-              We also creating ‘MVP’ meetups to give us a basis on which to test
-              effectiveness/need
-            </P>
-            <Line>Test</Line>
-            <P>
-              Students and coaches provide us with essential qualitiative
-              feedback on all trainings
-            </P>
-            <P>
-              <LinkButton to="/training" hasArrows>
-                Read more about our training
-              </LinkButton>
-            </P>
-            <P>
-              <Hr />
-            </P>
+            <Line>
+              Learn
+              <P>
+                Trainers are builders, searching for and implementing the latest
+                methods and tech. Both in personal and client projects. We’re
+                constantly learning too!
+              </P>
+            </Line>
+
+            <Line>
+              Build
+              <P>
+                We create and add to our curriculum when research shows to do
+                so. We also creating ‘MVP’ meetups to give us a basis on which
+                to test effectiveness/need
+              </P>
+            </Line>
+
+            <Line>
+              Test
+              <P>
+                Students and coaches provide us with essential qualitiative
+                feedback on all trainings
+              </P>
+              <P>
+                <LinkButton to="/training" hasArrows>
+                  Read more about our training
+                </LinkButton>
+              </P>
+            </Line>
+
+            <Hr />
           </Col>
         </Row>
       </Grid>
     </Section>
+    <Section />
   </React.Fragment>
 )
 
