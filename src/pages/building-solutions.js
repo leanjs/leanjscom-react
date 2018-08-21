@@ -14,6 +14,10 @@ import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote2 } from '../components/text'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
+import {
+  HideSingleComponentUsingCss,
+  DisplaySingleComponentUsingCss,
+} from '../components/utils'
 
 const BuildingSolutionsLinks = [
   {
@@ -29,6 +33,10 @@ const BuildingSolutionsLinks = [
     to: 'support',
   },
 ]
+
+const HandoversImage = props => (
+  <Image src="https://picsum.photos/300/200/?random" />
+)
 
 const BuildingSolutions = () => (
   <React.Fragment>
@@ -132,11 +140,17 @@ const BuildingSolutions = () => (
     <Section dark>
       <Grid>
         <Row>
-          <Col>
+          <Col md={6}>
             <a name="projectHandovers" />
             <H2>Slick handovers with expert tech training</H2>
           </Col>
+          <HideSingleComponentUsingCss xs sm>
+            <Col md={6}>
+              <HandoversImage />
+            </Col>
+          </HideSingleComponentUsingCss>
         </Row>
+
         <Row>
           <Col>
             <P>
@@ -158,11 +172,15 @@ const BuildingSolutions = () => (
             </Ul>
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <Image src={'https://picsum.photos/300/200/?random'} />
-          </Col>
-        </Row>
+
+        <HideSingleComponentUsingCss md lg>
+          <Row>
+            <Col md={false}>
+              <HandoversImage />
+            </Col>
+          </Row>
+        </HideSingleComponentUsingCss>
+
         <Row>
           <Col>
             <LinkButton hasArrows>Find out more about our training</LinkButton>
