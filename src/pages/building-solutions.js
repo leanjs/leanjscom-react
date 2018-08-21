@@ -70,14 +70,14 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col center md={6}>
+          <Col md={6}>
             <P>
               We know how painful digital projects can be. Our team have many
               years experience in digital and have developed a process that
               works with you - from beginning to end.
             </P>
           </Col>
-          <Col center md={6}>
+          <Col md={6}>
             <Image src={'https://picsum.photos/300/200/?random'} />
           </Col>
         </Row>
@@ -102,7 +102,7 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col center>
+          <Col>
             <Blockquote2>
               We never thought it possible! We only had a couple of months until
               Christmas but LeanJS sorted us out. They were highly professional
@@ -111,7 +111,7 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col center md={6}>
+          <Col md={6}>
             <Mugshot
               image={MUGSHOT_JAMES_NORTON}
               name="Bill Pierce"
@@ -120,7 +120,7 @@ const BuildingSolutions = () => (
               color={DARKGREY}
             />
           </Col>
-          <Col center md={6}>
+          <Col md={6}>
             <LinkButton dark hasArrows>
               Read our case studies
             </LinkButton>
@@ -159,12 +159,12 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col center>
+          <Col>
             <Image src={'https://picsum.photos/300/200/?random'} />
           </Col>
         </Row>
         <Row>
-          <Col center>
+          <Col>
             <LinkButton hasArrows>Find out more about our training</LinkButton>
           </Col>
         </Row>
@@ -180,18 +180,18 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col center>
+          <Col>
             <Image src={'https://picsum.photos/500/200/?random'} />
           </Col>
         </Row>
         <Row>
-          <Col center>
+          <Col>
             <P>
               Building a website or app is scary - we get it. But sometimes the
               real challenges start once the project is launched and live.
             </P>
           </Col>
-          <Col center>
+          <Col>
             <P>
               That’s why we promise that you wont be left in the lurch, we’ll be
               there to help you as much as you require. We wont dump you in it
@@ -220,12 +220,12 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col center md={6}>
+          <Col md={6}>
             <LinkButton dark hasArrows to="/case-studies">
               Read our case studies
             </LinkButton>
           </Col>
-          <Col center md={6}>
+          <Col md={6}>
             <LinkButton hasArrows to="/development-services">
               Development services
             </LinkButton>
