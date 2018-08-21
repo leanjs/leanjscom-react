@@ -56,7 +56,7 @@ const OurProcess = () => (
     <Section>
       <Grid>
         <Row>
-          <Col>
+          <Col md={8}>
             <a name="whatIsLean" />
             <H2>Working lean, reducing waste - rapidly</H2>
             <P>
@@ -109,7 +109,7 @@ const OurProcess = () => (
       <HighlightedItem>
         <Grid>
           <Row>
-            <Col>
+            <Col md={8}>
               <a name="howLongItTakes" />
               <H2>
                 Whoa there...<br />How long does that take?
@@ -159,7 +159,7 @@ const OurProcess = () => (
     <Section dark>
       <Grid>
         <Row>
-          <Col>
+          <Col md={8}>
             <a name="applyingLeanToTraining" />
             <H2>Applying our process to training as well as products</H2>
             <P>
