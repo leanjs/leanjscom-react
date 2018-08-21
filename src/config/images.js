@@ -44,7 +44,7 @@ export const MUGSHOT_ABINBEV =
 export const CASE_STUDY_ABINBEV =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FAB%26bev_mockup.jpg?alt=media'
 
-export const MUGSHOT_STHALHER =
+export const MUGSHOT_FINGOPAY =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2Fsthaler.jpg?alt=media'
 
 export const CASE_STUDY_FINGOPAY =

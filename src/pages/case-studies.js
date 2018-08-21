@@ -9,9 +9,15 @@ import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
 import {
-  MUGSHOT_JAMES_NORTON,
+  CASE_STUDY_ABINBEV,
+  MUGSHOT_ABINBEV,
   MUGSHOT_STHALHER,
   CASE_STUDY_FINGOPAY,
+  MUGSHOT_FINGOPAY,
+  MUGSHOT_BU,
+  CASE_STUDY_BU,
+  MUGSHOT_ASOS,
+  CASE_STUDY_ASOS,
 } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
@@ -79,7 +85,7 @@ const CaseStudies = () => (
             />
           </Col>
           <Col md={6}>
-            <Image src={'https://picsum.photos/300/200/?random'} />
+            <Image src={CASE_STUDY_ABINBEV} />
           </Col>
         </Row>
 
@@ -95,7 +101,7 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <Mugshot
-              image={MUGSHOT_JAMES_NORTON}
+              image={MUGSHOT_ABINBEV}
               name="Georgina Clarke"
               jobTitle="Account Manager ABinBev"
               company="ASOS.com"
@@ -182,7 +188,7 @@ const CaseStudies = () => (
             />
           </Col>
           <Col md={6}>
-            <Image src={'https://picsum.photos/300/200/?random'} />
+            <Image src={CASE_STUDY_BU} />
           </Col>
         </Row>
 
@@ -199,7 +205,7 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <Mugshot
-              image={MUGSHOT_JAMES_NORTON}
+              image={MUGSHOT_BU}
               name="Bill Pierce"
               jobTitle="Editor, AGNI"
               company="Boston University"
@@ -234,7 +240,7 @@ const CaseStudies = () => (
               />
             </Col>
             <Col md={6}>
-              <Image src={'https://picsum.photos/300/200/?random'} />
+              <Image src={CASE_STUDY_ASOS} />
             </Col>
           </Row>
           <Row>
@@ -250,7 +256,7 @@ const CaseStudies = () => (
           <Row>
             <Col md={6}>
               <Mugshot
-                image={MUGSHOT_JAMES_NORTON}
+                image={MUGSHOT_ASOS}
                 name="Bill Pierce"
                 jobTitle="Editor, AGNI"
                 company="Boston University"
@@ -267,7 +273,7 @@ const CaseStudies = () => (
       </HighlightedItem>
     </Section>
 
-    <Section>
+    {/* <Section>
       <Grid>
         <Row>
           <Col xs={6}>
@@ -285,7 +291,7 @@ const CaseStudies = () => (
             />
           </Col>
           <Col md={6}>
-            <Image src={'https://picsum.photos/300/200/?random'} />
+            <Image src={} />
           </Col>
         </Row>
 
@@ -301,7 +307,7 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <Mugshot
-              image={MUGSHOT_JAMES_NORTON}
+              image={''}
               name="Bill Pierce"
               jobTitle="Editor, AGNI"
               company="Boston University"
@@ -315,7 +321,7 @@ const CaseStudies = () => (
           </Col>
         </Row>
       </Grid>
-    </Section>
+    </Section> */}
   </React.Fragment>
 )
 
