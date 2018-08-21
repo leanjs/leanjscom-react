@@ -109,9 +109,9 @@ const CaseStudies = () => (
             />
           </Col>
           <Col md={6}>
-            <LinkButton external to="https://medium.com/leanjs">
+            {/* <LinkButton external to="https://medium.com/leanjs">
               Blog: How apps increase <br /> shopping value by 90%
-            </LinkButton>
+            </LinkButton> */}
           </Col>
         </Row>
       </Grid>
