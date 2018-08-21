@@ -11,7 +11,7 @@ import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
 import { MUGSHOT_JAMES_NORTON } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P } from '../components/text'
+import { H2, P, Blockquote2 } from '../components/text'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 
@@ -102,15 +102,11 @@ const BuildingSolutions = () => (
       </Row>
       <Row>
         <Col center>
-          <P quote>
-            “We never thought it possible! We only had a couple of months until
-            Christmas but LeanJS sorted us out.
-          </P>
-        </Col>
-        <Col center>
-          <P quote>
-            They were highly professional yet friendly and very effective.”
-          </P>
+          <Blockquote2>
+            We never thought it possible! We only had a couple of months until
+            Christmas but LeanJS sorted us out. They were highly professional
+            yet friendly and very effective.
+          </Blockquote2>
         </Col>
       </Row>
       <Row>

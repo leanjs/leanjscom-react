@@ -11,7 +11,7 @@ import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
 import { MUGSHOT_JAMES_NORTON } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P } from '../components/text'
+import { H2, P, Blockquote2 } from '../components/text'
 import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
@@ -80,14 +80,12 @@ const CaseStudies = () => (
         </Row>
 
         <Row>
-          <Col>
-            <P quote>
-              “We never thought it possible! We only had a couple of months
-              until Christmas but LeanJS sorted us out.
-            </P>
-            <P quote>
-              They were highly professional yet friendly and very effective.”
-            </P>
+          <Col md={8}>
+            <Blockquote2>
+              We never thought it possible! We only had a couple of months until
+              Christmas but LeanJS sorted us out. They were highly professional
+              yet friendly and very effective.
+            </Blockquote2>
           </Col>
         </Row>
         <Row>
@@ -133,16 +131,13 @@ const CaseStudies = () => (
           </Row>
 
           <Row>
-            <Col>
-              <P quote>
-                “We’d been working on the platform for a while but onboarding
-                was an issue.
-              </P>
-              <P quote>
-                LeanJS came in, discovered the issues in real life and provided
-                a workable solution in a fraction of the time we expected.
-                Amazed.”
-              </P>
+            <Col md={8}>
+              <Blockquote2>
+                We’d been working on the platform for a while but onboarding was
+                an issue. LeanJS came in, discovered the issues in real life and
+                provided a workable solution in a fraction of the time we
+                expected. Amazed.
+              </Blockquote2>
             </Col>
           </Row>
           <Row>
@@ -188,15 +183,13 @@ const CaseStudies = () => (
         </Row>
 
         <Row>
-          <Col>
-            <P quote>
-              “We’d been working on the platform for a while but onboarding was
-              an issue.
-            </P>
-            <P quote>
-              LeanJS came in, discovered the issues in real life and provided a
-              workable solution in a fraction of the time we expected. Amazed.”
-            </P>
+          <Col md={8}>
+            <Blockquote2>
+              We’d been working on the platform for a while but onboarding was
+              an issue. LeanJS came in, discovered the issues in real life and
+              provided a workable solution in a fraction of the time we
+              expected. Amazed.
+            </Blockquote2>
           </Col>
         </Row>
         <Row>
@@ -241,15 +234,13 @@ const CaseStudies = () => (
             </Col>
           </Row>
           <Row>
-            <Col>
-              <P quote>
-                “Our team had been talking about ReactJS for a while and when I
+            <Col md={8}>
+              <Blockquote2>
+                Our team had been talking about ReactJS for a while and when I
                 realised how effecient it can be, it was time for a change.
-              </P>
-              <P quote>
                 LeanJS tailored training for our needs and now we don’t work any
-                othe way.”
-              </P>
+                othe way.
+              </Blockquote2>
             </Col>
           </Row>
           <Row>
@@ -295,12 +286,12 @@ const CaseStudies = () => (
         </Row>
 
         <Row>
-          <Col>
-            <P quote>
-              “I’ve been used UpMentoring for a while and it really helps with
-              getting class feedback.
-            </P>
-            <P quote>Using it means I can improve classes and teach</P>
+          <Col md={8}>
+            <Blockquote2>
+              I’ve been used UpMentoring for a while and it really helps with
+              getting class feedback. Using it means I can improve classes and
+              teach.
+            </Blockquote2>
           </Col>
         </Row>
         <Row>

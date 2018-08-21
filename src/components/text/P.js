@@ -9,8 +9,6 @@ import {
 
 export default styled.p`
   ${TEXT_SIZE}
-  ${props =>
-    props.quote && `font-size: ${FONT_SIZE_STANDARD}; font-style: italic;`}
   ${FONT_FAMILY}
   text-align: ${props => props.align || 'left'};
   margin: 0;
