@@ -139,8 +139,8 @@ const CaseStudies = () => (
           <Col md={6}>
             <Mugshot
               image={MUGSHOT_ABINBEV}
-              name="Georgina Clarke"
-              jobTitle="Account Manager ABinBev"
+              name="Mertens Dries"
+              jobTitle="Head of Marketing at Saveur Bière (ABinBev)"
               company="ASOS.com"
               color={DARKGREY}
             />
