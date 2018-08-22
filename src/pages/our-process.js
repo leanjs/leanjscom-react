@@ -268,9 +268,15 @@ const OurProcess = () => (
               We don’t just apply our process to our product builds, but to our
               training too!
             </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <P>
               <img src={RICHARD_TEACHING} />
             </P>
+          </Col>
+          <Col md={6}>
             <Line>
               Learn
               <P>
@@ -301,7 +307,10 @@ const OurProcess = () => (
                 </LinkButton>
               </P>
             </Line>
-
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <Hr />
           </Col>
         </Row>
