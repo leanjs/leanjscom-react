@@ -93,6 +93,7 @@ const OurProcess = () => (
                       icon={<BenefitBullet image="chat" />}
                       sentence={sentence}
                       key={`howitworks-icons-and-sentences-${i}`}
+                      flushLeft
                     />
                   ))}
                   <P>
