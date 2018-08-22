@@ -18,6 +18,7 @@ import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
+import Indented from '../components/sections/Indented'
 import { RICHARD_TEACHING, ITERATION_DIAGRAM } from '../config/images'
 
 const HowItWorks = props =>
@@ -119,6 +120,10 @@ const OurProcess = () => (
                 Looking for Lean / Agile training? We can do that
               </LinkButton>
             </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={8}>
             <a name="ourLeanProcess" />
             <H2>How this works at LeanJS</H2>
             <P>
@@ -206,9 +211,6 @@ const OurProcess = () => (
           </Col>
         </Row>
       </Grid>
-    </Section>
-
-    <Section>
       <HighlightedItem>
         <Grid>
           <Row style={{ display: 'flex', justifyContent: 'center' }}>
@@ -267,9 +269,15 @@ const OurProcess = () => (
               We don’t just apply our process to our product builds, but to our
               training too!
             </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <P>
               <img src={RICHARD_TEACHING} />
             </P>
+          </Col>
+          <Col md={6}>
             <Line>
               Learn
               <P>
@@ -294,13 +302,20 @@ const OurProcess = () => (
                 Students and coaches provide us with essential qualitiative
                 feedback on all trainings
               </P>
+            </Line>
+
+            <Indented>
               <P>
                 <LinkButton to="/training" hasArrows>
                   Read more about our training
                 </LinkButton>
               </P>
-            </Line>
-
+            </Indented>
+          </Col>
+        </Row>
+        <Row>
+          <Col />
+          <Col>
             <Hr />
           </Col>
         </Row>

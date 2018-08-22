@@ -1,10 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Line from './Line'
+import Indented from './Indented'
 
 storiesOf('Sections', module)
-  .add('Standard', () => <Line>Section contents</Line>)
-  .add('Standard (vertical center)', () => (
+  .add('Line', () => <Line>Section contents</Line>)
+  .add('Line (vertical center)', () => (
     <Line verticalCenter>
       <p>Section contents para</p>
       <p>Section contents para</p>
@@ -12,4 +13,6 @@ storiesOf('Sections', module)
       <p>Section contents para</p>
     </Line>
   ))
-  .add('Wide', () => <Line wide>Section contents</Line>)
+  .add('Line (wide)', () => <Line wide>Section contents</Line>)
+  .add('Indented', () => <Indented>Section contents</Indented>)
+  .add('Indented (wide)', () => <Indented wide>Section contents</Indented>)
