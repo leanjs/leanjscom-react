@@ -14,6 +14,7 @@ import {
   SPACING_STANDARD,
   LAYOUT_SPACING_MEDIUM,
   LAYOUT_SPACING_LARGE,
+  FONT_WEIGHT_EXTRABOLD,
 } from '../../config/styles'
 import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
 import { ANCHOR_STYLE } from '../navigation/Link'
@@ -23,7 +24,7 @@ import withWidth from 'react-width'
 
 const H1 = styled(BaseH1)`
   font-size: ${FONT_SIZE_EXTRALARGE} !important;
-  font-weight: 900;
+  font-weight: ${FONT_WEIGHT_EXTRABOLD};
   font-style: normal;
   font-stretch: normal;
   line-height: 1.5;

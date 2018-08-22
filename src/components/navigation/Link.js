@@ -1,16 +1,22 @@
 import React from 'react'
 import GatsbyLink from 'gatsby-link'
 import styled from 'styled-components'
-import { FONT_FAMILY, WHITE, FONT_SIZE_STANDARD } from '../../config/styles'
+import {
+  FONT_FAMILY,
+  WHITE,
+  FONT_SIZE_STANDARD,
+  LINE_HEIGHT_LARGER,
+  FONT_WEIGHT_MEDIUMBOLD,
+} from '../../config/styles'
 
 export const ANCHOR_STYLE = `
     cursor: pointer;
     color: blue;
     text-decoration: underline;
     font-size: ${FONT_SIZE_STANDARD};
-    font-weight: 500;
+    font-weight: ${FONT_WEIGHT_MEDIUMBOLD};
     font-style: normal;
-    line-height: 1.5;
+    line-height: ${LINE_HEIGHT_LARGER};
     color: ${WHITE};
     ${FONT_FAMILY}
 `

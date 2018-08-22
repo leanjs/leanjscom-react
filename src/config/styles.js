@@ -25,4 +25,10 @@ export const FONT_SIZE_STANDARD = '1rem'
 export const FONT_SIZE_LARGE = '2rem'
 export const FONT_SIZE_EXTRALARGE = '3.5rem'
 
+export const LINE_HEIGHT_LARGER = '1.5rem'
 export const LINE_HEIGHT_LARGE = '2rem'
+
+export const FONT_WEIGHT_STANDARD = '400'
+export const FONT_WEIGHT_MEDIUMBOLD = '500'
+export const FONT_WEIGHT_BOLD = '700'
+export const FONT_WEIGHT_EXTRABOLD = '900'
