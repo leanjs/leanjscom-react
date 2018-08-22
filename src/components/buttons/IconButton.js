@@ -6,6 +6,7 @@ import {
   SPACING_LARGER,
   DARKGREY,
   FONT_SIZE_STANDARD,
+  FONT_WEIGHT_STANDARD,
   FONT_FAMILY,
   LINE_HEIGHT_LARGER,
 } from '../../config/styles'
@@ -33,9 +34,12 @@ const addIconButtonStyles = props => `
 	width:${SPACING_LARGER};
 	height:${SPACING_LARGER};
 
-	font-size:${FONT_SIZE_STANDARD};
-	${FONT_FAMILY}
 	line-height: ${LINE_HEIGHT_LARGER};
+
+	font-size:${FONT_SIZE_STANDARD};
+	font-weight:${FONT_WEIGHT_STANDARD};
+	${FONT_FAMILY};
+	color: ${DARKGREY};
 `
 
 const IconButtonInner = styled.button`
@@ -48,7 +52,6 @@ const IconButtonInner = styled.button`
 
 const LinkIconButtonInner = styled(({ image, ...rest }) => <Link {...rest} />)`
   ${addIconButtonStyles};
-  color: ${DARKGREY};
   text-decoration: none;
   display: inline-block;
 `
