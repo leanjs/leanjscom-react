@@ -67,16 +67,20 @@ const Contents = props => (
   </div>
 )
 
-export const IconButton = props => (
-  <IconButtonInner {...props}>
-    <Contents {...props} />
-  </IconButtonInner>
-)
+const ComponentTemplate = props => {
+  const Component = props.isLink ? LinkIconButtonInner : IconButtonInner
+
+  return (
+    <Component {...props}>
+      <Contents {...props} />
+    </Component>
+  )
+}
+
+export const IconButton = props => <ComponentTemplate {...props} />
 
 export const LinkIconButton = props => (
-  <LinkIconButtonInner {...props}>
-    <Contents {...props} />
-  </LinkIconButtonInner>
+  <ComponentTemplate isLink={true} {...props} />
 )
 
 export default IconButton
