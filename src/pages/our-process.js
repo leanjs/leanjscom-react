@@ -25,10 +25,10 @@ const HowItWorks = props =>
     <React.Fragment key={`howitworks-${j}`}>
       <Line>
         {section.heading}
-        {section.sentences.map((sentence, i) => (
+        {section.points.map((point, i) => (
           <SmallIconAndSentence
-            icon={<BenefitBullet image="chat" />}
-            sentence={sentence}
+            icon={<BenefitBullet image={point.icon} />}
+            sentence={point.sentence}
             key={`howitworks-icons-and-sentences-${i}`}
             flushLeft
           />
@@ -129,10 +129,22 @@ const OurProcess = () => (
               sections={[
                 {
                   heading: 'Learn',
-                  sentences: [
-                    'We take time talking with you  and your team, gauging expectations and business needs',
-                    'Speak to users to their core needs and ensure we prioritise how they think',
-                    'Look at competitors in the market, and outside your sector, to evaluate how to differentiate your digital solution',
+                  points: [
+                    {
+                      sentence:
+                        'We take time talking with you  and your team, gauging expectations and business needs',
+                      icon: 'business_needs',
+                    },
+                    {
+                      sentence:
+                        'Speak to users to their core needs and ensure we prioritise how they think',
+                      icon: 'chat',
+                    },
+                    {
+                      sentence:
+                        'Look at competitors in the market, and outside your sector, to evaluate how to differentiate your digital solution',
+                      icon: 'competitors',
+                    },
                   ],
                   button: {
                     text: 'Learn more about our design services',
@@ -142,10 +154,22 @@ const OurProcess = () => (
 
                 {
                   heading: 'Build',
-                  sentences: [
-                    'We start ‘low-fi’ so we can test the core functionality and content against user needs as soon as humanly possible. Minimal viable products (MVPs) first, always.',
-                    'Design, development and accessibility best practices are baked in to ensure future-friendly MVPs that you (with our help or not) can take further into the  future.',
-                    'Under the hood, we use the latest ReactJS ecosystem technologies. It’s stable, quick to iterate upon and future proof.',
+                  points: [
+                    {
+                      sentence:
+                        'We start ‘low-fi’ so we can test the core functionality and content against user needs as soon as humanly possible. Minimal viable products (MVPs) first, always.',
+                      icon: 'start_small',
+                    },
+                    {
+                      sentence:
+                        'Design, development and accessibility best practices are baked in to ensure future-friendly MVPs that you (with our help or not) can take further into the  future.',
+                      icon: 'quality',
+                    },
+                    {
+                      sentence:
+                        'Under the hood, we use the latest ReactJS ecosystem technologies. It’s stable, quick to iterate upon and future proof.',
+                      icon: 'react',
+                    },
                   ],
                   button: {
                     text: 'Learn more about our dev stack and build process',
@@ -155,10 +179,22 @@ const OurProcess = () => (
 
                 {
                   heading: 'Test',
-                  sentences: [
-                    'We put digital solutions in front of target users as early as possible. As soon as we have a working prototype, we test.',
-                    'We actually watch and speak with users in our tests. Qualitative insight helps us understand exactly how people use digital products.',
-                    'Quality assurance (QA) is essential for such innovative technologies. We run a myriad of real-world tests to make sure your MVP wont break.',
+                  points: [
+                    {
+                      sentence:
+                        'We put digital solutions in front of target users as early as possible. As soon as we have a working prototype, we test.',
+                      icon: 'holding_mobile',
+                    },
+                    {
+                      sentence:
+                        'We actually watch and speak with users in our tests. Qualitative insight helps us understand exactly how people use digital products.',
+                      icon: 'eye',
+                    },
+                    {
+                      sentence:
+                        'Quality assurance (QA) is essential for such innovative technologies. We run a myriad of real-world tests to make sure your MVP wont break.',
+                      icon: 'tick_badge',
+                    },
                   ],
                   button: {
                     text: 'Read our case studies',

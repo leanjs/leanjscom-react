@@ -6,7 +6,7 @@ const stories = storiesOf('Icons', module)
 Object.keys(icons).reduce(
   (agg, cur) =>
     agg.add(cur, () => (
-      <div style={{ background: 'gray', display: 'inline-block' }}>
+      <div style={{ background: '#ff6a00', display: 'inline-block' }}>
         <img src={icons[cur]} />
       </div>
     )),
