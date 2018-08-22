@@ -111,7 +111,8 @@ const OurProcess = () => (
     <Section>
       <HighlightedItem>
         <Grid>
-          <Row style={{ display: 'flex', justifyContent: 'center' }}>
+          <Row>
+            <Col md={3} />
             <Col md={6}>
               <a name="howLongItTakes" />
               <H2>Whoa there... How long does that take?</H2>
@@ -152,6 +153,7 @@ const OurProcess = () => (
                 </LinkButton>
               </P>
             </Col>
+            <Col md={3} />
           </Row>
         </Grid>
       </HighlightedItem>
