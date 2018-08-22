@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from '../navigation/Link'
+import Link, { styleChildLinkColor } from '../navigation/Link'
+
 import {
   WHITE,
   SPACING_LARGER,
@@ -31,6 +32,10 @@ const addIconButtonStyles = props => `
 		margin:0 auto;
 	}
 
+  .text {
+    color: ${DARKGREY};
+  }
+
 	width:${SPACING_LARGER};
 	height:${SPACING_LARGER};
 
@@ -39,7 +44,6 @@ const addIconButtonStyles = props => `
 	font-size:${FONT_SIZE_STANDARD};
 	font-weight:${FONT_WEIGHT_STANDARD};
 	${FONT_FAMILY};
-	color: ${DARKGREY};
 `
 
 const IconButtonInner = styled.button`

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Link, { styleChildLinkColor } from '../../navigation/Link'
+import ContactButton from '../../buttons/ContactButton'
 import React from 'react'
 import Ul, { Li as defaultLi } from '../../layout/Ul'
 import MenuData from './Menu.json'
@@ -37,6 +38,9 @@ const DesktopMenu = () => (
           {item.text}
         </DesktopMenuItem>
       ))}
+      <Li>
+        <ContactButton />
+      </Li>
     </Ul>
   </HideSingleComponentUsingCss>
 )
