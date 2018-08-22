@@ -7,7 +7,7 @@ import backgroundColor from 'react-storybook-decorator-background'
 import '../src/layouts/index.css'
 
 // Set background colour
-addDecorator(backgroundColor(['#2b2b2b', '#ffffff']))
+addDecorator(backgroundColor(['#c47a45', '#2b2b2b', '#ffffff']))
 
 // Load stories dynamically
 const req = require.context('../src', true, /\.stories\.js$/)
