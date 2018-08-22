@@ -1,3 +1,4 @@
+export { BUSINESS_NEEDS } from './icons/business_needs.js'
 export { CALENDAR } from './icons/calendar.js'
 export { CHAT } from './icons/chat.js'
 export { COST_EFFECTIVE } from './icons/cost_effective.js'
