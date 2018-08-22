@@ -10,7 +10,7 @@ import '../src/layouts/index.css'
 addDecorator(backgroundColor(['#2b2b2b', '#ffffff']))
 
 // Load stories dynamically
-const req = require.context('../src/components', true, /\.stories\.js$/)
+const req = require.context('../src', true, /\.stories\.js$/)
 function loadStories() {
   req.keys().forEach(filename => req(filename))
 }
