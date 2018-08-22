@@ -245,8 +245,8 @@ const BuildingSolutions = () => (
             </LinkButton>
           </Col>
           <Col md={6}>
-            <LinkButton hasArrows to="/development-services">
-              Development services
+            <LinkButton hasArrows to="#contact">
+              Contact us to discuss your development/design needs
             </LinkButton>
           </Col>
         </Row>
