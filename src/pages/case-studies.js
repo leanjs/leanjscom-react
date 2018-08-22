@@ -25,7 +25,6 @@ import { H2, P, Blockquote2 } from '../components/text'
 import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
-import caseStudies from '../content/caseStudies.json'
 import HighlightedItem from '../components/decoration/HighlightedItem'
 
 const CaseStudyTitle = styled(H2)`
@@ -39,7 +38,24 @@ const CaseStudies = () => (
   <React.Fragment>
     <Header
       titleLines={['Case Studies']}
-      links={caseStudies.CaseStudyLinks}
+      links={[
+        {
+          text: 'Boston University',
+          to: 'boston',
+        },
+        {
+          text: 'Fingo Pay',
+          to: 'fingo',
+        },
+        {
+          text: 'ABInBev',
+          to: 'abinbev',
+        },
+        {
+          text: 'ASOS.com',
+          to: 'asos',
+        },
+      ]}
       bgImg="home"
     >
       <Row>
@@ -81,7 +97,28 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <CaseStudyExpoBullets
-              content={caseStudies.CaseStudyContent.ABInBev}
+              content={[
+                {
+                  point: 'WHAT',
+                  description: 'Game app to support a Christmas campaign',
+                },
+                {
+                  point: 'HOW',
+                  description: 'Rapid prototyping and developement',
+                },
+                {
+                  point: 'WHY',
+                  description: 'Increasing shopping card value',
+                },
+                {
+                  point: 'TIME',
+                  description: '6 week turnaround',
+                },
+                {
+                  point: 'RESULT',
+                  description: '90% increase in shopping card value',
+                },
+              ]}
             />
           </Col>
           <Col md={6}>
@@ -132,7 +169,30 @@ const CaseStudies = () => (
           <Row>
             <Col md={6}>
               <CaseStudyExpoBullets
-                content={caseStudies.CaseStudyContent.FingoPay}
+                content={[
+                  {
+                    point: 'WHAT',
+                    description: 'Biometric payment onboarding MVP',
+                  },
+                  {
+                    point: 'HOW',
+                    description:
+                      'Rapid prototyping, React Native with Circle CI and card.io integration',
+                  },
+                  {
+                    point: 'WHY',
+                    description:
+                      'Increase user base, create buzz around alternative payment system',
+                  },
+                  {
+                    point: 'TIME',
+                    description: '2 week turnaround',
+                  },
+                  {
+                    point: 'RESULT',
+                    description: 'To be implemented across 100 pubs in the UK',
+                  },
+                ]}
               />
             </Col>
             <Col md={6}>
@@ -184,7 +244,30 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <CaseStudyExpoBullets
-              content={caseStudies.CaseStudyContent.BostonUniversity}
+              content={[
+                {
+                  point: 'WHAT',
+                  description: 'Advanced MVP site for AGNI literary journal',
+                },
+                {
+                  point: 'HOW',
+                  description: 'Lean UX, ReactJS development and migration',
+                },
+                {
+                  point: 'WHY',
+                  description:
+                    'Aiming to increase readership and improve brand awareness',
+                },
+                {
+                  point: 'TIME',
+                  description: '5 month turnaround',
+                },
+                {
+                  point: 'RESULT',
+                  description:
+                    '10,000 articles migrated, 50% bounce rate reduction',
+                },
+              ]}
             />
           </Col>
           <Col md={6}>
@@ -236,7 +319,27 @@ const CaseStudies = () => (
           <Row>
             <Col md={6}>
               <CaseStudyExpoBullets
-                content={caseStudies.CaseStudyContent.ASOScom}
+                content={[
+                  {
+                    point: 'WHAT',
+                    description: 'Team-wide ReactJS training',
+                  },
+                  {
+                    point: 'HOW',
+                    description:
+                      '1 week intensive training at the Asos offices',
+                  },
+                  {
+                    point: 'WHY',
+                    description:
+                      'To ensure the dev team is equipped with the most up-to-date code skills',
+                  },
+                  {
+                    point: 'RESULT',
+                    description:
+                      'Dev team now work in ReactJS, increasing productivity and code compliance',
+                  },
+                ]}
               />
             </Col>
             <Col md={6}>
@@ -287,7 +390,29 @@ const CaseStudies = () => (
         <Row>
           <Col md={6}>
             <CaseStudyExpoBullets
-              content={caseStudies.CaseStudyContent.UpMentoring}
+              content={[
+                {
+                  "point": "WHAT",
+                  "description": "Tech training booking and mentoring web app "
+                },
+                {
+                  "point": "HOW",
+                  "description": "ReactJS development, GraphQL"
+                },
+                {
+                  "point": "WHY",
+                  "description":
+                    "Improve tech students communication with mentors on their courses"
+                },
+                {
+                  "point": "TIME",
+                  "description": "Lean project (continuous)"
+                },
+                {
+                  "point": "RESULT",
+                  "description": "500+ users currently using the system"
+                }
+              ]}
             />
           </Col>
           <Col md={6}>

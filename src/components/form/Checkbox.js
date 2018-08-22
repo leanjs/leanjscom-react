@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { WHITE, SPACING_SMALL } from '../../config/styles'
 
@@ -30,18 +30,27 @@ const StyledCheckbox = styled.div`
     height: ${props => (props.size ? props.size : defaultSize)}em;
     width: ${props => (props.size ? props.size : defaultSize)}em;
 
+    padding: 5%;
+    box-sizing: border-box;
+
     .displayCheckboxInner {
       background-color: transparent;
-      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
       background-scroll: scroll;
-      height: 90%;
-      width: 90%;
-      margin: auto;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
 
-      visibility: ${props => (props.checked ? 'visible' : 'hidden')};
+      border: ${props => (props.focus ? '1px dotted grey' : 'none')};
+
+      ${props =>
+        props.checked
+          ? `
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+);
+      `
+          : ``};
     }
   }
 
@@ -76,7 +85,7 @@ const Label = props => {
   )
 }
 
-const Checkbox = props => (
+export const Checkbox = props => (
   <StyledCheckbox {...props}>
     <div>
       <div>
@@ -88,7 +97,9 @@ const Checkbox = props => (
             type="checkbox"
             id={props.id}
             checked={props.checked}
-            onClick={props.onChange}
+            onChange={props.onChange}
+            onFocus={props.onFocus}
+            onBlur={props.onBlur}
             className="actualCheckbox"
           />
         </div>
@@ -100,4 +111,27 @@ const Checkbox = props => (
   </StyledCheckbox>
 )
 
-export default Checkbox
+export class CheckBoxContainer extends Component {
+  state = {
+    hasFocus: false,
+  }
+
+  handleFocusChange = newState => () => {
+    this.setState({
+      hasFocus: newState,
+    })
+  }
+
+  render() {
+    return (
+      <Checkbox
+        {...this.props}
+        focus={this.state.hasFocus}
+        onFocus={this.handleFocusChange(true)}
+        onBlur={this.handleFocusChange(false)}
+      />
+    )
+  }
+}
+
+export default CheckBoxContainer

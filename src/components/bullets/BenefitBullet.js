@@ -3,6 +3,8 @@ import Bullet from './Bullet'
 
 import { DARKGREY, WHITE, BLACK, LIGHTGREY } from '../../config/styles'
 import {
+  BUSINESS_NEEDS,
+  COMPETITORS,
   QUALITY,
   COST_EFFECTIVE,
   QUICK,
@@ -18,9 +20,15 @@ import {
   TEAM,
   REACT,
   GLOBE,
+  START_SMALL,
+  HOLDING_MOBILE,
+  EYE,
+  TICK_BADGE,
 } from '../../config/icons'
 
 const images = {
+  business_needs: BUSINESS_NEEDS,
+  competitors: COMPETITORS,
   quality: QUALITY,
   costeffective: COST_EFFECTIVE,
   quick: QUICK,
@@ -36,6 +44,10 @@ const images = {
   team: TEAM,
   react: REACT,
   globe: GLOBE,
+  start_small: START_SMALL,
+  holding_mobile: HOLDING_MOBILE,
+  eye: EYE,
+  tick_badge: TICK_BADGE,
 }
 
 const BenefitBullet = ({ image, dark }) => (

@@ -14,6 +14,7 @@ export const BLACK = '#000000'
 export const SPACING_SMALL = '0.5rem'
 export const SPACING_STANDARD = '1rem'
 export const SPACING_LARGE = '2rem'
+export const SPACING_LARGER = '4rem'
 export const SPACING_EXTRALARGE = '5rem'
 
 export const LAYOUT_SPACING_MEDIUM = '9.7rem'
@@ -24,4 +25,10 @@ export const FONT_SIZE_STANDARD = '1rem'
 export const FONT_SIZE_LARGE = '2rem'
 export const FONT_SIZE_EXTRALARGE = '3.5rem'
 
+export const LINE_HEIGHT_LARGER = '1.5rem'
 export const LINE_HEIGHT_LARGE = '2rem'
+
+export const FONT_WEIGHT_STANDARD = '400'
+export const FONT_WEIGHT_MEDIUMBOLD = '500'
+export const FONT_WEIGHT_BOLD = '700'
+export const FONT_WEIGHT_EXTRABOLD = '900'

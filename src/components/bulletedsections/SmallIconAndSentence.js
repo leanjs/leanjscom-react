@@ -14,7 +14,7 @@ const Row = styled.div`
 `
 const getLeftPadding = isWideScreen => props =>
   `padding-left: ${
-    props.firstTable || (props.firstCell && !isWideScreen)
+    props.firstTable || props.flushLeft || (props.firstCell && !isWideScreen)
       ? `0`
       : `${isWideScreen ? SPACING_LARGE : SPACING_STANDARD}`
   }`
@@ -32,7 +32,7 @@ const Cell = styled.div`
 const SmallIconAndSentence = props => (
   <Table>
     <Row>
-      <Cell firstCell firstTable={props.first}>
+      <Cell firstCell firstTable={props.first} flushLeft={props.flushLeft}>
         {props.icon}
       </Cell>
       <Cell>{props.sentence}</Cell>

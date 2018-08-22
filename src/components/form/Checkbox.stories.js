@@ -1,10 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import Checkbox from './Checkbox'
+import { Checkbox } from './Checkbox'
 
 storiesOf('Checkbox', module)
   .add('Checked', () => <Checkbox checked />)
   .add('Unchecked', () => <Checkbox />)
+  .add('Focus', () => <Checkbox focus />)
   .add('Alternative sizes', () => <Checkbox checked size={6} />)
   .add('Labelled', () => <Checkbox checked label="Option 1" />)
   .add('Labelled using React Element', () => (
