@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Line from './Line'
+import Indented from './Indented'
 
 storiesOf('Sections', module)
   .add('Line', () => <Line>Section contents</Line>)
