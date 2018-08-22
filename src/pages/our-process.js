@@ -18,6 +18,7 @@ import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
+import Indented from '../components/sections/Indented'
 import { RICHARD_TEACHING, ITERATION_DIAGRAM } from '../config/images'
 
 const HowItWorks = props =>
@@ -301,15 +302,19 @@ const OurProcess = () => (
                 Students and coaches provide us with essential qualitiative
                 feedback on all trainings
               </P>
+            </Line>
+
+            <Indented>
               <P>
                 <LinkButton to="/training" hasArrows>
                   Read more about our training
                 </LinkButton>
               </P>
-            </Line>
+            </Indented>
           </Col>
         </Row>
         <Row>
+          <Col />
           <Col>
             <Hr />
           </Col>
