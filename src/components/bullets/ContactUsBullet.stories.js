@@ -1,9 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import ContactUsBullet, { validImages } from './ContactUsBullet'
+import { addStories } from './Bullet'
 
 const stories = storiesOf('ContactUsBullet', module)
-Object.keys(validImages).reduce(
-  (agg, cur) => agg.add(cur, () => <ContactUsBullet image={cur} />),
-  stories
-)
+addStories(ContactUsBullet, validImages, stories)
