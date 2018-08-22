@@ -8,7 +8,12 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
-import { MUGSHOT_JAMES_NORTON } from '../config/images'
+import {
+  MUGSHOT_ABINBEV,
+  ALEX_RICARDO_WHITEBOARD,
+  RICHARD_TEACHING,
+  LUIS_ALEX_DOG,
+} from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote2 } from '../components/text'
@@ -34,9 +39,7 @@ const BuildingSolutionsLinks = [
   },
 ]
 
-const HandoversImage = props => (
-  <Image src="https://picsum.photos/300/200/?random" />
-)
+const HandoversImage = props => <Image src={RICHARD_TEACHING} />
 
 const BuildingSolutions = () => (
   <React.Fragment>
@@ -86,7 +89,7 @@ const BuildingSolutions = () => (
             </P>
           </Col>
           <Col md={6}>
-            <Image src={'https://picsum.photos/300/200/?random'} />
+            <Image src={ALEX_RICARDO_WHITEBOARD} />
           </Col>
         </Row>
         <Row>
@@ -121,15 +124,15 @@ const BuildingSolutions = () => (
         <Row>
           <Col md={6}>
             <Mugshot
-              image={MUGSHOT_JAMES_NORTON}
-              name="Bill Pierce"
-              jobTitle="Editor, AGNI"
-              company="Boston University"
+              image={MUGSHOT_ABINBEV}
+              name="Mertens Dries"
+              jobTitle="Head of Marketing at Saveur Bière (ABinBev)"
+              company="ABinBev"
               color={DARKGREY}
             />
           </Col>
           <Col md={6}>
-            <LinkButton dark hasArrows>
+            <LinkButton to="/case-studies" dark hasArrows>
               Read our case studies
             </LinkButton>
           </Col>
@@ -183,7 +186,9 @@ const BuildingSolutions = () => (
 
         <Row>
           <Col>
-            <LinkButton hasArrows>Find out more about our training</LinkButton>
+            <LinkButton to="/training" hasArrows>
+              Find out more about our training
+            </LinkButton>
           </Col>
         </Row>
       </Grid>
@@ -199,7 +204,7 @@ const BuildingSolutions = () => (
         </Row>
         <Row>
           <Col md={6}>
-            <Image src={'https://picsum.photos/500/200/?random'} />
+            <Image src={LUIS_ALEX_DOG} />
           </Col>
           <Col md={6}>
             <P>
@@ -240,8 +245,8 @@ const BuildingSolutions = () => (
             </LinkButton>
           </Col>
           <Col md={6}>
-            <LinkButton hasArrows to="/development-services">
-              Development services
+            <LinkButton hasArrows to="#contact">
+              Contact us to discuss your development/design needs
             </LinkButton>
           </Col>
         </Row>

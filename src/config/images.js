@@ -13,6 +13,14 @@ export const CLIENTS_LOGOS =
 export const TEAMWORK =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/teamwork_makes_the_dream_work.jpg?alt=media'
 
+// building solutions page
+
+export const ALEX_RICARDO_WHITEBOARD =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/ricardoAlex_whiteboard.jpg?alt=media'
+
+export const LUIS_ALEX_DOG =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/luisAlex_dogsAreGreat.jpg?alt=media'
+
 // Team pics
 
 export const ALEX =
