@@ -4,6 +4,7 @@ import Link from '../Link'
 import React from 'react'
 import MenuData from './Menu.json'
 import { LinkedLeanJSLogo } from '../../logos/LeanJS'
+import ContactButton from '../../buttons/ContactButton'
 import './PhoneMenu.css'
 import { SPACING_SMALL } from '../../../config/styles'
 
@@ -39,6 +40,13 @@ class PhoneMenu extends React.Component {
             {item.text}
           </PhoneMenuItem>
         ))}
+        <PhoneMenuItem
+          onClick={closeMenu}
+          key="phonemenu-contact"
+          to="#contact"
+        >
+          Contact us
+        </PhoneMenuItem>
       </Menu>
     )
   }
