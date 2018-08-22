@@ -11,7 +11,7 @@ import {
   OFFICE,
 } from '../../config/icons'
 
-const images = {
+export const validImages = {
   phone: PHONE,
   email: EMAIL,
   twitter: TWITTER,
@@ -25,7 +25,7 @@ const ContactUsBullet = ({ image }) => (
     color={WHITE}
     bg={EXTRADARKGREY}
     size={40 / 18}
-    images={images}
+    images={validImages}
     image={image}
     hasBorder={false}
   />

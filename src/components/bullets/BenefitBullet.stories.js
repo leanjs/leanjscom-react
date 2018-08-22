@@ -1,21 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import BenefitBullet from './BenefitBullet'
+import BenefitBullet, { validImages } from './BenefitBullet'
 
-storiesOf('BenefitBullet', module)
-  .add('Quality', () => <BenefitBullet image="quality" />)
-  .add('Cost effective', () => <BenefitBullet image="costeffective" />)
-  .add('Quick', () => <BenefitBullet image="quick" />)
-  .add('Chat', () => <BenefitBullet image="chat" />)
-  .add('Gift', () => <BenefitBullet image="gift" />)
-  .add('Calendar', () => <BenefitBullet image="calendar" />)
-  .add('Tools', () => <BenefitBullet image="tools" />)
-  .add('Code', () => <BenefitBullet image="code" />)
-  .add('Expand', () => <BenefitBullet image="expand" />)
-  .add('Heart', () => <BenefitBullet image="heart" />)
-  .add('People', () => <BenefitBullet image="people" />)
-  .add('Head', () => <BenefitBullet image="head" />)
-  .add('Team', () => <BenefitBullet image="team" />)
-  .add('React', () => <BenefitBullet image="react" />)
-  .add('Globe', () => <BenefitBullet image="globe" />)
-  .add('Dark styles', () => <BenefitBullet image="react" dark />)
+const stories = storiesOf('BenefitBullet', module)
+Object.keys(validImages).reduce(
+  (agg, cur) => agg.add(cur, () => <BenefitBullet image={cur} />),
+  stories
+)

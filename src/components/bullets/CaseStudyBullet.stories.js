@@ -1,8 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import CaseStudyBullet from './CaseStudyBullet'
+import CaseStudyBullet, { validImages } from './CaseStudyBullet'
 
-storiesOf('CaseStudyBullet', module)
-  .add('ABinBev', () => <CaseStudyBullet image="abinbev" />)
-  .add('Boston University', () => <CaseStudyBullet image="bostonuniversity" />)
-  .add('ASOS', () => <CaseStudyBullet image="asos" />)
+const stories = storiesOf('CaseStudyBullet', module)
+Object.keys(validImages).reduce(
+  (agg, cur) => agg.add(cur, () => <CaseStudyBullet image={cur} />),
+  stories
+)

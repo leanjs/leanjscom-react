@@ -12,7 +12,7 @@ import {
   QUICK,
 } from '../../config/icons'
 
-const images = {
+export const validImages = {
   development: DEVELOPMENT,
   teaching: TEACHING,
   industry: INDUSTRY,
@@ -27,7 +27,7 @@ const ActivityBullet = ({ image }) => (
     color="black"
     bg={LIGHTGREY}
     size={60 / 18}
-    images={images}
+    images={validImages}
     image={image}
     hasBorder={false}
   />

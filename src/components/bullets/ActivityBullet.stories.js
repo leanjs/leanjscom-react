@@ -1,12 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import ActivityBullet from './ActivityBullet'
+import ActivityBullet, { validImages } from './ActivityBullet'
 
-storiesOf('ActivityBullet', module)
-  .add('Development', () => <ActivityBullet image="development" />)
-  .add('Teaching', () => <ActivityBullet image="teaching" />)
-  .add('Industry', () => <ActivityBullet image="industry" />)
-  .add('Heart', () => <ActivityBullet image="heart" />)
-  .add('Diamond', () => <ActivityBullet image="diamond" />)
-  .add('QA', () => <ActivityBullet image="qa" />)
-  .add('Quick', () => <ActivityBullet image="quick" />)
+const stories = storiesOf('ActivityBullet', module)
+Object.keys(validImages).reduce(
+  (agg, cur) => agg.add(cur, () => <ActivityBullet image={cur} />),
+  stories
+)

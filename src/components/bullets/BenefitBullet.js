@@ -26,7 +26,7 @@ import {
   TICK_BADGE,
 } from '../../config/icons'
 
-const images = {
+export const validImages = {
   business_needs: BUSINESS_NEEDS,
   competitors: COMPETITORS,
   quality: QUALITY,
@@ -55,7 +55,7 @@ const BenefitBullet = ({ image, dark }) => (
     color={dark ? BLACK : DARKGREY}
     bg={dark ? LIGHTGREY : WHITE}
     size={60 / 18}
-    images={images}
+    images={validImages}
     image={image}
     hasBorder={!dark}
     hasPadding={image !== 'globe'}

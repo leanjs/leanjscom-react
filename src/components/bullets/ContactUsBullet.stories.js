@@ -1,11 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import ContactUsBullet from './ContactUsBullet'
+import ContactUsBullet, { validImages } from './ContactUsBullet'
 
-storiesOf('ContactUsBullet', module)
-  .add('Phone', () => <ContactUsBullet image="phone" />)
-  .add('Email', () => <ContactUsBullet image="email" />)
-  .add('Twitter', () => <ContactUsBullet image="twitter" />)
-  .add('Instagram', () => <ContactUsBullet image="instagram" />)
-  .add('Hangouts', () => <ContactUsBullet image="hangouts" />)
-  .add('Office', () => <ContactUsBullet image="office" />)
+const stories = storiesOf('ContactUsBullet', module)
+Object.keys(validImages).reduce(
+  (agg, cur) => agg.add(cur, () => <ContactUsBullet image={cur} />),
+  stories
+)

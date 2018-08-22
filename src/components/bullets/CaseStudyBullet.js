@@ -4,7 +4,7 @@ import Bullet from './Bullet'
 import { MEDIUMGREY } from '../../config/styles'
 import { LOGO_ABINBEV, LOGO_BU, LOGO_ASOS } from '../../config/icons'
 
-const images = {
+export const validImages = {
   abinbev: LOGO_ABINBEV,
   bostonuniversity: LOGO_BU,
   asos: LOGO_ASOS,
@@ -18,7 +18,7 @@ const CaseStudyBullet = ({ image }) => (
     bg="white"
     size={bulletSize}
     borderSize={4 / 18}
-    images={images}
+    images={validImages}
     image={image}
     hasBorder={true}
   />

@@ -1,8 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import ValueBullet from './ValueBullet'
+import ValueBullet, { validImages } from './ValueBullet'
 
-storiesOf('ValueBullet', module)
-  .add('Learning', () => <ValueBullet image="learning" />)
-  .add('Caring', () => <ValueBullet image="caring" />)
-  .add('People', () => <ValueBullet image="people" />)
+const stories = storiesOf('ValueBullet', module)
+Object.keys(validImages).reduce(
+  (agg, cur) => agg.add(cur, () => <ValueBullet image={cur} />),
+  stories
+)
