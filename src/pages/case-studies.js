@@ -22,9 +22,9 @@ import {
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote2 } from '../components/text'
-import CaseStudyExpoBullets from '../components/bullets/CaseStudyExpoBullets'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
+import Circle from '../components/elements/Circle'
 import HighlightedItem from '../components/decoration/HighlightedItem'
 
 const CaseStudyTitle = styled(H2)`
@@ -33,6 +33,23 @@ const CaseStudyTitle = styled(H2)`
   flex-direction: row;
   align-items: center;
 `
+
+const CaseStudyExpoBullets = ({ content }) => (
+  <Ul unstyled>
+    {content.map(item => (
+      <Li>
+        <SmallIconAndSentence
+          icon={
+            <Circle size={60 / 18} bg={LIGHTGREY}>
+              {item.point}
+            </Circle>
+          }
+          sentence={item.description}
+        />
+      </Li>
+    ))}
+  </Ul>
+)
 
 const CaseStudies = () => (
   <React.Fragment>
