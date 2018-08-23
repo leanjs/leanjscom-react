@@ -1,9 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import * as icons from './icons'
+import { addStories } from '../../.storybook/utils'
 
 const stories = storiesOf('Icons', module)
-Object.keys(icons).reduce(
-  (agg, cur) => agg.add(cur, () => <img src={icons[cur]} />),
-  stories
-)
+addStories(icons, iconName => <img src={icons[iconName]} />, stories)

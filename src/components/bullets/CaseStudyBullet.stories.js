@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import CaseStudyBullet, { validImages } from './CaseStudyBullet'
-import { addStories } from './Bullet'
+import { addStories } from '../../../.storybook/utils'
 
 const stories = storiesOf('CaseStudyBullet', module)
-addStories(CaseStudyBullet, validImages, stories)
+addStories(validImages, image => <CaseStudyBullet image={image} />, stories)
