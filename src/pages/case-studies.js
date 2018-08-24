@@ -146,7 +146,7 @@ const CaseStudies = () => (
               image={MUGSHOT_ABINBEV}
               name="Mertens Dries"
               jobTitle="Head of Marketing at Saveur Bière (ABinBev)"
-              company="ASOS.com"
+              company="ABinBev"
               color={DARKGREY}
             />
           </Col>
@@ -364,9 +364,9 @@ const CaseStudies = () => (
             <Col md={6}>
               <Mugshot
                 image={MUGSHOT_ASOS}
-                name="Bill Pierce"
-                jobTitle="Editor, AGNI"
-                company="Boston University"
+                name="James Norton"
+                jobTitle="Engineering Practise Lead"
+                company="ASOS.com"
                 color={DARKGREY}
               />
             </Col>

@@ -15,7 +15,7 @@ import {
   FONT_SIZE_LARGE,
   SPACING_LARGE,
 } from '../config/styles'
-import { MUGSHOT_JAMES_NORTON } from '../config/images'
+import { MUGSHOT_ASOS } from '../config/images'
 import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
@@ -101,7 +101,7 @@ const TrainingPage = () => (
         <Row>
           <Col>
             <Mugshot
-              image={MUGSHOT_JAMES_NORTON}
+              image={MUGSHOT_ASOS}
               name="James Norton"
               jobTitle="Engineering Practise Lead"
               company="ASOS.com"
