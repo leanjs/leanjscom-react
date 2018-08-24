@@ -237,11 +237,11 @@ const TrainingPage = () => (
             <H2>Our next trainings...</H2>
           </SingleColRow>
           <SingleColRow>
-            <Link to="https://reactjs.academy/react-redux-graphql-bootcamp">
-              ReactJS Academy bootcamp: React, Redux, &amp; GraphQL
+            <Link to="https://reactjs.academy/react-native-bootcamp-london">
+              React Native Training
             </Link>
           </SingleColRow>
-          <SingleColRow>London | 20 - 26 August 2018</SingleColRow>
+          <SingleColRow>London | 17 September 2018</SingleColRow>
           <SingleColRow>
             <img src={LONDON_BOOTCAMP} />
           </SingleColRow>
