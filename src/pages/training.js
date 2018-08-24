@@ -19,7 +19,12 @@ import { MUGSHOT_JAMES_NORTON } from '../config/images'
 import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
-import Grid, { Col, Row } from '../components/layout/Grid'
+import Grid, {
+  Col,
+  Row,
+  SingleColRow,
+  SingleCellGrid,
+} from '../components/layout/Grid'
 import { H2, H3, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
@@ -108,176 +113,174 @@ const TrainingPage = () => (
 
     <Section dark>
       <Grid>
-        <Row>
-          <Col md={8}>
-            <H2>What we love to teach</H2>
-          </Col>
-        </Row>
+        <SingleColRow>
+          <H2>What we love to teach</H2>
+        </SingleColRow>
 
-        <Row>
-          <Col md={8}>
+        <SingleColRow>
+          <P>
+            At LeanJS we practise what we preach! All our trainers code and
+            design real world products with the methods we teach.
+          </P>
+        </SingleColRow>
+
+        <SingleColRow>
+          <P>
+            Training your team in leading edge tech means you can rely on your
+            team to get the job done.
+          </P>
+        </SingleColRow>
+
+        <SingleColRow>
+          <Line>
+            <H3>
+              ReactJS ecosystem <Topic>Code</Topic>
+            </H3>
             <P>
-              At LeanJS we practise what we preach! All our trainers code and
-              design real world products with the methods we teach.
+              Created in 2016, our{' '}
+              <Link external to="https://reactjs.academy/">
+                ReactJS Academy
+              </Link>{' '}
+              was the first in Europe.
             </P>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={8}>
             <P>
-              Training your team in leading edge tech means you can rely on your
-              team to get the job done.
-            </P>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={8}>
-            <Line>
-              <H3>
-                ReactJS ecosystem <Topic>Code</Topic>
-              </H3>
-              <P>
-                Created in 2016, our{' '}
-                <Link external to="https://reactjs.academy/">
-                  ReactJS Academy
-                </Link>{' '}
-                was the first in Europe.
-              </P>
-              <P>
-                <LinkButton external to="https://reactjs.academy/">
-                  Visit ReactJS Academy website
-                </LinkButton>
-              </P>
-            </Line>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={8}>
-            <Line>
-              <H3>
-                Product and UX design <Topic>Design</Topic>
-              </H3>
-              <P>
-                Learn how to develop an idea into a working, tested design with
-                design thinking.
-              </P>
-            </Line>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={8}>
-            <Line>
-              <H3>
-                Lean / Agile <Topic>Process</Topic>
-              </H3>
-              <P>
-                Let us guide you to change your processes to work quicker and
-                more efficiently
-              </P>
-            </Line>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={8}>
-            <P>
-              <LinkButton to="#contact" hasArrows>
-                What's your tech training needs? Contact us now!
+              <LinkButton external to="https://reactjs.academy/">
+                Visit ReactJS Academy website
               </LinkButton>
             </P>
-          </Col>
-        </Row>
+          </Line>
+        </SingleColRow>
+
+        <SingleColRow>
+          <Line>
+            <H3>
+              Product and UX design <Topic>Design</Topic>
+            </H3>
+            <P>
+              Learn how to develop an idea into a working, tested design with
+              design thinking.
+            </P>
+          </Line>
+        </SingleColRow>
+
+        <SingleColRow>
+          <Line>
+            <H3>
+              Lean / Agile <Topic>Process</Topic>
+            </H3>
+            <P>
+              Let us guide you to change your processes to work quicker and more
+              efficiently
+            </P>
+          </Line>
+        </SingleColRow>
+
+        <SingleColRow>
+          <P>
+            <LinkButton to="#contact" hasArrows>
+              What's your tech training needs? Contact us now!
+            </LinkButton>
+          </P>
+        </SingleColRow>
       </Grid>
     </Section>
 
     <Section>
       <Grid>
-        <Row>
-          <Col md={8}>
-            <H2>
-              Tailored private team team training - tailored for your team's
-              needs
-            </H2>
-            <P>
-              We love diving into an existing team and teaching the latest tech
-              tools and processes.
-            </P>
-            <P>It's intense, fun and very rewarding. Plus, it really works!</P>
-            <P>
-              <img src={ALEX_TEACHING} />
-            </P>
-            <P>
-              <Ul unstyled>
-                <Li>
-                  <SmallIconAndSentence
-                    icon={<BenefitBullet image="team" />}
-                    sentence="Immersive training for groups of max 20 participants"
-                  />
-                </Li>
-                <Li>
-                  <SmallIconAndSentence
-                    icon={<BenefitBullet image="globe" />}
-                    sentence="You choose the date and location - anywhere in the world!"
-                  />
-                </Li>
-              </Ul>
-            </P>
-            <P>
-              <LinkButton to="/case-studies#asos" dark hasArrows>
-                ASOS.com team training case study
-              </LinkButton>
-            </P>
-          </Col>
-        </Row>
+        <SingleColRow>
+          <H2>
+            Tailored private team team training - tailored for your team's needs
+          </H2>
+        </SingleColRow>
+        <SingleColRow>
+          <P>
+            We love diving into an existing team and teaching the latest tech
+            tools and processes.
+          </P>
+        </SingleColRow>
+        <SingleColRow>
+          <P>It's intense, fun and very rewarding. Plus, it really works!</P>
+        </SingleColRow>
+        <SingleColRow>
+          <P>
+            <img src={ALEX_TEACHING} />
+          </P>
+        </SingleColRow>
+        <SingleColRow>
+          <Ul unstyled>
+            <Li>
+              <SmallIconAndSentence
+                icon={<BenefitBullet image="team" />}
+                sentence="Immersive training for groups of max 20 participants"
+                flushLeft
+              />
+            </Li>
+            <Li>
+              <SmallIconAndSentence
+                icon={<BenefitBullet image="globe" />}
+                sentence="You choose the date and location - anywhere in the world!"
+                flushLeft
+              />
+            </Li>
+          </Ul>
+        </SingleColRow>
+        <SingleColRow>
+          <LinkButton to="/case-studies#asos" dark hasArrows>
+            ASOS.com team training case study
+          </LinkButton>
+        </SingleColRow>
       </Grid>
     </Section>
 
     <Section dark>
       <Grid>
-        <Row>
-          <Col md={8}>
-            <H2>Our super passionate trainers &amp; coach community</H2>
-            <P>At LeanJS, we have an overarching aim to help people.</P>
-            <P>
-              We have a core team of trainers with specialisms in development,
-              design, project methodologies.
-            </P>
-            <P>
-              With our ReactJS Academy, we’ve also created our coaching
-              community - passing on knowledge and enriching the tech community
-              at the same time. Read more on the ReactJS Academy website.
-            </P>
-            <LinkButton to="/team-principles" hasArrows>
-              Meet the LeanJS team
-            </LinkButton>
-            <P>
-              <Instagram />
-            </P>
-          </Col>
-        </Row>
+        <SingleColRow>
+          <H2>Our super passionate trainers &amp; coach community</H2>
+        </SingleColRow>
+        <SingleColRow>
+          At LeanJS, we have an overarching aim to help people.
+        </SingleColRow>
+        <SingleColRow>
+          We have a core team of trainers with specialisms in development,
+          design, project methodologies.
+        </SingleColRow>
+        <SingleColRow>
+          With our ReactJS Academy, we’ve also created our coaching community -
+          passing on knowledge and enriching the tech community at the same
+          time. Read more on the ReactJS Academy website.
+        </SingleColRow>
+        <SingleColRow>
+          <LinkButton to="/team-principles" hasArrows>
+            Meet the LeanJS team
+          </LinkButton>
+        </SingleColRow>
+        <SingleColRow>
+          <Instagram />
+        </SingleColRow>
       </Grid>
     </Section>
 
     <Section>
       <Grid>
-        <Row>
-          <BootcampCol>
+        <BootcampCol>
+          <SingleColRow>
             <H2>Our next bootcamp...</H2>
-            <P>
-              <Link to="https://reactjs.academy/react-redux-graphql-bootcamp">
-                ReactJS Academy bootcamp: React, Redux, &amp; GraphQL
-              </Link>
-            </P>
-            <P>London | 20 - 26 August 2018</P>
-            <P>
-              <img src={LONDON_BOOTCAMP} />
-            </P>
-            <P>
-              <LinkButton to="https://reactjs.academy" external>
-                Visit ReactJS Academy website
-              </LinkButton>
-            </P>
-          </BootcampCol>
-        </Row>
+          </SingleColRow>
+          <SingleColRow>
+            <Link to="https://reactjs.academy/react-redux-graphql-bootcamp">
+              ReactJS Academy bootcamp: React, Redux, &amp; GraphQL
+            </Link>
+          </SingleColRow>
+          <SingleColRow>London | 20 - 26 August 2018</SingleColRow>
+          <SingleColRow>
+            <img src={LONDON_BOOTCAMP} />
+          </SingleColRow>
+          <SingleColRow>
+            <LinkButton to="https://reactjs.academy" external>
+              Visit ReactJS Academy website
+            </LinkButton>
+          </SingleColRow>
+        </BootcampCol>
       </Grid>
     </Section>
   </React.Fragment>

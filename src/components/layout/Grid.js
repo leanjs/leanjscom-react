@@ -36,6 +36,20 @@ const Row = styled(FlexboxRow)`
   }
 `
 
-export { Row, Col, Grid }
+const SingleColRow = props => (
+  <Row>
+    <Col md={8} {...props}>
+      {props.children}
+    </Col>
+  </Row>
+)
+
+const SingleCellGrid = props => (
+  <Grid>
+    <SingleColRow {...props} />
+  </Grid>
+)
+
+export { Row, Col, Grid, SingleColRow, SingleCellGrid }
 
 export default Grid
