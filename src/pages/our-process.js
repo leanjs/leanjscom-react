@@ -33,11 +33,13 @@ const HowItWorks = props =>
             flushLeft
           />
         ))}
-        <P>
-          <LinkButton to={section.button.to} hasArrows>
-            {section.button.text}
-          </LinkButton>
-        </P>
+        {section.button ? (
+          <P>
+            <LinkButton to={section.button.to} hasArrows>
+              {section.button.text}
+            </LinkButton>
+          </P>
+        ) : null}
       </Line>
     </React.Fragment>
   ))
@@ -138,10 +140,6 @@ const OurProcess = () => (
                       icon: 'competitors',
                     },
                   ],
-                  button: {
-                    text: 'Learn more about our design services',
-                    to: '/building-solutions',
-                  },
                 },
 
                 {
@@ -163,10 +161,6 @@ const OurProcess = () => (
                       icon: 'react',
                     },
                   ],
-                  button: {
-                    text: 'Learn more about our dev stack and build process',
-                    to: '/building-solutions',
-                  },
                 },
 
                 {
@@ -188,10 +182,6 @@ const OurProcess = () => (
                       icon: 'tick_badge',
                     },
                   ],
-                  button: {
-                    text: 'Read our case studies',
-                    to: '/case-studies',
-                  },
                 },
               ]}
             />
