@@ -233,7 +233,7 @@ const Team = () => (
               photography, video production, mvps, design systems, branding,
               typography, teaching, user behaviour, Disney movies, American
               Football :P"
-              company="Hometown: Panama City, Panama"
+              hometown="Panama City, Panama"
               color={WHITE}
             />
           </Col>
