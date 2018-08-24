@@ -45,6 +45,11 @@ const ValueGrid = styled(Grid)`
   padding: 0;
 `
 
+const NoVerticalMarginRow = styled(Row)`
+  margin-top: 0;
+  margin-bottom: 0;
+`
+
 const ValueCol = styled(Col)`
   ${styleChildLinkColor(EXTRADARKGREY)};
   padding: 0;
@@ -74,7 +79,7 @@ const Team = () => (
             <Line>
               <H3>Our core values</H3>
               <ValueGrid>
-                <Row style={{ marginTop: 0 }}>
+                <NoVerticalMarginRow>
                   <SmallIconAndSentences
                     wrapWithCols
                     bulletType={BenefitBullet}
@@ -82,60 +87,66 @@ const Team = () => (
                     items={[
                       {
                         image: 'head',
-                        sentence:
-                          'Be unafraid to learn from everyone and believe in teaching what we know',
+                        sentence: (
+                          <React.Fragment>
+                            <P>
+                              Be unafraid to learn from everyone and believe in
+                              teaching what we know
+                            </P>
+                            <H3>Supporting principles</H3>
+                            <Ul>
+                              <Li>Keep searching, keep learning</Li>
+                              <Li>Share - because sharing is caring</Li>
+                              <Li>Build aligned minds, not just teams</Li>
+                              <Li>More than the sum of our parts</Li>
+                            </Ul>
+                          </React.Fragment>
+                        ),
                       },
                       {
                         image: 'heart',
-                        sentence:
-                          'Always aim to treat others how we would want to be treated',
+                        sentence: (
+                          <React.Fragment>
+                            <P>
+                              Always aim to treat others how we would want to be
+                              treated
+                            </P>
+                            <H3>Supporting principles</H3>
+                            <Ul>
+                              <Li>Treat others how you want to be treated</Li>
+                              <Li>Transparently true to our methodology</Li>
+                            </Ul>
+                          </React.Fragment>
+                        ),
                       },
                       {
                         image: 'people',
-                        sentence:
-                          'Ensure what we do is meaningful and always people-centred',
+                        sentence: (
+                          <React.Fragment>
+                            <P>
+                              Ensure what we do is meaningful and always
+                              people-centred
+                            </P>
+                            <H3>Supporting principles</H3>
+                            <Ul>
+                              <Li>People-centred products - always</Li>
+                              <Li>Be unafraid</Li>
+                              <Li>Purpose over profits</Li>
+                            </Ul>
+                          </React.Fragment>
+                        ),
                       },
                     ]}
                   />
-                </Row>
-                <Row>
-                  <ValueCol md={4}>
-                    <H3>Supporting principles</H3>
-                    <Ul>
-                      <Li>Keep searching, keep learning</Li>
-                      <Li>Share - because sharing is caring</Li>
-                      <Li>Build aligned minds, not just teams</Li>
-                      <Li>More than the sum of our parts</Li>
-                    </Ul>
-                  </ValueCol>
-                  <ValueCol md={4}>
-                    <H3>Supporting principles</H3>
-                    <Ul>
-                      <Li>Treat others how you want to be treated</Li>
-                      <Li>Transparently true to our methodology</Li>
-                    </Ul>
-                  </ValueCol>
-                  <ValueCol md={4}>
-                    <H3>Supporting principles</H3>
-                    <Ul>
-                      <Li>People-centred products - always</Li>
-                      <Li>Be unafraid</Li>
-                      <Li>Purpose over profits</Li>
-                    </Ul>
-                  </ValueCol>
-                </Row>
-
-                <Row>
-                  <Col>
-                    <LinkButton
-                      external
-                      to="https://medium.com/leanjs/open-source-branding-leanjs-sprint-1-8caf048396d0"
-                    >
-                      Blog: How we created our brand identity
-                    </LinkButton>
-                  </Col>
-                </Row>
+                </NoVerticalMarginRow>
               </ValueGrid>
+
+              <LinkButton
+                external
+                to="https://medium.com/leanjs/open-source-branding-leanjs-sprint-1-8caf048396d0"
+              >
+                Blog: How we created our brand identity
+              </LinkButton>
             </Line>
           </Col>
         </Row>
@@ -147,21 +158,21 @@ const Team = () => (
               Not-for-proft partnerships and discounts
               <ValueGrid>
                 <Row>
-                  <ValueCol sm={7} md={8}>
+                  <ValueCol sm={7}>
                     Do you work for a not-for-profit organisation and share our
                     values? Then we’d love to hear from you!
                   </ValueCol>
                 </Row>
 
                 <Row>
-                  <ValueCol sm={7} md={8}>
+                  <ValueCol sm={7}>
                     We’d love to partner with you and your team to help change
                     the world for the better.
                   </ValueCol>
                 </Row>
 
                 <Row>
-                  <ValueCol sm={7} md={8}>
+                  <ValueCol sm={7}>
                     To that end, we are always open to offering discounts on our
                     training, design and development services - depending on the
                     project.
