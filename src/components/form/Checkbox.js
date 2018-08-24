@@ -85,7 +85,7 @@ const Label = props => {
   )
 }
 
-export const Checkbox = props => (
+const Checkbox = props => (
   <StyledCheckbox {...props}>
     <div>
       <div>
