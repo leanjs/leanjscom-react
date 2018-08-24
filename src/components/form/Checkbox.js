@@ -111,7 +111,7 @@ const Checkbox = props => (
   </StyledCheckbox>
 )
 
-export class CheckBoxContainer extends Component {
+class CheckBoxContainer extends Component {
   state = {
     hasFocus: false,
   }
