@@ -239,14 +239,15 @@ const CaseStudyInner = props => (
     </Row>
 
     <Row>
-      <Col md={8}>
-        <Blockquote2>{props.quote.text}</Blockquote2>
+      <Col md={12}>
+        <Mugshot
+          {...props.quote.author}
+          quote={props.quote.text}
+          color={DARKGREY}
+        />
       </Col>
     </Row>
     <Row>
-      <Col md={6}>
-        <Mugshot {...props.quote.author} color={DARKGREY} />
-      </Col>
       {props.button ? (
         <Col md={6}>
           <LinkButton external={props.button.external} to={props.button.to}>
