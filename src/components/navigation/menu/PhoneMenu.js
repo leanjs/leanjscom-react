@@ -21,6 +21,34 @@ const PhoneMenuItem = styled(Item)`
   color: white;
 `
 
+const BurgerBar = styled.span`
+  position: absolute;
+  height: 20%;
+  left: 0px;
+  right: 0px;
+
+  opacity: 1;
+  background: red;
+  &.first {
+    top: 0%;
+  }
+  &.second {
+    top: 40%;
+  }
+  &.third {
+    top: 80%;
+  }
+`
+
+const BurgerLabel = styled.span`
+  margin-top: 36px;
+  display: inline-block;
+  color: white;
+  content: 'Menu';
+  font-size: 0.9rem;
+  text-align: center;
+`
+
 PhoneMenuItem.displayName = 'PhoneMenuItem'
 
 class PhoneMenu extends React.Component {
@@ -37,7 +65,17 @@ class PhoneMenu extends React.Component {
     const { closeMenu } = this
 
     return (
-      <Menu isOpen={isOpen}>
+      <Menu
+        isOpen={isOpen}
+        customBurgerIcon={
+          <span>
+            <BurgerBar className="bm-burger-bars first" />
+            <BurgerBar className="bm-burger-bars second" />
+            <BurgerBar className="bm-burger-bars third" />
+            <BurgerLabel>Menu</BurgerLabel>
+          </span>
+        }
+      >
         <LinkedLeanJSLogo />
         {MenuData.map((item, i) => (
           <PhoneMenuItem onClick={closeMenu} key={i} to={item.to}>
