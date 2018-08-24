@@ -204,29 +204,29 @@ const TrainingPage = () => (
 
     <Section dark>
       <Grid>
-        <SingleColRow>
-          <H2>Our super passionate trainers &amp; coach community</H2>
-        </SingleColRow>
-        <SingleColRow>
-          At LeanJS, we have an overarching aim to help people.
-        </SingleColRow>
-        <SingleColRow>
-          We have a core team of trainers with specialisms in development,
-          design, project methodologies.
-        </SingleColRow>
-        <SingleColRow>
-          With our ReactJS Academy, we’ve also created our coaching community -
-          passing on knowledge and enriching the tech community at the same
-          time. Read more on the ReactJS Academy website.
-        </SingleColRow>
-        <SingleColRow>
-          <LinkButton to="/team-principles" hasArrows>
-            Meet the LeanJS team
-          </LinkButton>
-        </SingleColRow>
-        <SingleColRow>
-          <Instagram />
-        </SingleColRow>
+        <Row>
+          <Col md={6}>
+            <H2>Our super passionate trainers &amp; coach community</H2>
+            <P>At LeanJS, we have an overarching aim to help people.</P>
+            <P>
+              We have a core team of trainers with specialisms in development,
+              design, project methodologies.
+            </P>
+            <P>
+              With our ReactJS Academy, we’ve also created our coaching
+              community - passing on knowledge and enriching the tech community
+              at the same time. Read more on the ReactJS Academy website.
+            </P>
+            <P>
+              <LinkButton to="/team-principles" hasArrows>
+                Meet the LeanJS team
+              </LinkButton>
+            </P>
+          </Col>
+          <Col md={6}>
+            <Instagram />
+          </Col>
+        </Row>
       </Grid>
     </Section>
 

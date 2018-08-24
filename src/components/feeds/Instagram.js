@@ -65,6 +65,10 @@ const photos = [
 
 const InstagramInner = styled(Grid)`
   background: white;
+  width: 100%;
+`
+const InstagramRow = styled(Row)`
+  ${props => (props.firstRow ? `margin-top:0` : null)};
 `
 
 const InstagramImage = styled(Image)`
@@ -75,7 +79,10 @@ const InstagramImage = styled(Image)`
 const Instagram = ({ numPhotos = 6, photosPerRow = 3 }) => (
   <InstagramInner>
     {arrayChunk(photos.slice(0, numPhotos), photosPerRow).map((chunk, j) => (
-      <Row key={`instagram-outer-${j}-${new Date().getTime()}`}>
+      <InstagramRow
+        firstRow={j === 0}
+        key={`instagram-outer-${j}-${new Date().getTime()}`}
+      >
         {chunk.map((photo, i) => (
           <Col
             xs={Math.floor(12 / photosPerRow)}
@@ -88,7 +95,7 @@ const Instagram = ({ numPhotos = 6, photosPerRow = 3 }) => (
             />
           </Col>
         ))}
-      </Row>
+      </InstagramRow>
     ))}
   </InstagramInner>
 )
