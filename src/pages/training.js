@@ -170,7 +170,7 @@ const TrainingPage = () => (
     <Section>
       <Grid>
         <Row>
-          <Col>
+          <Col md={8}>
             <H2>
               Tailored private team team training - tailored for your team's
               needs
@@ -212,7 +212,7 @@ const TrainingPage = () => (
     <Section dark>
       <Grid>
         <Row>
-          <Col>
+          <Col md={8}>
             <H2>Our super passionate trainers &amp; coach community</H2>
             <P>At LeanJS, we have an overarching aim to help people.</P>
             <P>
