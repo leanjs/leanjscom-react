@@ -147,8 +147,8 @@ const CaseStudies = () => (
           <Col md={8}>
             <Blockquote2>
               We never thought it possible! We only had a couple of months until
-              Christmas but LeanJS sorted us out. <br />
-              They were highly professional yet friendly and very effective.
+              Christmas but LeanJS sorted us out. They were highly professional
+              yet friendly and very effective.
             </Blockquote2>
           </Col>
         </Row>
@@ -221,10 +221,9 @@ const CaseStudies = () => (
             <Col md={8}>
               <Blockquote2>
                 We’d been working on the platform for a while but onboarding was
-                an issue. <br />
-                LeanJS came in, discovered the issues in real life and provided
-                a workable solution in a fraction of the time we expected.
-                Amazed.
+                an issue. LeanJS came in, discovered the issues in real life and
+                provided a workable solution in a fraction of the time we
+                expected. Amazed.
               </Blockquote2>
             </Col>
           </Row>
@@ -240,7 +239,7 @@ const CaseStudies = () => (
             </Col>
             <Col md={6}>
               <LinkButton external to="https://medium.com/leanjs">
-                Blog: Rapid prototyping <br /> IRL, in a pub
+                Blog: Rapid prototyping IRL, in a pub
               </LinkButton>
             </Col>
           </Row>
@@ -297,10 +296,8 @@ const CaseStudies = () => (
           <Col md={8}>
             <Blockquote2>
               LeanJS understood our mindset with a ability to ‘chameleon’
-              themselves.
-              <br />
-              A great team to be part of, always transparent - what they created
-              for us was incredible.
+              themselves. A great team to be part of, always transparent - what
+              they created for us was incredible.
             </Blockquote2>
           </Col>
         </Row>
@@ -370,7 +367,6 @@ const CaseStudies = () => (
               <Blockquote2>
                 Our team had been talking about ReactJS for a while and when I
                 realised how effecient it can be, it was time for a change.
-                <br />
                 LeanJS tailored training for our needs and now we don’t work any
                 othe way.
               </Blockquote2>
