@@ -52,105 +52,107 @@ const Team = () => (
       bgImg="home"
     />
     <Section>
-      <Row>
-        <Col>
-          <a name="ourValues" />
-          <H2>Our values and principles</H2>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <P>
-            Our team come from various backgrounds, life experiences and
-            countries but all have a shared vision….
-          </P>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Line>Our core values</Line>
-        </Col>
-      </Row>
-      <Row>
-        <ValueCol md={4}>
-          <SmallIconAndSentence
-            icon={<BenefitBullet image="head" />}
-            sentence="Be unafraid to learn from everyone and believe in teaching what we know"
-          />
-          <Link dark>Supporting principles</Link>
-          <Ul>
-            <Li>Keep searching, keep learning</Li>
-            <Li>Share - because sharing is caring</Li>
-            <Li>Build aligned minds, not just teams</Li>
-            <Li>More than the sum of our parts</Li>
-          </Ul>
-        </ValueCol>
-        <ValueCol md={4}>
-          <SmallIconAndSentence
-            icon={<BenefitBullet image="heart" />}
-            sentence="Always aim to treat others how we would want to be treated"
-          />
-          <Link>Supporting principles</Link>
-          <Ul>
-            <Li>Treat others how you want to be treated</Li>
-            <Li>Transparently true to our methodology</Li>
-          </Ul>
-        </ValueCol>
-        <ValueCol md={4}>
-          <SmallIconAndSentence
-            icon={<BenefitBullet image="people" />}
-            sentence="Ensure what we do is meaningful and always people-centred"
-          />
-          <Link dark>Supporting principles</Link>
-          <Ul>
-            <Li>People-centred products - always</Li>
-            <Li>Be unafraid</Li>
-            <Li>Purpose over profits</Li>
-          </Ul>
-        </ValueCol>
-      </Row>
-      <Row>
-        <Col>
-          <LinkButton external to="https://medium.com/leanjs">
-            Blog: How we created <br /> our brand identity
-          </LinkButton>
-        </Col>
-      </Row>
+      <Grid>
+        <Row>
+          <Col>
+            <a name="ourValues" />
+            <H2>Our values and principles</H2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <P>
+              Our team come from various backgrounds, life experiences and
+              countries but all have a shared vision….
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Line>Our core values</Line>
+          </Col>
+        </Row>
+        <Row>
+          <ValueCol md={4}>
+            <SmallIconAndSentence
+              icon={<BenefitBullet image="head" />}
+              sentence="Be unafraid to learn from everyone and believe in teaching what we know"
+            />
+            <Link dark>Supporting principles</Link>
+            <Ul>
+              <Li>Keep searching, keep learning</Li>
+              <Li>Share - because sharing is caring</Li>
+              <Li>Build aligned minds, not just teams</Li>
+              <Li>More than the sum of our parts</Li>
+            </Ul>
+          </ValueCol>
+          <ValueCol md={4}>
+            <SmallIconAndSentence
+              icon={<BenefitBullet image="heart" />}
+              sentence="Always aim to treat others how we would want to be treated"
+            />
+            <Link>Supporting principles</Link>
+            <Ul>
+              <Li>Treat others how you want to be treated</Li>
+              <Li>Transparently true to our methodology</Li>
+            </Ul>
+          </ValueCol>
+          <ValueCol md={4}>
+            <SmallIconAndSentence
+              icon={<BenefitBullet image="people" />}
+              sentence="Ensure what we do is meaningful and always people-centred"
+            />
+            <Link dark>Supporting principles</Link>
+            <Ul>
+              <Li>People-centred products - always</Li>
+              <Li>Be unafraid</Li>
+              <Li>Purpose over profits</Li>
+            </Ul>
+          </ValueCol>
+        </Row>
+        <Row>
+          <Col>
+            <LinkButton external to="https://medium.com/leanjs">
+              Blog: How we created <br /> our brand identity
+            </LinkButton>
+          </Col>
+        </Row>
 
-      <Row>
-        <Col>
-          <a name="notForProfitDiscounts" />
-          <Line>Not-for-proft partnerships and discounts</Line>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={4}>
-          <P>
-            Do you work for a not-for-profit organisation and share our values?
-            Then we’d love to hear from you!
-          </P>
-        </Col>
-        <Col md={4}>
-          <P>
-            We’d love to partner with you and your team to help change the world
-            for the better.
-          </P>
-        </Col>
-        <Col md={4}>
-          <P>
-            To that end, we are always open to offering discounts on our
-            training, design and development services - depending on the
-            project.
-          </P>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <LinkButton hasArrows to="#contact">
-            Contact us and let's work together!
-          </LinkButton>
-        </Col>
-      </Row>
+        <Row>
+          <Col>
+            <a name="notForProfitDiscounts" />
+            <Line>Not-for-proft partnerships and discounts</Line>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={4}>
+            <P>
+              Do you work for a not-for-profit organisation and share our
+              values? Then we’d love to hear from you!
+            </P>
+          </Col>
+          <Col md={4}>
+            <P>
+              We’d love to partner with you and your team to help change the
+              world for the better.
+            </P>
+          </Col>
+          <Col md={4}>
+            <P>
+              To that end, we are always open to offering discounts on our
+              training, design and development services - depending on the
+              project.
+            </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <LinkButton hasArrows to="#contact">
+              Contact us and let's work together!
+            </LinkButton>
+          </Col>
+        </Row>
+      </Grid>
     </Section>
     <Section dark>
       <Grid>
