@@ -52,7 +52,7 @@ const IndexPage = () => (
           <Ul unstyled>
             <Li>
               <SmallIconAndSentence
-                first
+                flushLeft
                 icon={<ActivityBullet image="development" />}
                 sentence="We build badass and scalable websites, apps & digital solutions…"
               />
