@@ -25,6 +25,7 @@ import TeamBio from '../components/mugshots/TeamBio'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
 import Link, { styleChildLinkColor } from '../components/navigation/Link'
+import Hr from '../components/decoration/Hr'
 
 const teamLinks = [
   {
@@ -192,7 +193,7 @@ const Team = () => (
       </Grid>
     </Section>
 
-    <Section dark>
+    <Section dark lastOnPage>
       <Grid>
         <Row>
           <Col>
@@ -280,6 +281,12 @@ const Team = () => (
               hometown="Chelmsford, UK"
               color={WHITE}
             />
+          </Col>
+        </Row>
+
+        <Row lastOnPage>
+          <Col>
+            <Hr />
           </Col>
         </Row>
       </Grid>
