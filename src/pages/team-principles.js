@@ -7,6 +7,7 @@ import Ul, { Li } from '../components/layout/Ul'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
+import SmallIconAndSentences from '../components/bulletedsections/SmallIconAndSentences'
 import { WHITE, DARKGREY, LIGHTGREY, EXTRADARKGREY } from '../config/styles'
 import {
   ALEX,
@@ -40,8 +41,13 @@ const teamLinks = [
   },
 ]
 
+const ValueGrid = styled(Grid)`
+  padding: 0;
+`
+
 const ValueCol = styled(Col)`
   ${styleChildLinkColor(EXTRADARKGREY)};
+  padding: 0;
 `
 
 const Team = () => (
@@ -69,91 +75,113 @@ const Team = () => (
         </Row>
         <Row>
           <Col>
-            <Line>Our core values</Line>
-          </Col>
-        </Row>
-        <Row>
-          <ValueCol md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="head" />}
-              sentence="Be unafraid to learn from everyone and believe in teaching what we know"
-            />
-            <Link dark>Supporting principles</Link>
-            <Ul>
-              <Li>Keep searching, keep learning</Li>
-              <Li>Share - because sharing is caring</Li>
-              <Li>Build aligned minds, not just teams</Li>
-              <Li>More than the sum of our parts</Li>
-            </Ul>
-          </ValueCol>
-          <ValueCol md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="heart" />}
-              sentence="Always aim to treat others how we would want to be treated"
-            />
-            <Link>Supporting principles</Link>
-            <Ul>
-              <Li>Treat others how you want to be treated</Li>
-              <Li>Transparently true to our methodology</Li>
-            </Ul>
-          </ValueCol>
-          <ValueCol md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="people" />}
-              sentence="Ensure what we do is meaningful and always people-centred"
-            />
-            <Link dark>Supporting principles</Link>
-            <Ul>
-              <Li>People-centred products - always</Li>
-              <Li>Be unafraid</Li>
-              <Li>Purpose over profits</Li>
-            </Ul>
-          </ValueCol>
-        </Row>
-        <Row>
-          <Col>
-            <LinkButton external to="https://medium.com/leanjs">
-              Blog: How we created <br /> our brand identity
-            </LinkButton>
+            <Line>
+              Our core values
+              <ValueGrid>
+                <Row>
+                  <SmallIconAndSentences
+                    wrapWithCols
+                    bulletType={BenefitBullet}
+                    flushLeft
+                    items={[
+                      {
+                        image: 'head',
+                        sentence:
+                          'Be unafraid to learn from everyone and believe in teaching what we know',
+                      },
+                      {
+                        image: 'heart',
+                        sentence:
+                          'Always aim to treat others how we would want to be treated',
+                      },
+                      {
+                        image: 'people',
+                        sentence:
+                          'Ensure what we do is meaningful and always people-centred',
+                      },
+                    ]}
+                  />
+                </Row>
+                <Row>
+                  <ValueCol md={4}>
+                    <Link dark>Supporting principles</Link>
+                    <Ul>
+                      <Li>Keep searching, keep learning</Li>
+                      <Li>Share - because sharing is caring</Li>
+                      <Li>Build aligned minds, not just teams</Li>
+                      <Li>More than the sum of our parts</Li>
+                    </Ul>
+                  </ValueCol>
+                  <ValueCol md={4}>
+                    <Link>Supporting principles</Link>
+                    <Ul>
+                      <Li>Treat others how you want to be treated</Li>
+                      <Li>Transparently true to our methodology</Li>
+                    </Ul>
+                  </ValueCol>
+                  <ValueCol md={4}>
+                    <Link dark>Supporting principles</Link>
+                    <Ul>
+                      <Li>People-centred products - always</Li>
+                      <Li>Be unafraid</Li>
+                      <Li>Purpose over profits</Li>
+                    </Ul>
+                  </ValueCol>
+                </Row>
+
+                <Row>
+                  <Col>
+                    <LinkButton external to="https://medium.com/leanjs">
+                      Blog: How we created our brand identity
+                    </LinkButton>
+                  </Col>
+                </Row>
+              </ValueGrid>
+            </Line>
           </Col>
         </Row>
 
         <Row>
           <Col>
             <a name="notForProfitDiscounts" />
-            <Line>Not-for-proft partnerships and discounts</Line>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={4}>
-            <P>
-              Do you work for a not-for-profit organisation and share our
-              values? Then we’d love to hear from you!
-            </P>
-          </Col>
-          <Col md={4}>
-            <P>
-              We’d love to partner with you and your team to help change the
-              world for the better.
-            </P>
-          </Col>
-          <Col md={4}>
-            <P>
-              To that end, we are always open to offering discounts on our
-              training, design and development services - depending on the
-              project.
-            </P>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <LinkButton hasArrows to="#contact">
-              Contact us and let's work together!
-            </LinkButton>
+            <Line>
+              Not-for-proft partnerships and discounts
+              <ValueGrid>
+                <Row>
+                  <ValueCol sm={7} md={8}>
+                    Do you work for a not-for-profit organisation and share our
+                    values? Then we’d love to hear from you!
+                  </ValueCol>
+                </Row>
+
+                <Row>
+                  <ValueCol sm={7} md={8}>
+                    We’d love to partner with you and your team to help change
+                    the world for the better.
+                  </ValueCol>
+                </Row>
+
+                <Row>
+                  <ValueCol sm={7} md={8}>
+                    To that end, we are always open to offering discounts on our
+                    training, design and development services - depending on the
+                    project.
+                  </ValueCol>
+                </Row>
+              </ValueGrid>
+              <Row>
+                <ValueCol>
+                  <LinkButton hasArrows to="#contact">
+                    Contact us and let's work together!
+                  </LinkButton>
+                </ValueCol>
+              </Row>
+            </Line>
           </Col>
         </Row>
       </Grid>
     </Section>
+
     <Section dark>
       <Grid>
         <Row>

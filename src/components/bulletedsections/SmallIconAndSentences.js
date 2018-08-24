@@ -11,6 +11,7 @@ const Item = props => {
       icon={<Bullet image={props.image} />}
       sentence={props.sentence}
       first={props.first}
+      flushLeft={props.flushLeft}
     />
   )
 }
@@ -23,7 +24,12 @@ const SmallIconAndSentences = props => {
         if (props.wrapWithCols) {
           return (
             <Col md={colSpan}>
-              <Item {...item} bulletType={props.bulletType} first={i === 0} />
+              <Item
+                {...item}
+                bulletType={props.bulletType}
+                flushLeft={props.flushLeft ? true : false}
+                first={i === 0}
+              />
             </Col>
           )
         }
