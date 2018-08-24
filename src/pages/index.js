@@ -230,7 +230,7 @@ const IndexPage = () => (
                 },
               ]}
             />
-            <LinkButton hasArrows dark fullWidth>
+            <LinkButton hasArrows dark fullWidthOnMobile>
               Working with you
             </LinkButton>
           </Col>
