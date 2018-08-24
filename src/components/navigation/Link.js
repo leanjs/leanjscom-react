@@ -73,6 +73,10 @@ const Link = ({ to = '', children = '', ...rest }) => {
   }
 }
 
+export const MailtoLink = props => (
+  <a href={`mailto:${props.to}`}>{props.children}</a>
+)
+
 export const ScrollingLink = styled(props => {
   return <LinkScroll {...{ smooth: true, duration: 500, ...props }} />
 })`
