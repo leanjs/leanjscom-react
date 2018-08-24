@@ -20,7 +20,7 @@ import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P, Blockquote } from '../components/text'
+import { H2, H3, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
@@ -65,25 +65,24 @@ const TrainingPage = () => (
       <Grid>
         <Row>
           <Col md={12}>
-            <P>Trusted by...</P>
+            <H3>Trusted by...</H3>
           </Col>
         </Row>
         <Row>
-          <Col md={12}>
+          <Col md={6}>
             <P>
               <HighlightedItem>
                 <img src={CLIENTS_LOGOS} />
               </HighlightedItem>
             </P>
           </Col>
-        </Row>
-        <Row>
-          <Col md={12}>
+          <Col md={6}>
             <P>
               <YouTube url="https://www.youtube.com/embed/2-IPT7Plsfc" />
             </P>
           </Col>
         </Row>
+
         <Row>
           <Col>
             <Blockquote>
