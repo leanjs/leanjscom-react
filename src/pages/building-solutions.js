@@ -96,17 +96,10 @@ const BuildingSolutions = () => (
               ]}
             />
           </Col>
-          <Col md={6}>
-            <Image src={ALEX_RICARDO_WHITEBOARD} />
-          </Col>
         </Row>
         <Row>
           <Col>
-            <Blockquote2>
-              We never thought it possible! We only had a couple of months until
-              Christmas but LeanJS sorted us out. They were highly professional
-              yet friendly and very effective.
-            </Blockquote2>
+            <Blockquote2 />
           </Col>
         </Row>
         <Row>
@@ -117,6 +110,7 @@ const BuildingSolutions = () => (
               jobTitle="Head of Marketing at Saveur Bière (ABinBev)"
               company="ABinBev"
               color={DARKGREY}
+              quote="We never thought it possible! We only had a couple of months until Christmas but LeanJS sorted us out. They were highly professional yet friendly and very effective."
             />
           </Col>
           <Col md={6}>

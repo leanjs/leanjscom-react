@@ -88,22 +88,13 @@ const TrainingPage = () => (
         </Row>
 
         <Row>
-          <Col md={8}>
-            <Blockquote>
-              LeanJS helped our team understand the complex in the simplest and
-              easiest way. At the end of training, we all felt like masters of
-              React!
-            </Blockquote>
-          </Col>
-        </Row>
-
-        <Row>
           <Col>
             <Mugshot
               image={MUGSHOT_ASOS}
               name="James Norton"
               jobTitle="Engineering Practise Lead"
               company="ASOS.com"
+              quote="LeanJS helped our team understand the complex in the simplest and easiest way. At the end of training, we all felt like masters of React!"
             />
           </Col>
         </Row>
