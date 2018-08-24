@@ -150,11 +150,6 @@ const caseStudies = [
       },
       text: `LeanJS understood our mindset with a ability to ‘chameleon’ themselves. A great team to be part of, always transparent - what they created for us was incredible.`,
     },
-    button: {
-      external: true,
-      to: 'https://medium.com/leanjs',
-      text: 'Blog: AGNI for Boston University Case Study',
-    },
   },
 
   {
@@ -191,11 +186,6 @@ const caseStudies = [
         company: 'ASOS.com',
       },
       text: `Our team had been talking about ReactJS for a while and when I realised how effecient it can be, it was time for a change. LeanJS tailored training for our needs and now we don’t work any othe way.`,
-    },
-    button: {
-      external: true,
-      to: 'https://medium.com/leanjs',
-      text: 'Blog: How we teach React at LeanJS',
     },
   },
 ]
