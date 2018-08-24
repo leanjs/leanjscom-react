@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Grid, { Row, Col } from '../layout/Grid'
+import Image from '../elements/Image'
 import { arrayChunk } from '../utils'
 
 const photos = [
@@ -62,26 +63,33 @@ const photos = [
   },
 ]
 
-const InstagramInner = styled.div`
+const InstagramInner = styled(Grid)`
   background: white;
+`
+
+const InstagramImage = styled(Image)`
+  margin-top: ${props => (props.firstRow ? `2rem` : `0`)};
+  padding-bottom: ${props => (props.lastRow ? `2rem` : `0`)};
 `
 
 const Instagram = ({ numPhotos = 6, photosPerRow = 3 }) => (
   <InstagramInner>
-    <Grid>
-      {arrayChunk(photos.slice(0, numPhotos), photosPerRow).map((chunk, j) => (
-        <Row key={`instagram-outer-${j}-${new Date().getTime()}`}>
-          {chunk.map((photo, i) => (
-            <Col
-              xs={Math.floor(12 / photosPerRow)}
-              key={`instagram-inner-${i}-${new Date().getTime()}`}
-            >
-              <img src={photo.url} />
-            </Col>
-          ))}
-        </Row>
-      ))}
-    </Grid>
+    {arrayChunk(photos.slice(0, numPhotos), photosPerRow).map((chunk, j) => (
+      <Row key={`instagram-outer-${j}-${new Date().getTime()}`}>
+        {chunk.map((photo, i) => (
+          <Col
+            xs={Math.floor(12 / photosPerRow)}
+            key={`instagram-inner-${i}-${new Date().getTime()}`}
+          >
+            <InstagramImage
+              firstRow={j === 0}
+              lastRow={j === numPhotos / photosPerRow - 1}
+              src={photo.url}
+            />
+          </Col>
+        ))}
+      </Row>
+    ))}
   </InstagramInner>
 )
 
