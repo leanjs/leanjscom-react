@@ -44,7 +44,6 @@ const BurgerLabel = styled.span`
   margin-top: 36px;
   display: inline-block;
   color: white;
-  content: 'Menu';
   font-size: 0.9rem;
   text-align: center;
 `
