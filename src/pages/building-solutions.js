@@ -7,6 +7,7 @@ import Ul, { Li } from '../components/layout/Ul'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
+import SmallIconAndSentences from '../components/bulletedsections/SmallIconAndSentences'
 import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
 import {
   MUGSHOT_ABINBEV,
@@ -82,24 +83,28 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="chat" />}
-              sentence="Be unafraid to learn from everyone and believe in teaching what we know"
-            />
-          </Col>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="gift" />}
-              sentence="Explain all possibilities with you and collaborate to prioritise the best solutions"
-            />
-          </Col>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="calendar" />}
-              sentence="Bi-weekly reviews throughout the design and build process"
-            />
-          </Col>
+          <SmallIconAndSentences
+            wrapWithCols
+            flushLeft
+            bulletType={BenefitBullet}
+            items={[
+              {
+                image: 'chat',
+                sentence:
+                  'Be unafraid to learn from everyone and believe in teaching what we know',
+              },
+              {
+                image: 'gift',
+                sentence:
+                  'Explain all possibilities with you and collaborate to prioritise the best solutions',
+              },
+              {
+                image: 'calendar',
+                sentence:
+                  'Bi-weekly reviews throughout the design and build process',
+              },
+            ]}
+          />
         </Row>
         <Row>
           <Col>
@@ -208,24 +213,27 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="tools" />}
-              sentence="Tailored, bespoke support packages"
-            />
-          </Col>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="code" />}
-              sentence="Proven, open sourced tech-stack under the hood that gives your team total flexibility"
-            />
-          </Col>
-          <Col md={4}>
-            <SmallIconAndSentence
-              icon={<BenefitBullet image="expand" />}
-              sentence="Robust, scalable technology that will live far into the future"
-            />
-          </Col>
+          <SmallIconAndSentences
+            wrapWithCols
+            flushLeft
+            bulletType={BenefitBullet}
+            items={[
+              {
+                image: 'tools',
+                sentence: 'Tailored, bespoke support packages',
+              },
+              {
+                image: 'code',
+                sentence:
+                  'Proven, open sourced tech-stack under the hood that gives your team total flexibility',
+              },
+              {
+                image: 'expand',
+                sentence:
+                  'Robust, scalable technology that will live far into the future',
+              },
+            ]}
+          />
         </Row>
         <Row>
           <Col md={6}>
