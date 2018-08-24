@@ -71,7 +71,7 @@ const HeaderTop = styled.div`
 
 const backgroundCirclesSize = ({ isMobile, windowWidth }) => {
   if (windowWidth !== null) {
-    return (windowWidth * (isMobile ? 0.85 : 0.25) * 2) / 18
+    return windowWidth * (isMobile ? 0.85 : 0.25) * 2 / 18
   } else {
     return 2000 / 18
   }
@@ -236,7 +236,9 @@ const Header = ({
                 <Row>
                   {bulletPoints
                     .slice(0, 2)
-                    .map(point => <BulletPoint {...point} />)}
+                    .map((point, i) => (
+                      <BulletPoint key={`header-bullet-${i}`} {...point} />
+                    ))}
                 </Row>
               </BulletPoints>
             ) : null}

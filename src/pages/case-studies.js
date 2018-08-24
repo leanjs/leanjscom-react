@@ -36,8 +36,8 @@ const CaseStudyTitle = styled(H2)`
 
 const CaseStudyExpoBullets = ({ content }) => (
   <Ul unstyled>
-    {content.map(item => (
-      <Li>
+    {content.map((item, i) => (
+      <Li key={`case-study-expo-${i}`}>
         <SmallIconAndSentence
           icon={
             <Circle size={60 / 18} bg={LIGHTGREY}>

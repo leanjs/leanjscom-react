@@ -3,7 +3,7 @@ import { LinkIconButton } from './IconButton'
 import { CHAT } from '../../config/icons'
 
 const ContactButton = () => (
-  <LinkIconButton image={CHAT} text="Contact" to="#contact" />
+  <LinkIconButton image={CHAT} text="Contact" scroll to="contact" />
 )
 
 export default ContactButton

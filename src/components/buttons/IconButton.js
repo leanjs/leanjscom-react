@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Link, { styleChildLinkColor } from '../navigation/Link'
 
+import { Link as LinkScroll } from 'react-scroll'
+
 import {
   WHITE,
   SPACING_LARGER,
@@ -54,11 +56,16 @@ const IconButtonInner = styled.button`
   }
 `
 
-const LinkIconButtonInner = styled(({ image, ...rest }) => <Link {...rest} />)`
+const LinkIconButtonInner = styled(({ image, isLink, scroll, ...rest }) => {
+  const LinkType = scroll ? LinkScroll : Link
+  const props = scroll ? { smooth: true, duration: 500, ...rest } : rest
+  return <LinkType {...props} />
+})`
   ${addIconButtonStyles};
   text-decoration: none;
   display: inline-block;
 `
+LinkIconButtonInner.displayName = 'LinkIconButtonInner'
 
 const Contents = props => (
   <div className="contents">
