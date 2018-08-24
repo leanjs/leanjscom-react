@@ -109,13 +109,13 @@ const TrainingPage = () => (
     <Section dark>
       <Grid>
         <Row>
-          <Col>
+          <Col md={8}>
             <H2>What we love to teach</H2>
           </Col>
         </Row>
 
         <Row>
-          <Col>
+          <Col md={8}>
             <P>
               At LeanJS we practise what we preach! All our trainers code and
               design real world products with the methods we teach.
@@ -127,37 +127,36 @@ const TrainingPage = () => (
 
             <Line>
               ReactJS ecosystem <Topic>Code</Topic>
+              <P>
+                Created in 2016, our{' '}
+                <Link external to="https://reactjs.academy/">
+                  ReactJS Academy
+                </Link>{' '}
+                was the first in Europe.
+              </P>
+              <P>
+                <LinkButton external to="https://reactjs.academy/">
+                  Visit ReactJS Academy website
+                </LinkButton>
+              </P>
             </Line>
-
-            <P>
-              Created in 2016, our{' '}
-              <Link external to="https://reactjs.academy/">
-                ReactJS Academy
-              </Link>{' '}
-              was the first in Europe.
-            </P>
-            <P>
-              <LinkButton external to="https://reactjs.academy/">
-                Visit ReactJS Academy website
-              </LinkButton>
-            </P>
 
             <Line>
               Product and UX design <Topic>Design</Topic>
+              <P>
+                Learn how to develop an idea into a working, tested design with
+                design thinking.
+              </P>
             </Line>
-
-            <P>
-              Learn how to develop an idea into a working, tested design with
-              design thinking.
-            </P>
 
             <Line>
               Lean / Agile <Topic>Process</Topic>
+              <P>
+                Let us guide you to change your processes to work quicker and
+                more efficiently
+              </P>
             </Line>
-            <P>
-              Let us guide you to change your processes to work quicker and more
-              efficiently
-            </P>
+
             <P>
               <LinkButton to="#contact" hasArrows>
                 What's your tech training needs? Contact us now!
