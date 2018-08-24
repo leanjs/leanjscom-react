@@ -46,38 +46,26 @@ const IndexPage = () => (
       titleLines={['LeanJS']}
       subtitle="We can help you evolve your tech. Quick snap!"
       bgImg="home"
-    >
-      <Row>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                flushLeft
-                icon={<ActivityBullet image="development" />}
-                sentence="We build badass and scalable websites, apps & digital solutions…"
-              />
-            </Li>
-          </Ul>
-          <LinkButton to="/building-solutions" hasArrows>
-            Building products
-          </LinkButton>
-        </Col>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                flushLeft
-                icon={<ActivityBullet image="teaching" />}
-                sentence="  We also teach innovative tech to your team…"
-              />
-            </Li>
-          </Ul>
-          <LinkButton to="/training" hasArrows>
-            Training services
-          </LinkButton>
-        </Col>
-      </Row>
-    </Header>
+      bulletPoints={[
+        {
+          icon: 'development',
+          sentence:
+            'We build badass and scalable websites, apps & digital solutions…',
+          button: {
+            to: '/building-solutions',
+            text: 'Building products',
+          },
+        },
+        {
+          icon: 'teaching',
+          sentence: 'We also teach innovative tech to your team…',
+          button: {
+            to: '/training',
+            text: 'Training products',
+          },
+        },
+      ]}
+    />
 
     <Section>
       <Grid>

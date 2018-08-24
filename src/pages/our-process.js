@@ -69,30 +69,18 @@ const OurProcess = () => (
         },
       ]}
       bgImg="ourprocess"
-    >
-      <Row>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<ActivityBullet image="qa" />}
-                sentence="A process that ensures quality is assured and creates trusted, scalable digital products"
-              />
-            </Li>
-          </Ul>
-        </Col>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<ActivityBullet image="quick" />}
-                sentence="From concept to launch - in as little as 6 weeks"
-              />
-            </Li>
-          </Ul>
-        </Col>
-      </Row>
-    </Header>
+      bulletPoints={[
+        {
+          icon: 'qa',
+          sentence:
+            'A process that ensures quality is assured and creates trusted, scalable digital products',
+        },
+        {
+          icon: 'quick',
+          sentence: 'From concept to launch - in as little as 6 weeks',
+        },
+      ]}
+    />
 
     <Section>
       <Grid>

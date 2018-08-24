@@ -74,30 +74,18 @@ const CaseStudies = () => (
         },
       ]}
       bgImg="home"
-    >
-      <Row>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<ActivityBullet image="industry" />}
-                sentence="Digital solutions built and user tested for over 20+ sectors"
-              />
-            </Li>
-          </Ul>
-        </Col>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<ActivityBullet image="teaching" />}
-                sentence="Over 1500 training participants in just 2 years"
-              />
-            </Li>
-          </Ul>
-        </Col>
-      </Row>
-    </Header>
+      bulletPoints={[
+        {
+          icon: 'industry',
+          sentence:
+            'Digital solutions built and user tested for over 20+ sectors',
+        },
+        {
+          icon: 'teaching',
+          sentence: 'Over 1500 training participants in just 2 years',
+        },
+      ]}
+    />
 
     <Section>
       <Grid>

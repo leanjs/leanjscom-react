@@ -47,30 +47,19 @@ const BuildingSolutions = () => (
       titleLines={['Building solutions']}
       links={BuildingSolutionsLinks}
       bgImg="home"
-    >
-      <Row>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<ActivityBullet image="heart" />}
-                sentence="We work with you from initial idea to product launch and beyond!"
-              />
-            </Li>
-          </Ul>
-        </Col>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<ActivityBullet image="diamond" />}
-                sentence="Design + development process for quality results, on time and on budget"
-              />
-            </Li>
-          </Ul>
-        </Col>
-      </Row>
-    </Header>
+      bulletPoints={[
+        {
+          icon: 'heart',
+          sentence:
+            'We work with you from initial idea to product launch and beyond!',
+        },
+        {
+          icon: 'diamond',
+          sentence:
+            'Design + development process for quality results, on time and on budget',
+        },
+      ]}
+    />
 
     <Section>
       <Grid>

@@ -41,30 +41,25 @@ const BootcampCol = styled(Col)`
 
 const TrainingPage = () => (
   <React.Fragment>
-    <Header titleLines={['Training']} subtitle="" bgImg="training">
-      <Row>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<BenefitBullet image="team" dark />}
-                sentence="Take your team and digital solutions further into the future"
-              />
-            </Li>
-          </Ul>
-        </Col>
-        <Col md={5}>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<BenefitBullet image="react" dark />}
-                sentence="Pioneering the first cutting-edge ReactJS training in Europe"
-              />
-            </Li>
-          </Ul>
-        </Col>
-      </Row>
-    </Header>
+    <Header
+      titleLines={['Training']}
+      subtitle=""
+      bgImg="training"
+      bulletPoints={[
+        {
+          bullet: BenefitBullet,
+          icon: 'team',
+          sentence:
+            'Take your team and digital solutions further into the future',
+        },
+        {
+          bullet: BenefitBullet,
+          icon: 'react',
+          sentence:
+            'Pioneering the first cutting-edge ReactJS training in Europe',
+        },
+      ]}
+    />
 
     <Section>
       <Grid>

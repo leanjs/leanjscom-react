@@ -21,6 +21,9 @@ import { ANCHOR_STYLE } from '../navigation/Link'
 import Menu from '../navigation/menu'
 import ConcentricCircles from '../decoration/ConcentricCircles'
 import withWidth from 'react-width'
+import SmallIconAndSentence from '../bulletedsections/SmallIconAndSentence'
+import ActivityBullet from '../bullets/ActivityBullet'
+import LinkButton from '../buttons/LinkButton'
 
 const H1 = styled(BaseH1)`
   font-size: ${FONT_SIZE_EXTRALARGE} !important;
@@ -105,6 +108,7 @@ const TitleBackground = styled.span`
 `
 
 const WHITE_TEXT = `
+  color: ${WHITE};
   a {
     color: ${WHITE};
   }
@@ -128,7 +132,7 @@ const Links = styled.div`
   padding: ${SPACING_STANDARD};
 `
 
-const Children = styled.div`
+const BulletPoints = styled.div`
   ${WHITE_TEXT};
 `
 
@@ -136,12 +140,31 @@ const StyledLinkScroll = styled(LinkScroll)`
   ${ANCHOR_STYLE};
 `
 
+const BulletPoint = props => {
+  const Bullet = props.bullet ? props.bullet : ActivityBullet
+
+  return (
+    <Col md={5}>
+      <SmallIconAndSentence
+        flushLeft
+        icon={<Bullet image={props.icon} />}
+        sentence={props.sentence}
+      />
+      {props.button ? (
+        <LinkButton to={props.button.to} hasArrows>
+          {props.button.text}
+        </LinkButton>
+      ) : null}
+    </Col>
+  )
+}
+
 const Header = ({
   titleLines = [],
   subtitle,
   links = [],
   bgImg,
-  children,
+  bulletPoints,
   ...props
 }) => {
   const canIGuessTheScreenSizeUsingJS = typeof window !== 'undefined'
@@ -208,7 +231,15 @@ const Header = ({
               ''
             )}
 
-            <Children>{children}</Children>
+            {bulletPoints ? (
+              <BulletPoints>
+                <Row>
+                  {bulletPoints
+                    .slice(0, 2)
+                    .map(point => <BulletPoint {...point} />)}
+                </Row>
+              </BulletPoints>
+            ) : null}
           </Col>
         </Row>
       </Grid>
