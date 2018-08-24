@@ -22,20 +22,25 @@ const SmallIconAndSentences = props => {
     <React.Fragment>
       {props.items.map((item, i) => {
         const key = `small-icon-and-sentences-${i}-${new Date().getTime()}`
+
+        const itemElement = (
+          <Item
+            {...item}
+            bulletType={props.bulletType}
+            flushLeft={props.flushLeft ? true : false}
+            first={i === 0}
+          />
+        )
+
         if (props.wrapWithCols) {
           return (
             <Col md={colSpan} key={key}>
-              <Item
-                {...item}
-                bulletType={props.bulletType}
-                flushLeft={props.flushLeft ? true : false}
-                first={i === 0}
-              />
+              {itemElement}
             </Col>
           )
         }
 
-        return <Item {...item} key={key} first={i === 0} />
+        return itemElement
       })}
     </React.Fragment>
   )

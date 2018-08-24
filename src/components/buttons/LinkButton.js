@@ -7,7 +7,7 @@ import { FONT_WEIGHT_STANDARD, SPACING_LARGE } from '../../config/styles'
 
 // NB cunning destructure method to remove invalid DOM properties before passing them to the underlying dom element
 // and thereby generating a React warning, as per https://github.com/styled-components/styled-components/issues/1268
-const LinkButton = styled(({ hasArrows, ...rest }) => <Link {...rest} />)`
+const LinkButton = styled(({ hasArrows, dark, ...rest }) => <Link {...rest} />)`
   ${DEFAULT_BUTTON_STYLES};
   text-decoration: none !important;
   display: inline-block;

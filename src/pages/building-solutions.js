@@ -40,8 +40,6 @@ const BuildingSolutionsLinks = [
   },
 ]
 
-const HandoversImage = props => <Image src={RICHARD_TEACHING} />
-
 const BuildingSolutions = () => (
   <React.Fragment>
     <Header
@@ -76,34 +74,31 @@ const BuildingSolutions = () => (
               years experience in digital and have developed a process that
               works with you - from beginning to end.
             </P>
+            <SmallIconAndSentences
+              flushLeft
+              bulletType={BenefitBullet}
+              items={[
+                {
+                  image: 'chat',
+                  sentence:
+                    'Be unafraid to learn from everyone and believe in teaching what we know',
+                },
+                {
+                  image: 'gift',
+                  sentence:
+                    'Explain all possibilities with you and collaborate to prioritise the best solutions',
+                },
+                {
+                  image: 'calendar',
+                  sentence:
+                    'Bi-weekly reviews throughout the design and build process',
+                },
+              ]}
+            />
           </Col>
           <Col md={6}>
             <Image src={ALEX_RICARDO_WHITEBOARD} />
           </Col>
-        </Row>
-        <Row>
-          <SmallIconAndSentences
-            wrapWithCols
-            flushLeft
-            bulletType={BenefitBullet}
-            items={[
-              {
-                image: 'chat',
-                sentence:
-                  'Be unafraid to learn from everyone and believe in teaching what we know',
-              },
-              {
-                image: 'gift',
-                sentence:
-                  'Explain all possibilities with you and collaborate to prioritise the best solutions',
-              },
-              {
-                image: 'calendar',
-                sentence:
-                  'Bi-weekly reviews throughout the design and build process',
-              },
-            ]}
-          />
         </Row>
         <Row>
           <Col>
@@ -139,16 +134,7 @@ const BuildingSolutions = () => (
           <Col md={6}>
             <a name="projectHandovers" />
             <H2>Slick handovers with expert tech training</H2>
-          </Col>
-          <HideSingleComponentUsingCss xs sm>
-            <Col md={6}>
-              <HandoversImage />
-            </Col>
-          </HideSingleComponentUsingCss>
-        </Row>
 
-        <Row>
-          <Col>
             <P>
               Anyone who’s completed a digital project knows how important a
               good handover is.
@@ -159,23 +145,16 @@ const BuildingSolutions = () => (
             </P>
             <P>We can provide training for:</P>
             <Ul>
-              <Li>
-                The ReactJS ecosystem
-                <Li>Working with GraphQL</Li>
-                <Li>Lean/Agile processes</Li>
-                <Li>Product & UX design</Li>
-              </Li>
+              <Li>The ReactJS ecosystem</Li>
+              <Li>Working with GraphQL</Li>
+              <Li>Lean/Agile processes</Li>
+              <Li>Product & UX design</Li>
             </Ul>
           </Col>
+          <Col md={6}>
+            <Image src={RICHARD_TEACHING} />
+          </Col>
         </Row>
-
-        <HideSingleComponentUsingCss md lg>
-          <Row>
-            <Col md={false}>
-              <HandoversImage />
-            </Col>
-          </Row>
-        </HideSingleComponentUsingCss>
 
         <Row>
           <Col>
@@ -190,16 +169,10 @@ const BuildingSolutions = () => (
     <Section>
       <Grid>
         <Row>
-          <Col>
+          <Col md={6}>
             <a name="support" />
             <H2>What happens next? How we support you…</H2>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <Image src={LUIS_ALEX_DOG} />
-          </Col>
-          <Col md={6}>
+
             <P>
               Building a website or app is scary - we get it. But sometimes the
               real challenges start once the project is launched and live.
@@ -209,40 +182,40 @@ const BuildingSolutions = () => (
               there to help you as much as you require. We wont dump you in it
               at the end of the project!
             </P>
+
+            <SmallIconAndSentences
+              flushLeft
+              bulletType={BenefitBullet}
+              items={[
+                {
+                  image: 'tools',
+                  sentence: 'Tailored, bespoke support packages',
+                },
+                {
+                  image: 'code',
+                  sentence:
+                    'Proven, open sourced tech-stack under the hood that gives your team total flexibility',
+                },
+                {
+                  image: 'expand',
+                  sentence:
+                    'Robust, scalable technology that will live far into the future',
+                },
+              ]}
+            />
+          </Col>
+
+          <Col md={6}>
+            <Image src={LUIS_ALEX_DOG} />
           </Col>
         </Row>
         <Row>
-          <SmallIconAndSentences
-            wrapWithCols
-            flushLeft
-            bulletType={BenefitBullet}
-            items={[
-              {
-                image: 'tools',
-                sentence: 'Tailored, bespoke support packages',
-              },
-              {
-                image: 'code',
-                sentence:
-                  'Proven, open sourced tech-stack under the hood that gives your team total flexibility',
-              },
-              {
-                image: 'expand',
-                sentence:
-                  'Robust, scalable technology that will live far into the future',
-              },
-            ]}
-          />
-        </Row>
-        <Row>
-          <Col md={6}>
+          <Col md={12}>
             <LinkButton dark hasArrows to="/case-studies">
               Read our case studies
             </LinkButton>
-          </Col>
-          <Col md={6}>
             <LinkButton hasArrows to="#contact">
-              Contact us to discuss your development/design needs
+              Contact us to discuss your needs
             </LinkButton>
           </Col>
         </Row>
