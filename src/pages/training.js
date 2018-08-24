@@ -84,7 +84,7 @@ const TrainingPage = () => (
         </Row>
 
         <Row>
-          <Col>
+          <Col md={8}>
             <Blockquote>
               LeanJS helped our team understand the complex in the simplest and
               easiest way. At the end of training, we all felt like masters of
