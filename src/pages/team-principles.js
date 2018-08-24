@@ -20,7 +20,7 @@ import {
 } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P } from '../components/text'
+import { H2, H3, P } from '../components/text'
 import TeamBio from '../components/mugshots/TeamBio'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
@@ -72,9 +72,9 @@ const Team = () => (
         <Row>
           <Col>
             <Line>
-              Our core values
+              <H3>Our core values</H3>
               <ValueGrid>
-                <Row>
+                <Row style={{ marginTop: 0 }}>
                   <SmallIconAndSentences
                     wrapWithCols
                     bulletType={BenefitBullet}
@@ -100,7 +100,7 @@ const Team = () => (
                 </Row>
                 <Row>
                   <ValueCol md={4}>
-                    <Link dark>Supporting principles</Link>
+                    <H3>Supporting principles</H3>
                     <Ul>
                       <Li>Keep searching, keep learning</Li>
                       <Li>Share - because sharing is caring</Li>
@@ -109,14 +109,14 @@ const Team = () => (
                     </Ul>
                   </ValueCol>
                   <ValueCol md={4}>
-                    <Link>Supporting principles</Link>
+                    <H3>Supporting principles</H3>
                     <Ul>
                       <Li>Treat others how you want to be treated</Li>
                       <Li>Transparently true to our methodology</Li>
                     </Ul>
                   </ValueCol>
                   <ValueCol md={4}>
-                    <Link dark>Supporting principles</Link>
+                    <H3>Supporting principles</H3>
                     <Ul>
                       <Li>People-centred products - always</Li>
                       <Li>Be unafraid</Li>
@@ -127,7 +127,10 @@ const Team = () => (
 
                 <Row>
                   <Col>
-                    <LinkButton external to="https://medium.com/leanjs">
+                    <LinkButton
+                      external
+                      to="https://medium.com/leanjs/open-source-branding-leanjs-sprint-1-8caf048396d0"
+                    >
                       Blog: How we created our brand identity
                     </LinkButton>
                   </Col>
