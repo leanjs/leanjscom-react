@@ -17,6 +17,10 @@ const LineOuter = styled.div`
 const LineInner = styled.div`
   padding-left: ${props => getLeftPadding(props)};
   position: relative;
+
+  h3 {
+    display: inline-block;
+  }
 `
 
 const LineActualLine = styled.div`

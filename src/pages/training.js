@@ -120,13 +120,22 @@ const TrainingPage = () => (
               At LeanJS we practise what we preach! All our trainers code and
               design real world products with the methods we teach.
             </P>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={8}>
             <P>
               Training your team in leading edge tech means you can rely on your
               team to get the job done.
             </P>
-
+          </Col>
+        </Row>
+        <Row>
+          <Col md={8}>
             <Line>
-              ReactJS ecosystem <Topic>Code</Topic>
+              <H3>
+                ReactJS ecosystem <Topic>Code</Topic>
+              </H3>
               <P>
                 Created in 2016, our{' '}
                 <Link external to="https://reactjs.academy/">
@@ -140,23 +149,36 @@ const TrainingPage = () => (
                 </LinkButton>
               </P>
             </Line>
-
+          </Col>
+        </Row>
+        <Row>
+          <Col md={8}>
             <Line>
-              Product and UX design <Topic>Design</Topic>
+              <H3>
+                Product and UX design <Topic>Design</Topic>
+              </H3>
               <P>
                 Learn how to develop an idea into a working, tested design with
                 design thinking.
               </P>
             </Line>
-
+          </Col>
+        </Row>
+        <Row>
+          <Col md={8}>
             <Line>
-              Lean / Agile <Topic>Process</Topic>
+              <H3>
+                Lean / Agile <Topic>Process</Topic>
+              </H3>
               <P>
                 Let us guide you to change your processes to work quicker and
                 more efficiently
               </P>
             </Line>
-
+          </Col>
+        </Row>
+        <Row>
+          <Col md={8}>
             <P>
               <LinkButton to="#contact" hasArrows>
                 What's your tech training needs? Contact us now!
