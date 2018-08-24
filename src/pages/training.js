@@ -103,122 +103,102 @@ const TrainingPage = () => (
 
     <Section dark>
       <Grid>
-        <SingleColRow>
-          <H2>What we love to teach</H2>
-        </SingleColRow>
+        <Row>
+          <Col md={6}>
+            <H2>What we love to teach</H2>
 
-        <SingleColRow>
-          <P>
-            At LeanJS we practise what we preach! All our trainers code and
-            design real world products with the methods we teach.
-          </P>
-        </SingleColRow>
-
-        <SingleColRow>
-          <P>
-            Training your team in leading edge tech means you can rely on your
-            team to get the job done.
-          </P>
-        </SingleColRow>
-
-        <SingleColRow>
-          <Line>
-            <H3>
-              ReactJS ecosystem <Topic>Code</Topic>
-            </H3>
             <P>
-              Created in 2016, our{' '}
-              <Link external to="https://reactjs.academy/">
-                ReactJS Academy
-              </Link>{' '}
-              was the first in Europe.
+              At LeanJS we practise what we preach! All our trainers code and
+              design real world products with the methods we teach.
             </P>
             <P>
-              <LinkButton external to="https://reactjs.academy/">
-                Visit ReactJS Academy website
+              Training your team in leading edge tech means you can rely on your
+              team to get the job done.
+            </P>
+          </Col>
+          <Col md={6}>
+            <Line>
+              <H3>
+                ReactJS ecosystem <Topic>Code</Topic>
+              </H3>
+              <P>
+                Created in 2016, our{' '}
+                <Link external to="https://reactjs.academy/">
+                  ReactJS Academy
+                </Link>{' '}
+                was the first in Europe.
+              </P>
+              <P>
+                <LinkButton external to="https://reactjs.academy/">
+                  Visit ReactJS Academy website
+                </LinkButton>
+              </P>
+            </Line>
+
+            <Line>
+              <H3>
+                Product and UX design <Topic>Design</Topic>
+              </H3>
+              <P>
+                Learn how to develop an idea into a working, tested design with
+                design thinking.
+              </P>
+            </Line>
+
+            <Line>
+              <H3>
+                Lean / Agile <Topic>Process</Topic>
+              </H3>
+              <P>
+                Let us guide you to change your processes to work quicker and
+                more efficiently
+              </P>
+            </Line>
+
+            <P>
+              <LinkButton scroll to="contact" hasArrows>
+                What's your tech training needs? Contact us now!
               </LinkButton>
             </P>
-          </Line>
-        </SingleColRow>
-
-        <SingleColRow>
-          <Line>
-            <H3>
-              Product and UX design <Topic>Design</Topic>
-            </H3>
-            <P>
-              Learn how to develop an idea into a working, tested design with
-              design thinking.
-            </P>
-          </Line>
-        </SingleColRow>
-
-        <SingleColRow>
-          <Line>
-            <H3>
-              Lean / Agile <Topic>Process</Topic>
-            </H3>
-            <P>
-              Let us guide you to change your processes to work quicker and more
-              efficiently
-            </P>
-          </Line>
-        </SingleColRow>
-
-        <SingleColRow>
-          <P>
-            <LinkButton scroll to="contact" hasArrows>
-              What's your tech training needs? Contact us now!
-            </LinkButton>
-          </P>
-        </SingleColRow>
+          </Col>
+        </Row>
       </Grid>
     </Section>
 
     <Section>
       <Grid>
-        <SingleColRow>
-          <H2>
-            Tailored private team team training - tailored for your team's needs
-          </H2>
-        </SingleColRow>
-        <SingleColRow>
-          <P>
-            We love diving into an existing team and teaching the latest tech
-            tools and processes.
-          </P>
-        </SingleColRow>
-        <SingleColRow>
-          <P>It's intense, fun and very rewarding. Plus, it really works!</P>
-        </SingleColRow>
-        <SingleColRow>
-          <P>
+        <Row>
+          <Col md={6}>
+            <H2>Corporate training - tailored for your team's needs</H2>
+
+            <P>
+              We love diving into an existing team and teaching the latest tech
+              tools and processes.
+            </P>
+
+            <P>It's intense, fun and very rewarding. Plus, it really works!</P>
+
+            <Ul unstyled>
+              <Li>
+                <SmallIconAndSentence
+                  icon={<BenefitBullet image="team" />}
+                  sentence="Immersive training for groups of max 20 participants"
+                  flushLeft
+                />
+              </Li>
+              <Li>
+                <SmallIconAndSentence
+                  icon={<BenefitBullet image="globe" />}
+                  sentence="You choose the date and location - anywhere in the world!"
+                  flushLeft
+                />
+              </Li>
+            </Ul>
+          </Col>
+          <Col md={6}>
             <img src={ALEX_TEACHING} />
-          </P>
-        </SingleColRow>
-        <SingleColRow>
-          <Ul unstyled>
-            <Li>
-              <SmallIconAndSentence
-                icon={<BenefitBullet image="team" />}
-                sentence="Immersive training for groups of max 20 participants"
-                flushLeft
-              />
-            </Li>
-            <Li>
-              <SmallIconAndSentence
-                icon={<BenefitBullet image="globe" />}
-                sentence="You choose the date and location - anywhere in the world!"
-                flushLeft
-              />
-            </Li>
-          </Ul>
-        </SingleColRow>
-        <SingleColRow>
-          <LinkButton to="/case-studies#asos" dark hasArrows>
-            ASOS.com team training case study
-          </LinkButton>
-        </SingleColRow>
+          </Col>
+        </Row>
       </Grid>
     </Section>
 
