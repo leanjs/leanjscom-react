@@ -1,7 +1,7 @@
 import React from 'react'
 import Bullet from './Bullet'
 
-import { LIGHTGREY } from '../../config/styles'
+import { LIGHTGREY, EXTRADARKGREY } from '../../config/styles'
 import { LEARNING, CARING, PEOPLE_2 } from '../../config/icons'
 
 export const validImages = {
@@ -13,7 +13,7 @@ export const validImages = {
 const ValueBullet = ({ image }) => (
   <Bullet
     color={LIGHTGREY}
-    bg="black"
+    bg={EXTRADARKGREY}
     size={60 / 18}
     hasBorder={true}
     images={validImages}
