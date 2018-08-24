@@ -37,7 +37,7 @@ export const Blockquote2 = styled(Blockquote)`
   font-style: italic;
   line-height: ${LINE_HEIGHT_LARGE};
   display: inline-block;
-  margin-left: ${SPACING_LARGE};
+  padding-left: ${props => (props.padLeft ? SPACING_LARGE : `0`)};
 `
 
 export default Blockquote

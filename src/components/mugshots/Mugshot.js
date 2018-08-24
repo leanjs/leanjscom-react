@@ -42,7 +42,7 @@ const Mugshot = ({ image, name, jobTitle, company, ...props }) => (
       <Spec>{jobTitle}</Spec>
       <Spec>{company}</Spec>
     </PersonSpecs>
-    {props.quote ? <Blockquote2>{props.quote}</Blockquote2> : null}
+    {props.quote ? <Blockquote2 padLeft>{props.quote}</Blockquote2> : null}
   </MugshotInner>
 )
 
