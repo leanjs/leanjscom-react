@@ -66,6 +66,7 @@ const IndexPage = () => (
           <Ul unstyled>
             <Li>
               <SmallIconAndSentence
+                flushLeft
                 icon={<ActivityBullet image="teaching" />}
                 sentence="  We also teach innovative tech to your team…"
               />
