@@ -9,8 +9,12 @@ import {
   SPACING_XXLARGE,
 } from '../../config/styles'
 
-const BioInner = styled.div`
+const Bio = styled.div`
   color: ${props => props.color || 'black'};
+  padding-bottom: ${SPACING_LARGE};
+`
+
+const BioInner = styled.div`
   display: flex;
 `
 
@@ -35,8 +39,8 @@ const AskMeAbout = styled.p`
 `
 
 const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
-  <div style={{ paddingBottom: SPACING_LARGE }}>
-    <BioInner {...props}>
+  <Bio {...props}>
+    <BioInner>
       <PersonImage>
         <img
           style={{
@@ -55,7 +59,7 @@ const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
       </PersonSpecs>
     </BioInner>
     <AskMeAbout>Ask me about: {specialisms}</AskMeAbout>
-  </div>
+  </Bio>
 )
 
 export default TeamBio
