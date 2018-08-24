@@ -23,6 +23,8 @@ export const LAYOUT_SPACING_LARGE = '38.9rem'
 
 export const FONT_SIZE_SMALL = '0.7rem'
 export const FONT_SIZE_STANDARD = '1rem'
+export const FONT_SIZE_LOWERQUARTILE = '1.25rem'
+export const FONT_SIZE_MEDIUM = '1.5rem'
 export const FONT_SIZE_LARGE = '2rem'
 export const FONT_SIZE_EXTRALARGE = '3.5rem'
 

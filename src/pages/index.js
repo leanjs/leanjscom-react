@@ -16,13 +16,9 @@ import { ITERATION_DIAGRAM } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P, Strong } from '../components/text'
+import { H2, H3a, P, Strong } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
-
-const TitleText = styled(P)`
-  font-size: ${FONT_SIZE_LARGE};
-`
 
 const IterationStages = props => (
   <React.Fragment>
@@ -142,7 +138,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <TitleText>Our core values</TitleText>
+            <H3a>Our core values</H3a>
           </Col>
         </Row>
         <Row>
@@ -213,7 +209,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col md={8}>
-            <TitleText>Here's how:</TitleText>
+            <H3a>Here's how:</H3a>
             <Image src={ITERATION_DIAGRAM} />
           </Col>
           <Col md={4}>

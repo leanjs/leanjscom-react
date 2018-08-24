@@ -4,7 +4,10 @@ import {
   FONT_FAMILY,
   FONT_SIZE_STANDARD,
   FONT_SIZE_LARGE,
+  FONT_SIZE_MEDIUM,
+  FONT_SIZE_LOWERQUARTILE,
   SPACING_LARGE,
+  FONT_WEIGHT_STANDARD,
   FONT_WEIGHT_MEDIUMBOLD,
   FONT_WEIGHT_BOLD,
 } from '../../config/styles'
@@ -33,7 +36,6 @@ export const H2 = styled.h2`
   font-weight: ${FONT_WEIGHT_BOLD};
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.5;
   letter-spacing: normal;
   margin-bottom: ${SPACING_LARGE};
   font-size: ${FONT_SIZE_LARGE};
@@ -47,12 +49,16 @@ export const H2Ref = styled(H2)`
 `
 
 export const H3 = styled.h3`
-  ${FONT_FAMILY} line-height: 1.2;
+  ${FONT_FAMILY};
   font-weight: ${FONT_WEIGHT_MEDIUMBOLD};
   font-size: ${FONT_SIZE_STANDARD};
   a {
     font-size: ${FONT_SIZE_LARGE};
   }
+`
+export const H3a = styled.h3`
+  font-weight: ${FONT_WEIGHT_STANDARD};
+  font-size: ${FONT_SIZE_LOWERQUARTILE};
 `
 
 export const H3Ref = styled(H3)`
@@ -60,8 +66,8 @@ export const H3Ref = styled(H3)`
 `
 
 export const H4 = styled.h4`
-  ${FONT_FAMILY} font-size: ${FONT_SIZE_STANDARD};
-  line-height: 1.2;
+  ${FONT_FAMILY};
+  font-size: ${FONT_SIZE_STANDARD};
   font-weight: ${FONT_WEIGHT_MEDIUMBOLD};
 `
 
@@ -70,8 +76,8 @@ export const H4Ref = styled(H4)`
 `
 
 export const H5 = styled.h5`
-  ${FONT_FAMILY} font-size: ${FONT_SIZE_STANDARD};
-  line-height: 1.2;
+  ${FONT_FAMILY};
+  font-size: ${FONT_SIZE_STANDARD};
   font-weight: ${FONT_WEIGHT_BOLD};
 `
 
