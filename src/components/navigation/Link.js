@@ -1,6 +1,7 @@
 import React from 'react'
 import GatsbyLink from 'gatsby-link'
 import styled from 'styled-components'
+import { Link as LinkScroll } from 'react-scroll'
 import {
   FONT_FAMILY,
   WHITE,
@@ -71,5 +72,11 @@ const Link = ({ to = '', children = '', ...rest }) => {
     )
   }
 }
+
+export const ScrollingLink = styled(props => {
+  return <LinkScroll {...{ smooth: true, duration: 500, ...props }} />
+})`
+  ${ANCHOR_STYLE};
+`
 
 export default Link

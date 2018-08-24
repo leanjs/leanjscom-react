@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link, { styleChildLinkColor } from '../navigation/Link'
-
-import { Link as LinkScroll } from 'react-scroll'
+import Link, { ScrollingLink, styleChildLinkColor } from '../navigation/Link'
 
 import {
   WHITE,
@@ -57,7 +55,7 @@ const IconButtonInner = styled.button`
 `
 
 const LinkIconButtonInner = styled(({ image, isLink, scroll, ...rest }) => {
-  const LinkType = scroll ? LinkScroll : Link
+  const LinkType = scroll ? ScrollingLink : Link
   const props = scroll ? { smooth: true, duration: 500, ...rest } : rest
   return <LinkType {...props} />
 })`

@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import Section from '../layout/Section'
-import { Link as LinkScroll } from 'react-scroll'
 import Grid, { Col, Row } from '../layout/Grid'
 import Ul, { Li } from '../layout/Ul'
 import { H1 as BaseH1, H2 as BaseH2 } from '../text'
@@ -17,7 +16,7 @@ import {
   FONT_WEIGHT_EXTRABOLD,
 } from '../../config/styles'
 import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
-import { ANCHOR_STYLE } from '../navigation/Link'
+import { ANCHOR_STYLE, ScrollingLink } from '../navigation/Link'
 import Menu from '../navigation/menu'
 import ConcentricCircles from '../decoration/ConcentricCircles'
 import withWidth from 'react-width'
@@ -136,10 +135,6 @@ const BulletPoints = styled.div`
   ${WHITE_TEXT};
 `
 
-const StyledLinkScroll = styled(LinkScroll)`
-  ${ANCHOR_STYLE};
-`
-
 const BulletPoint = props => {
   const Bullet = props.bullet ? props.bullet : ActivityBullet
 
@@ -216,13 +211,7 @@ const Header = ({
                 <Ul inline>
                   {links.map((link, i) => (
                     <Li key={i}>
-                      <StyledLinkScroll
-                        smooth={true}
-                        duration={500}
-                        to={link.to}
-                      >
-                        {link.text}
-                      </StyledLinkScroll>
+                      <ScrollingLink to={link.to}>{link.text}</ScrollingLink>
                     </Li>
                   ))}
                 </Ul>
