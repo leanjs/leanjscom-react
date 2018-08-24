@@ -243,7 +243,7 @@ const Team = () => (
             <TeamBio
               image={WILL}
               name="Will Voelcker"
-              specialisms="Web programming, teaching"
+              specialisms="Web programming, teaching, writing short bios"
               hometown="London, UK"
               color={WHITE}
             />
