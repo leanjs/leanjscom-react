@@ -264,7 +264,7 @@ const TrainingPage = () => (
       <Grid>
         <BootcampCol>
           <SingleColRow>
-            <H2>Our next bootcamp...</H2>
+            <H2>Our next trainings...</H2>
           </SingleColRow>
           <SingleColRow>
             <Link to="https://reactjs.academy/react-redux-graphql-bootcamp">
