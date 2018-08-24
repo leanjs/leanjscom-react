@@ -12,10 +12,17 @@ import {
 const Bio = styled.div`
   color: ${props => props.color || 'black'};
   padding-bottom: ${SPACING_LARGE};
+
+  img {
+    align-self: center;
+    min-width: ${SPACING_XXLARGE};
+    width: ${SPACING_XXLARGE};
+  }
 `
 
 const BioInner = styled.div`
   display: flex;
+  align-items: flex-start;
 `
 
 const PersonImage = styled.div`
@@ -31,34 +38,23 @@ const PersonSpecs = styled.div`
 `
 
 const Spec = styled.div`
-  margin-top: ${SPACING_SMALL};
-`
-
-const AskMeAbout = styled.p`
-  padding-right: ${SPACING_LARGE};
+  margin-top: ${props => (props.first ? 0 : SPACING_SMALL)};
 `
 
 const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
   <Bio {...props}>
     <BioInner>
       <PersonImage>
-        <img
-          style={{
-            float: 'left',
-            width: SPACING_XXLARGE,
-            height: SPACING_XXLARGE,
-          }}
-          src={image}
-        />
+        <img src={image} />
       </PersonImage>
       <PersonSpecs>
-        <Spec>
+        <Spec first>
           <strong>{name}</strong>
         </Spec>
         <Spec>Hometown: {hometown}</Spec>
+        <Spec>Ask me about: {specialisms}</Spec>
       </PersonSpecs>
     </BioInner>
-    <AskMeAbout>Ask me about: {specialisms}</AskMeAbout>
   </Bio>
 )
 
