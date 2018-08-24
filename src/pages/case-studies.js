@@ -39,6 +39,7 @@ const CaseStudyExpoBullets = ({ content }) => (
     {content.map((item, i) => (
       <Li key={`case-study-expo-${i}`}>
         <SmallIconAndSentence
+          flushLeft
           icon={
             <Circle size={90 / 18} bg={LIGHTGREY}>
               {item.point}
