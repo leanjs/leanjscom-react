@@ -23,7 +23,13 @@ const LargeIconAndPoints = ({ color, ...props }) => (
   <Line verticalCenter noBottomPadding>
     <Columns color={color}>
       <CaseStudyBullet className="case-study-bullet" image={props.image} />
-      <Ul className="points">{props.points.map(point => <Li>{point}</Li>)}</Ul>
+      <Ul className="points">
+        {props.points.map((point, i) => (
+          <Li key={`large-icon-and-points-${i}-${new Date().getTime()}`}>
+            {point}
+          </Li>
+        ))}
+      </Ul>
     </Columns>
   </Line>
 )

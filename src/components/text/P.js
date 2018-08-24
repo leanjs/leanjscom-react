@@ -13,7 +13,6 @@ export default styled.p`
   text-align: ${props => props.align || 'left'};
   margin: 0;
   padding-bottom: ${SPACING_STANDARD};
-  line-height: 1.2;
   > a {
     ${TEXT_SIZE}
   }

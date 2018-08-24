@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link, { styleChildLinkColor } from '../navigation/Link'
+import Link, { styleChildLinkColor, MailtoLink } from '../navigation/Link'
 import Grid, { Col, Row } from './Grid'
 import Section from './Section'
 
@@ -22,6 +22,7 @@ const LinkList = styled(Ul)`
   padding-left: 0;
   list-style: none;
   margin-left: 0;
+  ${styleChildLinkColor(WHITE)};
 `
 
 const Footer = () => (
@@ -39,22 +40,22 @@ const Footer = () => (
             <P>Let's start a conversation right now! Here's how:</P>
             <LinkList>
               <Li>
-                <Link>
+                <MailtoLink to="hello@leanjs.com">
                   <ContactUsBullet image="email" />Email hello@leanjs.com
-                </Link>
+                </MailtoLink>
               </Li>
               <Li>
-                <Link>
+                <Link to="https://twitter.com/leanjscom">
                   <ContactUsBullet image="twitter" />Tweet us @leanjscom
                 </Link>
               </Li>
               <Li>
-                <Link>
+                <Link to="https://www.instagram.com/leanjscom/">
                   <ContactUsBullet image="instagram" />Instagram us @leanjscom
                 </Link>
               </Li>
               <Li>
-                <Link>
+                <Link to="https://goo.gl/maps/jsLZCb4Yi352">
                   <ContactUsBullet image="office" />Visit us at: WeWork
                   Moorgate, 1 Fore St Ave, London, EC2Y 9DT
                 </Link>

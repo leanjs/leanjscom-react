@@ -4,9 +4,15 @@ import { requireFrom } from '../utils'
 
 import { SPACING_STANDARD, SPACING_SMALL } from '../../config/styles'
 
+import { Blockquote2 } from '../text'
+
 const MugshotInner = styled.div`
   color: ${props => props.color || 'black'};
   display: flex;
+
+  img {
+    align-self: center;
+  }
 `
 
 const PersonImage = styled.div`
@@ -36,6 +42,7 @@ const Mugshot = ({ image, name, jobTitle, company, ...props }) => (
       <Spec>{jobTitle}</Spec>
       <Spec>{company}</Spec>
     </PersonSpecs>
+    {props.quote ? <Blockquote2>{props.quote}</Blockquote2> : null}
   </MugshotInner>
 )
 

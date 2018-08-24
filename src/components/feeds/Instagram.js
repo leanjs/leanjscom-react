@@ -69,10 +69,13 @@ const InstagramInner = styled.div`
 const Instagram = ({ numPhotos = 6, photosPerRow = 3 }) => (
   <InstagramInner>
     <Grid>
-      {arrayChunk(photos.slice(0, numPhotos), photosPerRow).map(chunk => (
-        <Row>
-          {chunk.map(photo => (
-            <Col xs={Math.floor(12 / photosPerRow)}>
+      {arrayChunk(photos.slice(0, numPhotos), photosPerRow).map((chunk, j) => (
+        <Row key={`instagram-outer-${j}-${new Date().getTime()}`}>
+          {chunk.map((photo, i) => (
+            <Col
+              xs={Math.floor(12 / photosPerRow)}
+              key={`instagram-inner-${i}-${new Date().getTime()}`}
+            >
               <img src={photo.url} />
             </Col>
           ))}

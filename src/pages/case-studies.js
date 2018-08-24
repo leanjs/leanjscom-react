@@ -34,13 +34,180 @@ const CaseStudyTitle = styled(H2)`
   align-items: center;
 `
 
+const caseStudies = [
+  {
+    title: 'ABinBev',
+    topic: 'app',
+    anchor: 'abinbev',
+    bulletpoints: [
+      {
+        point: 'WHAT',
+        description: 'Game app to support a Christmas campaign',
+      },
+      {
+        point: 'HOW',
+        description: 'Rapid prototyping and developement',
+      },
+      {
+        point: 'WHY',
+        description: 'Increasing shopping card value',
+      },
+      {
+        point: 'TIME',
+        description: '6 week turnaround',
+      },
+      {
+        point: 'RESULT',
+        description: '90% increase in shopping card value',
+      },
+    ],
+    image: CASE_STUDY_ABINBEV,
+    quote: {
+      author: {
+        image: MUGSHOT_ABINBEV,
+        name: 'Mertens Dries',
+        jobTitle: 'Head of Marketing at Saveur Bière (ABinBev)',
+        company: 'ABinBev',
+      },
+      text: `We never thought it possible! We only had a couple of months until Christmas but LeanJS sorted us out. They were highly professional yet friendly and very effective.`,
+    },
+  },
+  {
+    title: 'FingoPay',
+    topic: 'working mvp',
+    anchor: 'fingo',
+    highlighted: true,
+    bulletpoints: [
+      {
+        point: 'WHAT',
+        description: 'Biometric payment onboarding MVP',
+      },
+      {
+        point: 'HOW',
+        description:
+          'Rapid prototyping, React Native with Circle CI and card.io integration',
+      },
+      {
+        point: 'WHY',
+        description:
+          'Increase user base, create buzz around alternative payment system',
+      },
+      {
+        point: 'TIME',
+        description: '2 week turnaround',
+      },
+      {
+        point: 'RESULT',
+        description: 'To be implemented across 100 pubs in the UK',
+      },
+    ],
+    image: CASE_STUDY_FINGOPAY,
+    quote: {
+      author: {
+        image: MUGSHOT_STHALHER,
+        name: 'Stuart Nelmes',
+        jobTitle: 'Chief Technology Officer',
+        company: 'Stahler/FingoPay',
+      },
+      text: `We’d been working on the platform for a while but onboarding was an issue. LeanJS came in, discovered the issues in real life and provided a workable solution in a fraction of the time we expected. Amazed.`,
+    },
+  },
+
+  {
+    title: 'Boston University',
+    topic: 'website',
+    anchor: 'boston',
+    bulletpoints: [
+      {
+        point: 'WHAT',
+        description: 'Advanced MVP site for AGNI literary journal',
+      },
+      {
+        point: 'HOW',
+        description: 'Lean UX, ReactJS development and migration',
+      },
+      {
+        point: 'WHY',
+        description:
+          'Aiming to increase readership and improve brand awareness',
+      },
+      {
+        point: 'TIME',
+        description: '5 month turnaround',
+      },
+      {
+        point: 'RESULT',
+        description: '10,000 articles migrated, 50% bounce rate reduction',
+      },
+    ],
+    image: CASE_STUDY_BU,
+    quote: {
+      author: {
+        image: MUGSHOT_BU,
+        name: 'Bill Pierce',
+        jobTitle: 'Editor, AGNI',
+        company: 'Boston University',
+      },
+      text: `LeanJS understood our mindset with a ability to ‘chameleon’ themselves. A great team to be part of, always transparent - what they created for us was incredible.`,
+    },
+    button: {
+      external: true,
+      to: 'https://medium.com/leanjs',
+      text: 'Blog: AGNI for Boston University Case Study',
+    },
+  },
+
+  {
+    title: 'ASOS',
+    topic: 'training',
+    anchor: 'asos',
+    highlighted: true,
+    bulletpoints: [
+      {
+        point: 'WHAT',
+        description: 'Team-wide ReactJS training',
+      },
+      {
+        point: 'HOW',
+        description: '1 week intensive training at the Asos offices',
+      },
+      {
+        point: 'WHY',
+        description:
+          'To ensure the dev team is equipped with the most up-to-date code skills',
+      },
+      {
+        point: 'RESULT',
+        description:
+          'Dev team now work in ReactJS, increasing productivity and code compliance',
+      },
+    ],
+    image: CASE_STUDY_ASOS,
+    quote: {
+      author: {
+        image: MUGSHOT_ASOS,
+        name: 'James Norton',
+        jobTitle: 'Engineering Practise Lead',
+        company: 'ASOS.com',
+      },
+      text: `Our team had been talking about ReactJS for a while and when I realised how effecient it can be, it was time for a change. LeanJS tailored training for our needs and now we don’t work any othe way.`,
+    },
+    button: {
+      external: true,
+      to: 'https://medium.com/leanjs',
+      text: 'Blog: How we teach React at LeanJS',
+    },
+  },
+]
+
 const CaseStudyExpoBullets = ({ content }) => (
   <Ul unstyled>
     {content.map((item, i) => (
       <Li key={`case-study-expo-${i}`}>
         <SmallIconAndSentence
+          flushLeft
           icon={
-            <Circle size={60 / 18} bg={LIGHTGREY}>
+            <Circle size={90 / 18} bg={LIGHTGREY}>
               {item.point}
             </Circle>
           }
@@ -51,29 +218,67 @@ const CaseStudyExpoBullets = ({ content }) => (
   </Ul>
 )
 
+const CaseStudyInner = props => (
+  <Grid>
+    <Row>
+      <Col xs={6}>
+        <a name={props.anchor} />
+        <CaseStudyTitle>
+          {props.title}
+          <Topic dark>{props.topic}</Topic>
+        </CaseStudyTitle>
+      </Col>
+    </Row>
+    <Row>
+      <Col md={6}>
+        <CaseStudyExpoBullets content={props.bulletpoints} />
+      </Col>
+      <Col md={6}>
+        <Image src={props.image} />
+      </Col>
+    </Row>
+
+    <Row>
+      <Col md={12}>
+        <Mugshot
+          {...props.quote.author}
+          quote={props.quote.text}
+          color={DARKGREY}
+        />
+      </Col>
+    </Row>
+    <Row>
+      {props.button ? (
+        <Col md={6}>
+          <LinkButton external={props.button.external} to={props.button.to}>
+            {props.button.text}
+          </LinkButton>
+        </Col>
+      ) : null}
+    </Row>
+  </Grid>
+)
+
+const CaseStudy = props => (
+  <Section>
+    {props.highlighted ? (
+      <HighlightedItem>
+        <CaseStudyInner {...props} />
+      </HighlightedItem>
+    ) : (
+      <CaseStudyInner {...props} />
+    )}
+  </Section>
+)
+
 const CaseStudies = () => (
   <React.Fragment>
     <Header
       titleLines={['Case Studies']}
-      links={[
-        {
-          text: 'Boston University',
-          to: 'boston',
-        },
-        {
-          text: 'Fingo Pay',
-          to: 'fingo',
-        },
-        {
-          text: 'ABInBev',
-          to: 'abinbev',
-        },
-        {
-          text: 'ASOS.com',
-          to: 'asos',
-        },
-      ]}
-      bgImg="home"
+      links={caseStudies.map(study => ({
+        text: study.title,
+        to: study.anchor,
+      }))}
       bulletPoints={[
         {
           icon: 'industry',
@@ -87,370 +292,9 @@ const CaseStudies = () => (
       ]}
     />
 
-    <Section>
-      <Grid>
-        <Row>
-          <Col xs={6}>
-            <a name="abinbev" />
-            <CaseStudyTitle>
-              ABInBev
-              <Topic dark>app</Topic>
-            </CaseStudyTitle>
-          </Col>
-          <Col xs={6} />
-        </Row>
-        <Row>
-          <Col md={6}>
-            <CaseStudyExpoBullets
-              content={[
-                {
-                  point: 'WHAT',
-                  description: 'Game app to support a Christmas campaign',
-                },
-                {
-                  point: 'HOW',
-                  description: 'Rapid prototyping and developement',
-                },
-                {
-                  point: 'WHY',
-                  description: 'Increasing shopping card value',
-                },
-                {
-                  point: 'TIME',
-                  description: '6 week turnaround',
-                },
-                {
-                  point: 'RESULT',
-                  description: '90% increase in shopping card value',
-                },
-              ]}
-            />
-          </Col>
-          <Col md={6}>
-            <Image src={CASE_STUDY_ABINBEV} />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col md={8}>
-            <Blockquote2>
-              We never thought it possible! We only had a couple of months until
-              Christmas but LeanJS sorted us out. They were highly professional
-              yet friendly and very effective.
-            </Blockquote2>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <Mugshot
-              image={MUGSHOT_ABINBEV}
-              name="Mertens Dries"
-              jobTitle="Head of Marketing at Saveur Bière (ABinBev)"
-              company="ABinBev"
-              color={DARKGREY}
-            />
-          </Col>
-          <Col md={6}>
-            {/* <LinkButton external to="https://medium.com/leanjs">
-              Blog: How apps increase <br /> shopping value by 90%
-            </LinkButton> */}
-          </Col>
-        </Row>
-      </Grid>
-    </Section>
-
-    <Section>
-      <HighlightedItem>
-        <Grid>
-          <Row>
-            <Col xs={6}>
-              <a name="fingo" />
-              <CaseStudyTitle>
-                FingoPay
-                <Topic dark>working mvp</Topic>
-              </CaseStudyTitle>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <CaseStudyExpoBullets
-                content={[
-                  {
-                    point: 'WHAT',
-                    description: 'Biometric payment onboarding MVP',
-                  },
-                  {
-                    point: 'HOW',
-                    description:
-                      'Rapid prototyping, React Native with Circle CI and card.io integration',
-                  },
-                  {
-                    point: 'WHY',
-                    description:
-                      'Increase user base, create buzz around alternative payment system',
-                  },
-                  {
-                    point: 'TIME',
-                    description: '2 week turnaround',
-                  },
-                  {
-                    point: 'RESULT',
-                    description: 'To be implemented across 100 pubs in the UK',
-                  },
-                ]}
-              />
-            </Col>
-            <Col md={6}>
-              <Image src={CASE_STUDY_FINGOPAY} />
-            </Col>
-          </Row>
-
-          <Row>
-            <Col md={8}>
-              <Blockquote2>
-                We’d been working on the platform for a while but onboarding was
-                an issue. LeanJS came in, discovered the issues in real life and
-                provided a workable solution in a fraction of the time we
-                expected. Amazed.
-              </Blockquote2>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <Mugshot
-                image={MUGSHOT_STHALHER}
-                name="Stuart Nelmes"
-                jobTitle="Chief Technology Officer"
-                company="Stahler/FingoPay"
-                color={DARKGREY}
-              />
-            </Col>
-            <Col md={6}>
-              <LinkButton external to="https://medium.com/leanjs">
-                Blog: Rapid prototyping IRL, in a pub
-              </LinkButton>
-            </Col>
-          </Row>
-        </Grid>
-      </HighlightedItem>
-    </Section>
-
-    <Section>
-      <Grid>
-        <Row>
-          <Col xs={6}>
-            <a name="boston" />
-            <CaseStudyTitle>
-              Boston University
-              <Topic dark>website</Topic>
-            </CaseStudyTitle>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <CaseStudyExpoBullets
-              content={[
-                {
-                  point: 'WHAT',
-                  description: 'Advanced MVP site for AGNI literary journal',
-                },
-                {
-                  point: 'HOW',
-                  description: 'Lean UX, ReactJS development and migration',
-                },
-                {
-                  point: 'WHY',
-                  description:
-                    'Aiming to increase readership and improve brand awareness',
-                },
-                {
-                  point: 'TIME',
-                  description: '5 month turnaround',
-                },
-                {
-                  point: 'RESULT',
-                  description:
-                    '10,000 articles migrated, 50% bounce rate reduction',
-                },
-              ]}
-            />
-          </Col>
-          <Col md={6}>
-            <Image src={CASE_STUDY_BU} />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col md={8}>
-            <Blockquote2>
-              LeanJS understood our mindset with a ability to ‘chameleon’
-              themselves. A great team to be part of, always transparent - what
-              they created for us was incredible.
-            </Blockquote2>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <Mugshot
-              image={MUGSHOT_BU}
-              name="Bill Pierce"
-              jobTitle="Editor, AGNI"
-              company="Boston University"
-              color={DARKGREY}
-            />
-          </Col>
-          <Col md={6}>
-            <LinkButton external to="https://medium.com/leanjs">
-              Blog: AGNI for Boston University Case Study
-            </LinkButton>
-          </Col>
-        </Row>
-      </Grid>
-    </Section>
-
-    <Section>
-      <HighlightedItem>
-        <Grid>
-          <Row>
-            <Col xs={6}>
-              <a name="asos" />
-              <CaseStudyTitle>
-                ASOS.com
-                <Topic dark>training</Topic>
-              </CaseStudyTitle>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <CaseStudyExpoBullets
-                content={[
-                  {
-                    point: 'WHAT',
-                    description: 'Team-wide ReactJS training',
-                  },
-                  {
-                    point: 'HOW',
-                    description:
-                      '1 week intensive training at the Asos offices',
-                  },
-                  {
-                    point: 'WHY',
-                    description:
-                      'To ensure the dev team is equipped with the most up-to-date code skills',
-                  },
-                  {
-                    point: 'RESULT',
-                    description:
-                      'Dev team now work in ReactJS, increasing productivity and code compliance',
-                  },
-                ]}
-              />
-            </Col>
-            <Col md={6}>
-              <Image src={CASE_STUDY_ASOS} />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={8}>
-              <Blockquote2>
-                Our team had been talking about ReactJS for a while and when I
-                realised how effecient it can be, it was time for a change.
-                LeanJS tailored training for our needs and now we don’t work any
-                othe way.
-              </Blockquote2>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <Mugshot
-                image={MUGSHOT_ASOS}
-                name="James Norton"
-                jobTitle="Engineering Practise Lead"
-                company="ASOS.com"
-                color={DARKGREY}
-              />
-            </Col>
-            <Col md={6}>
-              <LinkButton external to="https://medium.com/leanjs">
-                Blog: How we teach React at LeanJS
-              </LinkButton>
-            </Col>
-          </Row>
-        </Grid>
-      </HighlightedItem>
-    </Section>
-
-    {/* <Section>
-      <Grid>
-        <Row>
-          <Col xs={6}>
-            <a name="upmentoring" />
-            <CaseStudyTitle>
-              UpMentoring
-              <Topic dark>web app</Topic>
-            </CaseStudyTitle>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <CaseStudyExpoBullets
-              content={[
-                {
-                  "point": "WHAT",
-                  "description": "Tech training booking and mentoring web app "
-                },
-                {
-                  "point": "HOW",
-                  "description": "ReactJS development, GraphQL"
-                },
-                {
-                  "point": "WHY",
-                  "description":
-                    "Improve tech students communication with mentors on their courses"
-                },
-                {
-                  "point": "TIME",
-                  "description": "Lean project (continuous)"
-                },
-                {
-                  "point": "RESULT",
-                  "description": "500+ users currently using the system"
-                }
-              ]}
-            />
-          </Col>
-          <Col md={6}>
-            <Image src={} />
-          </Col>
-        </Row>
-
-        <Row>
-          <Col md={8}>
-            <Blockquote2>
-              I’ve been used UpMentoring for a while and it really helps with
-              getting class feedback. Using it means I can improve classes and
-              teach.
-            </Blockquote2>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <Mugshot
-              image={''}
-              name="Bill Pierce"
-              jobTitle="Editor, AGNI"
-              company="Boston University"
-              color={DARKGREY}
-            />
-          </Col>
-          <Col md={6}>
-            <LinkButton external to="https://upmentoring.com">
-              Visit UpMentoring.com
-            </LinkButton>
-          </Col>
-        </Row>
-      </Grid>
-    </Section> */}
+    {caseStudies.map((props, i) => (
+      <CaseStudy {...props} key={`case-study-${i}`} />
+    ))}
   </React.Fragment>
 )
 

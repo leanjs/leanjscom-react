@@ -16,25 +16,23 @@ import { ITERATION_DIAGRAM } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P, Strong } from '../components/text'
+import { H2, H3a, P, Strong } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 
-const TitleText = styled(P)`
-  font-size: ${FONT_SIZE_LARGE};
-`
-
 const IterationStages = props => (
   <React.Fragment>
-    {props.items.map(item => (
-      <Line>
+    {props.items.map((item, i) => (
+      <Line key={`iterationstage-${i}`}>
         {item.title}
         <P>{item.description}</P>
-        <P>
-          <LinkButton to={item.button.to} hasArrows>
-            {item.button.text}
-          </LinkButton>
-        </P>
+        {item.button ? (
+          <P>
+            <LinkButton to={item.button.to} hasArrows>
+              {item.button.text}
+            </LinkButton>
+          </P>
+        ) : null}
       </Line>
     ))}
   </React.Fragment>
@@ -45,7 +43,6 @@ const IndexPage = () => (
     <Header
       titleLines={['LeanJS']}
       subtitle="We can help you evolve your tech. Quick snap!"
-      bgImg="home"
       bulletPoints={[
         {
           icon: 'development',
@@ -114,12 +111,10 @@ const IndexPage = () => (
           </Col>
         </Row>
         <Row>
-          <Col md={5}>
+          <Col>
             <LinkButton fullWidthOnMobile hasArrows dark>
               Read case studies
             </LinkButton>
-          </Col>
-          <Col md={5}>
             <LinkButton fullWidthOnMobile hasArrows>
               Working with you
             </LinkButton>
@@ -142,7 +137,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <TitleText>Our core values</TitleText>
+            <H3a>Our core values</H3a>
           </Col>
         </Row>
         <Row>
@@ -213,7 +208,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col md={8}>
-            <TitleText>Here's how:</TitleText>
+            <H3a>Here's how:</H3a>
             <Image src={ITERATION_DIAGRAM} />
           </Col>
           <Col md={4}>
@@ -223,30 +218,18 @@ const IndexPage = () => (
                   title: 'Learn...',
                   description:
                     'User research, business analysis, competitor audit',
-                  button: {
-                    text: 'UX & design services',
-                    to: '/building-solutions',
-                  },
                 },
                 {
                   title: 'Build...',
                   description: 'Prototyping, coding and development',
-                  button: {
-                    text: 'Development services',
-                    to: '/building-solutions',
-                  },
                 },
                 {
                   title: 'Test...',
                   description: 'Usability testing, quality assurance',
-                  button: {
-                    text: 'UX & design services',
-                    to: '/building-solutions',
-                  },
                 },
               ]}
             />
-            <LinkButton hasArrows dark fullWidth>
+            <LinkButton hasArrows dark fullWidthOnMobile>
               Working with you
             </LinkButton>
           </Col>

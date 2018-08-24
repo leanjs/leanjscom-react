@@ -21,9 +21,10 @@ const SmallIconAndSentences = props => {
   return (
     <React.Fragment>
       {props.items.map((item, i) => {
+        const key = `small-icon-and-sentences-${i}-${new Date().getTime()}`
         if (props.wrapWithCols) {
           return (
-            <Col md={colSpan}>
+            <Col md={colSpan} key={key}>
               <Item
                 {...item}
                 bulletType={props.bulletType}
@@ -34,7 +35,7 @@ const SmallIconAndSentences = props => {
           )
         }
 
-        return <Item {...item} first={i === 0} />
+        return <Item {...item} key={key} first={i === 0} />
       })}
     </React.Fragment>
   )
