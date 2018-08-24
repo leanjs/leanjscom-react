@@ -4,7 +4,7 @@ import Ul, { Li } from './layout/Ul'
 import Checkbox from './form/Checkbox'
 import TextArea from './form/TextArea'
 import LabelledField from './form/LabelledField'
-import { P } from './text'
+import { P, Strong } from './text'
 import Link from './navigation/Link'
 import styled from 'styled-components'
 import Button from './buttons/Button'
@@ -72,7 +72,11 @@ class ContactForm extends Component {
     } = this.state
 
     if (submitted) {
-      return <P>Thank you for your submission! We will be in touch shortly.</P>
+      return (
+        <Strong large>
+          Thank you for your submission! We will be in touch shortly.
+        </Strong>
+      )
     }
 
     const isInvalid = message === '' || email === ''
