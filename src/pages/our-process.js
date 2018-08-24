@@ -197,7 +197,7 @@ const OurProcess = () => (
           </Col>
         </Row>
         <Row>
-          <Col md={2} />
+          <Col md={1} />
           <Col md={10}>
             <HighlightedItem>
               <FAQs>
@@ -247,7 +247,7 @@ const OurProcess = () => (
               </FAQs>
             </HighlightedItem>
           </Col>
-          <Col md={2} />
+          <Col md={1} />
         </Row>
       </Grid>
     </Section>

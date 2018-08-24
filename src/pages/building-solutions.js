@@ -98,11 +98,6 @@ const BuildingSolutions = () => (
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Blockquote2 />
-          </Col>
-        </Row>
-        <Row>
           <Col md={6}>
             <Mugshot
               image={MUGSHOT_ABINBEV}

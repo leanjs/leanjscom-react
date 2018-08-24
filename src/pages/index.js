@@ -112,10 +112,10 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <LinkButton fullWidthOnMobile hasArrows dark>
+            <LinkButton to="/case-studies" fullWidthOnMobile hasArrows dark>
               Read case studies
             </LinkButton>
-            <LinkButton fullWidthOnMobile hasArrows>
+            <LinkButton to="/our-process" fullWidthOnMobile hasArrows>
               Working with you
             </LinkButton>
           </Col>
