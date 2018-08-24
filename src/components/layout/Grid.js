@@ -29,10 +29,10 @@ const Row = styled(FlexboxRow)`
   margin-left: 0;
   margin-right: 0;
   margin-top: ${SPACING_LARGE};
-  margin-bottom: ${SPACING_LARGE};
+  margin-bottom: ${props => (props.lastOnPage ? 0 : SPACING_LARGE)};
   @media (max-width: ${SCREEN_SM_MAX}) {
     margin-top: ${SPACING_STANDARD};
-    margin-bottom: ${SPACING_STANDARD};
+    margin-bottom: ${props => (props.lastOnPage ? 0 : SPACING_STANDARD)};
   }
 `
 

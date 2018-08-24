@@ -6,6 +6,7 @@ import {
   EXTRADARKGREY,
   WHITE,
   FONT_FAMILY,
+  SPACING_STANDARD,
   SPACING_LARGE,
   SPACING_EXTRALARGE,
 } from '../../config/styles'
@@ -13,13 +14,21 @@ import {
 const Section = styled.section`
   ${FONT_FAMILY}
   padding-top: ${props => (props.top ? '0' : SPACING_EXTRALARGE)};
-  padding-bottom: ${SPACING_EXTRALARGE};
+  padding-bottom: ${props =>
+    props.dark && props.lastOnPage ? 0 : SPACING_EXTRALARGE};
   @media (max-width:${SCREEN_XS_MAX}) {
   	padding-top:${SPACING_LARGE};
     padding-bottom:${SPACING_LARGE};
   }
   background-color: ${props => props.dark && EXTRADARKGREY};
   color: ${props => props.dark && WHITE};
+  ${props =>
+    props.dark && props.lastOnPage
+      ? `
+    margin-bottom:-${parseFloat(SPACING_EXTRALARGE) -
+      parseFloat(SPACING_STANDARD)}rem;
+  `
+      : null};
 `
 
 Section.displayName = 'Section'

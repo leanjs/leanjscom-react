@@ -8,7 +8,7 @@ import Topic from '../components/labels/Topic'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
-import { WHITE, DARKGREY, LIGHTGREY } from '../config/styles'
+import { WHITE, DARKGREY, LIGHTGREY, SPACING_LARGE } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
@@ -43,6 +43,13 @@ const HowItWorks = props =>
       </Line>
     </React.Fragment>
   ))
+
+const FAQs = styled.div`
+  padding: ${SPACING_LARGE} ${SPACING_LARGE} 0 ${SPACING_LARGE};
+`
+const FAQ = styled.div`
+  padding-bottom: ${SPACING_LARGE};
+`
 
 const OurProcess = () => (
   <React.Fragment>
@@ -111,13 +118,12 @@ const OurProcess = () => (
           </Col>
         </Row>
         <Row>
-          <Col md={8}>
+          <Col md={6}>
             <a name="ourLeanProcess" />
             <H2>How this works at LeanJS</H2>
-            <P>
-              <Image src={ITERATION_DIAGRAM} />
-            </P>
-
+            <Image src={ITERATION_DIAGRAM} />
+          </Col>
+          <Col md={6}>
             <HowItWorks
               sections={[
                 {
@@ -190,56 +196,63 @@ const OurProcess = () => (
             />
           </Col>
         </Row>
-      </Grid>
-      <HighlightedItem>
-        <Grid>
-          <Row style={{ display: 'flex', justifyContent: 'center' }}>
-            <Col md={6}>
-              <a name="howLongItTakes" />
-              <H2>Whoa there... How long does that take?</H2>
-              <P>
-                It sounds a lot, we know. However, this process can take as
-                little as 6 weeks
-              </P>
-              <P>
-                Imagine - a fully formed, tested and proven MVP ready to take
-                into the future in only a fraction of the time it may've taken
-                in the past
-              </P>
-              <P>
-                <LinkButton to="/case-studies" hasArrows>
-                  Case studies
-                </LinkButton>
-              </P>
+        <Row>
+          <Col md={2} />
+          <Col md={10}>
+            <HighlightedItem>
+              <FAQs>
+                <FAQ>
+                  <a name="howLongItTakes" />
+                  <H2>Whoa there... How long does that take?</H2>
+                  <P>
+                    It sounds a lot, we know. However, this process can take as
+                    little as 6 weeks
+                  </P>
+                  <P>
+                    Imagine - a fully formed, tested and proven MVP ready to
+                    take into the future in only a fraction of the time it
+                    may've taken in the past
+                  </P>
+                  <P>
+                    <LinkButton to="/case-studies" hasArrows>
+                      Case studies
+                    </LinkButton>
+                  </P>
+                </FAQ>
 
-              <a name="mvp" />
-              <H2>MVP? What does that mean?</H2>
-              <P>
-                A minimum viable product (MVP) is a digital product that has
-                only the core features that a user needs to complete their
-                customer journey.
-              </P>
-              <P>
-                That goal is decided from user and business research with both
-                party’s needs considered.
-              </P>
-              <P>
-                Starting with an MVP means that we can build from the ground
-                upwards. This can apply to new and legacy products as well as we
-                can work iteratively from an existing feature/product. Simple!
-              </P>
-              <P>
-                <LinkButton to="/building-solutions" hasArrows>
-                  Learn more about our design services
-                </LinkButton>
-              </P>
-            </Col>
-          </Row>
-        </Grid>
-      </HighlightedItem>
+                <FAQ>
+                  <a name="mvp" />
+                  <H2>MVP? What does that mean?</H2>
+                  <P>
+                    A minimum viable product (MVP) is a digital product that has
+                    only the core features that a user needs to complete their
+                    customer journey.
+                  </P>
+                  <P>
+                    That goal is decided from user and business research with
+                    both party’s needs considered.
+                  </P>
+                  <P>
+                    Starting with an MVP means that we can build from the ground
+                    upwards. This can apply to new and legacy products as well
+                    as we can work iteratively from an existing feature/product.
+                    Simple!
+                  </P>
+                  <P>
+                    <LinkButton to="/building-solutions" hasArrows>
+                      Learn more about our design services
+                    </LinkButton>
+                  </P>
+                </FAQ>
+              </FAQs>
+            </HighlightedItem>
+          </Col>
+          <Col md={2} />
+        </Row>
+      </Grid>
     </Section>
 
-    <Section dark>
+    <Section dark lastOnPage>
       <Grid>
         <Row>
           <Col md={8}>
@@ -293,15 +306,13 @@ const OurProcess = () => (
             </Indented>
           </Col>
         </Row>
-        <Row>
-          <Col />
+        <Row lastOnPage>
           <Col>
             <Hr />
           </Col>
         </Row>
       </Grid>
     </Section>
-    <Section />
   </React.Fragment>
 )
 
