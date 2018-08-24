@@ -182,6 +182,10 @@ const OurProcess = () => (
                       icon: 'tick_badge',
                     },
                   ],
+                  button: {
+                    text: 'Read our case studies',
+                    to: '/case-studies',
+                  },
                 },
               ]}
             />
