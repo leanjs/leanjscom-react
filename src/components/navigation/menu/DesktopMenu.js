@@ -30,9 +30,10 @@ DesktopMenuItem.displayName = 'DesktopMenuItem'
 
 const DesktopMenuContainer = styled(Ul)``
 
+// 'wide' prop necessary because otherwise Li styles override Item styles for some reason (in production only)
 const DesktopMenu = () => (
   <HideSingleComponentUsingCss xs sm>
-    <Ul inline>
+    <Ul inline wide>
       {MenuData.map((item, i) => (
         <DesktopMenuItem key={i} to={item.to}>
           {item.text}
