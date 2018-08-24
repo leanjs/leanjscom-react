@@ -70,7 +70,6 @@ const OurProcess = () => (
           to: 'applyingLeanToTraining',
         },
       ]}
-      bgImg="ourprocess"
       bulletPoints={[
         {
           icon: 'qa',

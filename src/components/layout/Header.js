@@ -70,7 +70,7 @@ const HeaderTop = styled.div`
 
 const backgroundCirclesSize = ({ isMobile, windowWidth }) => {
   if (windowWidth !== null) {
-    return windowWidth * (isMobile ? 0.85 : 0.25) * 2 / 18
+    return (windowWidth * (isMobile ? 0.85 : 0.25) * 2) / 18
   } else {
     return 2000 / 18
   }
@@ -158,7 +158,6 @@ const Header = ({
   titleLines = [],
   subtitle,
   links = [],
-  bgImg,
   bulletPoints,
   ...props
 }) => {
@@ -169,7 +168,7 @@ const Header = ({
   const windowWidth = canIGuessTheScreenSizeUsingJS ? window.innerWidth : null
 
   return (
-    <HeaderSection top bgImg={bgImg}>
+    <HeaderSection top>
       <HeaderTop>
         <Menu />
 
@@ -242,7 +241,6 @@ Header.propTypes = {
   titleLines: PropTypes.array.isRequired,
   subtitle: PropTypes.string,
   links: PropTypes.array,
-  bgImg: PropTypes.string,
 }
 
 export default Header

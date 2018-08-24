@@ -47,7 +47,6 @@ const BuildingSolutions = () => (
     <Header
       titleLines={['Building solutions']}
       links={BuildingSolutionsLinks}
-      bgImg="home"
       bulletPoints={[
         {
           icon: 'heart',

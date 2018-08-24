@@ -49,7 +49,6 @@ const TrainingPage = () => (
     <Header
       titleLines={['Training']}
       subtitle=""
-      bgImg="training"
       bulletPoints={[
         {
           bullet: BenefitBullet,

@@ -43,7 +43,6 @@ const IndexPage = () => (
     <Header
       titleLines={['LeanJS']}
       subtitle="We can help you evolve your tech. Quick snap!"
-      bgImg="home"
       bulletPoints={[
         {
           icon: 'development',

@@ -52,11 +52,7 @@ const ValueCol = styled(Col)`
 
 const Team = () => (
   <React.Fragment>
-    <Header
-      titleLines={['Our Team and Principles']}
-      links={teamLinks}
-      bgImg="home"
-    />
+    <Header titleLines={['Our Team and Principles']} links={teamLinks} />
     <Section>
       <Grid>
         <Row>
