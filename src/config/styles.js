@@ -16,6 +16,7 @@ export const SPACING_STANDARD = '1rem'
 export const SPACING_LARGE = '2rem'
 export const SPACING_LARGER = '4rem'
 export const SPACING_EXTRALARGE = '5rem'
+export const SPACING_XXLARGE = '7rem'
 
 export const LAYOUT_SPACING_MEDIUM = '9.7rem'
 export const LAYOUT_SPACING_LARGE = '38.9rem'

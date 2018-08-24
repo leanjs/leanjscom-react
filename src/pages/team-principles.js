@@ -21,7 +21,7 @@ import {
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P } from '../components/text'
-import Mugshot from '../components/mugshots/Mugshot'
+import TeamBio from '../components/mugshots/TeamBio'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
 import Link, { styleChildLinkColor } from '../components/navigation/Link'
@@ -196,119 +196,80 @@ const Team = () => (
         </Row>
         <Row>
           <Col md={6}>
-            <Mugshot
+            <TeamBio
               image={ALEX}
               name="Alex Lobera"
-              jobTitle=""
-              company="Hometown: Barcelona, Spain"
+              specialisms="React, GraphQL, Lean, UX, Agile, strategy, mentoring,
+              high-performance teams, company culture, latin dance"
+              hometown="Barcelona, Spain"
               color={WHITE}
             />
-            <P>
-              <i>Ask me about:</i>
-              <br />
-              React, GraphQL, Lean, UX, Agile, strategy, mentoring,
-              high-performance teams, company culture, latin dance
-            </P>
           </Col>
           <Col md={6}>
-            <Mugshot
+            <TeamBio
               image={LENA}
               name="Lena Tregub"
-              jobTitle=""
-              company="Hometown: Kiev, Ukraine"
+              specialisms="Communication with clients, email marketing, reportage photography"
+              hometown="Kiev, Ukraine"
               color={WHITE}
             />
-            <P>
-              <i>Ask me about:</i>
-              <br />
-              Communication with clients, email marketing, reportage photography
-            </P>
           </Col>
         </Row>
         <Row>
           <Col md={6}>
-            <Mugshot
+            <TeamBio
               image={RICHARD}
               name="Richard Moss"
-              jobTitle=""
-              company="Hometown: London, UK"
+              specialisms="ReactJS academy trainings, our coaching and coaches, working with LeanJS, Lean/Agile, JavaScript, functional programming, React, any crazy ideas :-)"
+              hometown="London, UK"
               color={WHITE}
             />
-            <P>
-              <i>Ask me about:</i>
-              <br />
-              ReactJS academy trainings, our coaching and coaches, working with
-              LeanJS, Lean/Agile, JavaScript, functional programming, React, any
-              crazy ideas :-)
-            </P>
           </Col>
           <Col md={6}>
-            <Mugshot
+            <TeamBio
               image={HORACIO}
               name="Horacio Hererra"
-              jobTitle=""
+              specialisms="Design Sprints, Technical Analytics, Marketing Attribution,
+              photography, video production, mvps, design systems, branding,
+              typography, teaching, user behaviour, Disney movies, American
+              Football :P"
               company="Hometown: Panama City, Panama"
               color={WHITE}
             />
-            <P>
-              <i>Ask me about:</i>
-              <br />
-              Design Sprints, Technical Analytics, Marketing Attribution,
-              photography, video production, mvps, design systems, branding,
-              typography, teaching, user behaviour, Disney movies, American
-              Football :P
-            </P>
           </Col>
         </Row>
         <Row>
           <Col md={6}>
-            <Mugshot
+            <TeamBio
               image={WILL}
               name="Will Voelcker"
-              jobTitle=""
-              company="Hometown: London, UK"
+              specialisms="Web programming, teaching"
+              hometown="London, UK"
               color={WHITE}
             />
-            <P>
-              <i>Ask me about:</i>
-              <br />
-              Workflow strategies, Full stack JS, GraphQL APIs, Severless,
-              teaching methodologies
-            </P>
           </Col>
           <Col md={6}>
-            <Mugshot
+            <TeamBio
               image={LUIS}
               name="Luis Novella"
-              jobTitle=""
-              company="Hometown: Caracas, Venezuela"
+              specialisms="Digital and business transformation, change management, business strategy, management consultant, start-ups, Lean/Agile."
+              hometown="Caracas, Venezuela"
               color={WHITE}
             />
-            <P>
-              <i>Ask me about:</i>
-              <br />
-              Digital and business transformation, change management, business
-              strategy, management consultant, start-ups, Lean/Agile.
-            </P>
           </Col>
         </Row>
         <Row>
           <Col md={6}>
-            <Mugshot
+            <TeamBio
               image={PAUL}
               name="Paul Woodley"
-              jobTitle=""
-              company="Hometown: Chelmsford, UK"
-              color={WHITE}
-            />
-            <P>
-              <i>Ask me about:</i>
-              <br />
-              User research, rapid prototyping, user testing information
+              specialisms="User research, rapid prototyping, user testing information
               architecture, design workshops and sprints, UI, accessibility,
               print design, branding, social media marketing, badass Spotify
-              playlists
-            </P>
+              playlists"
+              hometown="Chelmsford, UK"
+              color={WHITE}
+            />
           </Col>
         </Row>
       </Grid>
