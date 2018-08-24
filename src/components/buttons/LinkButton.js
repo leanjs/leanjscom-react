@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from '../navigation/Link'
+import Link, { ScrollingLink } from '../navigation/Link'
 import { DEFAULT_BUTTON_STYLES, getForegroundColor } from './Button.js'
 import { NEW_WINDOW } from '../../config/icons'
 import { FONT_WEIGHT_STANDARD, SPACING_LARGE } from '../../config/styles'
 
 // NB cunning destructure method to remove invalid DOM properties before passing them to the underlying dom element
 // and thereby generating a React warning, as per https://github.com/styled-components/styled-components/issues/1268
-const LinkButton = styled(({ hasArrows, dark, ...rest }) => <Link {...rest} />)`
+const LinkButton = styled(({ hasArrows, dark, scroll, ...rest }) => {
+  const Component = scroll ? ScrollingLink : Link
+  return <Component {...rest} />
+})`
   ${DEFAULT_BUTTON_STYLES};
   text-decoration: none !important;
   display: inline-block;

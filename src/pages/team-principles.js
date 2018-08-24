@@ -167,7 +167,7 @@ const Team = () => (
               </ValueGrid>
               <Row>
                 <ValueCol>
-                  <LinkButton hasArrows to="#contact">
+                  <LinkButton scroll hasArrows to="contact">
                     Contact us and let's work together!
                   </LinkButton>
                 </ValueCol>

@@ -214,7 +214,7 @@ const BuildingSolutions = () => (
             <LinkButton dark hasArrows to="/case-studies">
               Read our case studies
             </LinkButton>
-            <LinkButton hasArrows to="#contact">
+            <LinkButton scroll hasArrows to="contact">
               Contact us to discuss your needs
             </LinkButton>
           </Col>

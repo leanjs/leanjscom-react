@@ -176,7 +176,7 @@ const TrainingPage = () => (
 
         <SingleColRow>
           <P>
-            <LinkButton to="#contact" hasArrows>
+            <LinkButton scroll to="contact" hasArrows>
               What's your tech training needs? Contact us now!
             </LinkButton>
           </P>

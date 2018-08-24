@@ -21,7 +21,7 @@ const getLeftPadding = isWideScreen => props =>
 
 const Cell = styled.div`
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
   padding: ${SPACING_STANDARD};
   ${getLeftPadding(true)};
   @media (max-width: ${SCREEN_SM_MAX}) {
