@@ -26,15 +26,17 @@ const TitleText = styled(P)`
 
 const IterationStages = props => (
   <React.Fragment>
-    {props.items.map(item => (
-      <Line>
+    {props.items.map((item, i) => (
+      <Line key={`iterationstage-${i}`}>
         {item.title}
         <P>{item.description}</P>
-        <P>
-          <LinkButton to={item.button.to} hasArrows>
-            {item.button.text}
-          </LinkButton>
-        </P>
+        {item.button ? (
+          <P>
+            <LinkButton to={item.button.to} hasArrows>
+              {item.button.text}
+            </LinkButton>
+          </P>
+        ) : null}
       </Line>
     ))}
   </React.Fragment>
@@ -221,26 +223,14 @@ const IndexPage = () => (
                   title: 'Learn...',
                   description:
                     'User research, business analysis, competitor audit',
-                  button: {
-                    text: 'UX & design services',
-                    to: '/building-solutions',
-                  },
                 },
                 {
                   title: 'Build...',
                   description: 'Prototyping, coding and development',
-                  button: {
-                    text: 'Development services',
-                    to: '/building-solutions',
-                  },
                 },
                 {
                   title: 'Test...',
                   description: 'Usability testing, quality assurance',
-                  button: {
-                    text: 'UX & design services',
-                    to: '/building-solutions',
-                  },
                 },
               ]}
             />
