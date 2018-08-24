@@ -28,7 +28,7 @@ const BurgerBar = styled.span`
   right: 0px;
 
   opacity: 1;
-  background: red;
+  background: white;
   &.first {
     top: 0%;
   }
