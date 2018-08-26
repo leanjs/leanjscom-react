@@ -19,17 +19,6 @@ export const Blockquote = styled.blockquote`
   :after {
     content: close-quote;
   }
-
-  ${props => {
-    if (props.bg === 'primary') {
-      return `
-        padding: ${SPACING_STANDARD};
-        background-color: ${reactBlue()};
-        font-size: ${FONT_SIZE_STANDARD};
-        font-style: italic;
-      `
-    }
-  }};
 `
 
 export const Blockquote2 = styled(Blockquote)`
