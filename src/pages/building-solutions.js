@@ -99,14 +99,14 @@ const BuildingSolutions = () => (
         </Row>
         <Row>
           <Col md={6}>
-            <Mugshot
+            {/* <Mugshot
               image={MUGSHOT_ABINBEV}
               name="Mertens Dries"
               jobTitle="Head of Marketing at Saveur Bière (ABinBev)"
               company="ABinBev"
               color={DARKGREY}
               quote="We never thought it possible! We only had a couple of months until Christmas but LeanJS sorted us out. They were highly professional yet friendly and very effective."
-            />
+            /> */}
           </Col>
           <Col md={6}>
             <LinkButton to="/case-studies" dark hasArrows>

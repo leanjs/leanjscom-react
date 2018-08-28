@@ -230,11 +230,11 @@ const CaseStudyInner = props => (
 
     <Row>
       <Col md={12}>
-        <Mugshot
+        {/* <Mugshot
           {...props.quote.author}
           quote={props.quote.text}
           color={DARKGREY}
-        />
+        /> */}
       </Col>
     </Row>
     <Row>
