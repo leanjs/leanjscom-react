@@ -63,7 +63,7 @@ const Footer = () => (
             </LinkList>
             <P>
               Want to speak to one of our team about a specific subject?{' '}
-              <Link>Visit our team page</Link>
+              <Link to="/team-principles">Visit our team page</Link>
             </P>
           </Col>
 
