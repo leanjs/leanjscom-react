@@ -164,7 +164,7 @@ const caseStudies = [
       },
       {
         point: 'HOW',
-        description: '1 week intensive training at the Asos offices',
+        description: 'On-site private training at the Asos offices',
       },
       {
         point: 'WHY',

@@ -165,7 +165,9 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <LinkButton hasArrows>Our Team and Principles</LinkButton>
+            <LinkButton to="/team-principles" hasArrows>
+              Our Team and Principles
+            </LinkButton>
           </Col>
         </Row>
         <Row>
@@ -229,7 +231,12 @@ const IndexPage = () => (
                 },
               ]}
             />
-            <LinkButton hasArrows dark fullWidthOnMobile>
+            <LinkButton
+              to="/building-solutions"
+              hasArrows
+              dark
+              fullWidthOnMobile
+            >
               Working with you
             </LinkButton>
           </Col>
