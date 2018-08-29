@@ -15,6 +15,7 @@ import {
   FONT_SIZE_LARGE,
   SPACING_LARGE,
 } from '../config/styles'
+import { SCREEN_XS_MAX } from '../components/utils'
 import { MUGSHOT_ASOS } from '../config/images'
 import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
@@ -25,6 +26,16 @@ import Grid, {
   SingleColRow,
   SingleCellGrid,
 } from '../components/layout/Grid'
+import {
+  Trainline,
+  ASOS,
+  Blockchain,
+  JohnLewis,
+  FinancialTimes,
+  SainBurys,
+  Tesco,
+  Telegraph,
+} from '../components/logos'
 import { H2, H3, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
@@ -42,6 +53,19 @@ const InlineItems = styled.div`
 
 const BootcampCol = styled(Col)`
   ${styleChildLinkColor(EXTRADARKGREY)};
+`
+
+const CompanyList = styled(Ul)`
+  overflow: hidden;
+  li {
+    margin-left: 10px;
+  }
+  @media (max-width: ${SCREEN_XS_MAX}) {
+    li {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
 `
 
 const TrainingPage = () => (
@@ -76,7 +100,34 @@ const TrainingPage = () => (
           <Col md={6}>
             <P>
               <HighlightedItem>
-                <img src={CLIENTS_LOGOS} />
+                <CompanyList inline>
+                  <Li>
+                    <ASOS colour={EXTRADARKGREY} height={35} />
+                  </Li>
+                  <Li>
+                    <JohnLewis colour={EXTRADARKGREY} height={35} />
+                  </Li>
+                  <Li>
+                    <FinancialTimes colour={EXTRADARKGREY} height={30} />
+                  </Li>
+                  <Li>
+                    <SainBurys colour={EXTRADARKGREY} height={35} />
+                  </Li>
+                  <Li>
+                    <Tesco
+                      colour={EXTRADARKGREY}
+                      secColour={EXTRADARKGREY}
+                      stroke={EXTRADARKGREY}
+                      height={40}
+                    />
+                  </Li>
+                  <Li>
+                    <Telegraph colour={EXTRADARKGREY} height={40} />
+                  </Li>
+                  <Li>
+                    <Trainline colour={EXTRADARKGREY} height={48} y={5} />
+                  </Li>
+                </CompanyList>
               </HighlightedItem>
             </P>
           </Col>
@@ -89,13 +140,13 @@ const TrainingPage = () => (
 
         <Row>
           <Col>
-            <Mugshot
+            {/* <Mugshot
               image={MUGSHOT_ASOS}
               name="James Norton"
               jobTitle="Engineering Practise Lead"
               company="ASOS.com"
               quote="LeanJS helped our team understand the complex in the simplest and easiest way. At the end of training, we all felt like masters of React!"
-            />
+            /> */}
           </Col>
         </Row>
       </Grid>
