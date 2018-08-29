@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'LeanJS Web',
+    title: 'LeanJS',
   },
   plugins: [
     'gatsby-plugin-styled-components',

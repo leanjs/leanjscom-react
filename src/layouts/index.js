@@ -29,7 +29,11 @@ const Layout = ({ children, data }) => (
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
-          { name: 'description', content: 'Sample' },
+          {
+            name: 'description',
+            content:
+              'LeanJS is a boutique of excellence focused on Lean, JavaScript, Agile, and people.',
+          },
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
