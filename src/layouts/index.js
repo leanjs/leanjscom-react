@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import favicon from './favicon.ico'
 
 import Footer from '../components/layout/Footer'
 import Grid from '../components/layout/Grid'
@@ -36,6 +37,7 @@ const Layout = ({ children, data }) => (
           },
           { name: 'keywords', content: 'sample, something' },
         ]}
+        link={[{ rel: 'icon', type: 'image/x-icon', href: `${favicon}` }]}
       />
 
       {children()}
