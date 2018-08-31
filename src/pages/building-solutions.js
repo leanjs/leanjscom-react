@@ -109,7 +109,7 @@ const BuildingSolutions = () => (
             /> */}
           </Col>
           <Col md={6}>
-            <LinkButton to="/case-studies" dark hasArrows fullWidthOnMobile>
+            <LinkButton to="/case-studies" dark hasArrows>
               Read our case studies
             </LinkButton>
           </Col>
@@ -147,7 +147,7 @@ const BuildingSolutions = () => (
 
         <Row>
           <Col>
-            <LinkButton to="/training" hasArrows fullWidthOnMobile>
+            <LinkButton to="/training" hasArrows>
               Find out more about our training
             </LinkButton>
           </Col>
@@ -200,10 +200,10 @@ const BuildingSolutions = () => (
         </Row>
         <Row>
           <Col md={12}>
-            <LinkButton dark hasArrows to="/case-studies" fullWidthOnMobile>
+            <LinkButton dark hasArrows to="/case-studies">
               Read our case studies
             </LinkButton>
-            <LinkButton scroll hasArrows to="contact" fullWidthOnMobile>
+            <LinkButton scroll hasArrows to="contact">
               Contact us to discuss your needs
             </LinkButton>
           </Col>

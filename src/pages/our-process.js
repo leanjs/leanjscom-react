@@ -35,7 +35,7 @@ const HowItWorks = props =>
         ))}
         {section.button ? (
           <P>
-            <LinkButton to={section.button.to} hasArrows fullWidthOnMobile>
+            <LinkButton to={section.button.to} hasArrows>
               {section.button.text}
             </LinkButton>
           </P>
@@ -111,7 +111,7 @@ const OurProcess = () => (
               would you?!
             </P>
             <P>
-              <LinkButton to="/training" hasArrows fullWidthOnMobile>
+              <LinkButton to="/training" hasArrows>
                 Looking for Lean / Agile training? We can do that
               </LinkButton>
             </P>
@@ -214,7 +214,7 @@ const OurProcess = () => (
                     may've taken in the past
                   </P>
                   <P>
-                    <LinkButton to="/case-studies" hasArrows fullWidthOnMobile>
+                    <LinkButton to="/case-studies" hasArrows>
                       Case studies
                     </LinkButton>
                   </P>
@@ -239,11 +239,7 @@ const OurProcess = () => (
                     Simple!
                   </P>
                   <P>
-                    <LinkButton
-                      to="/building-solutions"
-                      hasArrows
-                      fullWidthOnMobile
-                    >
+                    <LinkButton to="/building-solutions" hasArrows>
                       Learn more about our design services
                     </LinkButton>
                   </P>
@@ -303,7 +299,7 @@ const OurProcess = () => (
 
             <Indented>
               <P>
-                <LinkButton to="/training" hasArrows fullWidthOnMobile>
+                <LinkButton to="/training" hasArrows>
                   Read more about our training
                 </LinkButton>
               </P>

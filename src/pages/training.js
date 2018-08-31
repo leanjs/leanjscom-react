@@ -180,11 +180,7 @@ const TrainingPage = () => (
                 was the first in Europe.
               </P>
               <P>
-                <LinkButton
-                  external
-                  to="https://reactjs.academy/"
-                  fullWidthOnMobile
-                >
+                <LinkButton external to="https://reactjs.academy/">
                   Visit ReactJS Academy website
                 </LinkButton>
               </P>
@@ -211,7 +207,7 @@ const TrainingPage = () => (
             </Line>
 
             <P>
-              <LinkButton scroll to="contact" hasArrows fullWidthOnMobile>
+              <LinkButton scroll to="contact" hasArrows>
                 What's your tech training needs? Contact us now!
               </LinkButton>
             </P>
@@ -273,7 +269,7 @@ const TrainingPage = () => (
               at the same time. Read more on the ReactJS Academy website.
             </P>
             <P>
-              <LinkButton to="/team-principles" hasArrows fullWidthOnMobile>
+              <LinkButton to="/team-principles" hasArrows>
                 Meet the LeanJS team
               </LinkButton>
             </P>
@@ -301,7 +297,7 @@ const TrainingPage = () => (
             <img src={LONDON_BOOTCAMP} />
           </SingleColRow>
           <SingleColRow>
-            <LinkButton to="https://reactjs.academy" external fullWidthOnMobile>
+            <LinkButton to="https://reactjs.academy" external>
               Visit ReactJS Academy website
             </LinkButton>
           </SingleColRow>

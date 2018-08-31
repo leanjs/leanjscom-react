@@ -22,13 +22,12 @@ const setColours = props => `
 `
 const allowArrows = props =>
   props.hasArrows ? `&:after { content: " >>"}` : ``
-const allowFullWidth = props => `width: ${props.fullWidth ? `100%` : `auto`};`
-const allowFullWidthOnMobile = props =>
+const allowShrinkWrapOnMobile = props =>
   `${
-    props.fullWidthOnMobile
+    props.shrinkWrapOnMobile
       ? `
   @media (max-width:${SCREEN_SM_MAX}) {
-    width:100%;
+    width:auto;
   }
 `
       : null
@@ -41,9 +40,12 @@ export const DEFAULT_BUTTON_STYLES = props => `
 	margin: ${SPACING_STANDARD} 0;
 	padding: ${SPACING_SMALL} ${SPACING_STANDARD};
 	cursor:pointer;
+  width:auto;
+  @media (max-width:${SCREEN_SM_MAX}) {
+    width:100%;
+  }
+  ${allowShrinkWrapOnMobile(props)};
 	${setColours(props)};
-	${allowFullWidth(props)};
-  ${allowFullWidthOnMobile(props)};
 	${allowArrows(props)};
 `
 

@@ -28,7 +28,7 @@ const IterationStages = props => (
         <P>{item.description}</P>
         {item.button ? (
           <P>
-            <LinkButton to={item.button.to} hasArrows fullWidthOnMobile>
+            <LinkButton to={item.button.to} hasArrows>
               {item.button.text}
             </LinkButton>
           </P>
@@ -111,10 +111,10 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <LinkButton to="/case-studies" fullWidthOnMobile hasArrows dark>
+            <LinkButton to="/case-studies" hasArrows dark>
               Read case studies
             </LinkButton>
-            <LinkButton to="/our-process" fullWidthOnMobile hasArrows>
+            <LinkButton to="/our-process" hasArrows>
               Working with you
             </LinkButton>
           </Col>
@@ -164,7 +164,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <LinkButton to="/team-principles" hasArrows fullWidthOnMobile>
+            <LinkButton to="/team-principles" hasArrows>
               Our Team and Principles
             </LinkButton>
           </Col>
@@ -230,12 +230,7 @@ const IndexPage = () => (
                 },
               ]}
             />
-            <LinkButton
-              to="/building-solutions"
-              hasArrows
-              dark
-              fullWidthOnMobile
-            >
+            <LinkButton to="/building-solutions" hasArrows dark>
               Working with you
             </LinkButton>
           </Col>
