@@ -67,7 +67,7 @@ const IndexPage = () => (
     <Section>
       <Grid>
         <Row>
-          <Col md={12}>
+          <Col md={8}>
             <H2>
               We grab your business needs, align them with users’ intent and
               cook up solutions in a matter of weeks. Boom.
