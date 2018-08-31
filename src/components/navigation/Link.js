@@ -18,7 +18,7 @@ export const ANCHOR_STYLE = `
     font-weight: ${FONT_WEIGHT_MEDIUMBOLD};
     font-style: normal;
     line-height: ${LINE_HEIGHT_LARGER};
-    color: ${WHITE};
+    color: inherit;
     ${FONT_FAMILY}
 `
 

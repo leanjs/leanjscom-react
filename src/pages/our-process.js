@@ -11,7 +11,7 @@ import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSen
 import { WHITE, DARKGREY, LIGHTGREY, SPACING_LARGE } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P } from '../components/text'
+import { H2, P, MVPLink } from '../components/text'
 import Hr from '../components/decoration/Hr'
 import HighlightedItem from '../components/decoration/HighlightedItem'
 import Mugshot from '../components/mugshots/Mugshot'
@@ -69,7 +69,7 @@ const OurProcess = () => (
           to: 'howLongItTakes',
         },
         {
-          text: 'What is an MVP?',
+          text: ['What is an MVP?'],
           to: 'mvp',
         },
         {
@@ -151,13 +151,21 @@ const OurProcess = () => (
                   heading: 'Build',
                   points: [
                     {
-                      sentence:
-                        'We start ‘low-fi’ so we can test the core functionality and content against user needs as soon as humanly possible. Minimal viable products (MVPs) first, always.',
+                      sentence: [
+                        'We start ‘low-fi’ so we can test the core functionality and content against user needs as soon as humanly possible. Minimum viable products (',
+                        <MVPLink key={`lofimvp-${new Date().getTime()}`} />,
+                        's) first, always.',
+                      ],
                       icon: 'start_small',
                     },
                     {
-                      sentence:
-                        'Design, development and accessibility best practices are baked in to ensure future-friendly MVPs that you (with our help or not) can take further into the  future.',
+                      sentence: [
+                        'Design, development and accessibility best practices are baked in to ensure future-friendly ',
+                        <MVPLink
+                          key={`bestpractisemvp-${new Date().getTime()}`}
+                        />,
+                        's that you (with our help or not) can take further into the  future.',
+                      ],
                       icon: 'quality',
                     },
                     {
@@ -182,8 +190,11 @@ const OurProcess = () => (
                       icon: 'eye',
                     },
                     {
-                      sentence:
-                        'Quality assurance (QA) is essential for such innovative technologies. We run a myriad of real-world tests to make sure your MVP wont break.',
+                      sentence: [
+                        'Quality assurance (QA) is essential for such innovative technologies. We run a myriad of real-world tests to make sure your ',
+                        <MVPLink key={`qamvp-${new Date().getTime()}`} />,
+                        ' wont break.',
+                      ],
                       icon: 'tick_badge',
                     },
                   ],
@@ -209,9 +220,9 @@ const OurProcess = () => (
                     little as 6 weeks
                   </P>
                   <P>
-                    Imagine - a fully formed, tested and proven MVP ready to
-                    take into the future in only a fraction of the time it
-                    may've taken in the past
+                    Imagine - a fully formed, tested and proven <MVPLink />{' '}
+                    ready to take into the future in only a fraction of the time
+                    it may've taken in the past
                   </P>
                   <P>
                     <LinkButton to="/case-studies" hasArrows>

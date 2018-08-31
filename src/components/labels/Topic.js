@@ -7,6 +7,7 @@ import {
   FONT_SIZE_SMALL,
   SPACING_SMALL,
   SPACING_STANDARD,
+  FONT_WEIGHT_BOLD,
 } from '../../config/styles'
 
 // To maintain text centering while using letter-spacing, the text must be offset by the same amount as the letter spacing
@@ -23,7 +24,15 @@ const TopicInner = styled.div`
   display: inline-block;
 
   text-transform: uppercase;
-  font-size: ${FONT_SIZE_SMALL};
+  &,
+  a {
+    font-size: ${FONT_SIZE_SMALL};
+    font-weight: ${FONT_WEIGHT_BOLD};
+  }
+  a {
+    /* Need to remove underline from links because nonzero letter-spacing otherwise makes underline look too long */
+    text-decoration: none;
+  }
   letter-spacing: ${letterSpacing};
   text-indent: ${letterSpacing};
   text-align: center;

@@ -21,7 +21,7 @@ import {
 } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P, Blockquote2 } from '../components/text'
+import { H2, P, Blockquote2, MVPLink } from '../components/text'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Circle from '../components/elements/Circle'
@@ -74,14 +74,17 @@ const caseStudies = [
   },
   {
     title: 'FingoPay',
-    topic: 'working mvp',
+    topic: ['working ', <MVPLink key={`workingmvp-${new Date().getTime()}`} />],
     anchor: 'fingo',
     highlighted: true,
     bulletpoints: [
       {
         point: 'WHAT',
-        description:
-          'Biometric payment onboarding minimum viable product (MVP)',
+        description: [
+          'Biometric payment onboarding minimum viable product (',
+          <MVPLink key={`biometricmvp-${new Date().getTime()}`} />,
+          ')',
+        ],
       },
       {
         point: 'HOW',
@@ -121,7 +124,11 @@ const caseStudies = [
     bulletpoints: [
       {
         point: 'WHAT',
-        description: 'Advanced MVP site for AGNI literary journal',
+        description: [
+          'Advanced ',
+          <MVPLink key={`advancedmvp-${new Date().getTime()}`} />,
+          ' site for AGNI literary journal',
+        ],
       },
       {
         point: 'HOW',
