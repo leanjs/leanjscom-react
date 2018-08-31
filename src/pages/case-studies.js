@@ -80,7 +80,8 @@ const caseStudies = [
     bulletpoints: [
       {
         point: 'WHAT',
-        description: 'Biometric payment onboarding MVP',
+        description:
+          'Biometric payment onboarding minimum viable product (MVP)',
       },
       {
         point: 'HOW',
