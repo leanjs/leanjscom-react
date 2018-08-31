@@ -146,7 +146,7 @@ const BulletPoint = props => {
         sentence={props.sentence}
       />
       {props.button ? (
-        <LinkButton to={props.button.to} hasArrows>
+        <LinkButton to={props.button.to} hasArrows fullWidthOnMobile>
           {props.button.text}
         </LinkButton>
       ) : null}

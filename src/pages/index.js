@@ -77,7 +77,6 @@ const IndexPage = () => (
         <Row>
           <Col>
             <P>We’re not making it up… here’s some of our favourite work:</P>
-            <br />
           </Col>
         </Row>
         <Row>
@@ -165,7 +164,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <LinkButton to="/team-principles" hasArrows>
+            <LinkButton to="/team-principles" hasArrows fullWidthOnMobile>
               Our Team and Principles
             </LinkButton>
           </Col>

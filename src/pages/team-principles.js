@@ -145,6 +145,7 @@ const Team = () => (
               <LinkButton
                 external
                 to="https://medium.com/leanjs/open-source-branding-leanjs-sprint-1-8caf048396d0"
+                fullWidthOnMobile
               >
                 Blog: How we created our brand identity
               </LinkButton>
@@ -182,7 +183,7 @@ const Team = () => (
               </ValueGrid>
               <Row>
                 <ValueCol>
-                  <LinkButton scroll hasArrows to="contact">
+                  <LinkButton scroll hasArrows to="contact" fullWidthOnMobile>
                     Contact us and let's work together!
                   </LinkButton>
                 </ValueCol>

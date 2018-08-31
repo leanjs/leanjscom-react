@@ -111,7 +111,7 @@ const OurProcess = () => (
               would you?!
             </P>
             <P>
-              <LinkButton to="/training" hasArrows>
+              <LinkButton to="/training" hasArrows fullWidthOnMobile>
                 Looking for Lean / Agile training? We can do that
               </LinkButton>
             </P>
@@ -214,7 +214,7 @@ const OurProcess = () => (
                     may've taken in the past
                   </P>
                   <P>
-                    <LinkButton to="/case-studies" hasArrows>
+                    <LinkButton to="/case-studies" hasArrows fullWidthOnMobile>
                       Case studies
                     </LinkButton>
                   </P>
@@ -239,7 +239,11 @@ const OurProcess = () => (
                     Simple!
                   </P>
                   <P>
-                    <LinkButton to="/building-solutions" hasArrows>
+                    <LinkButton
+                      to="/building-solutions"
+                      hasArrows
+                      fullWidthOnMobile
+                    >
                       Learn more about our design services
                     </LinkButton>
                   </P>
