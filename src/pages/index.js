@@ -28,7 +28,7 @@ const IterationStages = props => (
         <P>{item.description}</P>
         {item.button ? (
           <P>
-            <LinkButton to={item.button.to} hasArrows>
+            <LinkButton to={item.button.to} hasArrows fullWidthOnMobile>
               {item.button.text}
             </LinkButton>
           </P>

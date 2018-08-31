@@ -303,7 +303,7 @@ const OurProcess = () => (
 
             <Indented>
               <P>
-                <LinkButton to="/training" hasArrows>
+                <LinkButton to="/training" hasArrows fullWidthOnMobile>
                   Read more about our training
                 </LinkButton>
               </P>
