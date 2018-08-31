@@ -35,7 +35,7 @@ const HowItWorks = props =>
         ))}
         {section.button ? (
           <P>
-            <LinkButton to={section.button.to} hasArrows>
+            <LinkButton to={section.button.to} hasArrows fullWidthOnMobile>
               {section.button.text}
             </LinkButton>
           </P>
