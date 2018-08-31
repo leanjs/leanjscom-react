@@ -131,7 +131,7 @@ const OurProcess = () => (
                   points: [
                     {
                       sentence:
-                        'We take time talking with you  and your team, gauging expectations and business needs',
+                        'We take time talking with you and your team, asking key questions and delving deep into your expectations and business needs',
                       icon: 'business_needs',
                     },
                     {
