@@ -54,7 +54,7 @@ const caseStudies = [
       },
       {
         point: 'TIME',
-        description: '6 week turnaround',
+        description: 'From idea to launch in 6 weeks',
       },
       {
         point: 'RESULT',
