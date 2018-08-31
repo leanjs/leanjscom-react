@@ -23,3 +23,13 @@ storiesOf('Mugshot', module)
       color={DARKGREY}
     />
   ))
+  .add('Name, job title, and quote', () => (
+    <Mugshot
+      image={MUGSHOT_JAMES_NORTON}
+      name="James Norton"
+      jobTitle="Engineering Practise Lead"
+      company="ASOS.com"
+      color={WHITE}
+      quote="I love LeanJS and all that she stands for"
+    />
+  ))
