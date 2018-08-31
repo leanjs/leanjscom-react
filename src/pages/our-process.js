@@ -69,7 +69,7 @@ const OurProcess = () => (
           to: 'howLongItTakes',
         },
         {
-          text: ['What is an MVP?'],
+          text: 'What is an MVP?',
           to: 'mvp',
         },
         {
