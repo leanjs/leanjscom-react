@@ -240,7 +240,11 @@ const CaseStudyInner = props => (
     <Row>
       {props.button ? (
         <Col md={6}>
-          <LinkButton external={props.button.external} to={props.button.to}>
+          <LinkButton
+            external={props.button.external}
+            to={props.button.to}
+            fullWidthOnMobile
+          >
             {props.button.text}
           </LinkButton>
         </Col>
