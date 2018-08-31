@@ -86,7 +86,7 @@ const BuildingSolutions = () => (
                 {
                   image: 'gift',
                   sentence:
-                    'Explain all possibilities with you and collaborate to prioritise the best solutions',
+                    "Explain all possibilities with you and collaborate to prioritise the best solutions - after-all, everyone's requirements are different!",
                 },
                 {
                   image: 'calendar',
