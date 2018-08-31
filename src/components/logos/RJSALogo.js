@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from '../navigation/Link'
 
-const SvgLogo = () => (
+export const RJSALogoUnlinked = () => (
   <svg focusable="false" width={160} height={58}>
     <title>ReactJs Academy Logo</title>
     <g fill="none" fillRule="evenodd">
