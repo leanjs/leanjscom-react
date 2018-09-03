@@ -30,7 +30,8 @@ export const FONT_SIZE_EXTRALARGE = '3.5rem'
 
 export const LINE_HEIGHT_LARGER = '1.5rem'
 export const LINE_HEIGHT_LARGE = '2rem'
-export const LINE_HEIGHT_EXTRALARGE = '4rem'
+export const LINE_HEIGHT_EXTRALARGE = '3rem'
+export const LINE_HEIGHT_XXLARGE = '4rem'
 
 export const FONT_WEIGHT_STANDARD = '400'
 export const FONT_WEIGHT_MEDIUMBOLD = '500'

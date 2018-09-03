@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FONT_SIZE_LARGE, LINE_HEIGHT_EXTRALARGE } from '../../config/styles'
+import { FONT_SIZE_LARGE, LINE_HEIGHT_XXLARGE } from '../../config/styles'
 
 export default styled.strong`
   ${props =>
     props.large
       ? `
 		font-size: ${FONT_SIZE_LARGE};
-		line-height: ${LINE_HEIGHT_EXTRALARGE};
+		line-height: ${LINE_HEIGHT_XXLARGE};
 	`
       : null};
 `

@@ -10,6 +10,7 @@ import {
   FONT_WEIGHT_STANDARD,
   FONT_WEIGHT_MEDIUMBOLD,
   FONT_WEIGHT_BOLD,
+  LINE_HEIGHT_EXTRALARGE,
 } from '../../config/styles'
 
 const REF = `
@@ -39,6 +40,7 @@ export const H2 = styled.h2`
   letter-spacing: normal;
   margin-bottom: ${SPACING_LARGE};
   font-size: ${FONT_SIZE_LARGE};
+  line-height: ${LINE_HEIGHT_EXTRALARGE};
   a {
     font-size: ${FONT_SIZE_LARGE};
   }
