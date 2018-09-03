@@ -1,11 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SPACING_STANDARD, SPACING_LARGE } from '../../config/styles'
+import {
+  SPACING_STANDARD,
+  SPACING_MEDIUM,
+  SPACING_LARGE,
+} from '../../config/styles'
 import { SCREEN_SM_MAX } from '../utils'
 
 const Table = styled.div`
   display: table;
   align-items: center;
+  margin-right: ${props =>
+    props.largeHorizontalSpacing ? SPACING_LARGE : `auto`};
 `
 const Row = styled.div`
   display: table-row;
@@ -16,7 +22,7 @@ const getLeftPadding = isWideScreen => props =>
   `padding-left: ${
     props.firstTable || props.flushLeft || (props.firstCell && !isWideScreen)
       ? `0`
-      : `${isWideScreen ? SPACING_LARGE : SPACING_STANDARD}`
+      : `${isWideScreen ? SPACING_MEDIUM : SPACING_STANDARD}`
   }`
 
 const Cell = styled.div`
@@ -30,7 +36,7 @@ const Cell = styled.div`
 `
 
 const SmallIconAndSentence = props => (
-  <Table>
+  <Table largeHorizontalSpacing={props.largeHorizontalSpacing}>
     <Row>
       <Cell firstCell firstTable={props.first} flushLeft={props.flushLeft}>
         {props.icon}

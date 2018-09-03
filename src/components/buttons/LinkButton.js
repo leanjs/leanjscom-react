@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link, { ScrollingLink } from '../navigation/Link'
 import { DEFAULT_BUTTON_STYLES, getForegroundColor } from './Button.js'
 import { NEW_WINDOW } from '../../resources/icons'
-import { FONT_WEIGHT_STANDARD, SPACING_LARGE } from '../../config/styles'
+import { FONT_WEIGHT_STANDARD, SPACING_MEDIUM } from '../../config/styles'
 import { backgroundIcon } from '../../resources/styles'
 
 // NB cunning destructure method to remove invalid DOM properties before passing them to the underlying dom element
@@ -28,7 +28,7 @@ const LinkButton = styled(({ hasArrows, dark, scroll, ...rest }) => {
   &:active {
     color: ${getForegroundColor} !important;
   }
-  margin-right: ${SPACING_LARGE};
+  margin-right: ${SPACING_MEDIUM};
   ${props => (props.external ? backgroundIcon(NEW_WINDOW) : null)};
 `
 

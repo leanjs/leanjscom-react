@@ -8,7 +8,7 @@ import Topic from '../components/labels/Topic'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
-import { WHITE, DARKGREY, LIGHTGREY, SPACING_LARGE } from '../config/styles'
+import { WHITE, DARKGREY, LIGHTGREY, SPACING_MEDIUM } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, MVPLink } from '../components/text'
@@ -45,10 +45,10 @@ const HowItWorks = props =>
   ))
 
 const FAQs = styled.div`
-  padding: ${SPACING_LARGE} ${SPACING_LARGE} 0 ${SPACING_LARGE};
+  padding: ${SPACING_MEDIUM} ${SPACING_MEDIUM} 0 ${SPACING_MEDIUM};
 `
 const FAQ = styled.div`
-  padding-bottom: ${SPACING_LARGE};
+  padding-bottom: ${SPACING_MEDIUM};
 `
 
 const OurProcess = () => (

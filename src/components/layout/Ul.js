@@ -5,13 +5,13 @@ import {
   WHITE,
   SPACING_SMALL,
   SPACING_STANDARD,
-  SPACING_LARGE,
+  SPACING_MEDIUM,
 } from '../../config/styles'
 
 const getPadding = props => {
   const y = props.wide ? SPACING_STANDARD : SPACING_SMALL
   const x = {
-    big: props.wide ? SPACING_LARGE : SPACING_STANDARD,
+    big: props.wide ? SPACING_MEDIUM : SPACING_STANDARD,
     std: props.wide ? SPACING_STANDARD : SPACING_SMALL,
   }
   const left = props.flushLeft ? 0 : x.std

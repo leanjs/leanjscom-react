@@ -10,7 +10,7 @@ import {
   DARKGREY,
   EXTRADARKGREY,
   WHITE,
-  SPACING_LARGE,
+  SPACING_MEDIUM,
 } from '../../config/styles'
 import { SCREEN_XS_MAX } from '../utils'
 import ContactUsBullet from '../bullets/ContactUsBullet'

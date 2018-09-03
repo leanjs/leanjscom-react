@@ -4,7 +4,7 @@ import Link, { ScrollingLink, styleChildLinkColor } from '../navigation/Link'
 
 import {
   WHITE,
-  SPACING_LARGER,
+  SPACING_EXTRALARGE,
   DARKGREY,
   FONT_SIZE_STANDARD,
   FONT_WEIGHT_STANDARD,
@@ -36,8 +36,8 @@ const addIconButtonStyles = props => `
     color: ${DARKGREY};
   }
 
-	width:${SPACING_LARGER};
-	height:${SPACING_LARGER};
+	width:${SPACING_EXTRALARGE};
+	height:${SPACING_EXTRALARGE};
 
 	line-height: ${LINE_HEIGHT_STANDARD};
 

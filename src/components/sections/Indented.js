@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SPACING_LARGE, SPACING_EXTRALARGE } from '../../config/styles'
+import { SPACING_MEDIUM, SPACING_XXLARGE } from '../../config/styles'
 
-const getIndent = props => (props.wide ? SPACING_EXTRALARGE : SPACING_LARGE)
+const getIndent = props => (props.wide ? SPACING_XXLARGE : SPACING_MEDIUM)
 
 const Outer = styled.div`
-  padding-bottom: ${SPACING_LARGE};
+  padding-bottom: ${SPACING_MEDIUM};
 `
 
 const Inner = styled.div`

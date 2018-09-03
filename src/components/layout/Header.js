@@ -141,6 +141,7 @@ const BulletPoint = props => {
         flushLeft
         icon={<Bullet image={props.icon} />}
         sentence={props.sentence}
+        largeHorizontalSpacing
       />
       {props.button ? (
         <LinkButton to={props.button.to} hasArrows>

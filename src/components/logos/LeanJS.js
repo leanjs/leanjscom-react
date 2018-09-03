@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from '../navigation/Link'
 import { LOGO_LEANJS } from '../../resources/icons'
-import { SPACING_LARGER } from '../../config/styles'
+import { SPACING_EXTRALARGE } from '../../config/styles'
 
-const defaultSize = SPACING_LARGER
+const defaultSize = SPACING_EXTRALARGE
 const getSize = props => (props.size ? props.size : defaultSize)
 
 export const LeanJSLogo = styled.div`

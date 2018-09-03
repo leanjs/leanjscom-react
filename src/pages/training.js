@@ -13,7 +13,7 @@ import {
   WHITE,
   EXTRADARKGREY,
   FONT_SIZE_LARGE,
-  SPACING_LARGE,
+  SPACING_MEDIUM,
 } from '../config/styles'
 import { SCREEN_XS_MAX } from '../components/utils'
 import {
@@ -52,7 +52,7 @@ const TitleText = styled(P)`
   font-size: ${FONT_SIZE_LARGE};
 `
 const InlineItems = styled.div`
-  padding-left: ${SPACING_LARGE};
+  padding-left: ${SPACING_MEDIUM};
 `
 
 const BootcampCol = styled(Col)`

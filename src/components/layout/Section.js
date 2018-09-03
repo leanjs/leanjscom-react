@@ -7,19 +7,19 @@ import {
   WHITE,
   FONT_FAMILY,
   SPACING_STANDARD,
-  SPACING_LARGE,
-  SPACING_EXTRALARGE,
+  SPACING_MEDIUM,
+  SPACING_XXLARGE,
   LINE_HEIGHT_STANDARD,
 } from '../../config/styles'
 
 const Section = styled.section`
   ${FONT_FAMILY}
-  padding-top: ${props => (props.top ? '0' : SPACING_EXTRALARGE)};
+  padding-top: ${props => (props.top ? '0' : SPACING_XXLARGE)};
   padding-bottom: ${props =>
-    props.dark && props.lastOnPage ? 0 : SPACING_EXTRALARGE};
+    props.dark && props.lastOnPage ? 0 : SPACING_XXLARGE};
   @media (max-width:${SCREEN_XS_MAX}) {
-  	padding-top:${SPACING_LARGE};
-    padding-bottom:${SPACING_LARGE};
+  	padding-top:${SPACING_MEDIUM};
+    padding-bottom:${SPACING_MEDIUM};
   }
   background-color: ${props => props.dark && EXTRADARKGREY};
   line-height: ${LINE_HEIGHT_STANDARD};
@@ -27,7 +27,7 @@ const Section = styled.section`
   ${props =>
     props.dark && props.lastOnPage
       ? `
-    margin-bottom:-${parseFloat(SPACING_EXTRALARGE) -
+    margin-bottom:-${parseFloat(SPACING_XXLARGE) -
       parseFloat(SPACING_STANDARD)}rem;
   `
       : null};

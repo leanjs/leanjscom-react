@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import {
   MEDIUMGREY,
-  SPACING_LARGE,
-  SPACING_EXTRALARGE,
+  SPACING_MEDIUM,
+  SPACING_XXLARGE,
 } from '../../config/styles'
 
-const getLineWidth = props => (props.wide ? SPACING_EXTRALARGE : SPACING_LARGE)
+const getLineWidth = props => (props.wide ? SPACING_XXLARGE : SPACING_MEDIUM)
 
 const getLeftPadding = props => `${parseFloat(getLineWidth(props)) + 1}rem`
 
 const LineOuter = styled.div`
-  padding-bottom: ${SPACING_LARGE};
+  padding-bottom: ${SPACING_MEDIUM};
 `
 
 const LineInner = styled.div`

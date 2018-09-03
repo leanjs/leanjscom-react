@@ -6,7 +6,7 @@ import {
   FONT_SIZE_LARGE,
   FONT_SIZE_MEDIUM,
   FONT_SIZE_LOWERQUARTILE,
-  SPACING_LARGE,
+  SPACING_MEDIUM,
   FONT_WEIGHT_STANDARD,
   FONT_WEIGHT_MEDIUMBOLD,
   FONT_WEIGHT_BOLD,
@@ -38,7 +38,7 @@ export const H2 = styled.h2`
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
-  margin-bottom: ${SPACING_LARGE};
+  margin-bottom: ${SPACING_MEDIUM};
   font-size: ${FONT_SIZE_LARGE};
   line-height: ${LINE_HEIGHT_EXTRALARGE};
   a {

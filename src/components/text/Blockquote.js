@@ -4,7 +4,7 @@ import {
   FONT_FAMILY,
   reactBlue,
   SPACING_STANDARD,
-  SPACING_LARGE,
+  SPACING_MEDIUM,
   FONT_SIZE_STANDARD,
   LINE_HEIGHT_LARGE,
 } from '../../config/styles'
@@ -26,7 +26,7 @@ export const Blockquote2 = styled(Blockquote)`
   font-style: italic;
   line-height: ${LINE_HEIGHT_LARGE};
   display: inline-block;
-  padding-left: ${props => (props.padLeft ? SPACING_LARGE : `0`)};
+  padding-left: ${props => (props.padLeft ? SPACING_MEDIUM : `0`)};
 `
 
 export default Blockquote

@@ -4,21 +4,21 @@ import { requireFrom } from '../utils'
 import Link from '../navigation/Link'
 import {
   SPACING_STANDARD,
-  SPACING_LARGE,
+  SPACING_MEDIUM,
   SPACING_SMALL,
-  SPACING_XXLARGE,
+  SPACING_XXXLARGE,
 } from '../../config/styles'
 import { LOGO_TWITTER, LOGO_LINKEDIN } from '../../resources/icons'
 import url from 'url'
 
 const Bio = styled.div`
   color: ${props => props.color || 'black'};
-  padding-bottom: ${SPACING_LARGE};
+  padding-bottom: ${SPACING_MEDIUM};
 
   img {
     align-self: center;
-    min-width: ${SPACING_XXLARGE};
-    width: ${SPACING_XXLARGE};
+    min-width: ${SPACING_XXXLARGE};
+    width: ${SPACING_XXXLARGE};
   }
 `
 
@@ -36,7 +36,7 @@ const PersonSpecs = styled.div`
   flex-direction: column;
 
   margin-left: ${SPACING_STANDARD};
-  padding-right: ${SPACING_LARGE};
+  padding-right: ${SPACING_MEDIUM};
 `
 
 const Spec = styled.div`
