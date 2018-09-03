@@ -17,7 +17,7 @@ import {
 } from '../config/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P, Blockquote2 } from '../components/text'
+import { H2, P, Blockquote2, Strong } from '../components/text'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import {
@@ -70,9 +70,14 @@ const BuildingSolutions = () => (
         <Row>
           <Col md={6}>
             <P>
-              We know how painful digital projects can be. Our team have many
-              years experience in digital and have developed a process that
-              works with you - from beginning to end.
+              We know how painful digital projects can be. But we also know that
+              we can learn as much from you as you can from us - it's all about
+              collaboration.{' '}
+            </P>
+            <P>
+              Our team have many years experience in digital and have developed{' '}
+              <Strong>a process that works alongside you</Strong> and your
+              business - from beginning to end.
             </P>
             <SmallIconAndSentences
               flushLeft
