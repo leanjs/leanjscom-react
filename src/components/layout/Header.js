@@ -207,7 +207,7 @@ const Header = ({
           <Col>
             {links && links.length ? (
               <Links>
-                <Ul inline>
+                <Ul inline flushLeft>
                   {links.map((link, i) => (
                     <Li key={i}>
                       <ScrollingLink to={link.to}>{link.text}</ScrollingLink>

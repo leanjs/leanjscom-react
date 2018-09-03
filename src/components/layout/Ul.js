@@ -5,7 +5,20 @@ import {
   WHITE,
   SPACING_SMALL,
   SPACING_STANDARD,
+  SPACING_LARGE,
 } from '../../config/styles'
+
+const getPadding = props => {
+  const y = props.wide ? SPACING_STANDARD : SPACING_SMALL
+  const x = {
+    big: props.wide ? SPACING_LARGE : SPACING_STANDARD,
+    std: props.wide ? SPACING_STANDARD : SPACING_SMALL,
+  }
+  const left = props.flushLeft ? 0 : x.std
+  const right = props.flushLeft ? x.big : x.std
+
+  return `${y} ${right} ${y} ${left}`
+}
 
 const Ul = styled.ul`
   ${props =>
@@ -23,7 +36,7 @@ const Ul = styled.ul`
           padding: 0;
           > li {
             display: inline-block;
-            padding: ${props.wide ? SPACING_STANDARD : SPACING_SMALL};
+            padding: ${getPadding(props)};
             margin-bottom:0;
             :first-child {
               padding-left: 0;
