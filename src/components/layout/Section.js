@@ -9,6 +9,7 @@ import {
   SPACING_STANDARD,
   SPACING_LARGE,
   SPACING_EXTRALARGE,
+  LINE_HEIGHT_STANDARD,
 } from '../../config/styles'
 
 const Section = styled.section`
@@ -21,6 +22,7 @@ const Section = styled.section`
     padding-bottom:${SPACING_LARGE};
   }
   background-color: ${props => props.dark && EXTRADARKGREY};
+  line-height: ${LINE_HEIGHT_STANDARD};
   color: ${props => props.dark && WHITE};
   ${props =>
     props.dark && props.lastOnPage
