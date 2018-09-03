@@ -28,7 +28,7 @@ export const FONT_SIZE_MEDIUM = '1.5rem'
 export const FONT_SIZE_LARGE = '2rem'
 export const FONT_SIZE_EXTRALARGE = '3.5rem'
 
-export const LINE_HEIGHT_LARGER = '1.5rem'
+export const LINE_HEIGHT_STANDARD = '1.8rem'
 export const LINE_HEIGHT_LARGE = '2rem'
 export const LINE_HEIGHT_EXTRALARGE = '3rem'
 export const LINE_HEIGHT_XXLARGE = '4rem'

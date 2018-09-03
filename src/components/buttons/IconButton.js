@@ -9,7 +9,7 @@ import {
   FONT_SIZE_STANDARD,
   FONT_WEIGHT_STANDARD,
   FONT_FAMILY,
-  LINE_HEIGHT_LARGER,
+  LINE_HEIGHT_STANDARD,
 } from '../../config/styles'
 
 const addIconButtonStyles = props => `
@@ -39,7 +39,7 @@ const addIconButtonStyles = props => `
 	width:${SPACING_LARGER};
 	height:${SPACING_LARGER};
 
-	line-height: ${LINE_HEIGHT_LARGER};
+	line-height: ${LINE_HEIGHT_STANDARD};
 
 	font-size:${FONT_SIZE_STANDARD};
 	font-weight:${FONT_WEIGHT_STANDARD};

@@ -6,7 +6,7 @@ import {
   FONT_FAMILY,
   WHITE,
   FONT_SIZE_STANDARD,
-  LINE_HEIGHT_LARGER,
+  LINE_HEIGHT_STANDARD,
   FONT_WEIGHT_MEDIUMBOLD,
 } from '../../config/styles'
 import { backgroundIcon } from '../../resources/styles'
@@ -18,7 +18,7 @@ export const ANCHOR_STYLE = `
     font-size: ${FONT_SIZE_STANDARD};
     font-weight: ${FONT_WEIGHT_MEDIUMBOLD};
     font-style: normal;
-    line-height: ${LINE_HEIGHT_LARGER};
+    line-height: ${LINE_HEIGHT_STANDARD};
     color: inherit;
     ${FONT_FAMILY}
 `
