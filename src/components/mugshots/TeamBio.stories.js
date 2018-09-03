@@ -18,20 +18,17 @@ storiesOf('TeamBio', module)
     <TeamBio
       image={LUIS}
       name="Luis Novella"
-      twitter={{
-        to: 'https://twitter.com/novellaluis',
-        username: 'novellaluis',
-      }}
+      twitter="https://twitter.com/novellaluis"
       specialisms="Digital and business transformation, change management, business strategy, management consultant, start-ups, Lean/Agile."
       hometown="Caracas, Venezuela"
       color={WHITE}
     />
   ))
-  .add('With LinkedIn', () => (
+  .add('With LinkedIn link', () => (
     <TeamBio
       image={LUIS}
       name="Luis Novella"
-      linkedin={{ to: 'https://www.linkedin.com/in/luisnovella/' }}
+      linkedin="https://www.linkedin.com/in/luisnovella"
       specialisms="Digital and business transformation, change management, business strategy, management consultant, start-ups, Lean/Agile."
       hometown="Caracas, Venezuela"
       color={WHITE}
