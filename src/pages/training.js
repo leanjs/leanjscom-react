@@ -106,7 +106,9 @@ const TrainingPage = () => (
               <HighlightedItem>
                 <CompanyList inline>
                   <Li>
-                    <ASOS colour={EXTRADARKGREY} height={35} />
+                    <Link to="/case-studies#asos">
+                      <ASOS colour={EXTRADARKGREY} height={35} />
+                    </Link>
                   </Li>
                   <Li>
                     <JohnLewis colour={EXTRADARKGREY} height={35} />
