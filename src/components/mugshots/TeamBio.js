@@ -52,7 +52,10 @@ const OptionalLinkSpec = props => (
   </OptionalSpec>
 )
 
-const formatTwitter = url => url.replace('https://twitter.com/', '@')
+const formatTwitter = twitterURL => {
+  const { hostname, pathname } = url.parse(twitterURL)
+  return pathname.replace(/^\//, '@')
+}
 
 const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
   <Bio {...props}>
