@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link, { ScrollingLink } from '../navigation/Link'
 import { DEFAULT_BUTTON_STYLES, getForegroundColor } from './Button.js'
-import { NEW_WINDOW } from '../../config/icons'
+import { NEW_WINDOW } from '../../resources/icons'
 import { FONT_WEIGHT_STANDARD, SPACING_LARGE } from '../../config/styles'
 
 // NB cunning destructure method to remove invalid DOM properties before passing them to the underlying dom element

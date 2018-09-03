@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from '../navigation/Link'
-import { LOGO_LEANJS } from '../../config/icons'
+import { LOGO_LEANJS } from '../../resources/icons'
 import { SPACING_LARGER } from '../../config/styles'
 
 const defaultSize = SPACING_LARGER

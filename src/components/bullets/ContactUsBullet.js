@@ -9,7 +9,7 @@ import {
   LOGO_INSTAGRAM,
   LOGO_GOOGLE_HANGOUTS,
   OFFICE,
-} from '../../config/icons'
+} from '../../resources/icons'
 
 export const validImages = {
   phone: PHONE,

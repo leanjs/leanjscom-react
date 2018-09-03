@@ -18,7 +18,7 @@ import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
 import Indented from '../components/sections/Indented'
-import { RICHARD_TEACHING, ITERATION_DIAGRAM } from '../config/images'
+import { RICHARD_TEACHING, ITERATION_DIAGRAM } from '../resources/images'
 
 const HowItWorks = props =>
   props.sections.map((section, j) => (

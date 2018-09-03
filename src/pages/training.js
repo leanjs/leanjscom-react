@@ -16,7 +16,12 @@ import {
   SPACING_LARGE,
 } from '../config/styles'
 import { SCREEN_XS_MAX } from '../components/utils'
-import { MUGSHOT_ASOS } from '../config/images'
+import {
+  MUGSHOT_ASOS,
+  LONDON_BOOTCAMP,
+  ALEX_TEACHING,
+  CLIENTS_LOGOS,
+} from '../resources/images'
 import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
@@ -40,7 +45,6 @@ import { H2, H3, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
-import { LONDON_BOOTCAMP, ALEX_TEACHING, CLIENTS_LOGOS } from '../config/images'
 import { styleChildLinkColor } from '../components/navigation/Link'
 import HighlightedItem from '../components/decoration/HighlightedItem'
 

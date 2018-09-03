@@ -14,7 +14,7 @@ import {
   ALEX_RICARDO_WHITEBOARD,
   RICHARD_TEACHING,
   LUIS_ALEX_DOG,
-} from '../config/images'
+} from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote2, Strong } from '../components/text'

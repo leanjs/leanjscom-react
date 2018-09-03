@@ -2,7 +2,7 @@ import React from 'react'
 import Bullet from './Bullet'
 
 import { LIGHTGREY, EXTRADARKGREY } from '../../config/styles'
-import { LEARNING, CARING, PEOPLE_2 } from '../../config/icons'
+import { LEARNING, CARING, PEOPLE_2 } from '../../resources/icons'
 
 export const validImages = {
   learning: LEARNING,

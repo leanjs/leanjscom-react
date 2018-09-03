@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Mugshot from './Mugshot'
-import { MUGSHOT_JAMES_NORTON } from '../../config/images'
+import { MUGSHOT_JAMES_NORTON } from '../../resources/images'
 import { WHITE, DARKGREY } from '../../config/styles'
 
 storiesOf('Mugshot', module)

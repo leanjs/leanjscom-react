@@ -18,7 +18,7 @@ import {
   CASE_STUDY_BU,
   MUGSHOT_ASOS,
   CASE_STUDY_ASOS,
-} from '../config/images'
+} from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote2, MVPLink } from '../components/text'

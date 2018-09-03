@@ -17,7 +17,7 @@ import {
   WILL,
   LUIS,
   PAUL,
-} from '../config/images'
+} from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, H3, P } from '../components/text'

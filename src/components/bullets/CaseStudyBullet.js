@@ -2,7 +2,7 @@ import React from 'react'
 import Bullet from './Bullet'
 
 import { MEDIUMGREY } from '../../config/styles'
-import { LOGO_ABINBEV, LOGO_BU, LOGO_ASOS } from '../../config/icons'
+import { LOGO_ABINBEV, LOGO_BU, LOGO_ASOS } from '../../resources/icons'
 
 export const validImages = {
   abinbev: LOGO_ABINBEV,

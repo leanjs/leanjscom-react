@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import TeamBio from './TeamBio'
-import { LUIS } from '../../config/images'
+import { LUIS } from '../../resources/images'
 import { WHITE } from '../../config/styles'
 
 storiesOf('TeamBio', module).add(

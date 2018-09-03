@@ -10,7 +10,7 @@ import {
   DIAMOND,
   QA,
   QUICK,
-} from '../../config/icons'
+} from '../../resources/icons'
 
 export const validImages = {
   development: DEVELOPMENT,

@@ -24,7 +24,7 @@ import {
   HOLDING_MOBILE,
   EYE,
   TICK_BADGE,
-} from '../../config/icons'
+} from '../../resources/icons'
 
 export const validImages = {
   business_needs: BUSINESS_NEEDS,
