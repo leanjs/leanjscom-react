@@ -186,6 +186,9 @@ const Team = () => (
                   <LinkButton scroll hasArrows to="contact">
                     Contact us and let's work together!
                   </LinkButton>
+                  <LinkButton hasArrows to="/case-studies">
+                    Case studies
+                  </LinkButton>
                 </ValueCol>
               </Row>
             </Line>
