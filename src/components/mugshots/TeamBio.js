@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { requireFrom } from '../utils'
-import LogoLink from '../navigation/Link'
+import Link from '../navigation/Link'
 import {
   SPACING_STANDARD,
   SPACING_LARGE,
@@ -9,6 +9,7 @@ import {
   SPACING_XXLARGE,
 } from '../../config/styles'
 import { LOGO_TWITTER, LOGO_LINKEDIN } from '../../resources/icons'
+import url from 'url'
 
 const Bio = styled.div`
   color: ${props => props.color || 'black'};
@@ -42,26 +43,18 @@ const Spec = styled.div`
   margin-top: ${props => (props.first ? 0 : SPACING_SMALL)};
 `
 
-const getLogo = logoName => {
-  switch (logoName) {
-    case 'twitter':
-      return LOGO_TWITTER
-    case 'linkedin':
-      return LOGO_LINKEDIN
-    default:
-      throw new Error('Unknown logo')
-  }
-}
+const OptionalSpec = props =>
+  props.show ? <Spec>{props.children}</Spec> : null
 
-const TeamBio = ({
-  image,
-  name,
-  contact,
-  hometown,
-  specialisms,
-  LogoLink,
-  ...props
-}) => (
+const OptionalLinkSpec = props => (
+  <OptionalSpec show={props.show}>
+    <Link to={props.to}>{props.text}</Link>
+  </OptionalSpec>
+)
+
+const formatTwitter = url => url.replace('https://twitter.com/', '@')
+
+const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
   <Bio {...props}>
     <BioInner>
       <PersonImage>
@@ -71,22 +64,21 @@ const TeamBio = ({
         <Spec first>
           <strong>{name}</strong>
         </Spec>
-        {contact ? (
-          <Spec>
-            <LogoLink to={contact.to} logo={getLogo(contact.logo)}>
-              {contact.text}
-            </LogoLink>
-          </Spec>
-        ) : null}
+        <OptionalLinkSpec
+          show={props.twitter ? true : false}
+          to={props.twitter ? props.twitter : null}
+          text={props.twitter ? formatTwitter(props.twitter) : null}
+        />
+        <OptionalLinkSpec
+          show={props.linkedin ? true : false}
+          to={props.linkedin ? props.linkedin : null}
+          text={props.linkedin ? props.linkedin : null}
+        />
         <Spec>Hometown: {hometown}</Spec>
         <Spec>Ask me about: {specialisms}</Spec>
       </PersonSpecs>
     </BioInner>
   </Bio>
 )
-
-TeamBio.defaultProps = {
-  LogoLink,
-}
 
 export default TeamBio

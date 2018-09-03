@@ -211,6 +211,7 @@ const Team = () => (
             <TeamBio
               image={ALEX}
               name="Alex Lobera"
+              twitter="https://twitter.com/alex_lobera"
               specialisms="React, GraphQL, Lean, UX, Agile, strategy, mentoring,
               high-performance teams, company culture, latin dance"
               hometown="Barcelona, Spain"
@@ -221,6 +222,7 @@ const Team = () => (
             <TeamBio
               image={LENA}
               name="Lena Tregub"
+              twitter="https://twitter.com/lenatregub"
               specialisms="Communication with clients, email marketing, reportage photography"
               hometown="Kiev, Ukraine"
               color={WHITE}
@@ -232,6 +234,7 @@ const Team = () => (
             <TeamBio
               image={RICHARD}
               name="Richard Moss"
+              twitter="https://twitter.com/ric9176"
               specialisms="ReactJS academy trainings, our coaching and coaches, working with LeanJS, Lean/Agile, JavaScript, functional programming, React, any crazy ideas :-)"
               hometown="London, UK"
               color={WHITE}
@@ -241,6 +244,7 @@ const Team = () => (
             <TeamBio
               image={HORACIO}
               name="Horacio Hererra"
+              twitter="https://twitter.com/hhg2288"
               specialisms="Design Sprints, Technical Analytics, Marketing Attribution,
               photography, video production, mvps, design systems, branding,
               typography, teaching, user behaviour, Disney movies, American
@@ -255,6 +259,7 @@ const Team = () => (
             <TeamBio
               image={WILL}
               name="Will Voelcker"
+              linkedin="https://linkedin.com/in/willv"
               specialisms="Web programming, teaching, writing short bios"
               hometown="London, UK"
               color={WHITE}
@@ -264,6 +269,7 @@ const Team = () => (
             <TeamBio
               image={LUIS}
               name="Luis Novella"
+              twitter="https://twitter.com/novellaluis"
               specialisms="Digital and business transformation, change management, business strategy, management consultant, start-ups, Lean/Agile."
               hometown="Caracas, Venezuela"
               color={WHITE}
@@ -275,6 +281,7 @@ const Team = () => (
             <TeamBio
               image={PAUL}
               name="Paul Woodley"
+              twitter="https://twitter.com/paulw_design"
               specialisms="User research, rapid prototyping, user testing information
               architecture, design workshops and sprints, UI, accessibility,
               print design, branding, social media marketing, badass Spotify

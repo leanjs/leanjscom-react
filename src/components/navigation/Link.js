@@ -9,6 +9,7 @@ import {
   LINE_HEIGHT_LARGER,
   FONT_WEIGHT_MEDIUMBOLD,
 } from '../../config/styles'
+import { backgroundIcon } from '../../resources/styles'
 
 export const ANCHOR_STYLE = `
     cursor: pointer;
@@ -81,20 +82,6 @@ export const ScrollingLink = styled(props => {
   return <LinkScroll {...{ smooth: true, duration: 500, ...props }} />
 })`
   ${ANCHOR_STYLE};
-`
-
-export const LogoLink = styled(Link)`
-  ${props =>
-    props.logo
-      ? `
-    background-image:url(${props.logo});
-    background-position:0.5em center;
-    background-size:auto 1em;
-    background-repeat:no-repeat;
-    background-scroll:scroll;
-    padding-left:2em;
-  `
-      : ``};
 `
 
 export default Link
