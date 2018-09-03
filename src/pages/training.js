@@ -272,7 +272,10 @@ const TrainingPage = () => (
             <P>
               With our ReactJS Academy, we’ve also created our coaching
               community - passing on knowledge and enriching the tech community
-              at the same time. Read more on the ReactJS Academy website.
+              at the same time.{' '}
+              <Link to="https://reactjs.academy/">
+                Read more on the ReactJS Academy website.
+              </Link>
             </P>
             <P>
               <LinkButton to="/team-principles" hasArrows>
