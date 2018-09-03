@@ -54,7 +54,13 @@ const OptionalLinkSpec = props => (
 
 const formatTwitter = twitterURL => {
   const { pathname } = url.parse(twitterURL)
-  return pathname.replace(/^\//, '@')
+  const matches = pathname.match(/^\/([^\/]+)/)
+
+  if (matches) {
+    return `@${matches[1]}`
+  }
+
+  return twitterURL
 }
 
 const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
