@@ -189,7 +189,7 @@ const Header = ({
             </Col>
           </Row>
           <Row>
-            <Col md={8}>
+            <Col md={6}>
               {subtitle ? (
                 <SubTitleBackground>
                   <H2Header>{subtitle}</H2Header>
