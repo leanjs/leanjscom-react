@@ -85,10 +85,7 @@ const BackgroundCircles = styled.div`
 `
 
 const H2Header = styled(BaseH2)`
-  padding: 0 !important;
-  margin: 0 !important;
-  font-size: ${FONT_SIZE_LARGE} !important;
-  color: ${WHITE};
+  margin-bottom: 0;
 `
 
 const TITLE_BACKGROUND = `
