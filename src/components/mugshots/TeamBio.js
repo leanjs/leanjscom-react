@@ -53,7 +53,7 @@ const OptionalLinkSpec = props => (
 )
 
 const formatTwitter = twitterURL => {
-  const { hostname, pathname } = url.parse(twitterURL)
+  const { pathname } = url.parse(twitterURL)
   return pathname.replace(/^\//, '@')
 }
 
