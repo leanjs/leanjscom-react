@@ -70,8 +70,9 @@ const Team = () => (
         <Row>
           <Col>
             <P>
-              Our team come from various backgrounds, life experiences and
-              countries but all have a shared vision….
+              Our team are a boutique team of specialists, coming from various
+              backgrounds, life experiences and countries but all have a shared
+              vision…
             </P>
           </Col>
         </Row>
