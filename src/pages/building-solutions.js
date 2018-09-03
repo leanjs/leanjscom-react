@@ -139,10 +139,10 @@ const BuildingSolutions = () => (
             </P>
             <P>We can provide training for:</P>
             <Ul>
+              <Li>Product & UX design</Li>
               <Li>The ReactJS ecosystem</Li>
               <Li>Working with GraphQL</Li>
               <Li>Lean/Agile processes</Li>
-              <Li>Product & UX design</Li>
             </Ul>
           </Col>
           <Col md={6}>
