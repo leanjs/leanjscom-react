@@ -138,9 +138,7 @@ const TrainingPage = () => (
             </P>
           </Col>
           <Col md={6}>
-            <P>
-              <YouTube url="https://www.youtube.com/embed/2-IPT7Plsfc" />
-            </P>
+            <YouTube url="https://www.youtube.com/embed/2-IPT7Plsfc" />
           </Col>
         </Row>
 
