@@ -156,51 +156,62 @@ const BulletPointsRows = ({
   hideSm = false,
   hideMd = false,
   hideLg = false,
-  namespace,
   rows,
-}) => (
-  <HideSingleComponentUsingCss xs={hideXs} sm={hideSm} md={hideMd} lg={hideLg}>
-    <div>
-      {rows.map((row, i) => (
-        <BulletPointsRow
-          key={`${namespace}-${i}`}
-          {...row}
-          namespace={`${namespace}-${row.namespace}`}
-        />
-      ))}
-    </div>
-  </HideSingleComponentUsingCss>
-)
+}) => {
+  const namespace = `${hideXs ? `xs-` : ``}${hideSm ? `sm-` : ``}${
+    hideMd ? `md-` : ``
+  }${hideLg ? `lg-` : ``}`
+  return (
+    <HideSingleComponentUsingCss
+      xs={hideXs}
+      sm={hideSm}
+      md={hideMd}
+      lg={hideLg}
+    >
+      <div>
+        {rows.map((row, i) => {
+          const includeButton =
+            row.includeButton || typeof row.includeButton === 'undefined'
+          const includeIconAndSentence =
+            row.includeIconAndSentence ||
+            typeof row.includeIconAndSentence === 'undefined'
+          const rowNamespace = `${namespace}-${i}`
+          return (
+            <BulletPointsRow
+              key={`${namespace}-${i}`}
+              includeButton={includeButton}
+              includeIconAndSentence={includeIconAndSentence}
+              namespace={rowNamespace}
+              points={row.points}
+            />
+          )
+        })}
+      </div>
+    </HideSingleComponentUsingCss>
+  )
+}
 
 const BulletPoints = ({ points }) => (
   <BulletPointsWrapper>
     <BulletPointsRows
-      namespace="md-lg"
       hideMd
       hideLg
       rows={[
         {
           namespace: '',
-          includeButton: true,
-          includeIconAndSentence: true,
           points,
         },
       ]}
     />
     <BulletPointsRows
-      namespace="xs-sm"
       hideXs
       hideSm
       rows={[
         {
-          namespace: 'icons-sentences',
           includeButton: false,
-          includeIconAndSentence: true,
           points,
         },
         {
-          namespace: 'buttons',
-          includeButton: true,
           includeIconAndSentence: false,
           points,
         },
