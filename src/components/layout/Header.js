@@ -18,6 +18,7 @@ import {
 import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
 import { ANCHOR_STYLE, ScrollingLink } from '../navigation/Link'
 import Menu from '../navigation/menu'
+import { HideSingleComponentUsingCss } from '../utils'
 import ConcentricCircles from '../decoration/ConcentricCircles'
 import withWidth from 'react-width'
 import SmallIconAndSentence from '../bulletedsections/SmallIconAndSentence'
@@ -128,22 +129,101 @@ const Links = styled.div`
   padding: ${SPACING_STANDARD};
 `
 
-const BulletPoints = styled.div`
+const BulletPointsWrapper = styled.div`
   ${WHITE_TEXT};
 `
+
+const BulletPointsRow = ({
+  points,
+  includeButton = true,
+  includeIconAndSentence = true,
+  namespace = '',
+}) => (
+  <Row>
+    {points.map((point, i) => (
+      <BulletPoint
+        key={`header-bullet-${namespace}-${i}`}
+        {...point}
+        includeButton={includeButton}
+        includeIconAndSentence={includeIconAndSentence}
+      />
+    ))}
+  </Row>
+)
+
+const BulletPointsRows = ({
+  hideXs = false,
+  hideSm = false,
+  hideMd = false,
+  hideLg = false,
+  namespace,
+  rows,
+}) => (
+  <HideSingleComponentUsingCss xs={hideXs} sm={hideSm} md={hideMd} lg={hideLg}>
+    <div>
+      {rows.map((row, i) => (
+        <BulletPointsRow
+          key={`${namespace}-${i}`}
+          {...row}
+          namespace={`${namespace}-${row.namespace}`}
+        />
+      ))}
+    </div>
+  </HideSingleComponentUsingCss>
+)
+
+const BulletPoints = ({ points }) => (
+  <BulletPointsWrapper>
+    <BulletPointsRows
+      namespace="md-lg"
+      hideMd
+      hideLg
+      rows={[
+        {
+          namespace: '',
+          includeButton: true,
+          includeIconAndSentence: true,
+          points,
+        },
+      ]}
+    />
+    <BulletPointsRows
+      namespace="xs-sm"
+      hideXs
+      hideSm
+      rows={[
+        {
+          namespace: 'icons-sentences',
+          includeButton: false,
+          includeIconAndSentence: true,
+          points,
+        },
+        {
+          namespace: 'buttons',
+          includeButton: true,
+          includeIconAndSentence: false,
+          points,
+        },
+      ]}
+    />
+  </BulletPointsWrapper>
+)
 
 const BulletPoint = props => {
   const Bullet = props.bullet ? props.bullet : ActivityBullet
 
   return (
     <Col md={5}>
-      <SmallIconAndSentence
-        flushLeft
-        icon={<Bullet image={props.icon} />}
-        sentence={props.sentence}
-        largeHorizontalSpacing
-      />
-      {props.button ? (
+      {props.includeIconAndSentence ? (
+        <SmallIconAndSentence
+          flushLeft
+          icon={<Bullet image={props.icon} />}
+          sentence={props.sentence}
+          largeHorizontalSpacing
+        />
+      ) : null}
+
+      {props.includeButton && props.button ? (
         <LinkButton to={props.button.to} hasArrows>
           {props.button.text}
         </LinkButton>
@@ -218,15 +298,7 @@ const Header = ({
             )}
 
             {bulletPoints ? (
-              <BulletPoints>
-                <Row>
-                  {bulletPoints
-                    .slice(0, 2)
-                    .map((point, i) => (
-                      <BulletPoint key={`header-bullet-${i}`} {...point} />
-                    ))}
-                </Row>
-              </BulletPoints>
+              <BulletPoints points={bulletPoints.slice(0, 2)} />
             ) : null}
           </Col>
         </Row>
