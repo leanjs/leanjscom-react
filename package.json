@@ -33,12 +33,14 @@
     "format": "prettier --trailing-comma --single-quote --no-semi '{src,functions,firebase}/**/*.{js,json,css,md}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "deploy-storybook": "storybook-to-ghpages",
     "predeploy": "npm run build",
     "build-and-serve": "npm run build && gatsby serve",
     "deploy": "firebase deploy --only hosting"
   },
   "devDependencies": {
     "@storybook/react": "^3.4.8",
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-plugin-styled-components": "^1.5.1",
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
