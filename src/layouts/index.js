@@ -1,25 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
 import favicon from './favicon.ico'
 
 import Footer from '../components/layout/Footer'
-import Grid from '../components/layout/Grid'
 import './index.css'
 import './reset.css'
 
 import { ThemeProvider } from 'styled-components'
-import { injectGlobal } from 'styled-components'
 
 const gridTheme = {
   flexboxgrid: {
     gutterWidth: 1,
     outerMargin: 0.5,
     container: {
-      sm: 46, // rem
-      md: 64, // rem
-      lg: 64, // rem
+      // In small and medium screens the container takes full with, so no size is specified
+      sm: null,
+      md: null,
+      // In large screens the container takes a fixed width of 64rm
+      lg: 64,
     },
   },
 }

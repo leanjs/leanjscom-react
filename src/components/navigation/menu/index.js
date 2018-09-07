@@ -30,7 +30,7 @@ const Menu = ({ width }) => {
   return (
     <MenuContainer>
       <LinkedLeanJSLogo />
-      {canIGuessTheScreenSizeUsingJS && width < MEDIUM ? (
+      {canIGuessTheScreenSizeUsingJS && width <= MEDIUM ? (
         <PhoneMenu />
       ) : (
         <DesktopMenu />
