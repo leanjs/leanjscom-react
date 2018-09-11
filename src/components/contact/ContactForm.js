@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import { db } from '../../firebase'
-import Ul, { Li } from './layout/Ul'
-import Checkbox from './form/Checkbox'
-import TextArea from './form/TextArea'
-import LabelledField from './form/LabelledField'
-import { P, Strong } from './text'
-import Link from './navigation/Link'
 import styled from 'styled-components'
-import Button from './buttons/Button'
+
+import { db } from '../../../firebase'
+import Ul, { Li } from '../layout/Ul'
+import Checkbox from '../form/Checkbox'
+import TextArea from '../form/TextArea'
+import LabelledField from '../form/LabelledField'
+import { P, Strong } from '../text'
+import Link from '../navigation/Link'
+import Button from '../buttons/Button'
 
 class ContactForm extends Component {
   constructor(props) {

@@ -20,33 +20,40 @@ const getPadding = props => {
   return `${y} ${right} ${y} ${left}`
 }
 
-const Ul = styled.ul`
-  ${props =>
-    props.unstyled
-      ? `
+const allowUnstyled = props =>
+  props.unstyled
+    ? `
     margin-left: 0;
     > li {
       list-style-type: none;
     }
-  `
-      : ''} ${props =>
-    props.inline
-      ? `
-          margin: 0;
-          padding: 0;
-          > li {
-            display: inline-block;
-            padding: ${getPadding(props)};
-            margin-bottom:0;
-            :first-child {
-              padding-left: 0;
-            }
-            :last-child {
-              padding-right: 0;
-            }
-          }
-        `
-      : ''};
+`
+    : ``
+
+const allowInline = props =>
+  props.inline
+    ? `
+  display:inline-block;
+  margin: 0;
+  padding: 0;
+  ${props.right ? `float:right;` : ``}
+  > li {
+    display: inline-block;
+    padding: ${getPadding(props)};
+    margin-bottom:0;
+    :first-child {
+      padding-left: 0;
+    }
+    :last-child {
+      padding-right: 0;
+    }
+  }
+`
+    : ``
+
+const Ul = styled.ul`
+  ${allowUnstyled};
+  ${allowInline};
 `
 
 const Li = styled.li`

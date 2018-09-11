@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import favicon from './favicon.ico'
 
 import Footer from '../components/layout/Footer'
+import ContactInstructions from '../components/contact/ContactInstructions'
 import './index.css'
 import './reset.css'
 
@@ -41,6 +42,7 @@ const Layout = ({ children, data }) => (
 
       {children()}
 
+      <ContactInstructions />
       <Footer />
     </React.Fragment>
   </ThemeProvider>

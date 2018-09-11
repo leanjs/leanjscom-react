@@ -19,6 +19,7 @@ export const SPACING_EXTRALARGE = '4rem'
 export const SPACING_XXLARGE = '5rem'
 export const SPACING_XXXLARGE = '7rem'
 
+export const LAYOUT_SPACING_SMALL = '8rem'
 export const LAYOUT_SPACING_MEDIUM = '9.7rem'
 export const LAYOUT_SPACING_LARGE = '38.9rem'
 
