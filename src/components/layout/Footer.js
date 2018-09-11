@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import ContactInstructions from '../contact/ContactInstructions'
 import Ul, { Li } from '../layout/Ul'
 
 import {
