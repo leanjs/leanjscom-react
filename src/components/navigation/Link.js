@@ -11,11 +11,11 @@ import {
 } from '../../config/styles'
 import { backgroundIcon } from '../../resources/styles'
 
-export const ANCHOR_STYLE = `
+export const ANCHOR_STYLE = props => `
     cursor: pointer;
     color: blue;
     text-decoration: underline;
-    font-size: ${FONT_SIZE_STANDARD};
+    font-size: ${props.inheritFontSize ? `inherit` : FONT_SIZE_STANDARD};
     font-weight: ${FONT_WEIGHT_MEDIUMBOLD};
     font-style: normal;
     line-height: ${LINE_HEIGHT_STANDARD};

@@ -12,6 +12,7 @@ import {
 } from '../../config/styles'
 
 import { SCREEN_MD_MAX, SCREEN_LG_MIN } from '../utils'
+import Link from '../navigation/Link'
 
 import PropTypes, { instanceOf } from 'prop-types'
 
@@ -42,8 +43,13 @@ const CookiesNotificationInner = styled.div`
 
 export const CookiesNotification = props => (
   <CookiesNotificationInner>
-    Using our site means you consent to our use of cookies. Find out more in our
-    cookie policy.
+    <div>
+      Using our site means you consent to our use of cookies. Find out more in
+      our{' '}
+      <Link inheritFontSize to="/terms-and-conditions">
+        cookie policy
+      </Link>.
+    </div>
     <button onClick={props.onNotificationDismissed}>⨯</button>
   </CookiesNotificationInner>
 )

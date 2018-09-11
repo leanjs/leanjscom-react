@@ -25,7 +25,7 @@ import {
   SCREEN_MD_MAX,
   SCREEN_LG_MIN,
 } from '../utils'
-import { ANCHOR_STYLE, ScrollingLink } from '../navigation/Link'
+import { ScrollingLink } from '../navigation/Link'
 import Menu from '../navigation/menu'
 import { HideSingleComponentUsingCss } from '../utils'
 import ConcentricCircles from '../decoration/ConcentricCircles'
