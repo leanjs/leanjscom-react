@@ -391,9 +391,6 @@ class HeaderContainer extends React.Component {
         handleDismissCookieNotification={this.handleDismissCookieNotification}
       />
     )
-    if (!this.state.shown) {
-      return null
-    }
   }
 }
 
