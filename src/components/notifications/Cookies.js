@@ -2,24 +2,42 @@ import React from 'react'
 import styled from 'styled-components'
 
 import {
-  FONT_SIZE_SMALL,
+  FONT_SIZE_EXTRASMALL,
+  FONT_SIZE_STANDARD,
+  FONT_SIZE_LARGE,
   SPACING_SMALL,
+  SPACING_STANDARD,
   LAYOUT_SPACING_LARGE,
   WHITE,
 } from '../../config/styles'
 
-import { withCookies, Cookies } from 'react-cookie'
+import { SCREEN_MD_MAX, SCREEN_LG_MIN } from '../utils'
 
 import PropTypes, { instanceOf } from 'prop-types'
 
 const CookiesNotificationInner = styled.div`
-  font-size: ${FONT_SIZE_SMALL};
-  border: 1px dotted white;
-  display: inline-block;
+  font-size: ${FONT_SIZE_EXTRASMALL};
+  line-height: ${FONT_SIZE_STANDARD};
+  border: 1px dashed white;
+  display: flex;
   padding: ${SPACING_SMALL};
-  padding-right: 3rem;
   color: ${WHITE};
   max-width: ${LAYOUT_SPACING_LARGE};
+
+  button {
+  	width: ${FONT_SIZE_LARGE};
+  	height: ${FONT_SIZE_LARGE};
+  	font-size: ${FONT_SIZE_LARGE};
+
+  	margin: 0 0 ${SPACING_SMALL} ${SPACING_SMALL}
+  	padding: 0;
+
+  	background: none;
+  	border: none;
+  	color: ${WHITE};
+
+  	cursor:pointer;
+  }
 `
 
 export const CookiesNotification = props => (
@@ -30,44 +48,22 @@ export const CookiesNotification = props => (
   </CookiesNotificationInner>
 )
 
-class CookiesNotificationWrapper extends React.Component {
-  static propTypes = {
-    cookies: instanceOf(Cookies).isRequired,
-    cookieName: PropTypes.string.isRequired,
+const CookiesNotificationWrapper = styled.div`
+  @media (max-width: ${SCREEN_MD_MAX}) {
+    display: flex;
+    justify-content: center;
+    margin-top: ${SPACING_SMALL};
   }
-
-  static defaultProps = {
-    cookieName: 'allow-cookies',
+  @media (min-width: ${SCREEN_LG_MIN}) {
+    float: right;
+    padding: ${SPACING_SMALL} ${SPACING_STANDARD} 0 0;
   }
+`
 
-  constructor(props) {
-    super(props)
+const CookiesNotificationWithWrapper = props => (
+  <CookiesNotificationWrapper>
+    <CookiesNotification {...props} />
+  </CookiesNotificationWrapper>
+)
 
-    const { cookies, cookieName } = props
-
-    this.state = {
-      shown: !cookies.get(cookieName),
-    }
-  }
-
-  handleDismissNotification() {
-    const { cookies, cookieName } = this.props
-
-    cookies.set(cookieName, 1, { path: '/' })
-    this.setState({ shown: false })
-  }
-
-  render() {
-    if (!this.state.shown) {
-      return null
-    }
-
-    return (
-      <CookiesNotification
-        onNotificationDismissed={this.handleDismissNotification}
-      />
-    )
-  }
-}
-
-export default withCookies(CookiesNotificationWrapper)
+export default CookiesNotificationWithWrapper
