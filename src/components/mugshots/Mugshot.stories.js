@@ -30,6 +30,6 @@ storiesOf('Mugshot', module)
       jobTitle="Engineering Practise Lead"
       company="ASOS.com"
       color={WHITE}
-      quote="I love LeanJS and all that she stands for"
+      quote="I love LeanJS"
     />
   ))
