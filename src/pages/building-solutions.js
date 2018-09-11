@@ -70,14 +70,10 @@ const BuildingSolutions = () => (
         <Row>
           <Col md={6}>
             <P>
-              We know how painful digital projects can be. But we also know that
-              we can learn as much from you as you can from us - it's all about
-              collaboration.{' '}
+              We understand how painful digital projects can be, which is why - for us - it's all about collaboration. {' '}
             </P>
             <P>
-              Our team have many years experience in digital and have developed{' '}
-              <Strong>a process that works alongside you</Strong> and your
-              business - from beginning to end.
+              We have years of experience in digital and have developed{' '} <Strong>a problem-solving process that works alongside you</Strong> from idea to launch.
             </P>
             <SmallIconAndSentences
               flushLeft
@@ -86,17 +82,17 @@ const BuildingSolutions = () => (
                 {
                   image: 'chat',
                   sentence:
-                    'Be unafraid to learn from everyone and believe in teaching what we know',
+                    'We’re always curious, hungry to learn and believe in sharing and teaching what we know',
                 },
                 {
                   image: 'gift',
                   sentence:
-                    "Explain all possibilities with you and collaborate to prioritise the best solutions - after-all, everyone's requirements are different!",
+                    "Finding and explaining all solutions with you is key, prioritising with you the ideal outcomes to fit your requirements, timelines and budgets",
                 },
                 {
                   image: 'calendar',
                   sentence:
-                    'Bi-weekly reviews throughout the design and build process',
+                    'We hold bi-weekly sprint reviews with you throughout the design and build process',
                 },
               ]}
             />
@@ -104,6 +100,11 @@ const BuildingSolutions = () => (
         </Row>
         <Row>
           <Col md={6}>
+            <LinkButton to="/case-studies" dark hasArrows>
+              Read our case studies
+            </LinkButton>
+          </Col>
+                    <Col md={6}>
             {/* <Mugshot
               image={MUGSHOT_ABINBEV}
               name="Mertens Dries"
@@ -112,11 +113,6 @@ const BuildingSolutions = () => (
               color={DARKGREY}
               quote="We never thought it possible! We only had a couple of months until Christmas but LeanJS sorted us out. They were highly professional yet friendly and very effective."
             /> */}
-          </Col>
-          <Col md={6}>
-            <LinkButton to="/case-studies" dark hasArrows>
-              Read our case studies
-            </LinkButton>
           </Col>
         </Row>
       </Grid>
@@ -168,13 +164,10 @@ const BuildingSolutions = () => (
             <H2>What happens next? How we support you…</H2>
 
             <P>
-              Building a website or app is scary - we get it. But sometimes the
-              real challenges start once the project is launched and live.
+              Building a website or app is scary, we get it! However, sometimes the real challenges start once the project is launched and live.
             </P>
             <P>
-              That’s why we promise that you wont be left in the lurch, we’ll be
-              there to help you as much as you require. We wont dump you in it
-              at the end of the project!
+              That's why we promise not to leave you in the lurch. We’ll be there to help you as much as you require. We wont dump you in it at the end of the project!
             </P>
 
             <SmallIconAndSentences
