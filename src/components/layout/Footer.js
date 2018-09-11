@@ -28,7 +28,7 @@ const Footer = () => (
   <FooterInner>
     <Ul inline>
       <Li>
-        <Link to="/terms-and-conditions">Privacy Policy</Link>
+        <Link to="/terms-and-conditions">Terms and conditions</Link>
       </Li>
     </Ul>
     <Ul inline right>
