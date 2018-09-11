@@ -23,7 +23,6 @@ const FooterInner = styled.footer`
 const Footer = () => (
   <FooterInner>
     <Ul inline>
-      <Li>Sitemap</Li>
       <Li>Privacy Policy</Li>
     </Ul>
     <Ul inline right>
