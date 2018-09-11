@@ -1,80 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link, { styleChildLinkColor, MailtoLink } from '../navigation/Link'
-import Grid, { Col, Row } from './Grid'
-import Section from './Section'
+
+import ContactInstructions from '../contact/ContactInstructions'
+import Ul, { Li } from '../layout/Ul'
 
 import {
-  LIGHTGREY,
-  MEDIUMGREY,
-  DARKGREY,
-  EXTRADARKGREY,
+  FONT_FAMILY,
   WHITE,
-  SPACING_MEDIUM,
+  SPACING_SMALL,
+  LAYOUT_SPACING_MEDIUM,
 } from '../../config/styles'
-import { SCREEN_XS_MAX } from '../utils'
-import ContactUsBullet from '../bullets/ContactUsBullet'
-import { H2, H3, P } from '../text'
-import ContactForm from '../ContactForm'
-import Ul, { Li } from './Ul'
 
-const LinkList = styled(Ul)`
-  padding-left: 0;
-  list-style: none;
-  margin-left: 0;
-  ${styleChildLinkColor(WHITE)};
+import { SCREEN_LG_MIN } from '../utils'
+
+const FooterInner = styled.footer`
+  padding: 0 ${SPACING_SMALL};
+  @media (min-width: ${SCREEN_LG_MIN}) {
+    padding: 0 ${LAYOUT_SPACING_MEDIUM};
+  }
 `
 
 const Footer = () => (
-  <Section dark>
-    <footer>
-      <Grid>
-        <Row>
-          <H2>
-            <a name="contact" />We'd love to chat
-          </H2>
-        </Row>
-
-        <Row>
-          <Col md={6}>
-            <P>Let's start a conversation right now! Here's how:</P>
-            <LinkList>
-              <Li>
-                <MailtoLink to="hello@leanjs.com">
-                  <ContactUsBullet image="email" />Email hello@leanjs.com
-                </MailtoLink>
-              </Li>
-              <Li>
-                <Link to="https://twitter.com/leanjscom">
-                  <ContactUsBullet image="twitter" />Tweet us @leanjscom
-                </Link>
-              </Li>
-              <Li>
-                <Link to="https://www.instagram.com/leanjscom/">
-                  <ContactUsBullet image="instagram" />Instagram us @leanjscom
-                </Link>
-              </Li>
-              <Li>
-                <Link to="https://goo.gl/maps/jsLZCb4Yi352">
-                  <ContactUsBullet image="office" />Visit us at: WeWork
-                  Moorgate, 1 Fore St Ave, London, EC2Y 9DT
-                </Link>
-              </Li>
-            </LinkList>
-            <P>
-              Want to speak to one of our team about a specific subject?{' '}
-              <Link to="/team-principles">Visit our team page</Link>
-            </P>
-          </Col>
-
-          <Col md={6}>
-            <H3>Or fill out our form :)</H3>
-            <ContactForm />
-          </Col>
-        </Row>
-      </Grid>
-    </footer>
-  </Section>
+  <FooterInner>
+    <Ul inline>
+      <Li>Sitemap</Li>
+      <Li>Privacy Policy</Li>
+    </Ul>
+    <Ul inline right>
+      <Li>© LeanJS 2008</Li>
+    </Ul>
+  </FooterInner>
 )
 
 export default Footer
