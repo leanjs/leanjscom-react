@@ -12,7 +12,7 @@ import {
   FONT_SIZE_EXTRALARGE,
   SPACING_STANDARD,
   LAYOUT_SPACING_MEDIUM,
-  LAYOUT_SPACING_LARGE,
+  LAYOUT_SPACING_EXTRALARGE,
   FONT_WEIGHT_EXTRABOLD,
 } from '../../config/styles'
 import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
@@ -37,7 +37,7 @@ const H1 = styled(BaseH1)`
 const HeaderSection = styled(Section)`
 
   background-color: ${EXTRADARKGREY};
-  min-height: ${LAYOUT_SPACING_LARGE};
+  min-height: ${LAYOUT_SPACING_EXTRALARGE};
   position: relative;
   z-index:2;
 

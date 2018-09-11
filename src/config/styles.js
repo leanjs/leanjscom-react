@@ -21,9 +21,11 @@ export const SPACING_XXXLARGE = '7rem'
 
 export const LAYOUT_SPACING_SMALL = '8rem'
 export const LAYOUT_SPACING_MEDIUM = '9.7rem'
-export const LAYOUT_SPACING_LARGE = '38.9rem'
+export const LAYOUT_SPACING_LARGE = '20rem'
+export const LAYOUT_SPACING_EXTRALARGE = '38.9rem'
 
-export const FONT_SIZE_SMALL = '0.7rem'
+export const FONT_SIZE_EXTRASMALL = '0.7rem'
+export const FONT_SIZE_SMALL = '0.9rem'
 export const FONT_SIZE_STANDARD = '1rem'
 export const FONT_SIZE_LOWERQUARTILE = '1.25rem'
 export const FONT_SIZE_MEDIUM = '1.5rem'
