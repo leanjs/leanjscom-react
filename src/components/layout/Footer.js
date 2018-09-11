@@ -13,6 +13,8 @@ import {
 
 import { SCREEN_LG_MIN } from '../utils'
 
+import Link from '../navigation/Link'
+
 const FooterInner = styled.footer`
   padding: 0 ${SPACING_SMALL};
   @media (min-width: ${SCREEN_LG_MIN}) {
@@ -20,13 +22,19 @@ const FooterInner = styled.footer`
   }
 `
 
+const CurrentYear = () => new Date().getFullYear()
+
 const Footer = () => (
   <FooterInner>
     <Ul inline>
-      <Li>Privacy Policy</Li>
+      <Li>
+        <Link to="/terms-and-conditions">Privacy Policy</Link>
+      </Li>
     </Ul>
     <Ul inline right>
-      <Li>© LeanJS 2008</Li>
+      <Li>
+        © LeanJS <CurrentYear />
+      </Li>
     </Ul>
   </FooterInner>
 )
