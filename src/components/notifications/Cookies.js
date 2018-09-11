@@ -29,7 +29,7 @@ const CookiesNotificationInner = styled.div`
   	height: ${FONT_SIZE_LARGE};
   	font-size: ${FONT_SIZE_LARGE};
 
-  	margin: 0 0 ${SPACING_SMALL} ${SPACING_SMALL}
+  	margin: 0
   	padding: 0;
 
   	background: none;
