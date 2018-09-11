@@ -355,7 +355,7 @@ Header.propTypes = {
   links: PropTypes.array,
 }
 
-const allowCookiesCookieName = 'allow-cookies'
+const cookieNotificationCookieName = 'cookie-notification-dismissed'
 
 class HeaderContainer extends React.Component {
   static propTypes = {
@@ -368,7 +368,7 @@ class HeaderContainer extends React.Component {
     const { cookies } = props
 
     this.state = {
-      showCookieNotification: !cookies.get(allowCookiesCookieName),
+      showCookieNotification: !cookies.get(cookieNotificationCookieName),
     }
   }
 
@@ -376,7 +376,7 @@ class HeaderContainer extends React.Component {
     const { cookies } = this.props
 
     const tenYearsInMs = 311040000000
-    cookies.set(allowCookiesCookieName, 1, {
+    cookies.set(cookieNotificationCookieName, 1, {
       path: '/',
       expires: new Date(Date.now() + tenYearsInMs),
     })
