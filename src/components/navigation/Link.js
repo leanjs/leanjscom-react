@@ -75,7 +75,9 @@ const Link = ({ to = '', children = '', ...rest }) => {
 }
 
 export const MailtoLink = props => (
-  <a href={`mailto:${props.to}`}>{props.children}</a>
+  <a href={`mailto:${props.to}`}>
+    {props.children ? props.children : props.to}
+  </a>
 )
 
 export const ScrollingLink = styled(props => {

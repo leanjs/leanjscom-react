@@ -50,6 +50,10 @@ export const H2Ref = styled(H2)`
   ${REF};
 `
 
+export const H2a = styled(H2)`
+  font-size: ${FONT_SIZE_MEDIUM};
+`
+
 export const H3 = styled.h3`
   ${FONT_FAMILY};
   font-weight: ${FONT_WEIGHT_MEDIUMBOLD};

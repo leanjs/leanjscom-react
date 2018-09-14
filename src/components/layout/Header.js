@@ -148,6 +148,11 @@ const SubTitleBackground = styled.div`
   }
 `
 
+const Intro = styled.div`
+  ${WHITE_TEXT};
+  padding: ${SPACING_STANDARD};
+`
+
 const Links = styled.div`
   ${TITLE_BACKGROUND};
   ${WHITE_TEXT};
@@ -271,6 +276,7 @@ const BulletPoint = props => {
 const Header = ({
   titleLines = [],
   subtitle,
+  intro,
   links = [],
   bulletPoints,
   ...props
@@ -318,6 +324,10 @@ const Header = ({
                 ''
               )}
             </Col>
+          </Row>
+
+          <Row>
+            <Col md={7}>{intro ? <Intro>{intro}</Intro> : ''}</Col>
           </Row>
         </Grid>
       </HeaderTop>
