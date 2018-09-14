@@ -27,7 +27,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prebuild": "npm run format",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma --single-quote --no-semi '{src,functions,firebase}/**/*.{js,json,css,md}'",
