@@ -11,7 +11,7 @@ export const CLIENTS_LOGOS =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/clients-logos.png?alt=media'
 
 export const TEAMWORK =
-  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/teamwork_makes_the_dream_work.jpg?alt=media'
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team_photography%2Fteamwork_makes_the_dream_work2.jpg?alt=media'
 
 // building solutions page
 
