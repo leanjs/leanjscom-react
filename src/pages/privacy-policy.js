@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { P, H2, H2a, H3, H4, H5, H5a } from '../components/text'
+import { P, H2a, H5a } from '../components/text'
 import Header from '../components/layout/Header'
 import Ul, { Li } from '../components/layout/Ul'
 import Section from '../components/layout/Section'
