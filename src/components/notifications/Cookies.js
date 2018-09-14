@@ -46,7 +46,7 @@ export const CookiesNotification = props => (
     <div>
       Using our site means you consent to our use of cookies. Find out more in
       our{' '}
-      <Link inheritFontSize to="/terms-and-conditions">
+      <Link inheritFontSize to="/privacy-policy">
         cookie policy
       </Link>.
     </div>
