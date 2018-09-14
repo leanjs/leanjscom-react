@@ -66,8 +66,11 @@ const Link = ({ to = '', children = '', ...rest }) => {
   } else if (!to) {
     return <BasicLink {...rest}>{children}</BasicLink>
   } else {
+    // The destination URLs need to have trailing slashes for the Gatsby prefetching to happen
+    const dest = to.slice(-1) === '/' ? to : to + '/'
+
     return (
-      <RouterLink {...rest} to={to}>
+      <RouterLink {...rest} to={dest}>
         {children}
       </RouterLink>
     )
