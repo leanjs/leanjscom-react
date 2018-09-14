@@ -25,11 +25,16 @@ const pageContentSections = [
     heading: 'Who is collecting my information?',
     name: 'who-is-collecting',
     content: (
-      <P>
-        Through our contact form, we will collect your name, phone number or
-        email address and details about what type of LeanJS service you’re
-        interested in.
-      </P>
+      <React.Fragment>
+        <P>
+          LeanJS is collecting the information mentioned in the previous
+          section.
+        </P>
+        <P>
+          For more information about LeanJS’s people, visit the{' '}
+          <Link to="/about-us">About Us</Link> page.
+        </P>
+      </React.Fragment>
     ),
   },
   {
