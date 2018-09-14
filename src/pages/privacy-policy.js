@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import { P, H2, H2a, H3, H4, H5 } from '../components/text'
 import Header from '../components/layout/Header'
@@ -6,6 +7,7 @@ import Ul, { Li } from '../components/layout/Ul'
 import Section from '../components/layout/Section'
 import Line from '../components/sections/Line'
 import Link, { ScrollingLink, MailtoLink } from '../components/navigation/Link'
+import { SPACING_STANDARD, SPACING_LARGE } from '../config/styles'
 
 const pageContentSections = [
   {
@@ -183,6 +185,10 @@ const pageContentSections = [
   },
 ]
 
+const PrivacyPolicyContents = styled.section`
+  padding-top: ${SPACING_LARGE};
+`
+
 const PrivacyPolicyPage = () => (
   <div>
     <Header
@@ -193,8 +199,8 @@ const PrivacyPolicyPage = () => (
       <H2a>What's on this page:</H2a>
 
       <Ul unstyled>
-        {pageContentSections.map(section => (
-          <Li>
+        {pageContentSections.map((section, i) => (
+          <Li key={`privacy-policy-index-${i}`}>
             <ScrollingLink to={`#${section.name}`}>
               {section.heading}
             </ScrollingLink>
@@ -202,12 +208,14 @@ const PrivacyPolicyPage = () => (
         ))}
       </Ul>
 
-      {pageContentSections.map(section => (
-        <React.Fragment>
-          <a name={`#${section.name}`} />
-          <Line heading={section.heading}>{section.content}</Line>
-        </React.Fragment>
-      ))}
+      <PrivacyPolicyContents>
+        {pageContentSections.map((section, i) => (
+          <React.Fragment key={`privacy-policy-content-${i}`}>
+            <a name={`#${section.name}`} />
+            <Line heading={section.heading}>{section.content}</Line>
+          </React.Fragment>
+        ))}
+      </PrivacyPolicyContents>
     </Section>
   </div>
 )
