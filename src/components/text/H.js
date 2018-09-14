@@ -6,6 +6,7 @@ import {
   FONT_SIZE_LARGE,
   FONT_SIZE_MEDIUM,
   FONT_SIZE_LOWERQUARTILE,
+  SPACING_SMALL,
   SPACING_MEDIUM,
   FONT_WEIGHT_STANDARD,
   FONT_WEIGHT_MEDIUMBOLD,
@@ -89,4 +90,8 @@ export const H5 = styled.h5`
 
 export const H5Ref = styled(H5)`
   ${REF};
+`
+
+export const H5a = styled(H5)`
+  margin-bottom: ${SPACING_SMALL};
 `

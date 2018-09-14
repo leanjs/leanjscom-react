@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { P, H2, H2a, H3, H4, H5 } from '../components/text'
+import { P, H2, H2a, H3, H4, H5, H5a } from '../components/text'
 import Header from '../components/layout/Header'
 import Ul, { Li } from '../components/layout/Ul'
 import Section from '../components/layout/Section'
@@ -90,7 +90,7 @@ const pageContentSections = [
         </P>
         <P>The key parties we may share information with will be:</P>
 
-        <H5>Our sub-brands</H5>
+        <H5a>Our sub-brands</H5a>
         <P>
           The LeanJS family of brands includes training companies such as{' '}
           <Link to="https://reactjs.academy/">ReactJS Academy</Link>. As the
@@ -100,7 +100,7 @@ const pageContentSections = [
           information with further third parties.
         </P>
 
-        <H5>Our hosting providers</H5>
+        <H5a>Our hosting providers</H5a>
         <P>
           All our information is stored on servers owned by{' '}
           <Link to="https://aws.amazon.com/">Amazon Web Services, Inc</Link> and
@@ -169,7 +169,7 @@ const pageContentSections = [
           the functionality of LeanJS.com.
         </P>
 
-        <H5>Google Analytics</H5>
+        <H5a>Google Analytics</H5a>
         <P>
           We use Google Analytics which employs cookies on LeanJS. These cookies
           transmits website data to Google Analytics servers in the United
