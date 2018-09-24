@@ -14,6 +14,7 @@ import {
   ALEX_RICARDO_WHITEBOARD,
   RICHARD_TEACHING,
   LUIS_ALEX_DOG,
+  HORACIO_TEACHING
 } from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
@@ -54,7 +55,7 @@ const BuildingSolutions = () => (
         {
           icon: 'diamond',
           sentence:
-            'Design + development process for quality results, on time and on budget',
+            'Rapid, quality design and development - on time, on budget',
         },
       ]}
     />
@@ -97,6 +98,11 @@ const BuildingSolutions = () => (
               ]}
             />
           </Col>
+          <Col md={1}>
+          </Col>
+          <Col md={5}>
+            <Image src={ALEX_RICARDO_WHITEBOARD} />
+          </Col>
         </Row>
         <Row>
           <Col md={6}>
@@ -121,6 +127,11 @@ const BuildingSolutions = () => (
     <Section dark>
       <Grid>
         <Row>
+          <Col md={5}>
+            <Image src={HORACIO_TEACHING} />
+          </Col>
+          <Col md={1}>
+          </Col>
           <Col md={6}>
             <a name="projectHandovers" />
             <H2>Slick handovers with expert tech training</H2>
@@ -141,13 +152,13 @@ const BuildingSolutions = () => (
               <Li>Lean/Agile processes</Li>
             </Ul>
           </Col>
-          <Col md={6}>
-            <Image src={RICHARD_TEACHING} />
-          </Col>
+
         </Row>
 
         <Row>
-          <Col>
+        <Col md={6}>
+        </Col>
+          <Col md={6}>
             <LinkButton to="/training" hasArrows>
               Find out more about our training
             </LinkButton>
@@ -159,10 +170,13 @@ const BuildingSolutions = () => (
     <Section>
       <Grid>
         <Row>
-          <Col md={6}>
+          <Col md={12}>
             <a name="support" />
             <H2>What happens next? How we support you…</H2>
-
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <P>
               Building a website or app is scary, we get it! However, sometimes the real challenges start once the project is launched and live.
             </P>
@@ -191,8 +205,9 @@ const BuildingSolutions = () => (
               ]}
             />
           </Col>
-
-          <Col md={6}>
+          <Col md={1}>
+          </Col>
+          <Col md={5}>
             <Image src={LUIS_ALEX_DOG} />
           </Col>
         </Row>

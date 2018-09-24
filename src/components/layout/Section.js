@@ -14,6 +14,7 @@ import {
   SPACING_SMALL,
   SPACING_STANDARD,
   SPACING_MEDIUM,
+  SPACING_LARGE,
   SPACING_XXLARGE,
   LAYOUT_SPACING_SMALL,
   LAYOUT_SPACING_MEDIUM,
@@ -29,7 +30,7 @@ const Section = styled.section`
   ${FONT_FAMILY}
   padding-top: ${props => (props.top ? '0' : SPACING_XXLARGE)};
   padding-bottom: ${props =>
-    props.dark && props.lastOnPage ? 0 : SPACING_XXLARGE};
+    props.dark && props.lastOnPage ? 0 : SPACING_LARGE};
   @media (max-width:${SCREEN_XS_MAX}) {
   	padding-top:${SPACING_MEDIUM};
     padding-bottom:${SPACING_MEDIUM};

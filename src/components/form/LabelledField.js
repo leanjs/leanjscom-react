@@ -11,7 +11,7 @@ const LabelledFieldInner = styled.div`
 `
 
 const LabelContainer = styled.div`
-  padding-bottom: ${SPACING_SMALL};
+  padding-bottom: ${SPACING_STANDARD};
 `
 
 const Field = props => {

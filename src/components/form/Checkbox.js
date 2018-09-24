@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { WHITE, SPACING_SMALL } from '../../config/styles'
 
-const defaultSize = 3
+const defaultSize = 2
 
 const StyledCheckbox = styled.div`
   > div {
@@ -15,7 +15,7 @@ const StyledCheckbox = styled.div`
   .displayCheckboxOuter,
   .labelWrapper {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
   }
 
   .labelWrapper {
@@ -30,7 +30,7 @@ const StyledCheckbox = styled.div`
     height: ${props => (props.size ? props.size : defaultSize)}em;
     width: ${props => (props.size ? props.size : defaultSize)}em;
 
-    padding: 5%;
+    padding: 15%;
     box-sizing: border-box;
 
     .displayCheckboxInner {

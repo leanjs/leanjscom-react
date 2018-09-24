@@ -17,10 +17,11 @@ import {
   WILL,
   LUIS,
   PAUL,
+  ALEX_RICH_LAPTOP,
 } from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, H3, P } from '../components/text'
+import { H2, H3, H3a, P, Strong } from '../components/text'
 import TeamBio from '../components/mugshots/TeamBio'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
@@ -68,7 +69,7 @@ const Team = () => (
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col sm={7}>
             <P>
               Our team are a boutique team of specialists, coming from various
               backgrounds, life experiences and countries but all have a shared
@@ -77,9 +78,9 @@ const Team = () => (
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col sm={12}>
             <Line>
-              <H3>Our core values</H3>
+              <H3a>Our core values</H3a>
               <ValueGrid>
                 <NoVerticalMarginRow>
                   <SmallIconAndSentences
@@ -92,10 +93,10 @@ const Team = () => (
                         sentence: (
                           <React.Fragment>
                             <P>
-                              Be unafraid to learn from everyone and believe in
-                              teaching what we know
+                              <Strong>Be unafraid to learn from everyone and believe in
+                              teaching what we know</Strong>
                             </P>
-                            <H3>Supporting principles</H3>
+                            <P>Supporting principles:</P>
                             <Ul>
                               <Li>Keep searching, keep learning</Li>
                               <Li>Share - because sharing is caring</Li>
@@ -110,10 +111,10 @@ const Team = () => (
                         sentence: (
                           <React.Fragment>
                             <P>
-                              Always aim to treat others how we would want to be
-                              treated
+                              <Strong>Always aim to treat others how we would want to be
+                              treated</Strong>
                             </P>
-                            <H3>Supporting principles</H3>
+                            <P>Supporting principles:</P>
                             <Ul>
                               <Li>Treat others how you want to be treated</Li>
                               <Li>Transparently true to our methodology</Li>
@@ -126,10 +127,10 @@ const Team = () => (
                         sentence: (
                           <React.Fragment>
                             <P>
-                              Ensure what we do is meaningful and always
-                              people-centred
+                             <Strong>Ensure what we do is meaningful and always
+                              people-centred</Strong>
                             </P>
-                            <H3>Supporting principles</H3>
+                            <P>Supporting principles:</P>
                             <Ul>
                               <Li>People-centred products - always</Li>
                               <Li>Be unafraid</Li>
@@ -157,40 +158,35 @@ const Team = () => (
           <Col>
             <a name="notForProfitDiscounts" />
             <Line>
-              Not-for-proft partnerships and discounts
+              <H3a>Not-for-proft partnerships and discounts</H3a>
               <ValueGrid>
                 <Row>
-                  <ValueCol sm={7}>
-                    Do you work for a not-for-profit organisation and share our
-                    values? Then we’d love to hear from you!
-                  </ValueCol>
-                </Row>
+                  <Col sm={6}>
+                    <P>Do you work for a not-for-profit organisation and share our
+                    values? Then we’d love to hear from you!</P>
 
-                <Row>
-                  <ValueCol sm={7}>
-                    We’d love to partner with you and your team to help change
-                    the world for the better.
-                  </ValueCol>
-                </Row>
+                    <P>We’d love to partner with you and your team to help change
+                    the world for the better.</P>
 
-                <Row>
-                  <ValueCol sm={7}>
-                    To that end, we are always open to offering discounts on our
+                    <P>To that end, we are always open to offering discounts on our
                     training, design and development services - depending on the
-                    project.
-                  </ValueCol>
-                </Row>
-              </ValueGrid>
-              <Row>
-                <ValueCol>
+                    project.</P>
                   <LinkButton scroll hasArrows to="contact">
-                    Contact us and let's work together!
+                    Contact us now
                   </LinkButton>
                   <LinkButton hasArrows to="/case-studies">
                     Case studies
                   </LinkButton>
-                </ValueCol>
-              </Row>
+                  </Col>
+                  <Col sm={1}>
+                  </Col>
+                  <Col sm={4}>
+                    <P>
+                      <img src={ALEX_RICH_LAPTOP} />
+                    </P>
+                  </Col>
+                </Row>
+              </ValueGrid>
             </Line>
           </Col>
         </Row>

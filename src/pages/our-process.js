@@ -18,7 +18,7 @@ import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
 import Indented from '../components/sections/Indented'
-import { RICHARD_TEACHING, ITERATION_DIAGRAM } from '../resources/images'
+import { RICHARD_TEACHING, ITERATION_DIAGRAM, ALEX_TEACHING2, PAUL_POSTITS } from '../resources/images'
 
 const HowItWorks = props =>
   props.sections.map((section, j) => (
@@ -81,7 +81,7 @@ const OurProcess = () => (
         {
           icon: 'qa',
           sentence:
-            'A process that ensures quality is assured and creates trusted, scalable digital products',
+            'A process ensuring user-tested, quality digital solutions',
         },
         {
           icon: 'quick',
@@ -93,9 +93,11 @@ const OurProcess = () => (
     <Section>
       <Grid>
         <Row>
-          <Col md={8}>
+          <Col md={12}>
             <a name="whatIsLean" />
             <H2>Working lean, reducing waste - rapidly</H2>
+          </Col>
+          <Col md={6}>
             <P>
               You’re probably thinking, what IS Lean? For that matter, you
               may’ve heard of Agile too and thought the same… So, what is all
@@ -112,16 +114,27 @@ const OurProcess = () => (
             </P>
             <P>
               <LinkButton to="/training" hasArrows>
-                Looking for Lean / Agile training? We can do that
+                Lean / Agile training? We can do that
               </LinkButton>
             </P>
           </Col>
+          <Col md={1}>
+          </Col>
+          <Col md={5}>
+            <Image src={PAUL_POSTITS} />
+          </Col>
         </Row>
         <Row>
-          <Col md={6}>
-            <a name="ourLeanProcess" />
+        </Row>
+        <Row>
+          <Col md={12}>
             <H2>How this works at LeanJS</H2>
+            <a name="ourLeanProcess" />
+          </Col>
+          <Col md={5}>
             <Image src={ITERATION_DIAGRAM} />
+          </Col>
+          <Col md={1}>
           </Col>
           <Col md={6}>
             <HowItWorks
@@ -266,7 +279,7 @@ const OurProcess = () => (
     <Section dark lastOnPage>
       <Grid>
         <Row>
-          <Col md={8}>
+          <Col md={12}>
             <a name="applyingLeanToTraining" />
             <H2>Applying our process to training as well as products</H2>
             <P>
@@ -276,10 +289,12 @@ const OurProcess = () => (
           </Col>
         </Row>
         <Row>
-          <Col md={6}>
+          <Col md={5}>
             <P>
-              <img src={RICHARD_TEACHING} />
+              <img src={ALEX_TEACHING2} />
             </P>
+          </Col>
+          <Col md={1}>
           </Col>
           <Col md={6}>
             <Line>

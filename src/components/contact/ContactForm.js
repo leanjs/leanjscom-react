@@ -118,11 +118,6 @@ class ContactForm extends Component {
               checked: interestedInTraining,
               label: 'Training',
             },
-            {
-              name: 'interestedInBothDigitalSolutionsAndTraining',
-              checked: interestedInBothDigitalSolutionsAndTraining,
-              label: 'Both!',
-            },
           ]}
           onChange={this.handleCheckboxChanged}
         />
@@ -141,6 +136,7 @@ class ContactForm extends Component {
           id="contact-form-allow-marketing"
           label={
             <label htmlFor="contact-form-allow-marketing">
+              Sign up for our newsletter!
               We do not spam - ever. But, if you're up for it, we'd love to tell
               you about any cool new services or offers that we've got going on.
               Interested? Tick the box! Not sure, here's our{' '}

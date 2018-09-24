@@ -4,14 +4,29 @@ export const LONDON_BOOTCAMP =
 export const ALEX_TEACHING =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/companyPitch.png?alt=media'
 
+export const ALEX_TEACHING2 =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/alex_teaching2.jpg?alt=media'
+
+export const PAUL_TEACHING =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/paul_teaching.jpg?alt=media'
+
+export const PAUL_POSTITS =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/paul_postits.jpg?alt=media'
+
+export const HORACIO_TEACHING =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/horacio_teaching.jpg?alt=media'
+
 export const RICHARD_TEACHING =
-  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/richard-teaching.png?alt=media'
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/richteaching2.jpg?alt=media'
 
 export const CLIENTS_LOGOS =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/clients-logos.png?alt=media'
 
 export const TEAMWORK =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team_photography%2Fteamwork_makes_the_dream_work2.jpg?alt=media'
+
+export const ALEX_RICH_LAPTOP =
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/alex_rich_problem.jpg?alt=media'
 
 // building solutions page
 
@@ -53,22 +68,22 @@ export const CASE_STUDY_ABINBEV =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FAB%26bev_mockup.jpg?alt=media'
 
 export const MUGSHOT_FINGOPAY =
-  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2Fsthaler.jpg?alt=media'
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2Ffingopay_mockup.jpg?alt=media'
 
 export const CASE_STUDY_FINGOPAY =
-  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FcaseStudy_fingopay%20(1).jpg?alt=media'
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2Ffingopay_mockup.jpg?alt=media'
 
 export const MUGSHOT_BU =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FbostonUniversity.jpg?alt=media'
 
 export const CASE_STUDY_BU =
-  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FAGNI_mockup.jpg?alt=media'
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FAGNI_mockup2.jpg?alt=media'
 
 export const MUGSHOT_ASOS =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2Fasos.jpg?alt=media'
 
 export const CASE_STUDY_ASOS =
-  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FcaseStudy_Asos%20(1).jpg?alt=media'
+  'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FcaseStudies_ASOS.jpg?alt=media'
 
 export const CASE_STUDY_REACTJSACADEMY =
   'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/casestudies%2FReact_mockup.jpg?alt=media'

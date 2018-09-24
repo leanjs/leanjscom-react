@@ -42,12 +42,12 @@ const IndexPage = () => (
   <React.Fragment>
     <Header
       titleLines={['LeanJS']}
-      subtitle="We can help you evolve your tech. Quick snap!"
+      subtitle="Our team can help you evolve your tech. Quick snap!"
       bulletPoints={[
         {
           icon: 'development',
           sentence:
-            'We build badass and scalable websites, apps & digital solutions…',
+            'We build scalable websites, apps & digital solutions…',
           button: {
             to: '/building-solutions',
             text: 'Building products',
@@ -67,9 +67,9 @@ const IndexPage = () => (
     <Section>
       <Grid>
         <Row>
-          <Col md={8}>
+          <Col md={12}>
             <H2>
-              We grab your business needs, align them with users’ intent and
+              We take your business needs, align them with users’ intent and
               cook up solutions in a matter of weeks. Boom.
             </H2>
           </Col>
@@ -125,11 +125,12 @@ const IndexPage = () => (
     <Section dark>
       <Grid>
         <Row>
-          <Col md={8}>
+          <Col md={12}>
             <H2>We care about you and your people. We value good ethics.</H2>
+          </Col>
+          <Col md={7}>
             <P>
-              Whoa, that sounds heavy… Thing is,{' '}
-              <Strong>we have lofty ambitions and want to do ‘good’</Strong> in
+              Whoa, that sounds heavy… Thing is, we have lofty ambitions and want to do ‘good’ in
               the world through our work and actions.
             </P>
           </Col>
@@ -171,7 +172,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <Instagram />
+            <Instagram/>
           </Col>
         </Row>
       </Grid>
@@ -181,6 +182,8 @@ const IndexPage = () => (
       <Grid>
         <Col>
           <H2>What we do, how we do it</H2>
+          </Col>
+        <Col md={6}>
           <P>
             We work exclusivity in the iterative, incremental ‘Lean’ way (thus
             the name!). This ensures:
@@ -198,21 +201,25 @@ const IndexPage = () => (
               {
                 image: 'costeffective',
                 sentence:
-                  'Cost effective, tested solutions that you can build upon',
+                  'Cost effective solutions you can build upon',
               },
               {
                 image: 'quick',
-                sentence: 'Very quick turnarounds',
+                sentence: 'Tested products with very quick turnarounds',
               },
             ]}
           />
         </Row>
         <Row>
-          <Col md={8}>
+          <Col md={12}>
             <H3a>Here's how:</H3a>
+          </Col>
+          <Col md={6}>
             <Image src={ITERATION_DIAGRAM} />
           </Col>
-          <Col md={4}>
+          <Col md={1}>
+          </Col>
+          <Col md={5}>
             <IterationStages
               items={[
                 {

@@ -34,7 +34,7 @@ const ContactInstructions = () => (
         </H2>
       </Row>
       <Row>
-        <Col md={6}>
+        <Col md={5}>
           <P>Let's start a conversation right now! Here's how:</P>
           <LinkList>
             <Li>
@@ -53,9 +53,8 @@ const ContactInstructions = () => (
               </Link>
             </Li>
             <Li>
-              <Link to="https://goo.gl/maps/jsLZCb4Yi352">
-                <ContactUsBullet image="office" />Visit us at: WeWork Moorgate,
-                1 Fore St Ave, London, EC2Y 9DT
+                <ContactUsBullet image="office" />Visit us at WeWork Moorgate,
+                1 Fore St Ave, London, EC2Y 9DT - <Link to="https://goo.gl/maps/jsLZCb4Yi352">See on map
               </Link>
             </Li>
           </LinkList>
@@ -64,7 +63,9 @@ const ContactInstructions = () => (
             <Link to="/team-principles">Visit our team page</Link>
           </P>
         </Col>
-        <Col md={6}>
+        <Col md={1}>
+        </Col>
+        <Col md={5}>
           <H3>Or fill out our form :)</H3>
           <ContactForm />
         </Col>
