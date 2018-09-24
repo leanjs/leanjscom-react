@@ -128,6 +128,9 @@ const Links = styled.div`
   ${WHITE_TEXT};
   padding: ${SPACING_STANDARD};
 `
+const LinksDescription = styled.span`
+  padding-right: ${SPACING_STANDARD};
+`
 
 const BulletPointsWrapper = styled.div`
   ${WHITE_TEXT};
@@ -137,7 +140,7 @@ const BulletPointsRow = ({
   points,
   includeButton = true,
   includeIconAndSentence = true,
-  namespace = '',
+  namespace = 'bulletpoints',
 }) => (
   <Row>
     {points.map((point, i) => (
@@ -151,74 +154,6 @@ const BulletPointsRow = ({
   </Row>
 )
 
-const BulletPointsRows = ({
-  hideXs = false,
-  hideSm = false,
-  hideMd = false,
-  hideLg = false,
-  rows,
-}) => {
-  const namespace = `${hideXs ? `xs-` : ``}${hideSm ? `sm-` : ``}${
-    hideMd ? `md-` : ``
-  }${hideLg ? `lg-` : ``}`
-  return (
-    <HideSingleComponentUsingCss
-      xs={hideXs}
-      sm={hideSm}
-      md={hideMd}
-      lg={hideLg}
-    >
-      <div>
-        {rows.map((row, i) => {
-          const includeButton =
-            row.includeButton || typeof row.includeButton === 'undefined'
-          const includeIconAndSentence =
-            row.includeIconAndSentence ||
-            typeof row.includeIconAndSentence === 'undefined'
-          const rowNamespace = `${namespace}-${i}`
-          return (
-            <BulletPointsRow
-              key={`${namespace}-${i}`}
-              includeButton={includeButton}
-              includeIconAndSentence={includeIconAndSentence}
-              namespace={rowNamespace}
-              points={row.points}
-            />
-          )
-        })}
-      </div>
-    </HideSingleComponentUsingCss>
-  )
-}
-
-const BulletPoints = ({ points }) => (
-  <BulletPointsWrapper>
-    <BulletPointsRows
-      hideMd
-      hideLg
-      rows={[
-        {
-          namespace: '',
-          points,
-        },
-      ]}
-    />
-    <BulletPointsRows
-      hideXs
-      hideSm
-      rows={[
-        {
-          includeButton: false,
-          points,
-        },
-        {
-          includeIconAndSentence: false,
-          points,
-        },
-      ]}
-    />
-  </BulletPointsWrapper>
-)
 
 const BulletPoint = props => {
   const Bullet = props.bullet ? props.bullet : ActivityBullet
@@ -295,7 +230,7 @@ const Header = ({
         <Row>
           <Col>
             {links && links.length ? (
-              <Links>
+              <Links><LinksDescription>On this page:</LinksDescription> 
                 <Ul inline flushLeft>
                   {links.map((link, i) => (
                     <Li key={i}>
@@ -308,8 +243,15 @@ const Header = ({
               ''
             )}
 
+          {/* TODO:WV:20190924:Remove pointless components and props - this was overengineered and is now simpler but needs more work*/}
             {bulletPoints ? (
-              <BulletPoints points={bulletPoints.slice(0, 2)} />
+
+              <BulletPointsWrapper><BulletPointsRow
+                includeButton={true}
+                includeIconAndSentence={true}
+                points={bulletPoints}
+              /></BulletPointsWrapper>
+
             ) : null}
           </Col>
         </Row>

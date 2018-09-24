@@ -172,7 +172,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <Instagram/>
+            <Instagram photosPerRow={6}/>
           </Col>
         </Row>
       </Grid>
