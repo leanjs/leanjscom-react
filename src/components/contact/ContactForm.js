@@ -9,6 +9,7 @@ import LabelledField from '../form/LabelledField'
 import { P, Strong } from '../text'
 import Link from '../navigation/Link'
 import Button from '../buttons/Button'
+import Indented from '../sections/Indented'
 
 class ContactForm extends Component {
   constructor(props) {
@@ -118,11 +119,6 @@ class ContactForm extends Component {
               checked: interestedInTraining,
               label: 'Training',
             },
-            {
-              name: 'interestedInBothDigitalSolutionsAndTraining',
-              checked: interestedInBothDigitalSolutionsAndTraining,
-              label: 'Both!',
-            },
           ]}
           onChange={this.handleCheckboxChanged}
         />
@@ -141,16 +137,17 @@ class ContactForm extends Component {
           id="contact-form-allow-marketing"
           label={
             <label htmlFor="contact-form-allow-marketing">
-              We do not spam - ever. But, if you're up for it, we'd love to tell
-              you about any cool new services or offers that we've got going on.
-              Interested? Tick the box! Not sure, here's our{' '}
-              <Link>Privacy Policy</Link>
+              Sign up for our newsletter!
             </label>
           }
           checked={allowMarketing}
           onChange={this.handleCheckboxChanged('allowMarketing')}
         />
-
+        <P>
+              We do not spam - ever. But, if you're up for it, we'd love to tell
+              you about any cool new services or offers that we've got going on.
+              Interested? Tick the box! Not sure, here's our{' '}
+              <Link>Privacy Policy</Link></P>
         <Button disabled={isInvalid} type="submit">
           Send
         </Button>

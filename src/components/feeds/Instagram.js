@@ -11,10 +11,6 @@ const photos = [
   },
   {
     url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FRichTeaching.jpg?alt=media',
-  },
-  {
-    url:
       'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FPaulWhiteboardCrazy.jpg?alt=media',
   },
   {
@@ -28,6 +24,10 @@ const photos = [
   {
     url:
       'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FAlexRichThinking.jpg?alt=media',
+  },
+  {
+    url:
+      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FPaulTesting.jpg?alt=media',
   },
   {
     url:
@@ -47,10 +47,6 @@ const photos = [
   },
   {
     url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FPaulTesting.jpg?alt=media',
-  },
-  {
-    url:
       'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FRicardoAlex.jpg?alt=media',
   },
   {
@@ -64,7 +60,7 @@ const photos = [
 ]
 
 const InstagramInner = styled(Grid)`
-  background: white;
+  background: none;
   width: 100%;
 `
 const InstagramRow = styled(Row)`

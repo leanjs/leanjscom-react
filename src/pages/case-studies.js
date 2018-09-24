@@ -204,6 +204,7 @@ const CaseStudyExpoBullets = ({ content }) => (
       <Li key={`case-study-expo-${i}`}>
         <SmallIconAndSentence
           flushLeft
+          verticalCenter
           icon={
             <Circle size={90 / 18} bg={LIGHTGREY}>
               {item.point}
@@ -236,24 +237,26 @@ const CaseStudyInner = props => (
       </Col>
     </Row>
 
+    {/*
     <Row>
       <Col md={12}>
-        {/* <Mugshot
+        <Mugshot
           {...props.quote.author}
           quote={props.quote.text}
           color={DARKGREY}
-        /> */}
+        />
       </Col>
     </Row>
-    <Row>
-      {props.button ? (
-        <Col md={6}>
-          <LinkButton external={props.button.external} to={props.button.to}>
-            {props.button.text}
-          </LinkButton>
-        </Col>
-      ) : null}
-    </Row>
+    */}
+
+    {props.button ? (
+      <Row><Col md={6}>
+        <LinkButton external={props.button.external} to={props.button.to}>
+          {props.button.text}
+        </LinkButton>
+      </Col></Row>
+    ) : null}
+
   </Grid>
 )
 

@@ -21,6 +21,7 @@ import {
   LONDON_BOOTCAMP,
   ALEX_TEACHING,
   CLIENTS_LOGOS,
+  RICHARD_TEACHING,
 } from '../resources/images'
 import Link from '../components/navigation/Link'
 import LinkButton from '../components/buttons/LinkButton'
@@ -41,7 +42,7 @@ import {
   Tesco,
   Telegraph,
 } from '../components/logos'
-import { H2, H3, P, Blockquote } from '../components/text'
+import { H2, H3, H3a, P, Blockquote } from '../components/text'
 import Topic from '../components/labels/Topic'
 import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
@@ -61,8 +62,11 @@ const BootcampCol = styled(Col)`
 
 const CompanyList = styled(Ul)`
   overflow: hidden;
+  border:none;
+  padding: 0;
   li {
-    margin-left: 10px;
+    margin: 0 1rem 1.5rem 0;
+
   }
   @media (max-width: ${SCREEN_XS_MAX}) {
     li {
@@ -159,9 +163,10 @@ const TrainingPage = () => (
     <Section dark>
       <Grid>
         <Row>
-          <Col md={6}>
+          <Col md={12}>
             <H2>What we love to teach</H2>
-
+          </Col>
+          <Col md={6}>
             <P>
               At LeanJS we practise what we preach! All our trainers code and
               design real world products with the methods we teach.
@@ -173,27 +178,22 @@ const TrainingPage = () => (
           </Col>
           <Col md={6}>
             <Line>
-              <H3>
-                ReactJS ecosystem <Topic>Code</Topic>
-              </H3>
+              <H3a>
+                ReactJS, Redux and GraphQL <Topic>Code</Topic>
+              </H3a>
               <P>
                 Created in 2016, our{' '}
                 <Link external to="https://reactjs.academy/">
                   ReactJS Academy
                 </Link>{' '}
-                was the first in Europe.
-              </P>
-              <P>
-                <LinkButton external to="https://reactjs.academy/">
-                  Visit ReactJS Academy website
-                </LinkButton>
+                was the first teaching the React ecosystem in Europe.
               </P>
             </Line>
 
             <Line>
-              <H3>
+              <H3a>
                 Product and UX design <Topic>Design</Topic>
-              </H3>
+              </H3a>
               <P>
                 Learn how to develop an idea into a working, tested design with
                 design thinking.
@@ -201,9 +201,9 @@ const TrainingPage = () => (
             </Line>
 
             <Line>
-              <H3>
-                Lean / Agile <Topic>Process</Topic>
-              </H3>
+              <H3a>
+                Lean and Agile methodologies<Topic>Process</Topic>
+              </H3a>
               <P>
                 Let us guide you to change your processes to work quicker and
                 more efficiently
@@ -212,7 +212,7 @@ const TrainingPage = () => (
 
             <P>
               <LinkButton scroll to="contact" hasArrows>
-                What's your tech training needs? Contact us now!
+                What's your training needs? Contact us!
               </LinkButton>
             </P>
           </Col>
@@ -223,9 +223,12 @@ const TrainingPage = () => (
     <Section>
       <Grid>
         <Row>
-          <Col md={6}>
+          <Col md={12}>
             <H2>Corporate training - tailored for your team's needs</H2>
-
+            </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <P>
               We love diving into an existing team and teaching the latest tech
               tools and processes.
@@ -237,7 +240,7 @@ const TrainingPage = () => (
               <Li>
                 <SmallIconAndSentence
                   icon={<BenefitBullet image="team" />}
-                  sentence="Immersive training for groups of max 20 participants"
+                  sentence="Immersive training for groups of a maximum 20 participants"
                   flushLeft
                 />
               </Li>
@@ -250,8 +253,10 @@ const TrainingPage = () => (
               </Li>
             </Ul>
           </Col>
-          <Col md={6}>
-            <img src={ALEX_TEACHING} />
+          <Col md={1}>
+          </Col>
+          <Col md={5}>
+            <img src={RICHARD_TEACHING} />
           </Col>
         </Row>
       </Grid>
@@ -260,8 +265,12 @@ const TrainingPage = () => (
     <Section dark>
       <Grid>
         <Row>
-          <Col md={6}>
+          <Col md={12}>
             <H2>Our super passionate trainers &amp; coach community</H2>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <P>At LeanJS, we have an overarching aim to help people.</P>
             <P>
               We have a core team of trainers with specialisms in development,
