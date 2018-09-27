@@ -11,7 +11,7 @@ import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSen
 import { WHITE, DARKGREY, LIGHTGREY, SPACING_MEDIUM } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, P, MVPLink } from '../components/text'
+import { H2, H3a, P, MVPLink } from '../components/text'
 import Hr from '../components/decoration/Hr'
 import HighlightedItem from '../components/decoration/HighlightedItem'
 import Mugshot from '../components/mugshots/Mugshot'
@@ -24,7 +24,7 @@ const HowItWorks = props =>
   props.sections.map((section, j) => (
     <React.Fragment key={`howitworks-${j}`}>
       <Line>
-        {section.heading}
+        <H3a>{section.heading}</H3a>
         {section.points.map((point, i) => (
           <SmallIconAndSentence
             icon={<BenefitBullet image={point.icon} />}
@@ -113,9 +113,9 @@ const OurProcess = () => (
               would you?!
             </P>
             <P>
-              <LinkButton to="/training" hasArrows>
-                Lean / Agile training? We can do that
-              </LinkButton>
+            <LinkButton to="/case-studies" dark hasArrows>
+              Read our case studies
+            </LinkButton>
             </P>
           </Col>
           <Col md={1}>
@@ -131,6 +131,7 @@ const OurProcess = () => (
             <H2>How this works at LeanJS</H2>
             <a name="ourLeanProcess" />
           </Col>
+          <Row></Row>
           <Col md={5}>
             <Image src={ITERATION_DIAGRAM} />
           </Col>
@@ -212,14 +213,15 @@ const OurProcess = () => (
                     },
                   ],
                   button: {
-                    text: 'Read our case studies',
-                    to: '/case-studies',
+                    text: 'Lean / Agile training? We can do that',
+                    to: '/training',
                   },
                 },
               ]}
             />
           </Col>
         </Row>
+
         <Row>
           <Col md={1} />
           <Col md={10}>
@@ -239,7 +241,7 @@ const OurProcess = () => (
                   </P>
                   <P>
                     <LinkButton to="/case-studies" hasArrows>
-                      Case studies
+                      Read our case studies
                     </LinkButton>
                   </P>
                 </FAQ>
@@ -264,7 +266,7 @@ const OurProcess = () => (
                   </P>
                   <P>
                     <LinkButton to="/building-solutions" hasArrows>
-                      Learn more about our design services
+                      Building solutions with you
                     </LinkButton>
                   </P>
                 </FAQ>
@@ -298,7 +300,7 @@ const OurProcess = () => (
           </Col>
           <Col md={6}>
             <Line>
-              Learn
+              <H3a>Learn</H3a>
               <P>
                 Trainers are builders, searching for and implementing the latest
                 methods and tech. Both in personal and client projects. We’re
@@ -307,7 +309,7 @@ const OurProcess = () => (
             </Line>
 
             <Line>
-              Build
+              <H3a>Build</H3a>
               <P>
                 We create and add to our curriculum when research shows to do
                 so. We also creating ‘MVP’ meetups to give us a basis on which
@@ -316,7 +318,7 @@ const OurProcess = () => (
             </Line>
 
             <Line>
-              Test
+              <H3a>Test</H3a>
               <P>
                 Students and coaches provide us with essential qualitiative
                 feedback on all trainings

@@ -60,7 +60,7 @@ export const H3 = styled.h3`
 `
 export const H3a = styled.h3`
   ${FONT_FAMILY};
-  font-weight: ${FONT_WEIGHT_STANDARD};
+  font-weight: ${FONT_WEIGHT_BOLD};
   font-size: ${FONT_SIZE_LOWERQUARTILE};
 `
 
