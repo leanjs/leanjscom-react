@@ -32,7 +32,7 @@ const pageContentSections = [
         </P>
         <P>
           For more information about LeanJS’s people, visit the{' '}
-          <Link to="/about-us">About Us</Link> page.
+          <Link to="/team-principles/">Team & Principles</Link> page.
         </P>
       </React.Fragment>
     ),
