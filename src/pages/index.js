@@ -24,7 +24,7 @@ const IterationStages = props => (
   <React.Fragment>
     {props.items.map((item, i) => (
       <Line key={`iterationstage-${i}`}>
-        {item.title}
+        <H3a>{item.title}</H3a>
         <P>{item.description}</P>
         {item.button ? (
           <P>
@@ -214,6 +214,7 @@ const IndexPage = () => (
           <Col md={12}>
             <H3a>Here's how:</H3a>
           </Col>
+          <Row></Row>
           <Col md={6}>
             <Image src={ITERATION_DIAGRAM} />
           </Col>

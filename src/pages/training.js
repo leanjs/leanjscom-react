@@ -252,6 +252,8 @@ const TrainingPage = () => (
                 />
               </Li>
             </Ul>
+            <P>If you're looking for private training, email us at <Link to="mailto:hello@leanjs.com">hello@leanjs.com</Link> now.
+            </P>
           </Col>
           <Col md={1}>
           </Col>
