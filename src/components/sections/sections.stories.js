@@ -4,7 +4,22 @@ import Line from './Line'
 import Indented from './Indented'
 
 storiesOf('Sections', module)
-  .add('Line', () => <Line>Section contents</Line>)
+  .add('Line', () => (
+    <Line>
+      Section contents line 1
+      <p>Section contents para</p>
+      <p>Section contents para</p>
+      <p>Section contents para</p>
+    </Line>
+  ))
+  .add('Line (with heading)', () => (
+    <Line heading="Section heading">
+      <p>Section contents para</p>
+      <p>Section contents para</p>
+      <p>Section contents para</p>
+      <p>Section contents para</p>
+    </Line>
+  ))
   .add('Line (vertical center)', () => (
     <Line verticalCenter>
       <p>Section contents para</p>

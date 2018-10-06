@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import {
   WHITE,
   DARKGREY,
-  FONT_SIZE_SMALL,
+  FONT_SIZE_EXTRASMALL,
   SPACING_SMALL,
   SPACING_STANDARD,
   FONT_WEIGHT_BOLD,
@@ -26,7 +26,7 @@ const TopicInner = styled.div`
   text-transform: uppercase;
   &,
   a {
-    font-size: ${FONT_SIZE_SMALL};
+    font-size: ${FONT_SIZE_EXTRASMALL};
     font-weight: ${FONT_WEIGHT_BOLD};
   }
   a {

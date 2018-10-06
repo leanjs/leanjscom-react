@@ -5,6 +5,7 @@ import {
   SPACING_MEDIUM,
   SPACING_XXLARGE,
 } from '../../config/styles'
+import { H3 } from '../text'
 
 const getLineWidth = props => (props.wide ? SPACING_XXLARGE : SPACING_MEDIUM)
 
@@ -21,6 +22,10 @@ const LineInner = styled.div`
   h3 {
     display: inline-block;
   }
+`
+
+const LineHeading = styled(H3)`
+  vertical-align: middle;
 `
 
 const LineActualLine = styled.div`
@@ -43,13 +48,25 @@ const LineActualLine = styled.div`
   background: ${MEDIUMGREY};
 `
 
-const Line = ({ wide = false, verticalCenter = false, children }) => (
-  <LineOuter>
-    <LineInner wide={wide}>
-      <LineActualLine verticalCenter={verticalCenter} wide={wide} />
-      {children}
-    </LineInner>
-  </LineOuter>
-)
+const Line = ({ wide = false, verticalCenter = false, children, heading }) => {
+  const ActualLine = props => (
+    <LineActualLine verticalCenter={verticalCenter} wide={wide} />
+  )
+  return (
+    <LineOuter>
+      <LineInner wide={wide}>
+        {heading ? (
+          <LineHeading>
+            <ActualLine />
+            {heading}
+          </LineHeading>
+        ) : (
+          <ActualLine />
+        )}
+        {children}
+      </LineInner>
+    </LineOuter>
+  )
+}
 
 export default Line

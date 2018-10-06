@@ -1,6 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes, { instanceOf } from 'prop-types'
 import styled, { css } from 'styled-components'
+import { withCookies, Cookies } from 'react-cookie'
 import Section from '../layout/Section'
 import Grid, { Col, Row } from '../layout/Grid'
 import Ul, { Li } from '../layout/Ul'
@@ -10,13 +11,21 @@ import {
   EXTRADARKGREY,
   FONT_SIZE_LARGE,
   FONT_SIZE_EXTRALARGE,
+  SPACING_SMALL,
   SPACING_STANDARD,
   LAYOUT_SPACING_MEDIUM,
-  LAYOUT_SPACING_LARGE,
+  LAYOUT_SPACING_EXTRALARGE,
   FONT_WEIGHT_EXTRABOLD,
 } from '../../config/styles'
-import { SCREEN_SM_MIN, SCREEN_SM_MAX, SCREEN_XS_MAX } from '../utils'
-import { ANCHOR_STYLE, ScrollingLink } from '../navigation/Link'
+import {
+  SCREEN_XS_MAX,
+  SCREEN_SM_MIN,
+  SCREEN_SM_MAX,
+  SCREEN_MD_MIN,
+  SCREEN_MD_MAX,
+  SCREEN_LG_MIN,
+} from '../utils'
+import { ScrollingLink } from '../navigation/Link'
 import Menu from '../navigation/menu'
 import { HideSingleComponentUsingCss } from '../utils'
 import ConcentricCircles from '../decoration/ConcentricCircles'
@@ -24,6 +33,7 @@ import withWidth from 'react-width'
 import SmallIconAndSentence from '../bulletedsections/SmallIconAndSentence'
 import ActivityBullet from '../bullets/ActivityBullet'
 import LinkButton from '../buttons/LinkButton'
+import CookiesNotification from '../notifications/Cookies'
 
 const H1 = styled(BaseH1)`
   font-size: ${FONT_SIZE_EXTRALARGE} !important;
@@ -37,7 +47,7 @@ const H1 = styled(BaseH1)`
 const HeaderSection = styled(Section)`
 
   background-color: ${EXTRADARKGREY};
-  min-height: ${LAYOUT_SPACING_LARGE};
+  min-height: ${LAYOUT_SPACING_EXTRALARGE};
   position: relative;
   z-index:2;
 
@@ -67,6 +77,21 @@ const HeaderTop = styled.div`
   @media (max-width: ${SCREEN_SM_MAX}) {
     overflow: hidden;
   }
+
+  /* Adjust position of the burger menu if the cookie notice is showing */
+  ${props =>
+    props.showCookieNotification
+      ? `
+    .bm-burger-button {
+      @media(max-width:${SCREEN_XS_MAX}) {
+        top:7.4rem;
+      }
+      @media(min-width:${SCREEN_SM_MIN}) and (max-width:${SCREEN_MD_MAX}) {
+        top:5.2rem;
+      }
+    }
+  `
+      : ``};
 `
 
 const backgroundCirclesSize = ({ isMobile, windowWidth }) => {
@@ -121,6 +146,11 @@ const SubTitleBackground = styled.div`
   ul {
     margin-top: ${SPACING_STANDARD};
   }
+`
+
+const Intro = styled.div`
+  ${WHITE_TEXT};
+  padding: ${SPACING_STANDARD};
 `
 
 const Links = styled.div`
@@ -181,6 +211,7 @@ const BulletPoint = props => {
 const Header = ({
   titleLines = [],
   subtitle,
+  intro,
   links = [],
   bulletPoints,
   ...props
@@ -193,7 +224,13 @@ const Header = ({
 
   return (
     <HeaderSection top>
-      <HeaderTop>
+      <HeaderTop showCookieNotification={props.showCookieNotification}>
+        {props.showCookieNotification ? (
+          <CookiesNotification
+            onNotificationDismissed={props.handleDismissCookieNotification}
+          />
+        ) : null}
+
         <Menu />
 
         <BackgroundCircles isMobile={isMobile} windowWidth={windowWidth}>
@@ -222,6 +259,10 @@ const Header = ({
                 ''
               )}
             </Col>
+          </Row>
+
+          <Row>
+            <Col md={7}>{intro ? <Intro>{intro}</Intro> : ''}</Col>
           </Row>
         </Grid>
       </HeaderTop>
@@ -266,4 +307,43 @@ Header.propTypes = {
   links: PropTypes.array,
 }
 
-export default Header
+const cookieNotificationCookieName = 'cookie-notification-dismissed'
+
+class HeaderContainer extends React.Component {
+  static propTypes = {
+    cookies: instanceOf(Cookies).isRequired,
+  }
+
+  constructor(props) {
+    super(props)
+
+    const { cookies } = props
+
+    this.state = {
+      showCookieNotification: !cookies.get(cookieNotificationCookieName),
+    }
+  }
+
+  handleDismissCookieNotification = () => {
+    const { cookies } = this.props
+
+    const tenYearsInMs = 311040000000
+    cookies.set(cookieNotificationCookieName, 1, {
+      path: '/',
+      expires: new Date(Date.now() + tenYearsInMs),
+    })
+    this.setState({ showCookieNotification: false })
+  }
+
+  render() {
+    return (
+      <Header
+        {...this.props}
+        showCookieNotification={this.state.showCookieNotification}
+        handleDismissCookieNotification={this.handleDismissCookieNotification}
+      />
+    )
+  }
+}
+
+export default withCookies(HeaderContainer)

@@ -10,6 +10,8 @@ import './reset.css'
 
 import { ThemeProvider } from 'styled-components'
 
+import { CookiesProvider } from 'react-cookie'
+
 const gridTheme = {
   flexboxgrid: {
     gutterWidth: 1,
@@ -26,25 +28,27 @@ const gridTheme = {
 
 const Layout = ({ children, data }) => (
   <ThemeProvider theme={gridTheme}>
-    <React.Fragment>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          {
-            name: 'description',
-            content:
-              'LeanJS is a boutique of excellence focused on Lean, JavaScript, Agile, and people.',
-          },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-        link={[{ rel: 'icon', type: 'image/x-icon', href: `${favicon}` }]}
-      />
+    <CookiesProvider>
+      <React.Fragment>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            {
+              name: 'description',
+              content:
+                'LeanJS is a boutique of excellence focused on Lean, JavaScript, Agile, and people.',
+            },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+          link={[{ rel: 'icon', type: 'image/x-icon', href: `${favicon}` }]}
+        />
 
-      {children()}
+        {children()}
 
-      <ContactInstructions />
-      <Footer />
-    </React.Fragment>
+        <ContactInstructions />
+        <Footer />
+      </React.Fragment>
+    </CookiesProvider>
   </ThemeProvider>
 )
 
