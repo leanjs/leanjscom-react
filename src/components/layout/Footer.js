@@ -32,7 +32,7 @@ const Footer = () => (
     </Ul>
     <Ul inline right>
       <Li>
-        © LeanJS <CurrentYear />
+        © Techdency Limited T/A LeanJS <CurrentYear />
       </Li>
     </Ul>
   </FooterInner>
