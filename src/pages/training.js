@@ -200,6 +200,7 @@ const TrainingPage = () => (
               </P>
             </Line>
 
+            {/*}
             <Line>
               <H3a>
                 Lean and Agile methodologies<Topic>Process</Topic>
@@ -209,7 +210,8 @@ const TrainingPage = () => (
                 more efficiently
               </P>
             </Line>
-
+          */}
+          
             <P>
               <LinkButton scroll to="contact" hasArrows>
                 What's your training needs? Contact us!
