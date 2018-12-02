@@ -121,7 +121,7 @@ const OurProcess = () => (
           <Col md={1}>
           </Col>
           <Col md={5}>
-            <Image src={PAUL_POSTITS} />
+            <Image src={PAUL_POSTITS} alt="UX designer Paul, grouping post-it notes on a wall to find patterns" />
           </Col>
         </Row>
         <Row>
@@ -133,7 +133,7 @@ const OurProcess = () => (
           </Col>
           <Row></Row>
           <Col md={5}>
-            <Image src={ITERATION_DIAGRAM} />
+            <Image src={ITERATION_DIAGRAM} alt="Three circles stating 'Test', 'Learn' and 'Build', each with an arrow pointing to the next, showing a circular motion of Lean production"/>
           </Col>
           <Col md={1}>
           </Col>
@@ -293,7 +293,7 @@ const OurProcess = () => (
         <Row>
           <Col md={5}>
             <P>
-              <img src={ALEX_TEACHING2} />
+              <img src={ALEX_TEACHING2} alt="In a classroom full of students, Alex has his back to the image whilst presenting to those students"/>
             </P>
           </Col>
           <Col md={1}>

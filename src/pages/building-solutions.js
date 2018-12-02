@@ -101,7 +101,7 @@ const BuildingSolutions = () => (
           <Col md={1}>
           </Col>
           <Col md={5}>
-            <Image src={ALEX_RICARDO_WHITEBOARD} />
+            <Image src={ALEX_RICARDO_WHITEBOARD} alt="Alex and a client standing in front of a whiteboard that has different sketches and post-it notes all over it" />
           </Col>
         </Row>
         <Row>
@@ -128,7 +128,7 @@ const BuildingSolutions = () => (
       <Grid>
         <Row>
           <Col md={5}>
-            <Image src={HORACIO_TEACHING} />
+            <Image src={HORACIO_TEACHING} alt="React Native coach Horacio presenting to a group of developers, with two of those developers featured in the foreground." />
           </Col>
           <Col md={1}>
           </Col>
@@ -208,7 +208,7 @@ const BuildingSolutions = () => (
           <Col md={1}>
           </Col>
           <Col md={5}>
-            <Image src={LUIS_ALEX_DOG} />
+            <Image src={LUIS_ALEX_DOG} alt="Luis with his dog who is licking Alex's hand, even though he was trying to go for a high-five!" />
           </Col>
         </Row>
         <Row>

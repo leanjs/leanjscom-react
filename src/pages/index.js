@@ -106,7 +106,7 @@ const IndexPage = () => (
             </Ul>
           </Col>
           <Col md={6}>
-            <Image src={TEAMWORK} />
+            <Image src={TEAMWORK} alt="The LeanJS team, happily discussing a digital project around laptops whilst enjoying a drink" />
           </Col>
         </Row>
         <Row>
@@ -216,7 +216,7 @@ const IndexPage = () => (
           </Col>
           <Row></Row>
           <Col md={6}>
-            <Image src={ITERATION_DIAGRAM} />
+            <Image src={ITERATION_DIAGRAM} alt="Three circles stating 'Test', 'Learn' and 'Build', each with an arrow pointing to the next, showing a circular motion of Lean production"/>
           </Col>
           <Col md={1}>
           </Col>
