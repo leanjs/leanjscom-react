@@ -67,7 +67,7 @@ const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
   <Bio {...props}>
     <BioInner>
       <PersonImage>
-        <img src={image} />
+        <img src={image} alt={name} />
       </PersonImage>
       <PersonSpecs>
         <Spec first>

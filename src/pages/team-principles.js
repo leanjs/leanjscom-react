@@ -171,18 +171,19 @@ const Team = () => (
                     <P>To that end, we are always open to offering discounts on our
                     training, design and development services - depending on the
                     project.</P>
+                    <LinkButton hasArrows to="/case-studies" dark>
+                    Case studies
+                  </LinkButton>
                   <LinkButton scroll hasArrows to="contact">
                     Contact us now
                   </LinkButton>
-                  <LinkButton hasArrows to="/case-studies">
-                    Case studies
-                  </LinkButton>
+
                   </Col>
                   <Col sm={1}>
                   </Col>
                   <Col sm={4}>
                     <P>
-                      <img src={ALEX_RICH_LAPTOP} />
+                      <img src={ALEX_RICH_LAPTOP} alt="Alex and Rich, thinking over a problem whilst looking at a laptop screen" />
                     </P>
                   </Col>
                 </Row>

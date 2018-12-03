@@ -62,6 +62,7 @@ const caseStudies = [
       },
     ],
     image: CASE_STUDY_ABINBEV,
+    alt: "Three smart phones, each showing different screens from the ABinBev app project",
     quote: {
       author: {
         image: MUGSHOT_ABINBEV,
@@ -106,6 +107,7 @@ const caseStudies = [
       },
     ],
     image: CASE_STUDY_FINGOPAY,
+    alt: "Two tablets, showing two screens from the onboarding project for biometric payment system FingoPay ",
     quote: {
       author: {
         image: MUGSHOT_STHALHER,
@@ -149,6 +151,7 @@ const caseStudies = [
       },
     ],
     image: CASE_STUDY_BU,
+    alt: "A smartphone and a wide-screen computer display showing Boston University's 'AGNI' website design in two different widths",
     quote: {
       author: {
         image: MUGSHOT_BU,
@@ -186,6 +189,7 @@ const caseStudies = [
       },
     ],
     image: CASE_STUDY_ASOS,
+    alt: "Two images of our ReactJS training sessions where our coaches are presenting to the entire class and answering questions from individual students",
     quote: {
       author: {
         image: MUGSHOT_ASOS,
@@ -233,7 +237,7 @@ const CaseStudyInner = props => (
         <CaseStudyExpoBullets content={props.bulletpoints} />
       </Col>
       <Col md={6}>
-        <Image src={props.image} />
+        <Image src={props.image} alt={props.alt}/>
       </Col>
     </Row>
 

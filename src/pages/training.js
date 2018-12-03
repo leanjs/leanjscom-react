@@ -260,7 +260,7 @@ const TrainingPage = () => (
           <Col md={1}>
           </Col>
           <Col md={5}>
-            <img src={RICHARD_TEACHING} />
+            <img src={RICHARD_TEACHING} alt="Richard, with Alex, teaching React - and telling jokes - to a classroom of smiling students"/>
           </Col>
         </Row>
       </Grid>
@@ -306,20 +306,13 @@ const TrainingPage = () => (
         <BootcampCol>
           <SingleColRow>
             <H2>Our next trainings...</H2>
-          </SingleColRow>
-          <SingleColRow>
-            <Link to="https://reactjs.academy/react-native-bootcamp-london">
-              React Native Training
-            </Link>
-          </SingleColRow>
-          <SingleColRow>London | 17 September 2018</SingleColRow>
-          <SingleColRow>
-            <img src={LONDON_BOOTCAMP} />
-          </SingleColRow>
-          <SingleColRow>
-            <LinkButton to="https://reactjs.academy" external>
-              Visit ReactJS Academy website
+            <P>We are currently running several different training courses in the React ecosystem - both for businesses and for individual developers. Find out more at:</P>
+            <LinkButton to="https://reactjs.academy" external >
+             ReactJS Academy website
             </LinkButton>
+          </SingleColRow>
+          <SingleColRow>
+            <P>If you're looking for training in UX and Product Design don't hesitate in contacting us using the form below or emailing <Link to="mailto:hello@leanjs.com">hello@leanjs.com</Link></P>
           </SingleColRow>
         </BootcampCol>
       </Grid>
