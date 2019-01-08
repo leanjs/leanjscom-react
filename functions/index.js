@@ -7,6 +7,7 @@ admin.initializeApp(functions.config().firebase)
 exports.sendEmail = functions.database
   .ref('/contactSubmissions/{name}')
   .onWrite((snap, context) => {
+    console.log('snap val', snap.after.val())
     const slackURL =
       'https://hooks.slack.com/services/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'
     fetch(slackURL, {
