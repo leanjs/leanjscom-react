@@ -48,6 +48,7 @@ import YouTube from '../components/videos/YouTube'
 import Instagram from '../components/feeds/Instagram'
 import { styleChildLinkColor } from '../components/navigation/Link'
 import HighlightedItem from '../components/decoration/HighlightedItem'
+import Hr from '../components/decoration/Hr'
 
 const TitleText = styled(P)`
   font-size: ${FONT_SIZE_LARGE};
@@ -299,8 +300,9 @@ const TrainingPage = () => (
           </Col>
         </Row>
       </Grid>
+      <Hr />
     </Section>
-
+{/* 
     <Section>
       <Grid>
         <BootcampCol>
@@ -316,7 +318,8 @@ const TrainingPage = () => (
           </SingleColRow>
         </BootcampCol>
       </Grid>
-    </Section>
+    </Section> 
+    ^ This section will be added later down the line when we've got our Upcoming Courses section in RJSA sorted */}
   </React.Fragment>
 )
 

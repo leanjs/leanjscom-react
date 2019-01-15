@@ -16,7 +16,7 @@ import { ITERATION_DIAGRAM } from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, H3a, P, Strong } from '../components/text'
+import { H2, H3a, H5, P, Strong } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 
@@ -85,19 +85,20 @@ const IndexPage = () => (
               <Li>
                 <LargeIconAndPoints
                   image="abinbev"
-                  points={['Rapid app design and build', '6 week turnaround']}
+                  points={['Client: ABInBev', 'Rapid app design and build', '6 week turnaround']}
                 />
               </Li>
               <Li>
                 <LargeIconAndPoints
                   image="bostonuniversity"
-                  points={['Website redesign', '90,000 page migration']}
+                  points={['Client: Boston University', 'Website redesign', '90,000 page migration']}
                 />
               </Li>
               <Li>
                 <LargeIconAndPoints
                   image="asos"
                   points={[
+                    'Client: ASOS',
                     'Bespoke tech training',
                     'Increased productivity and compliance',
                   ]}
