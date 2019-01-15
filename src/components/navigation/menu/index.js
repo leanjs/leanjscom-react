@@ -10,7 +10,7 @@ import { styleChildLinkColor } from '../Link'
 
 export { DesktopMenu, PhoneMenu }
 
-const MenuContainer = styled.div`
+const MenuContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
