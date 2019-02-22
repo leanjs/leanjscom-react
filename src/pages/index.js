@@ -46,19 +46,10 @@ const IndexPage = () => (
       bulletPoints={[
         {
           icon: 'development',
-          sentence:
-            'We build scalable websites, apps & digital solutions…',
+          sentence: 'We build scalable websites, apps & digital solutions…',
           button: {
             to: '/building-solutions',
             text: 'Building products',
-          },
-        },
-        {
-          icon: 'teaching',
-          sentence: 'We also teach innovative tech to your team…',
-          button: {
-            to: '/training',
-            text: 'Training products',
           },
         },
       ]}
@@ -85,13 +76,21 @@ const IndexPage = () => (
               <Li>
                 <LargeIconAndPoints
                   image="abinbev"
-                  points={['Client: ABInBev', 'Rapid app design and build', '6 week turnaround']}
+                  points={[
+                    'Client: ABInBev',
+                    'Rapid app design and build',
+                    '6 week turnaround',
+                  ]}
                 />
               </Li>
               <Li>
                 <LargeIconAndPoints
                   image="bostonuniversity"
-                  points={['Client: Boston University', 'Website redesign', '90,000 page migration']}
+                  points={[
+                    'Client: Boston University',
+                    'Website redesign',
+                    '90,000 page migration',
+                  ]}
                 />
               </Li>
               <Li>
@@ -107,7 +106,10 @@ const IndexPage = () => (
             </Ul>
           </Col>
           <Col md={6}>
-            <Image src={TEAMWORK} alt="The LeanJS team, happily discussing a digital project around laptops whilst enjoying a drink" />
+            <Image
+              src={TEAMWORK}
+              alt="The LeanJS team, happily discussing a digital project around laptops whilst enjoying a drink"
+            />
           </Col>
         </Row>
         <Row>
@@ -131,8 +133,8 @@ const IndexPage = () => (
           </Col>
           <Col md={7}>
             <P>
-              Whoa, that sounds heavy… Thing is, we have lofty ambitions and want to do ‘good’ in
-              the world through our work and actions.
+              Whoa, that sounds heavy… Thing is, we have lofty ambitions and
+              want to do ‘good’ in the world through our work and actions.
             </P>
           </Col>
         </Row>
@@ -173,7 +175,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <Instagram photosPerRow={6}/>
+            <Instagram photosPerRow={6} />
           </Col>
         </Row>
       </Grid>
@@ -183,7 +185,7 @@ const IndexPage = () => (
       <Grid>
         <Col>
           <H2>What we do, how we do it</H2>
-          </Col>
+        </Col>
         <Col md={6}>
           <P>
             We work exclusivity in the iterative, incremental ‘Lean’ way (thus
@@ -201,8 +203,7 @@ const IndexPage = () => (
               },
               {
                 image: 'costeffective',
-                sentence:
-                  'Cost effective solutions you can build upon',
+                sentence: 'Cost effective solutions you can build upon',
               },
               {
                 image: 'quick',
@@ -215,12 +216,14 @@ const IndexPage = () => (
           <Col md={12}>
             <H3a>Here's how:</H3a>
           </Col>
-          <Row></Row>
+          <Row />
           <Col md={6}>
-            <Image src={ITERATION_DIAGRAM} alt="Three circles stating 'Test', 'Learn' and 'Build', each with an arrow pointing to the next, showing a circular motion of Lean production"/>
+            <Image
+              src={ITERATION_DIAGRAM}
+              alt="Three circles stating 'Test', 'Learn' and 'Build', each with an arrow pointing to the next, showing a circular motion of Lean production"
+            />
           </Col>
-          <Col md={1}>
-          </Col>
+          <Col md={1} />
           <Col md={5}>
             <IterationStages
               items={[

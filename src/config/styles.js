@@ -10,6 +10,7 @@ export const DARKGREY = '#4a4a4a'
 export const EXTRADARKGREY = '#2b2b2b'
 export const WHITE = '#ffffff'
 export const BLACK = '#000000'
+export const MUSTARD = '#FDEB33'
 
 export const SPACING_SMALL = '0.5rem'
 export const SPACING_STANDARD = '1rem'

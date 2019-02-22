@@ -25,16 +25,28 @@ const MenuContainer = styled.nav`
   ${styleChildLinkColor(WHITE)};
 `
 
+const LogoWrapper = styled.div`
+  display: inline-block;
+  margin: 0 0 0 15%;
+`
+
 const Menu = ({ width }) => {
   const canIGuessTheScreenSizeUsingJS = typeof window !== 'undefined'
 
   return (
     <MenuContainer>
-      <LinkedLeanJSLogo />
       {canIGuessTheScreenSizeUsingJS && width <= MEDIUM ? (
-        <PhoneMenu />
+        <React.Fragment>
+          <LinkedLeanJSLogo />
+          <PhoneMenu />
+        </React.Fragment>
       ) : (
-        <DesktopMenu />
+        <React.Fragment>
+          <LogoWrapper>
+            <LinkedLeanJSLogo />
+          </LogoWrapper>
+          <DesktopMenu />
+        </React.Fragment>
       )}
     </MenuContainer>
   )
