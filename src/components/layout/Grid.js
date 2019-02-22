@@ -56,12 +56,16 @@ const Col = styled(({ xs, sm, md, lg, align, style = {}, ...rest }) => {
 const Row = styled(FlexboxRow)`
   margin-left: 0;
   margin-right: 0;
-  margin-top: ${SPACING_MEDIUM};
-  margin-bottom: ${props => (props.lastOnPage ? 0 : SPACING_MEDIUM)};
-  @media (max-width: ${SCREEN_SM_MAX}) {
-    margin-top: ${SPACING_STANDARD};
-    margin-bottom: ${props => (props.lastOnPage ? 0 : SPACING_STANDARD)};
-  }
+
+  margin-top: ${SPACING_STANDARD};
+  margin-bottom: ${props => (props.lastOnPage ? 0 : SPACING_STANDARD)};
+  ${media(
+    'md',
+    `
+    margin-top: ${SPACING_MEDIUM};
+    margin-bottom: ${props => (props.lastOnPage ? 0 : SPACING_MEDIUM)};
+  `
+  )};
 `
 
 const SingleColRow = props => (
