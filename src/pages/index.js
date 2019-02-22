@@ -21,7 +21,7 @@ import { ITERATION_DIAGRAM } from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, H3a, H5, P, Strong } from '../components/text'
+import { H2, H3a, H5, P, Strong, SupportingText } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 
@@ -42,10 +42,6 @@ const IterationStages = props => (
     ))}
   </React.Fragment>
 )
-
-const SupportingText = styled(P)`
-  font-size: ${FONT_SIZE_LOWERQUARTILE};
-`
 
 const Strike = styled.span`
   text-decoration: line-through;
@@ -92,32 +88,36 @@ const IndexPage = () => (
               <Li>
                 <LargeIconAndPoints
                   image="fingopay"
+                  heading="FingoPay"
                   points={[
-                    'Client: FingoPay',
                     'Biometric payment service',
                     'Onboarding app for unique finger scanning API',
                     '1-day rapid user research, prototyping and testing',
                     'React Native app creation in 2 weeks',
                   ]}
                 />
+
+                {/* TODO: WV:20190222: Add the whitespace properly */}
+                <br />
               </Li>
               <Li>
                 <LargeIconAndPoints
                   image="bostonuniversity"
+                  heading="Boston University - AGNI"
                   points={[
-                    'Client: Boston University - AGNI',
                     'Highly regarded US-based literary publication ',
                     'Website magazine and blog',
                     'Full UX process, UI and React website',
                     'Migration 90,000+ pages',
                   ]}
                 />
+                <br />
               </Li>
               <Li>
                 <LargeIconAndPoints
                   image="abinbev"
+                  heading="ABInBev"
                   points={[
-                    'Client: ABInBev',
                     'World’s largest brewing company',
                     'Interactive festive app',
                     'Rapid, collaborative design and build',
@@ -218,17 +218,34 @@ const IndexPage = () => (
     <Section>
       <Grid>
         <Col>
-          <H2>What we do, how we do it</H2>
+          <H2>How our process works </H2>
         </Col>
-        <Col md={6}>
+        <Col>
+          <SupportingText>
+            Using proven techniques and scalable approaches, we work
+            incrementally yet thoroughly.
+          </SupportingText>
           <P>
-            We work exclusivity in the iterative, incremental ‘Lean’ way (thus
-            the name!). This ensures:
+            We only work in the iterative, ‘Lean’ way - thus the name! We start
+            small, design and develop rapidly to collaboratively build products
+            that scale effectively over time.
           </P>
+          <P>
+            This is not to say we don’t strive to understand the bigger picture
+            - far from it - but to develop effectively and rapidly, we must
+            prioritise effectively, start small and evolve from there.
+          </P>
+          <P>Our lean approach is:</P>
         </Col>
+        <Row />
+        <Row>
+          <Col md={12}>
+            <H3a>Our lean approach is:</H3a>
+          </Col>
+        </Row>
         <Row>
           <SmallIconAndSentences
-            wrapWithCols={true}
+            wrapWithCols={false}
             bulletType={BenefitBullet}
             items={[
               {
@@ -245,40 +262,12 @@ const IndexPage = () => (
               },
             ]}
           />
-        </Row>
-        <Row>
-          <Col md={12}>
-            <H3a>Here's how:</H3a>
-          </Col>
-          <Row />
+
           <Col md={6}>
             <Image
               src={ITERATION_DIAGRAM}
               alt="Three circles stating 'Test', 'Learn' and 'Build', each with an arrow pointing to the next, showing a circular motion of Lean production"
             />
-          </Col>
-          <Col md={1} />
-          <Col md={5}>
-            <IterationStages
-              items={[
-                {
-                  title: 'Learn...',
-                  description:
-                    'User research, business analysis, competitor audit',
-                },
-                {
-                  title: 'Build...',
-                  description: 'Prototyping, coding and development',
-                },
-                {
-                  title: 'Test...',
-                  description: 'Usability testing, quality assurance',
-                },
-              ]}
-            />
-            <LinkButton to="/building-solutions" hasArrows dark>
-              Working with you
-            </LinkButton>
           </Col>
         </Row>
       </Grid>

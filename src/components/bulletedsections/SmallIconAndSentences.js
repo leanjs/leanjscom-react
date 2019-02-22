@@ -29,6 +29,7 @@ const SmallIconAndSentences = props => {
             bulletType={props.bulletType}
             flushLeft={props.flushLeft ? true : false}
             first={i === 0}
+            key={`${key}-item`}
           />
         )
 
