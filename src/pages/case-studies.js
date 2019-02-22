@@ -18,6 +18,14 @@ import {
   MUGSHOT_ASOS,
   CASE_STUDY_ASOS,
 } from '../resources/images'
+
+import {
+  LOGO_BU,
+  LOGO_FINGOPAY,
+  LOGO_ASOS,
+  LOGO_ABINBEV,
+} from '../resources/icons'
+
 import LinkButton from '../components/buttons/LinkButton'
 import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, P, Blockquote2, MVPLink, SupportingText } from '../components/text'
@@ -56,7 +64,11 @@ const caseStudies = [
         description: '10,000 articles migrated, 50% bounce rate reduction',
       },
     ],
-    image: CASE_STUDY_BU,
+    primaryImage: CASE_STUDY_BU,
+    client: {
+      name: 'Boston University',
+      logo: LOGO_BU,
+    },
     alt:
       "A smartphone and a wide-screen computer display showing Boston University's 'AGNI' website design in two different widths",
     quote: {
@@ -94,7 +106,11 @@ const caseStudies = [
         description: 'To be implemented across 100 pubs in the UK',
       },
     ],
-    image: CASE_STUDY_FINGOPAY,
+    primaryImage: CASE_STUDY_FINGOPAY,
+    client: {
+      name: 'FingoPay',
+      logo: LOGO_FINGOPAY,
+    },
     alt:
       'Two tablets, showing two screens from the onboarding project for biometric payment system FingoPay ',
     quote: {
@@ -132,7 +148,11 @@ const caseStudies = [
           'Dev team now work in ReactJS, increasing productivity and code compliance',
       },
     ],
-    image: CASE_STUDY_ASOS,
+    primaryImage: CASE_STUDY_ASOS,
+    client: {
+      name: 'ASOS',
+      logo: LOGO_ASOS,
+    },
     alt:
       'Two images of our ReactJS training sessions where our coaches are presenting to the entire class and answering questions from individual students',
     quote: {
@@ -169,7 +189,11 @@ const caseStudies = [
         description: '90% increase in shopping card value',
       },
     ],
-    image: CASE_STUDY_ABINBEV,
+    primaryImage: CASE_STUDY_ABINBEV,
+    client: {
+      name: 'ABinBev',
+      logo: LOGO_ABINBEV,
+    },
     alt:
       'Three smart phones, each showing different screens from the ABinBev app project',
     quote: {
@@ -206,9 +230,16 @@ const CaseStudyExpoBullets = ({ content }) => (
 const CaseStudyInner = props => (
   <Grid>
     <Row>
-      <Col xs={6}>
+      <Col sm={6}>
         <a name={props.anchor} />
         <CaseStudyTitle>{props.title}</CaseStudyTitle>
+      </Col>
+      <Col sm={6} align={{ md: 'right' }}>
+        <Image src={props.client.logo} alt={props.client.name} />
+      </Col>
+    </Row>
+    <Row>
+      <Col>
         <SupportingText>{props.supportingText}</SupportingText>
       </Col>
     </Row>
@@ -220,7 +251,7 @@ const CaseStudyInner = props => (
         <CaseStudyExpoBullets content={props.bulletpoints} />
       </Col>
       <Col md={6}>
-        <Image src={props.image} alt={props.alt} />
+        <Image src={props.primaryImage} alt={props.alt} />
       </Col>
     </Row>
 
