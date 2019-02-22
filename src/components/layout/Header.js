@@ -273,10 +273,7 @@ const Header = ({
                   <TitleBackground key={i} children={line} />
                 ))}
               </H1>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
+
               {subtitle ? (
                 <SubTitleBackground>
                   <H2Header>{subtitle}</H2Header>

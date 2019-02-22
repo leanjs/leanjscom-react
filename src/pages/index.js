@@ -10,7 +10,12 @@ import BenefitBullet from '../components/bullets/BenefitBullet'
 import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import SmallIconAndSentences from '../components/bulletedsections/SmallIconAndSentences'
-import { WHITE, SPACING_MEDIUM, FONT_SIZE_LARGE } from '../config/styles'
+import {
+  WHITE,
+  SPACING_MEDIUM,
+  FONT_SIZE_LARGE,
+  FONT_SIZE_LOWERQUARTILE,
+} from '../config/styles'
 import { TEAMWORK } from '../resources/images'
 import { ITERATION_DIAGRAM } from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
@@ -38,18 +43,27 @@ const IterationStages = props => (
   </React.Fragment>
 )
 
+const SupportingText = styled(P)`
+  font-size: ${FONT_SIZE_LOWERQUARTILE};
+`
+
+const Strike = styled.span`
+  text-decoration: line-through;
+`
+
 const IndexPage = () => (
   <React.Fragment>
     <Header
       titleLines={['LeanJS']}
-      subtitle="Our team can help you evolve your tech. Quick snap!"
+      subtitle="Develop, evolve, grow - quick snap."
       bulletPoints={[
         {
           icon: 'development',
-          sentence: 'We build scalable websites, apps & digital solutions…',
+          sentence:
+            'We help you advance innovative and scalable solutions - guiding you through the modern tech maze',
           button: {
-            to: '/building-solutions',
-            text: 'Building products',
+            to: '/case-studies',
+            text: 'Case studies',
           },
         },
       ]}
@@ -59,10 +73,12 @@ const IndexPage = () => (
       <Grid>
         <Row>
           <Col md={12}>
-            <H2>
-              We take your business needs, align them with users’ intent and
-              cook up solutions in a matter of weeks. Boom.
-            </H2>
+            <H2>Tech that starts small for a wider impact.</H2>
+            <SupportingText>
+              Using our proven methodology, we collaboratively tackle big
+              problems and develop effective, tested solutions that align
+              business needs to your users’ intent.
+            </SupportingText>
           </Col>
         </Row>
         <Row>
@@ -75,11 +91,13 @@ const IndexPage = () => (
             <Ul unstyled>
               <Li>
                 <LargeIconAndPoints
-                  image="abinbev"
+                  image="fingopay"
                   points={[
-                    'Client: ABInBev',
-                    'Rapid app design and build',
-                    '6 week turnaround',
+                    'Client: FingoPay',
+                    'Biometric payment service',
+                    'Onboarding app for unique finger scanning API',
+                    '1-day rapid user research, prototyping and testing',
+                    'React Native app creation in 2 weeks',
                   ]}
                 />
               </Li>
@@ -87,19 +105,23 @@ const IndexPage = () => (
                 <LargeIconAndPoints
                   image="bostonuniversity"
                   points={[
-                    'Client: Boston University',
-                    'Website redesign',
-                    '90,000 page migration',
+                    'Client: Boston University - AGNI',
+                    'Highly regarded US-based literary publication ',
+                    'Website magazine and blog',
+                    'Full UX process, UI and React website',
+                    'Migration 90,000+ pages',
                   ]}
                 />
               </Li>
               <Li>
                 <LargeIconAndPoints
-                  image="asos"
+                  image="abinbev"
                   points={[
-                    'Client: ASOS',
-                    'Bespoke tech training',
-                    'Increased productivity and compliance',
+                    'Client: ABInBev',
+                    'World’s largest brewing company',
+                    'Interactive festive app',
+                    'Rapid, collaborative design and build',
+                    '90% increase in shopping card value',
                   ]}
                 />
               </Li>
@@ -117,9 +139,6 @@ const IndexPage = () => (
             <LinkButton to="/case-studies" hasArrows dark>
               Read case studies
             </LinkButton>
-            <LinkButton to="/our-process" hasArrows>
-              Working with you
-            </LinkButton>
           </Col>
         </Row>
       </Grid>
@@ -129,12 +148,27 @@ const IndexPage = () => (
       <Grid>
         <Row>
           <Col md={12}>
-            <H2>We care about you and your people. We value good ethics.</H2>
+            <H2>
+              Your team of <Strike>experts</Strike> <Strike>teachers</Strike>{' '}
+              guides.
+            </H2>
+            <SupportingText>
+              Collaboration and guidance is pivotal to any project's success -
+              so we welcome everyone into tech!
+            </SupportingText>
           </Col>
           <Col md={7}>
             <P>
-              Whoa, that sounds heavy… Thing is, we have lofty ambitions and
-              want to do ‘good’ in the world through our work and actions.
+              Our cross-functional team knows how problematic digital projects
+              can be. We evangelise communication across specialities through
+              our expertise and experience as development and UX mentors.
+            </P>
+            <P>
+              We created the first React training in Europe - ReactJS Academy,
+              and continue to pioneer edtech with the launch of GraphQL
+              University in 2019. Through them, we deliver advanced Corporate
+              team training across the world, developing staff through the power
+              of cutting-edge tech.
             </P>
           </Col>
         </Row>

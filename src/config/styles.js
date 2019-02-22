@@ -42,3 +42,5 @@ export const FONT_WEIGHT_STANDARD = '400'
 export const FONT_WEIGHT_MEDIUMBOLD = '500'
 export const FONT_WEIGHT_BOLD = '700'
 export const FONT_WEIGHT_EXTRABOLD = '900'
+
+export const PARAGRAPH_CHARACTER_WIDTH = '65ch'
