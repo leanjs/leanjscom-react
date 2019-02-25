@@ -13,6 +13,7 @@ import SmallIconAndSentences from '../components/bulletedsections/SmallIconAndSe
 import {
   WHITE,
   SPACING_MEDIUM,
+  SPACING_LARGE,
   FONT_SIZE_LARGE,
   FONT_SIZE_LOWERQUARTILE,
 } from '../config/styles'
@@ -45,6 +46,12 @@ const IterationStages = props => (
 
 const Strike = styled.span`
   text-decoration: line-through;
+`
+
+const CaseStudyList = styled(Ul)`
+  > li:not(:last-child) {
+    padding-bottom: ${SPACING_LARGE};
+  }
 `
 
 const IndexPage = () => (
@@ -84,7 +91,7 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col md={6}>
-            <Ul unstyled>
+            <CaseStudyList unstyled>
               <Li>
                 <LargeIconAndPoints
                   image="fingopay"
@@ -96,9 +103,6 @@ const IndexPage = () => (
                     'React Native app creation in 2 weeks',
                   ]}
                 />
-
-                {/* TODO: WV:20190222: Add the whitespace properly */}
-                <br />
               </Li>
               <Li>
                 <LargeIconAndPoints
@@ -111,7 +115,6 @@ const IndexPage = () => (
                     'Migration 90,000+ pages',
                   ]}
                 />
-                <br />
               </Li>
               <Li>
                 <LargeIconAndPoints
@@ -125,7 +128,7 @@ const IndexPage = () => (
                   ]}
                 />
               </Li>
-            </Ul>
+            </CaseStudyList>
           </Col>
           <Col md={6}>
             <Image
