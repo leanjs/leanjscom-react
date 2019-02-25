@@ -246,6 +246,7 @@ const IndexPage = () => (
         <Row>
           <SmallIconAndSentences
             wrapWithCols={false}
+            markupAsList={true}
             bulletType={BenefitBullet}
             items={[
               {
