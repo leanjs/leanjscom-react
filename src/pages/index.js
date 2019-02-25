@@ -247,6 +247,7 @@ const IndexPage = () => (
           <SmallIconAndSentences
             wrapWithCols={false}
             markupAsList={true}
+            flushLeft={true}
             bulletType={BenefitBullet}
             items={[
               {
