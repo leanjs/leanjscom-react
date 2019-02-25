@@ -128,7 +128,7 @@ const caseStudies = [
     title: 'ReactJS Academy',
     anchor: 'asos',
     highlighted: false,
-    suportingText: 'UX/UI and rapidly iterated React website',
+    supportingText: 'UX/UI and rapidly iterated React website',
     paragraphs: [
       'The ReactJS Academy website is a product to market advanced training for developers and rapidly evolves from month-to-month.',
       'Since July 2018, it has undergone multiple iterations based on quantitative metrics, stakeholder research and usability testing, meeting user and business needs - both from a design and tech standpoint.',
@@ -170,7 +170,7 @@ const caseStudies = [
     title: 'ABinBev',
     anchor: 'abinbev',
     highlighted: true,
-    suportingText: 'Interactive festive app',
+    supportingText: 'Interactive festive app',
     paragraphs: [
       'The ABinBev app was a milestone project for LeanJS.',
       'With a strict timeframe and an aim to create a product that increased shopping cart value in the lead-up to Christmas, we designed and developed a highly interactive app that satisfied ABinBev’s marketing aims and delighted users.',
@@ -283,21 +283,11 @@ const CaseStudies = () => (
   <React.Fragment>
     <Header
       titleLines={['Case Studies']}
+      subtitle="What we've done - it's how we learn!"
       links={caseStudies.map(study => ({
         text: study.title,
         to: study.anchor,
       }))}
-      bulletPoints={[
-        {
-          icon: 'industry',
-          sentence:
-            'Digital solutions built and user tested for over 20+ sectors',
-        },
-        {
-          icon: 'teaching',
-          sentence: 'Over 1500 training participants in just 2 years',
-        },
-      ]}
     />
 
     {caseStudies.map((props, i) => (
