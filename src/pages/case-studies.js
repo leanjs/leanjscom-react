@@ -32,7 +32,6 @@ import { H2, P, Blockquote2, MVPLink, SupportingText } from '../components/text'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Circle from '../components/elements/Circle'
-import HighlightedItem from '../components/decoration/HighlightedItem'
 
 const CaseStudyTitle = styled(H2)`
   no-wrap;
@@ -90,7 +89,6 @@ const caseStudies = [
       'Combining the innovation-led space of bio-metrics with React Native was a real thrill for us and we learnt a lot!',
       'Starting with an 8-hour rapid prototyping exercise on London’s South Bank, we took the user-validated design and developed a bleeding-edge React Native app that worked perfectly for',
     ],
-    highlighted: true,
     bulletpoints: [
       {
         point: 'HOW',
@@ -115,7 +113,7 @@ const caseStudies = [
       'Two tablets, showing two screens from the onboarding project for biometric payment system FingoPay ',
     quote: {
       author: {
-        image: MUGSHOT_STHALHER,
+        image: MUGSHOT_ASOS,
         name: 'Stuart Nelmes',
         jobTitle: 'Chief Technology Officer',
         company: 'Stahler/FingoPay',
@@ -127,7 +125,6 @@ const caseStudies = [
   {
     title: 'ReactJS Academy',
     anchor: 'asos',
-    highlighted: false,
     supportingText: 'UX/UI and rapidly iterated React website',
     paragraphs: [
       'The ReactJS Academy website is a product to market advanced training for developers and rapidly evolves from month-to-month.',
@@ -169,7 +166,6 @@ const caseStudies = [
   {
     title: 'ABinBev',
     anchor: 'abinbev',
-    highlighted: true,
     supportingText: 'Interactive festive app',
     paragraphs: [
       'The ABinBev app was a milestone project for LeanJS.',
@@ -252,6 +248,13 @@ const CaseStudyInner = props => (
       </Col>
       <Col md={6}>
         <Image src={props.primaryImage} alt={props.alt} />
+        {props.quote && (
+          <Mugshot
+            {...props.quote.author}
+            quote={props.quote.text}
+            color={DARKGREY}
+          />
+        )}
       </Col>
     </Row>
 
@@ -269,13 +272,7 @@ const CaseStudyInner = props => (
 
 const CaseStudy = props => (
   <Section>
-    {props.highlighted ? (
-      <HighlightedItem>
-        <CaseStudyInner {...props} />
-      </HighlightedItem>
-    ) : (
-      <CaseStudyInner {...props} />
-    )}
+    <CaseStudyInner {...props} />
   </Section>
 )
 

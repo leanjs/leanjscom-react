@@ -1,49 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
-import { requireFrom } from '../utils'
-
-import { SPACING_STANDARD, SPACING_SMALL } from '../../config/styles'
 
 import { Blockquote2 } from '../text'
+import SmallIconAndSentence from '../bulletedsections/SmallIconAndSentence'
 
-const MugshotInner = styled.div`
-  color: ${props => props.color || 'black'};
-  display: flex;
+import { MEDIUMGREY } from '../../config/styles'
 
-  img {
-    align-self: center;
-  }
+const Mugshot = ({ image, quote, name, jobTitle, company }) => {
+  const img = <img src={image} />
+  const text = (
+    <React.Fragment>
+      <Blockquote2>{quote}</Blockquote2>
+      <p>
+        <strong>
+          {name}
+          <br /> ({jobTitle}, {company})
+        </strong>
+      </p>
+    </React.Fragment>
+  )
+  return <SmallIconAndSentence icon={img} sentence={text} />
+}
+
+const MugshotWrapper = styled.div`
+  border: 1px solid ${MEDIUMGREY};
 `
 
-const PersonImage = styled.div`
-  display: flex;
-`
-
-const PersonSpecs = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  margin-left: ${SPACING_STANDARD};
-`
-
-const Spec = styled.div`
-  margin-top: ${SPACING_SMALL};
-`
-
-const Mugshot = ({ image, name, jobTitle, company, ...props }) => (
-  <MugshotInner {...props}>
-    <PersonImage>
-      <img style={{ maxHeight: '10em' }} src={image} />
-    </PersonImage>
-    <PersonSpecs>
-      <Spec>
-        <strong>{name}</strong>
-      </Spec>
-      <Spec>{jobTitle}</Spec>
-      <Spec>{company}</Spec>
-    </PersonSpecs>
-    {props.quote ? <Blockquote2 padLeft>{props.quote}</Blockquote2> : null}
-  </MugshotInner>
+const MugshotWithStyles = props => (
+  <MugshotWrapper>
+    <Mugshot {...props} />
+  </MugshotWrapper>
 )
 
-export default Mugshot
+export default MugshotWithStyles
