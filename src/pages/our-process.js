@@ -192,7 +192,7 @@ const OurProcess = () => (
             </P>
 
             <P>
-              <LinkButton to="/team-principles" hasArrows>
+              <LinkButton to="/team" hasArrows>
                 Our team and principles
               </LinkButton>
             </P>

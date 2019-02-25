@@ -7,9 +7,12 @@ import {
   SPACING_MEDIUM,
   SPACING_SMALL,
   SPACING_XXXLARGE,
+  DARKGREY,
+  FONT_SIZE_MEDIUM,
 } from '../../config/styles'
 import { LOGO_TWITTER, LOGO_LINKEDIN } from '../../resources/icons'
 import url from 'url'
+import LargeIconAndPoints from '../bulletedsections/LargeIconAndPoints'
 
 const Bio = styled.div`
   color: ${props => props.color || 'black'};
@@ -43,6 +46,10 @@ const Spec = styled.div`
   margin-top: ${props => (props.first ? 0 : SPACING_SMALL)};
 `
 
+const PersonName = styled.span`
+  font-size: ${FONT_SIZE_MEDIUM};
+`
+
 const OptionalSpec = props =>
   props.show ? <Spec>{props.children}</Spec> : null
 
@@ -71,7 +78,7 @@ const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
       </PersonImage>
       <PersonSpecs>
         <Spec first>
-          <strong>{name}</strong>
+          <PersonName>{name}</PersonName>
         </Spec>
         <OptionalLinkSpec
           show={props.twitter ? true : false}
@@ -84,7 +91,14 @@ const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
           text={props.linkedin ? props.linkedin : null}
         />
         <Spec>Hometown: {hometown}</Spec>
-        <Spec>Ask me about: {specialisms}</Spec>
+        <Spec>
+          <LargeIconAndPoints
+            heading="Ask me about"
+            points={specialisms.split(/\s*,\s*/g)}
+            color={DARKGREY}
+            flushLeft
+          />
+        </Spec>
       </PersonSpecs>
     </BioInner>
   </Bio>

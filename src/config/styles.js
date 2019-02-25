@@ -44,3 +44,4 @@ export const FONT_WEIGHT_BOLD = '700'
 export const FONT_WEIGHT_EXTRABOLD = '900'
 
 export const PARAGRAPH_CHARACTER_WIDTH = '65ch'
+export const PARAGRAPH_CHARACTER_WIDTH_NARROW = '33ch'

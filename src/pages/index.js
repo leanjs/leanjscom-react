@@ -205,8 +205,8 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
-            <LinkButton to="/team-principles" hasArrows>
-              Our Team and Principles
+            <LinkButton to="/team" hasArrows>
+              Our Team
             </LinkButton>
           </Col>
         </Row>

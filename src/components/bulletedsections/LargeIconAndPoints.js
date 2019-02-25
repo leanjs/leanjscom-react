@@ -25,14 +25,21 @@ const Columns = styled.div`
 `
 
 const Points = styled(Ul)`
-  margin-left: ${SPACING_LARGE};
+  margin-left: ${props => (props.flushLeft ? 0 : SPACING_LARGE)};
 `
 
 const PointsHeading = styled(Li)`
   list-style: none;
   padding-left: 0;
   position: relative;
-  left: -${parseInt(SPACING_STANDARD) + 1.45}rem;
+  ${props =>
+    props.flushLeft
+      ? `
+    left: -${parseInt(SPACING_STANDARD)}rem;
+  `
+      : `
+    left: -${parseInt(SPACING_STANDARD) + 1.45}rem;
+  `};
   font-weight: bold;
 `
 
@@ -42,8 +49,8 @@ const LargeIconAndPoints = ({ color, ...props }) => (
     {props.image && (
       <CaseStudyBullet className="case-study-bullet" image={props.image} />
     )}
-    <Points className="points">
-      <PointsHeading>{props.heading}</PointsHeading>
+    <Points className="points" flushLeft={props.flushLeft}>
+      <PointsHeading flushLeft={props.flushLeft}>{props.heading}</PointsHeading>
       {props.points.map((point, i) => (
         <Li key={`large-icon-and-points-${i}-${new Date().getTime()}`}>
           {point}
