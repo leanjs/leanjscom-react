@@ -181,84 +181,82 @@ const Team = () => (
         </Row>
         <Row>
           <Col sm={12}>
-            <Line>
-              <H3a>Our core values</H3a>
-              <ValueGrid>
-                <NoVerticalMarginRow>
-                  <SmallIconAndSentences
-                    wrapWithCols
-                    bulletType={BenefitBullet}
-                    flushLeft
-                    items={[
-                      {
-                        image: 'head',
-                        sentence: (
-                          <React.Fragment>
-                            <P>
-                              <Strong>
-                                Be unafraid to learn from everyone and believe
-                                in teaching what we know
-                              </Strong>
-                            </P>
-                            <P>Supporting principles:</P>
-                            <Ul>
-                              <Li>Keep searching, keep learning</Li>
-                              <Li>Share - because sharing is caring</Li>
-                              <Li>Build aligned minds, not just teams</Li>
-                              <Li>More than the sum of our parts</Li>
-                            </Ul>
-                          </React.Fragment>
-                        ),
-                      },
-                      {
-                        image: 'heart',
-                        sentence: (
-                          <React.Fragment>
-                            <P>
-                              <Strong>
-                                Always aim to treat others how we would want to
-                                be treated
-                              </Strong>
-                            </P>
-                            <P>Supporting principles:</P>
-                            <Ul>
-                              <Li>Treat others how you want to be treated</Li>
-                              <Li>Transparently true to our methodology</Li>
-                            </Ul>
-                          </React.Fragment>
-                        ),
-                      },
-                      {
-                        image: 'people',
-                        sentence: (
-                          <React.Fragment>
-                            <P>
-                              <Strong>
-                                Ensure what we do is meaningful and always
-                                people-centred
-                              </Strong>
-                            </P>
-                            <P>Supporting principles:</P>
-                            <Ul>
-                              <Li>People-centred products - always</Li>
-                              <Li>Be unafraid</Li>
-                              <Li>Purpose over profits</Li>
-                            </Ul>
-                          </React.Fragment>
-                        ),
-                      },
-                    ]}
-                  />
-                </NoVerticalMarginRow>
-              </ValueGrid>
+            <H3a>Our core values</H3a>
+            <ValueGrid>
+              <NoVerticalMarginRow>
+                <SmallIconAndSentences
+                  markupAsList
+                  bulletType={BenefitBullet}
+                  flushLeft
+                  items={[
+                    {
+                      image: 'head',
+                      sentence: (
+                        <React.Fragment>
+                          <P>
+                            <Strong>
+                              Be unafraid to learn from everyone and believe in
+                              teaching what we know
+                            </Strong>
+                          </P>
+                          <P>Supporting principles:</P>
+                          <Ul>
+                            <Li>Keep searching, keep learning</Li>
+                            <Li>Share - because sharing is caring</Li>
+                            <Li>Build aligned minds, not just teams</Li>
+                            <Li>More than the sum of our parts</Li>
+                          </Ul>
+                        </React.Fragment>
+                      ),
+                    },
+                    {
+                      image: 'heart',
+                      sentence: (
+                        <React.Fragment>
+                          <P>
+                            <Strong>
+                              Always aim to treat others how we would want to be
+                              treated
+                            </Strong>
+                          </P>
+                          <P>Supporting principles:</P>
+                          <Ul>
+                            <Li>Treat others how you want to be treated</Li>
+                            <Li>Transparently true to our methodology</Li>
+                          </Ul>
+                        </React.Fragment>
+                      ),
+                    },
+                    {
+                      image: 'people',
+                      sentence: (
+                        <React.Fragment>
+                          <P>
+                            <Strong>
+                              Ensure what we do is meaningful and always
+                              people-centred
+                            </Strong>
+                          </P>
+                          <P>Supporting principles:</P>
+                          <Ul>
+                            <Li>People-centred products - always</Li>
+                            <Li>Be unafraid</Li>
+                            <Li>Purpose over profits</Li>
+                          </Ul>
+                        </React.Fragment>
+                      ),
+                    },
+                  ]}
+                />
+              </NoVerticalMarginRow>
+            </ValueGrid>
 
-              <LinkButton
-                external
-                to="https://medium.com/leanjs/open-source-branding-leanjs-sprint-1-8caf048396d0"
-              >
-                Blog: How we created our brand identity
-              </LinkButton>
-            </Line>
+            <LinkButton
+              external
+              to="https://medium.com/leanjs/open-source-branding-leanjs-sprint-1-8caf048396d0"
+            >
+              Blog: How we created our brand identity
+            </LinkButton>
           </Col>
         </Row>
       </Grid>
