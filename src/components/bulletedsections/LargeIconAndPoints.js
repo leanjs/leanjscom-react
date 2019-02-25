@@ -36,9 +36,12 @@ const PointsHeading = styled(Li)`
   font-weight: bold;
 `
 
+// TODO:WV:20190225:If there is no icon this should really be a different component; it would be more semantic
 const LargeIconAndPoints = ({ color, ...props }) => (
   <Columns color={color}>
-    <CaseStudyBullet className="case-study-bullet" image={props.image} />
+    {props.image && (
+      <CaseStudyBullet className="case-study-bullet" image={props.image} />
+    )}
     <Points className="points">
       <PointsHeading>{props.heading}</PointsHeading>
       {props.points.map((point, i) => (

@@ -8,41 +8,24 @@ import Topic from '../components/labels/Topic'
 import BenefitBullet from '../components/bullets/BenefitBullet'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
+import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
 import { WHITE, DARKGREY, LIGHTGREY, SPACING_MEDIUM } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
+import Link from '../components/navigation/Link'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, H3a, P, MVPLink } from '../components/text'
+import { H2, H3a, P, scalabilityLink, SupportingText } from '../components/text'
 import Hr from '../components/decoration/Hr'
 import HighlightedItem from '../components/decoration/HighlightedItem'
 import Mugshot from '../components/mugshots/Mugshot'
 import Image from '../components/elements/Image'
 import Line from '../components/sections/Line'
 import Indented from '../components/sections/Indented'
-import { RICHARD_TEACHING, ITERATION_DIAGRAM, ALEX_TEACHING2, PAUL_POSTITS } from '../resources/images'
-
-const HowItWorks = props =>
-  props.sections.map((section, j) => (
-    <React.Fragment key={`howitworks-${j}`}>
-      <Line>
-        <H3a>{section.heading}</H3a>
-        {section.points.map((point, i) => (
-          <SmallIconAndSentence
-            icon={<BenefitBullet image={point.icon} />}
-            sentence={point.sentence}
-            key={`howitworks-icons-and-sentences-${i}`}
-            flushLeft
-          />
-        ))}
-        {section.button ? (
-          <P>
-            <LinkButton to={section.button.to} hasArrows>
-              {section.button.text}
-            </LinkButton>
-          </P>
-        ) : null}
-      </Line>
-    </React.Fragment>
-  ))
+import {
+  RICHARD_TEACHING,
+  ITERATION_DIAGRAM,
+  ALEX_TEACHING2,
+  PAUL_POSTITS,
+} from '../resources/images'
 
 const FAQs = styled.div`
   padding: ${SPACING_MEDIUM} ${SPACING_MEDIUM} 0 ${SPACING_MEDIUM};
@@ -55,37 +38,23 @@ const OurProcess = () => (
   <React.Fragment>
     <Header
       titleLines={['Our process']}
+      subtitle="Our unique process utlises techniques and approaches that work - incrementally yet throroughly"
       links={[
         {
-          text: "What is 'Lean'?",
-          to: 'whatIsLean',
+          text: 'Our lean approach',
+          to: 'ourLeanApproach',
         },
         {
-          text: 'Our lean process',
-          to: 'ourLeanProcess',
+          text: 'Timeframes',
+          to: 'timeframes',
         },
         {
-          text: 'How long it takes',
-          to: 'howLongItTakes',
+          text: 'Scalability',
+          to: 'scalability',
         },
         {
-          text: 'What is an MVP?',
-          to: 'mvp',
-        },
-        {
-          text: 'Applying Lean to training',
-          to: 'applyingLeanToTraining',
-        },
-      ]}
-      bulletPoints={[
-        {
-          icon: 'qa',
-          sentence:
-            'A process ensuring user-tested, quality digital solutions',
-        },
-        {
-          icon: 'quick',
-          sentence: 'From concept to launch - in as little as 6 weeks',
+          text: 'Future friendliness and handover',
+          to: 'futureFriendlinessAndHandover',
         },
       ]}
     />
@@ -94,249 +63,181 @@ const OurProcess = () => (
       <Grid>
         <Row>
           <Col md={12}>
-            <a name="whatIsLean" />
-            <H2>Working lean, reducing waste - rapidly</H2>
+            <a name="ourLeanApproach" />
+            <H2>Our lean approach</H2>
           </Col>
           <Col md={6}>
+            <SupportingText>
+              Everything we do is about efficiency - reducing business waste,
+              rapidly
+            </SupportingText>
             <P>
-              You’re probably thinking, what IS Lean? For that matter, you
-              may’ve heard of Agile too and thought the same… So, what is all
-              this jargon about?
+              Lean is like cooking with family... you try and add ingredients,
+              taste, learn and experiment with flavours as you go - asking them
+              to taste with you along the way. You quickly find what works great
+              and immediately reject what tastes bad.
             </P>
             <P>
-              Lean/Agile is like cooking. You add ingredients, taste, learn and
-              experiment with flavours as you go. You find and use what works
-              great and reject what tastes bad.
+              The result? A delicious finished product that you can reproduce
+              over and over, delighting your nearest and dearest with something
+              they - and you - love.
             </P>
             <P>
-              You wouldn’t serve something to your guests without tasting now
-              would you?!
-            </P>
-            <P>
-            <LinkButton to="/case-studies" dark hasArrows>
-              Read our case studies
-            </LinkButton>
+              <LinkButton to="/contact" dark hasArrows>
+                Contact
+              </LinkButton>
             </P>
           </Col>
-          <Col md={1}>
-          </Col>
+          <Col md={1} />
           <Col md={5}>
-            <Image src={PAUL_POSTITS} alt="UX designer Paul, grouping post-it notes on a wall to find patterns" />
-          </Col>
-        </Row>
-        <Row>
-        </Row>
-        <Row>
-          <Col md={12}>
-            <H2>How this works at LeanJS</H2>
-            <a name="ourLeanProcess" />
-          </Col>
-          <Row></Row>
-          <Col md={5}>
-            <Image src={ITERATION_DIAGRAM} alt="Three circles stating 'Test', 'Learn' and 'Build', each with an arrow pointing to the next, showing a circular motion of Lean production"/>
-          </Col>
-          <Col md={1}>
-          </Col>
-          <Col md={6}>
-            <HowItWorks
-              sections={[
-                {
-                  heading: 'Learn',
-                  points: [
-                    {
-                      sentence:
-                        'We take time talking with you and your team, asking key questions and delving deep into your expectations and business needs',
-                      icon: 'business_needs',
-                    },
-                    {
-                      sentence:
-                        'Speak to users to their core needs and ensure we prioritise how they think',
-                      icon: 'chat',
-                    },
-                    {
-                      sentence:
-                        'Look at competitors in the market, and outside your sector, to evaluate how to differentiate your digital solution',
-                      icon: 'competitors',
-                    },
-                  ],
-                },
-
-                {
-                  heading: 'Build',
-                  points: [
-                    {
-                      sentence: [
-                        'We start ‘low-fi’ so we can test the core functionality and content against user needs as soon as humanly possible. Minimum viable products (',
-                        <MVPLink key={`lofimvp-${new Date().getTime()}`} />,
-                        's) first, always.',
-                      ],
-                      icon: 'start_small',
-                    },
-                    {
-                      sentence: [
-                        'Design, development and accessibility best practices are baked in to ensure future-friendly ',
-                        <MVPLink
-                          key={`bestpractisemvp-${new Date().getTime()}`}
-                        />,
-                        's that you (with our help or not) can take further into the  future.',
-                      ],
-                      icon: 'quality',
-                    },
-                    {
-                      sentence:
-                        'Under the hood, we use the latest ReactJS ecosystem technologies. It’s stable, quick to iterate upon and future proof.',
-                      icon: 'react',
-                    },
-                  ],
-                },
-
-                {
-                  heading: 'Test',
-                  points: [
-                    {
-                      sentence:
-                        'We put digital solutions in front of target users as early as possible. As soon as we have a working prototype, we test.',
-                      icon: 'holding_mobile',
-                    },
-                    {
-                      sentence:
-                        'We actually watch and speak with users in our tests. Qualitative insight helps us understand exactly how people use digital products.',
-                      icon: 'eye',
-                    },
-                    {
-                      sentence: [
-                        'Quality assurance (QA) is essential for such innovative technologies. We run a myriad of real-world tests to make sure your ',
-                        <MVPLink key={`qamvp-${new Date().getTime()}`} />,
-                        ' wont break.',
-                      ],
-                      icon: 'tick_badge',
-                    },
-                  ],
-                  button: {
-                    text: 'Lean / Agile training? We can do that',
-                    to: '/training',
-                  },
-                },
-              ]}
+            <Image
+              src={PAUL_POSTITS}
+              alt="UX designer Paul, grouping post-it notes on a wall to find patterns"
             />
           </Col>
         </Row>
-
+        <Row />
         <Row>
-          <Col md={1} />
-          <Col md={10}>
-            <HighlightedItem>
-              <FAQs>
-                <FAQ>
-                  <a name="howLongItTakes" />
-                  <H2>Whoa there... How long does that take?</H2>
-                  <P>
-                    It sounds a lot, we know. However, this process can take as
-                    little as 6 weeks
-                  </P>
-                  <P>
-                    Imagine - a fully formed, tested and proven <MVPLink />{' '}
-                    ready to take into the future in only a fraction of the time
-                    it may've taken in the past
-                  </P>
-                  <P>
-                    <LinkButton to="/case-studies" hasArrows>
-                      Read our case studies
-                    </LinkButton>
-                  </P>
-                </FAQ>
-
-                <FAQ>
-                  <a name="mvp" />
-                  <H2>MVP? What does that mean?</H2>
-                  <P>
-                    A minimum viable product (MVP) is a digital product that has
-                    only the core features that a user needs to complete their
-                    customer journey.
-                  </P>
-                  <P>
-                    That goal is decided from user and business research with
-                    both party’s needs considered.
-                  </P>
-                  <P>
-                    Starting with an MVP means that we can build from the ground
-                    upwards. This can apply to new and legacy products as well
-                    as we can work iteratively from an existing feature/product.
-                    Simple!
-                  </P>
-                  <P>
-                    <LinkButton to="/building-solutions" hasArrows>
-                      Building solutions with you
-                    </LinkButton>
-                  </P>
-                </FAQ>
-              </FAQs>
-            </HighlightedItem>
+          <Col md={12}>
+            <H2>Stages of the LeanJS process</H2>
           </Col>
-          <Col md={1} />
+          <Col md={7}>
+            <LargeIconAndPoints
+              heading="Learn..."
+              points={[
+                'Collaborative client workshops',
+                'User research, identifying needs',
+                'Competitor research',
+                'Analysis of quantitative data',
+              ]}
+            />
+
+            <LargeIconAndPoints
+              heading="Build..."
+              points={[
+                'Strategy documentation',
+                'ReactJS-coded, low fidelity prototyping',
+                'Process creation and visualisation',
+              ]}
+            />
+
+            <LargeIconAndPoints
+              heading="Test..."
+              points={[
+                'Usability testing with the target audience',
+                'Stringent React code review and testing',
+                'Quantitative measurement',
+              ]}
+            />
+          </Col>
+          <Col md={5}>
+            <Image
+              src={ITERATION_DIAGRAM}
+              alt="Three circles stating 'Test', 'Learn' and 'Build', each with an arrow pointing to the next, showing a circular motion of Lean production"
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6} />
+          <Col md={6}>
+            <a name="timeframes" />
+            <H2>Lean project timescales</H2>
+            <P>
+              All projects are different but we’ve proven that our process can
+              deliver quality, fully researched and tested tech in just 3.5
+              weeks - from idea to launch. Learn more on our{' '}
+              <Link to="https://medium.com/leanjs/reactjs-academy-2018-website-design-case-study-4b2074dc4e5d">
+                blog
+              </Link>
+            </P>
+            <P>
+              The reason for this is our unique process and the tools we utilise
+              to create products and processes - a combination of design
+              thinking, cutting edge development skills, user-centred project
+              management good practices and passion from the LeanJS team.
+            </P>
+            <P>
+              <LinkButton to="/case-studies" hasArrows dark>
+                Case studies
+              </LinkButton>
+            </P>
+          </Col>
         </Row>
       </Grid>
     </Section>
-
-    <Section dark lastOnPage>
+    <Section dark>
       <Grid>
         <Row>
-          <Col md={12}>
-            <a name="applyingLeanToTraining" />
-            <H2>Applying our process to training as well as products</H2>
+          <Col>
+            <a name="scalability" />
+            <H2>Scalability in an evolving tech world</H2>
+            <SupportingText>
+              Starting small doesn't mean we ignore the bigger picture...
+            </SupportingText>
             <P>
-              We don’t just apply our process to our product builds, but to our
-              training too!
+              Digital transformation has been all the rage over the past few
+              years and using traditional ‘top-down’ approaches, the desired
+              outcomes can be incredibly hard to achieve.
+            </P>
+            <P>
+              However, our experience tells us that working incrementally means
+              less exposure to business risks and creates more learnings from
+              which to build from.
+            </P>
+            <P>
+              Our process combines Lean Startup thinking with UX design
+              processes and ReactJS’s revolutionary development methodology
+              means stakeholders can do one important thing: make better, faster
+              business decisions.
+            </P>
+
+            <P>
+              <LinkButton to="/team-principles" hasArrows>
+                Our team and principles
+              </LinkButton>
             </P>
           </Col>
         </Row>
+      </Grid>
+    </Section>
+    <Section>
+      <Grid>
+        <Row>
+          <Col>
+            <a name="futureFriendlinessAndHandover" />
+            <H2>Guiding you into the future</H2>
+            <SupportingText>
+              Handovers can be problematic, but our coaching expertise can help
+              ease the pain...
+            </SupportingText>
+          </Col>
+        </Row>
+
         <Row>
           <Col md={5}>
             <P>
-              <img src={ALEX_TEACHING2} alt="In a classroom full of students, Alex has his back to the image whilst presenting to those students"/>
+              <img
+                src={ALEX_TEACHING2}
+                alt="In a classroom full of students, Alex has his back to the image whilst presenting to those students"
+              />
             </P>
           </Col>
-          <Col md={1}>
-          </Col>
+          <Col md={1} />
           <Col md={6}>
-            <Line>
-              <H3a>Learn</H3a>
-              <P>
-                Trainers are builders, searching for and implementing the latest
-                methods and tech. Both in personal and client projects. We’re
-                constantly learning too!
-              </P>
-            </Line>
-
-            <Line>
-              <H3a>Build</H3a>
-              <P>
-                We create and add to our curriculum when research shows to do
-                so. We also creating ‘MVP’ meetups to give us a basis on which
-                to test effectiveness/need
-              </P>
-            </Line>
-
-            <Line>
-              <H3a>Test</H3a>
-              <P>
-                Students and coaches provide us with essential qualitiative
-                feedback on all trainings
-              </P>
-            </Line>
-
-            <Indented>
-              <P>
-                <LinkButton to="/training" hasArrows>
-                  Read more about our training
-                </LinkButton>
-              </P>
-            </Indented>
-          </Col>
-        </Row>
-        <Row lastOnPage>
-          <Col>
-            <Hr />
+            <P>
+              Bacon ipsum dolor amet bresaola turkey ribeye corned beef chuck.
+              Turducken pork belly rump hamburger.
+            </P>
+            <P>
+              Frankfurter turducken beef doner cupim jerky alcatra, drumstick
+              kevin meatball corned beef turkey bresaola chuck salami. Alcatra
+              drumstick sausage landjaeger burgdoggen venison t-bone turkey
+              bresaola swine kevin turducken.
+            </P>
+            <P>
+              Turducken fatback sausage, bresaola venison pig hamburger pork
+              loin pancetta porchetta landjaeger burgdoggen shankle doner.
+            </P>
           </Col>
         </Row>
       </Grid>
