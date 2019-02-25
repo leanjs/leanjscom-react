@@ -180,8 +180,12 @@ const Team = () => (
           </Col>
         </Row>
         <Row>
-          <Col sm={12}>
+          <Col>
             <H3a>Our core values</H3a>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
             <ValueGrid>
               <NoVerticalMarginRow>
                 <SmallIconAndSentences
@@ -257,6 +261,13 @@ const Team = () => (
             >
               Blog: How we created our brand identity
             </LinkButton>
+          </Col>
+          <Col md={6}>{/* Picture could go here */}</Col>
+        </Row>
+
+        <Row lastOnPage>
+          <Col>
+            <Hr />
           </Col>
         </Row>
       </Grid>
