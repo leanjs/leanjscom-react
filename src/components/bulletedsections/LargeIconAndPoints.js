@@ -7,13 +7,14 @@ import {
   SPACING_STANDARD,
   SPACING_MEDIUM,
   SPACING_LARGE,
+  LIGHTGREY,
 } from '../../config/styles'
 
 const Columns = styled.div`
   display: flex;
-  // align-items: top;
-
-  ul {
+  flex-direction: column;
+  border: 1px solid ${LIGHTGREY}
+  // align-items: top; ul {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: ${SPACING_STANDARD};
@@ -24,9 +25,7 @@ const Columns = styled.div`
   }
 `
 
-const Points = styled(Ul)`
-  margin-left: ${props => (props.flushLeft ? 0 : SPACING_LARGE)};
-`
+const Points = styled(Ul)``
 
 const PointsHeading = styled(Li)`
   list-style: none;

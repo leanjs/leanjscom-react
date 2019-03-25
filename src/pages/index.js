@@ -134,7 +134,7 @@ const IndexPage = () => (
                     'Day 5: Iterate on findings',
                   ]}
                 />
-                <LinkButton to="/case-studies" hasArrows dark>
+                <LinkButton to="#" hasArrows dark>
                   Find out more - UX Sprint
                 </LinkButton>
               </Li>
@@ -147,14 +147,14 @@ const IndexPage = () => (
                   image="bostonuniversity"
                   heading="React Sprint - 1 Week"
                   points={[
-                    'Day 1 = ',
-                    'Day 2 = ',
-                    'Day 3 = ',
-                    'Day 4 = ',
-                    'Day 5 = ',
+                    'Day 1: ',
+                    'Day 2: ',
+                    'Day 3: ',
+                    'Day 4: ',
+                    'Day 5: ',
                   ]}
                 />
-                <LinkButton to="/case-studies" hasArrows dark>
+                <LinkButton to="#" hasArrows dark>
                   Find out more - React Sprint
                 </LinkButton>
               </Li>
@@ -167,14 +167,14 @@ const IndexPage = () => (
                   image="abinbev"
                   heading="GraphQL Sprint - 1 Week"
                   points={[
-                    'Day 1 = ',
-                    'Day 2 = ',
-                    'Day 3 = ',
-                    'Day 4 = ',
-                    'Day 5 = ',
+                    'Day 1: ',
+                    'Day 2: ',
+                    'Day 3: ',
+                    'Day 4: ',
+                    'Day 5: ',
                   ]}
                 />
-                <LinkButton to="/case-studies" hasArrows dark>
+                <LinkButton to="#" hasArrows dark>
                   Find out more - GraphQL Sprint
                 </LinkButton>
               </Li>
@@ -188,10 +188,7 @@ const IndexPage = () => (
       <Grid>
         <Row>
           <Col md={12}>
-            <H2>
-              Your team of <Strike>experts</Strike> <Strike>teachers</Strike>{' '}
-              guides.
-            </H2>
+            <H2>Your team of mentors</H2>
             <SupportingText>
               Our design and dev sprints are all about working{' '}
               <strong>with you and your team</strong>
@@ -203,17 +200,17 @@ const IndexPage = () => (
               solutions that can results in tech products that are formulated to
               be on-time and on-budget.
             </P>
-          </Col>
-          <Col>
-            <LinkButton to="/team" hasArrows>
-              Want to talk? Contact us!
-            </LinkButton>
+            <Col>
+              <LinkButton to="#" hasArrows>
+                Want to talk? Contact us!
+              </LinkButton>
+            </Col>
           </Col>
         </Row>
         <Row />
         <Row>
           <Col>
-            <H3a>Your sprint guides</H3a>
+            <H3a>Our Sprint Leads / Mentors</H3a>
           </Col>
         </Row>
         <Row>
@@ -222,7 +219,7 @@ const IndexPage = () => (
               <PersonName>UX design</PersonName>
               <br />
               <PersonName>Paul Woodley</PersonName>
-              <img src="https://via.placeholder.com/350x65" />
+              <img src="https://via.placeholder.com/350x350" />
               <P>
                 With over 10 years of UX/UI design experience, Paul has been UX
                 Lead of an array of projects with clients like the Bank of
@@ -244,7 +241,7 @@ const IndexPage = () => (
               <PersonName>React</PersonName>
               <br />
               <PersonName>Alex Lobera</PersonName>
-              <img src="https://via.placeholder.com/350x65" />
+              <img src="https://via.placeholder.com/350x350" />
               <P>
                 As founder and Head Coach of ReactJS Academy - Europe's very
                 first React training school, Alex is an authority on ReactJS
@@ -266,7 +263,7 @@ const IndexPage = () => (
               <PersonName>GraphQL</PersonName>
               <br />
               <PersonName>Richard Moss</PersonName>
-              <img src="https://via.placeholder.com/350x65" />
+              <img src="https://via.placeholder.com/350x350" />
               <P>
                 As you've guessed, mentoring is passion for us - and Richard is
                 no exception. As Product Owner of ReactJS Academy, Richard is at
