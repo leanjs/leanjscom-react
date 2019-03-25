@@ -129,7 +129,7 @@ const WHITE_TEXT = `
 const SubTitleBackground = styled.div`
   ${TITLE_BACKGROUND};
   ${WHITE_TEXT};
-  padding: ${SPACING_STANDARD};
+
   ul {
     margin-top: ${SPACING_STANDARD};
   }

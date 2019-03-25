@@ -79,6 +79,8 @@ const SprintList = styled(Ul)`
   }
 `
 
+const SprintTabs = styled.div``
+
 const IndexPage = () => (
   <React.Fragment>
     <Header
@@ -88,7 +90,7 @@ const IndexPage = () => (
         {
           icon: 'development',
           sentence:
-            'Inject us into your team and achieve UX + React + GraphQL in just 3 weeks ',
+            'You, your team and us - achieving UX + React + GraphQL in just 3 weeks ',
           button: {
             to: '#howitworks',
             text: 'How it works',
@@ -283,7 +285,11 @@ const IndexPage = () => (
             </Profile>
           </Col>
         </Row>
-
+        <Row>
+          <Col>
+            <Instagram photosPerRow={6} />
+          </Col>
+        </Row>
         <Row>
           <Col>
             <H3a>Our guiding principles</H3a>
@@ -338,143 +344,146 @@ const IndexPage = () => (
           </P>
         </Col>
         <Row />
-        <Row>
-          <Col md={12}>
-            <H3a>Week 1 - user experience (UX) design</H3a>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <H5>Day 1: Problem space / research</H5>
-          </Col>
-        </Row>
-        <Row>
-          <SmallIconAndSentences
-            wrapWithCols={true}
-            bulletType={ValueBullet}
-            items={[
-              {
-                image: 'learning',
-                sentence:
-                  'Stakeholder research using our unique Assumptions Canvas',
-              },
-              {
-                image: 'caring',
-                sentence: 'User research, validation of the Assumptions Canvas',
-              },
-              {
-                image: 'people',
-                sentence:
-                  'Prioritise and decide upon key jobs-to-be-done to focus upon',
-              },
-            ]}
-          />
-        </Row>
-        <Row>
-          <Col>
-            <H5>Day 2: Ideation</H5>
-          </Col>
-        </Row>
-        <Row>
-          <SmallIconAndSentences
-            wrapWithCols={true}
-            bulletType={ValueBullet}
-            items={[
-              {
-                image: 'learning',
-                sentence:
-                  'Ideation workshop to create solutions based on user findings',
-              },
-              {
-                image: 'caring',
-                sentence:
-                  'Design studio workshop bringing out all ideas and align expectations',
-              },
-              {
-                image: 'people',
-                sentence:
-                  'Create the design strategy document, no wireframes required!',
-              },
-            ]}
-          />
-        </Row>
-        <Row>
-          <Col>
-            <H5>Day 3: Prototyping in code</H5>
-          </Col>
-        </Row>
-        <Row>
-          <SmallIconAndSentences
-            wrapWithCols={true}
-            bulletType={ValueBullet}
-            items={[
-              {
-                image: 'learning',
-                sentence:
-                  'Minimum viable product creation and finalised strategy',
-              },
-              {
-                image: 'caring',
-                sentence: 'Pairing sessions between designers and developers',
-              },
-              {
-                image: 'people',
-                sentence: 'Demos and retros with the whole team',
-              },
-            ]}
-          />
-        </Row>
-        <Row>
-          <Col>
-            <H5>Day 4: User testing</H5>
-          </Col>
-        </Row>
-        <Row>
-          <SmallIconAndSentences
-            wrapWithCols={true}
-            bulletType={ValueBullet}
-            items={[
-              {
-                image: 'learning',
-                sentence:
-                  'Usability testing with pre-sourced users to find issues',
-              },
-              {
-                image: 'caring',
-                sentence: 'Any team members able observe user behaviours',
-              },
-              {
-                image: 'people',
-                sentence: 'Affinity mapping of usabilty testing findings',
-              },
-            ]}
-          />
-        </Row>
-        <Row>
-          <Col>
-            <H5>Day 5: Iteration / retros</H5>
-          </Col>
-        </Row>
-        <Row>
-          <SmallIconAndSentences
-            wrapWithCols={true}
-            bulletType={ValueBullet}
-            items={[
-              {
-                image: 'learning',
-                sentence: 'Review of testing, solutionising from insights',
-              },
-              {
-                image: 'caring',
-                sentence: 'Final design and dev pairing session',
-              },
-              {
-                image: 'people',
-                sentence: 'Final demo and retro, handshakes and beers!',
-              },
-            ]}
-          />
-        </Row>
+        <SprintTabs>
+          <Row>
+            <Col md={12}>
+              <H3a>Week 1 - user experience (UX) design</H3a>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 1: Problem space / research</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence:
+                    'Stakeholder research using our unique Assumptions Canvas',
+                },
+                {
+                  image: 'caring',
+                  sentence:
+                    'User research, validation of the Assumptions Canvas',
+                },
+                {
+                  image: 'people',
+                  sentence:
+                    'Prioritise and decide upon key jobs-to-be-done to focus upon',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 2: Ideation</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence:
+                    'Ideation workshop to create solutions based on user findings',
+                },
+                {
+                  image: 'caring',
+                  sentence:
+                    'Design studio workshop bringing out all ideas and align expectations',
+                },
+                {
+                  image: 'people',
+                  sentence:
+                    'Create the design strategy document, no wireframes required!',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 3: Prototyping in code</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence:
+                    'Minimum viable product creation and finalised strategy',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Pairing sessions between designers and developers',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Demos and retros with the whole team',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 4: User testing</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence:
+                    'Usability testing with pre-sourced users to find issues',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Any team members able observe user behaviours',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Affinity mapping of usabilty testing findings',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 5: Iteration / retros</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Review of testing, solutionising from insights',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Final design and dev pairing session',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Final demo and retro, handshakes and beers!',
+                },
+              ]}
+            />
+          </Row>
+        </SprintTabs>
       </Grid>
     </Section>
   </React.Fragment>
