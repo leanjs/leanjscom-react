@@ -28,7 +28,7 @@ const DesktopMenuItem = styled(Item)`
 
 const MenuWrapper = styled.div`
   display: inline-block;
-  margin: 0 15% 0 0;
+  margin-right: 0.5rem;
 `
 
 DesktopMenuItem.displayName = 'DesktopMenuItem'

@@ -45,6 +45,7 @@ const H1 = styled(BaseH1)`
   line-height: 1.5;
   letter-spacing: normal;
   color: ${WHITE};
+  margin-bottom: 0;
 `
 const HeaderSection = styled(Section)`
 

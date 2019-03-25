@@ -21,8 +21,7 @@ const setColours = props => `
       props
     )}), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
-const allowArrows = props =>
-  props.hasArrows ? `&:after { content: " >>"}` : ``
+const allowArrows = props => (props.hasArrows ? `&:after { content: " "}` : ``)
 const allowShrinkWrapOnMobile = props =>
   `${
     props.shrinkWrapOnMobile

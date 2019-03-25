@@ -15,7 +15,7 @@ import {
 const addIconButtonStyles = props => `
 	border:none;
 	background:${WHITE};
-
+  box-shadow: 0 19px 38px rgba(0,0,0,0.5), 0 15px 12px rgba(0,0,0,0.3);
 	.contents {
 		height:100%;
 		width:100%;

@@ -7,7 +7,7 @@ import {
   SPACING_MEDIUM,
   SPACING_SMALL,
   SPACING_XXXLARGE,
-  DARKGREY,
+  WHITE,
   FONT_SIZE_MEDIUM,
 } from '../../config/styles'
 import { LOGO_TWITTER, LOGO_LINKEDIN } from '../../resources/icons'
@@ -32,6 +32,7 @@ const BioInner = styled.div`
 
 const PersonImage = styled.div`
   display: flex;
+  align-items: center;
 `
 
 const PersonSpecs = styled.div`
@@ -93,9 +94,9 @@ const TeamBio = ({ image, name, hometown, specialisms, ...props }) => (
         <Spec>Hometown: {hometown}</Spec>
         <Spec>
           <LargeIconAndPoints
-            heading="Ask me about"
+            heading="Experience"
             points={specialisms.split(/\s*,\s*/g)}
-            color={DARKGREY}
+            color={WHITE}
             flushLeft
           />
         </Spec>

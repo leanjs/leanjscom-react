@@ -27,7 +27,7 @@ const MenuContainer = styled.nav`
 
 const LogoWrapper = styled.div`
   display: inline-block;
-  margin: 0 0 0 15%;
+  margin-left: 0.5rem;
 `
 
 const Menu = ({ width }) => {

@@ -4,6 +4,7 @@ import {
   SPACING_STANDARD,
   SPACING_MEDIUM,
   SPACING_LARGE,
+  MEDIUMGREY,
 } from '../../config/styles'
 import { SCREEN_SM_MAX } from '../utils'
 
@@ -27,7 +28,7 @@ const getLeftPadding = isWideScreen => props =>
 
 const Cell = styled.div`
   display: table-cell;
-  vertical-align: ${props => props.verticalCenter?'middle':'top'};
+  vertical-align: ${props => (props.verticalCenter ? 'middle' : 'top')};
   padding: ${SPACING_STANDARD};
   ${getLeftPadding(true)};
   @media (max-width: ${SCREEN_SM_MAX}) {
@@ -38,7 +39,12 @@ const Cell = styled.div`
 const SmallIconAndSentence = props => (
   <Table largeHorizontalSpacing={props.largeHorizontalSpacing}>
     <Row>
-      <Cell firstCell firstTable={props.first} flushLeft={props.flushLeft} verticalCenter={props.verticalCenter}>
+      <Cell
+        firstCell
+        firstTable={props.first}
+        flushLeft={props.flushLeft}
+        verticalCenter={props.verticalCenter}
+      >
         {props.icon}
       </Cell>
       <Cell verticalCenter={props.verticalCenter}>{props.sentence}</Cell>

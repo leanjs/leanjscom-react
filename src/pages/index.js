@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Link from '../components/navigation/Link'
 import Header from '../components/layout/Header'
 import Section from '../components/layout/Section'
 import Ul, { Li } from '../components/layout/Ul'
@@ -12,12 +13,26 @@ import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSen
 import SmallIconAndSentences from '../components/bulletedsections/SmallIconAndSentences'
 import {
   WHITE,
+  DARKGREY,
+  MEDIUMGREY,
   SPACING_MEDIUM,
   SPACING_LARGE,
+  FONT_SIZE_MEDIUM,
   FONT_SIZE_LARGE,
   FONT_SIZE_LOWERQUARTILE,
 } from '../config/styles'
-import { TEAMWORK } from '../resources/images'
+
+import {
+  ALEX,
+  LENA,
+  RICHARD,
+  HORACIO,
+  WILL,
+  LUIS,
+  PAUL,
+  ALEX_RICH_LAPTOP,
+  TEAMWORK,
+} from '../resources/images'
 import { ITERATION_DIAGRAM } from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
@@ -25,6 +40,7 @@ import Grid, { Col, Row } from '../components/layout/Grid'
 import { H2, H3a, H5, P, Strong, SupportingText } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
+import TeamBio from '../components/mugshots/TeamBio'
 
 const IterationStages = props => (
   <React.Fragment>
@@ -44,11 +60,20 @@ const IterationStages = props => (
   </React.Fragment>
 )
 
+const Profile = styled.div`
+  padding-right: ${SPACING_LARGE};
+  margin-bottom: ${SPACING_MEDIUM};
+`
+
+const PersonName = styled.span`
+  font-size: ${FONT_SIZE_MEDIUM};
+`
+
 const Strike = styled.span`
   text-decoration: line-through;
 `
 
-const CaseStudyList = styled(Ul)`
+const SprintList = styled(Ul)`
   > li:not(:last-child) {
     padding-bottom: ${SPACING_LARGE};
   }
@@ -58,15 +83,15 @@ const IndexPage = () => (
   <React.Fragment>
     <Header
       titleLines={['LeanJS']}
-      subtitle="Develop, evolve, grow - quick snap."
+      subtitle="Home of the Full Stack Sprint"
       bulletPoints={[
         {
           icon: 'development',
           sentence:
-            'We help you advance innovative and scalable solutions - guiding you through the modern tech maze',
+            'Inject us into your team and achieve UX + React + GraphQL in just 3 weeks ',
           button: {
-            to: '/case-studies',
-            text: 'Case studies',
+            to: '#howitworks',
+            text: 'How it works',
           },
         },
       ]}
@@ -76,72 +101,82 @@ const IndexPage = () => (
       <Grid>
         <Row>
           <Col md={12}>
-            <H2>Tech that starts small for a wider impact.</H2>
+            <H2>Enabling maximum effeciency - how your team COULD work</H2>
             <SupportingText>
-              Using our proven methodology, we collaboratively tackle big
-              problems and develop effective, tested solutions that align
-              business needs to your users’ intent.
+              The <strong>Full Stack Sprint</strong> offers you and your team
+              the secrets of super-fast design and development to improve your
+              projects the Lean way.<br />
+              <br />Using hands on workshops and fitting in with your
+              current/future projects, we share our proven methodology and you
+              walk away with the effeciency you want!
             </SupportingText>
           </Col>
         </Row>
         <Row>
           <Col>
-            <P>We’re not making it up… here’s some of our favourite work:</P>
+            <P>Choose ANY (or all!) of these 3 sprints...</P>
           </Col>
         </Row>
         <Row>
-          <Col md={6}>
-            <CaseStudyList unstyled>
+          <Col md={4}>
+            <SprintList unstyled>
               <Li>
                 <LargeIconAndPoints
                   image="fingopay"
-                  heading="FingoPay"
+                  heading="UX Sprint - 1 Week"
                   points={[
-                    'Biometric payment service',
-                    'Onboarding app for unique finger scanning API',
-                    '1-day rapid user research, prototyping and testing',
-                    'React Native app creation in 2 weeks',
+                    'Day 1: Problem space / research',
+                    'Day 2: Ideation',
+                    'Day 3: Prototyping in code',
+                    'Day 4: User testing',
+                    'Day 5: Iterate on findings',
                   ]}
                 />
+                <LinkButton to="/case-studies" hasArrows dark>
+                  Find out more - UX Sprint
+                </LinkButton>
               </Li>
+            </SprintList>
+          </Col>
+          <Col md={4}>
+            <SprintList unstyled>
               <Li>
                 <LargeIconAndPoints
                   image="bostonuniversity"
-                  heading="Boston University - AGNI"
+                  heading="React Sprint - 1 Week"
                   points={[
-                    'Highly regarded US-based literary publication ',
-                    'Website magazine and blog',
-                    'Full UX process, UI and React website',
-                    'Migration 90,000+ pages',
+                    'Day 1 = ',
+                    'Day 2 = ',
+                    'Day 3 = ',
+                    'Day 4 = ',
+                    'Day 5 = ',
                   ]}
                 />
+                <LinkButton to="/case-studies" hasArrows dark>
+                  Find out more - React Sprint
+                </LinkButton>
               </Li>
+            </SprintList>
+          </Col>
+          <Col md={4}>
+            <SprintList unstyled>
               <Li>
                 <LargeIconAndPoints
                   image="abinbev"
-                  heading="ABInBev"
+                  heading="GraphQL Sprint - 1 Week"
                   points={[
-                    'World’s largest brewing company',
-                    'Interactive festive app',
-                    'Rapid, collaborative design and build',
-                    '90% increase in shopping card value',
+                    'Day 1 = ',
+                    'Day 2 = ',
+                    'Day 3 = ',
+                    'Day 4 = ',
+                    'Day 5 = ',
                   ]}
                 />
+                <LinkButton to="/case-studies" hasArrows dark>
+                  Find out more - GraphQL Sprint
+                </LinkButton>
               </Li>
-            </CaseStudyList>
-          </Col>
-          <Col md={6}>
-            <Image
-              src={TEAMWORK}
-              alt="The LeanJS team, happily discussing a digital project around laptops whilst enjoying a drink"
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <LinkButton to="/case-studies" hasArrows dark>
-              Read case studies
-            </LinkButton>
+            </SprintList>
           </Col>
         </Row>
       </Grid>
@@ -156,30 +191,105 @@ const IndexPage = () => (
               guides.
             </H2>
             <SupportingText>
-              Collaboration and guidance is pivotal to any project's success -
-              so we welcome everyone into tech!
+              Our design and dev sprints are all about working{' '}
+              <strong>with you and your team</strong>
             </SupportingText>
           </Col>
           <Col md={7}>
             <P>
-              Our cross-functional team knows how problematic digital projects
-              can be. We evangelise communication across specialities through
-              our expertise and experience as development and UX mentors.
+              In 1-week bursts we mentor you to create positive, future-facing
+              solutions that can results in tech products that are formulated to
+              be on-time and on-budget.
             </P>
-            <P>
-              We created the first React training in Europe - ReactJS Academy,
-              and continue to pioneer edtech with the launch of GraphQL
-              University in 2019. Through them, we deliver advanced Corporate
-              team training across the world, developing staff through the power
-              of cutting-edge tech.
-            </P>
+          </Col>
+          <Col>
+            <LinkButton to="/team" hasArrows>
+              Want to talk? Contact us!
+            </LinkButton>
+          </Col>
+        </Row>
+        <Row />
+        <Row>
+          <Col>
+            <H3a>Your sprint guides</H3a>
           </Col>
         </Row>
         <Row>
-          <Col>
-            <H3a>Our core values</H3a>
+          <Col md={4}>
+            <Profile>
+              <PersonName>UX design</PersonName>
+              <br />
+              <PersonName>Paul Woodley</PersonName>
+              <img src="https://via.placeholder.com/350x65" />
+              <P>
+                With over 10 years of UX/UI design experience, Paul has been UX
+                Lead of an array of projects with clients like the Bank of
+                England, Thomas Cook and Boston University.
+              </P>{' '}
+              <P>
+                His skills and experiene cover the entire UX spectrum from User
+                Research, Prototyping, Testing and UI design as well a coding.
+                Workshops and teaching are a real passion, demonstrated across
+                his client work as well as at General Assembly's London Campus.
+              </P>
+              <Link>Twitter</Link>
+              <br />
+              <Link>LinkedIn</Link>
+            </Profile>
+          </Col>
+          <Col md={4}>
+            <Profile>
+              <PersonName>React</PersonName>
+              <br />
+              <PersonName>Alex Lobera</PersonName>
+              <img src="https://via.placeholder.com/350x65" />
+              <P>
+                As founder and Head Coach of ReactJS Academy - Europe's very
+                first React training school, Alex is an authority on ReactJS
+                teaching over 1500 students in his time.{' '}
+              </P>
+              <P>
+                Hailing from Barcelona, Alex has been immersed in the world of
+                development for over 15 years.His experience as Tech Lead across
+                different organisations means he lends real-world project-based
+                knowledge and Lean process advocacy to his coding skills
+              </P>{' '}
+              <Link>Twitter</Link>
+              <br />
+              <Link>LinkedIn</Link>
+            </Profile>
+          </Col>
+          <Col md={4}>
+            <Profile>
+              <PersonName>GraphQL</PersonName>
+              <br />
+              <PersonName>Richard Moss</PersonName>
+              <img src="https://via.placeholder.com/350x65" />
+              <P>
+                As you've guessed, mentoring is passion for us - and Richard is
+                no exception. As Product Owner of ReactJS Academy, Richard is at
+                the forefront of GraphQL education.{' '}
+              </P>
+              <P>
+                Over the past decade, Richard has been a key developer across a
+                host of EdTech and marketing projects - all while taking the
+                time to fit in tutoring and mentoring kids and adults in coding
+                as well as teaching English through his online channel 'English
+                Tutors Live'.
+              </P>{' '}
+              <Link>Twitter</Link>
+              <br />
+              <Link>LinkedIn</Link>
+            </Profile>
           </Col>
         </Row>
+
+        <Row>
+          <Col>
+            <H3a>Our guiding principles</H3a>
+          </Col>
+        </Row>
+
         <Row>
           <SmallIconAndSentences
             wrapWithCols={true}
@@ -203,77 +313,167 @@ const IndexPage = () => (
             ]}
           />
         </Row>
-        <Row>
-          <Col>
-            <LinkButton to="/team" hasArrows>
-              Our Team
-            </LinkButton>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Instagram photosPerRow={6} />
-          </Col>
-        </Row>
       </Grid>
     </Section>
 
     <Section>
       <Grid>
         <Col>
-          <H2>How our process works </H2>
+          <H2>How the Full Stack Sprint works </H2>
         </Col>
         <Col>
           <SupportingText>
-            Using proven techniques and scalable approaches, we work
-            incrementally yet thoroughly.
+            A highly scalable series of 1-week sprints, the Full Stack Sprint
+            teaches you how to work quickly using unique tooling and approaches.
           </SupportingText>
           <P>
-            We only work in the iterative, ‘Lean’ way - thus the name! We start
-            small, design and develop rapidly to collaboratively build products
-            that scale effectively over time.
+            In modern tech, design and development can still take a long time.
+            We understand!
           </P>
           <P>
-            This is not to say we don’t strive to understand the bigger picture
-            - far from it - but to develop effectively and rapidly, we must
-            prioritise effectively, start small and evolve from there.
+            Condensing bleeding-edge UX design and React & GraphQL development
+            into 1-week sprints can help get that troublesome project started on
+            the right foot. All we need is you, your team, a maximum of 3 weeks
+            blocked out and a trees-worth of post-its!
           </P>
-          <P>Our lean approach is:</P>
         </Col>
         <Row />
         <Row>
           <Col md={12}>
-            <H3a>Our lean approach is:</H3a>
+            <H3a>Week 1 - user experience (UX) design</H3a>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <H5>Day 1: Problem space / research</H5>
           </Col>
         </Row>
         <Row>
           <SmallIconAndSentences
-            wrapWithCols={false}
-            markupAsList={true}
-            flushLeft={true}
-            bulletType={BenefitBullet}
+            wrapWithCols={true}
+            bulletType={ValueBullet}
             items={[
               {
-                image: 'quality',
-                sentence: 'A process that ensures quality is baked in',
+                image: 'learning',
+                sentence:
+                  'Stakeholder research using our unique Assumptions Canvas',
               },
               {
-                image: 'costeffective',
-                sentence: 'Cost effective solutions you can build upon',
+                image: 'caring',
+                sentence: 'User research, validation of the Assumptions Canvas',
               },
               {
-                image: 'quick',
-                sentence: 'Tested products with very quick turnarounds',
+                image: 'people',
+                sentence:
+                  'Prioritise and decide upon key jobs-to-be-done to focus upon',
               },
             ]}
           />
-
-          <Col md={6}>
-            <Image
-              src={ITERATION_DIAGRAM}
-              alt="Three circles stating 'Test', 'Learn' and 'Build', each with an arrow pointing to the next, showing a circular motion of Lean production"
-            />
+        </Row>
+        <Row>
+          <Col>
+            <H5>Day 2: Ideation</H5>
           </Col>
+        </Row>
+        <Row>
+          <SmallIconAndSentences
+            wrapWithCols={true}
+            bulletType={ValueBullet}
+            items={[
+              {
+                image: 'learning',
+                sentence:
+                  'Ideation workshop to create solutions based on user findings',
+              },
+              {
+                image: 'caring',
+                sentence:
+                  'Design studio workshop bringing out all ideas and align expectations',
+              },
+              {
+                image: 'people',
+                sentence:
+                  'Create the design strategy document, no wireframes required!',
+              },
+            ]}
+          />
+        </Row>
+        <Row>
+          <Col>
+            <H5>Day 3: Prototyping in code</H5>
+          </Col>
+        </Row>
+        <Row>
+          <SmallIconAndSentences
+            wrapWithCols={true}
+            bulletType={ValueBullet}
+            items={[
+              {
+                image: 'learning',
+                sentence:
+                  'Minimum viable product creation and finalised strategy',
+              },
+              {
+                image: 'caring',
+                sentence: 'Pairing sessions between designers and developers',
+              },
+              {
+                image: 'people',
+                sentence: 'Demos and retros with the whole team',
+              },
+            ]}
+          />
+        </Row>
+        <Row>
+          <Col>
+            <H5>Day 4: User testing</H5>
+          </Col>
+        </Row>
+        <Row>
+          <SmallIconAndSentences
+            wrapWithCols={true}
+            bulletType={ValueBullet}
+            items={[
+              {
+                image: 'learning',
+                sentence:
+                  'Usability testing with pre-sourced users to find issues',
+              },
+              {
+                image: 'caring',
+                sentence: 'Any team members able observe user behaviours',
+              },
+              {
+                image: 'people',
+                sentence: 'Affinity mapping of usabilty testing findings',
+              },
+            ]}
+          />
+        </Row>
+        <Row>
+          <Col>
+            <H5>Day 5: Iteration / retros</H5>
+          </Col>
+        </Row>
+        <Row>
+          <SmallIconAndSentences
+            wrapWithCols={true}
+            bulletType={ValueBullet}
+            items={[
+              {
+                image: 'learning',
+                sentence: 'Review of testing, solutionising from insights',
+              },
+              {
+                image: 'caring',
+                sentence: 'Final design and dev pairing session',
+              },
+              {
+                image: 'people',
+                sentence: 'Final demo and retro, handshakes and beers!',
+              },
+            ]}
+          />
         </Row>
       </Grid>
     </Section>

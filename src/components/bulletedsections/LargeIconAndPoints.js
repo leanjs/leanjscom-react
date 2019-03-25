@@ -11,7 +11,7 @@ import {
 
 const Columns = styled.div`
   display: flex;
-  align-items: top;
+  // align-items: top;
 
   ul {
     margin-top: 0;
