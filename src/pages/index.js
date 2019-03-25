@@ -102,23 +102,31 @@ const IndexPage = () => (
     <Section>
       <Grid>
         <Row>
-          <Col md={12}>
-            <H2>Enabling maximum effeciency - how your team COULD work</H2>
+          <H2>Maximum effeciency, minimum time - choose your sprint...</H2>
+          <Col md={7}>
             <SupportingText>
-              The <strong>Full Stack Sprint</strong> offers you and your team
-              the secrets of super-fast design and development to improve your
-              projects the Lean way.<br />
-              <br />Using hands on workshops and fitting in with your
-              current/future projects, we share our proven methodology and you
-              walk away with the effeciency you want!
+              The LeanJS <strong>Full Stack Sprint</strong> offers the secrets
+              of super-fast design and development, improving project process
+              the Leanest way possible.
             </SupportingText>
+            <P>
+              Using hands on workshops and fitting in with your current/future
+              projects, we share our proven methodology and you walk away with
+              the effeciency you want!
+            </P>
+            <P>
+              We promise to base any of 3 types of sprints around a real problem
+              you're experiencing in your tech products. Whether it's users who
+              aren't signing up that precious newsletter or your APIs aren't
+              fitting into React, we've got a sprint for you.
+            </P>
+            <Strong>Just choose a sprint (or several) and go!</Strong>
+          </Col>
+          <Col md={5}>
+            <img src="https://via.placeholder.com/350x250" />
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <P>Choose ANY (or all!) of these 3 sprints...</P>
-          </Col>
-        </Row>
+
         <Row>
           <Col md={4}>
             <SprintList unstyled>
@@ -214,7 +222,7 @@ const IndexPage = () => (
           </Col>
         </Row>
         <Row>
-          <Col md={4}>
+          <Col md={5}>
             <Profile>
               <PersonName>UX design</PersonName>
               <br />
@@ -321,30 +329,40 @@ const IndexPage = () => (
 
     <Section>
       <Grid>
-        <Col>
+        <Row>
           <H2>How the Full Stack Sprint works </H2>
-        </Col>
-        <Col>
-          <SupportingText>
-            A highly scalable series of 1-week sprints, the Full Stack Sprint
-            teaches you how to work quickly using unique tooling and approaches.
-          </SupportingText>
-          <P>
-            In modern tech, design and development can still take a long time.
-            We understand!
-          </P>
-          <P>
-            Condensing bleeding-edge UX design and React & GraphQL development
-            into 1-week sprints can help get that troublesome project started on
-            the right foot. All we need is you, your team, a maximum of 3 weeks
-            blocked out and a trees-worth of post-its!
-          </P>
-        </Col>
+          <Row>
+            <Col md={7}>
+              <SupportingText>
+                A highly scalable series of 1-week sprints, the Full Stack
+                Sprint guides your team on working super-lean using unique
+                tooling and approaches.
+              </SupportingText>
+              <P>
+                In modern tech, design and development can still take a long
+                time. We understand!
+              </P>
+              <P>
+                You can choose any (or all!) of our sprints, which condense
+                bleeding-edge UX design and React & GraphQL development into
+                1-week sprints that can help kickstart that troublesome project
+                you've been itching to get to.
+              </P>
+              <P>
+                All we need is you, your team, a maximum of 3 weeks blocked out
+                and a trees-worth of post-its!
+              </P>
+            </Col>
+            <Col md={4}>
+              <img src="https://via.placeholder.com/350x250" />
+            </Col>
+          </Row>
+        </Row>
         <Row />
         <SprintTabs>
           <Row>
             <Col md={12}>
-              <H3a>Week 1 - user experience (UX) design</H3a>
+              <H3a>Sprint 1 - UX design</H3a>
             </Col>
           </Row>
           <Row>
@@ -476,6 +494,270 @@ const IndexPage = () => (
                 {
                   image: 'people',
                   sentence: 'Final demo and retro, handshakes and beers!',
+                },
+              ]}
+            />
+          </Row>
+        </SprintTabs>
+        <SprintTabs>
+          <Row>
+            <Col md={12}>
+              <H3a>Sprint 2 - React Development</H3a>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 1: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 2: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 3: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 4: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 5: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+        </SprintTabs>
+        <SprintTabs>
+          <Row>
+            <Col md={12}>
+              <H3a>Sprint 2 - GraphQL Development</H3a>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 1: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 2: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 3: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 4: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
+                },
+              ]}
+            />
+          </Row>
+          <Row>
+            <Col>
+              <H5>Day 5: Something</H5>
+            </Col>
+          </Row>
+          <Row>
+            <SmallIconAndSentences
+              wrapWithCols={true}
+              bulletType={ValueBullet}
+              items={[
+                {
+                  image: 'learning',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'caring',
+                  sentence: 'Something',
+                },
+                {
+                  image: 'people',
+                  sentence: 'Something',
                 },
               ]}
             />

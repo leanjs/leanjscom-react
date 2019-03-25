@@ -1,17 +1,17 @@
 [
   {
-    "to": "/case-studies",
-    "text": "Case Studies",
+    "to": "#",
+    "text": "Sprint Types",
     "onlyOn": null
   },
   {
-    "to": "/our-process",
-    "text": "Our Process",
+    "to": "#",
+    "text": "Our Mentors",
     "onlyOn": null
   },
   {
-    "to": "/team",
-    "text": "Our Team",
+    "to": "#",
+    "text": "How it works",
     "onlyOn": null
   },
   {

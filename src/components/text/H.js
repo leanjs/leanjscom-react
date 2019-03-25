@@ -101,4 +101,5 @@ export const H5a = styled(H5)`
 
 export const SupportingText = styled(P)`
   font-size: ${FONT_SIZE_LOWERQUARTILE};
+  line-height: 2rem;
 `
