@@ -85,12 +85,13 @@ const IndexPage = () => (
   <React.Fragment>
     <Header
       titleLines={['LeanJS']}
-      subtitle="Home of the Full Stack Sprint"
+      subtitle="Enabling product teams to innovate - rapidly!"
+      // subtitle="Home of the Full Stack Sprint series"
       bulletPoints={[
         {
           icon: 'development',
           sentence:
-            'You, your team and us - achieving UX + React + GraphQL in just 3 weeks ',
+            'Our series of 1-week sprint trainings can revolutionise your UX, React and GraphQL processes',
           button: {
             to: '#howitworks',
             text: 'How it works',
@@ -105,9 +106,9 @@ const IndexPage = () => (
           <H2>Maximum effeciency, minimum time - choose your sprint...</H2>
           <Col md={7}>
             <SupportingText>
-              The LeanJS <strong>Full Stack Sprint</strong> offers the secrets
-              of super-fast design and development, improving project process
-              the Leanest way possible.
+              The LeanJS <strong>Full Stack Sprint</strong> series offers the
+              secrets of super-fast design and development, improving project
+              process the Leanest way possible.
             </SupportingText>
             <P>
               Using hands on workshops and fitting in with your current/future
@@ -196,7 +197,7 @@ const IndexPage = () => (
       <Grid>
         <Row>
           <Col md={12}>
-            <H2>Your team of mentors</H2>
+            <H2>Your team of coaches</H2>
             <SupportingText>
               Our design and dev sprints are all about working{' '}
               <strong>with you and your team</strong>
@@ -210,7 +211,7 @@ const IndexPage = () => (
             </P>
             <Col>
               <LinkButton to="#" hasArrows>
-                Want to talk? Contact us!
+                Any questions? Contact us!
               </LinkButton>
             </Col>
           </Col>
@@ -218,11 +219,11 @@ const IndexPage = () => (
         <Row />
         <Row>
           <Col>
-            <H3a>Our Sprint Leads / Mentors</H3a>
+            <H3a>Our Sprint Leads</H3a>
           </Col>
         </Row>
         <Row>
-          <Col md={5}>
+          <Col md={4}>
             <Profile>
               <PersonName>UX design</PersonName>
               <br />
@@ -246,7 +247,7 @@ const IndexPage = () => (
           </Col>
           <Col md={4}>
             <Profile>
-              <PersonName>React</PersonName>
+              <PersonName>React & React Native</PersonName>
               <br />
               <PersonName>Alex Lobera</PersonName>
               <img src="https://via.placeholder.com/350x350" />
@@ -292,9 +293,16 @@ const IndexPage = () => (
         </Row>
         <Row>
           <Col>
+            <H3a>Specialist coaches</H3a>
+            <P>
+              Our Leads strategise your sprints but our supporting cast of
+              coaches offer flexibility in ensuring sub-specialisms such as
+              React Native, UI Design, Marketing plus many more.
+            </P>
             <Instagram photosPerRow={6} />
           </Col>
         </Row>
+
         <Row>
           <Col>
             <H3a>Our guiding principles</H3a>
@@ -330,7 +338,7 @@ const IndexPage = () => (
     <Section>
       <Grid>
         <Row>
-          <H2>How the Full Stack Sprint works </H2>
+          <H2>How the Full Stack Sprint series works </H2>
           <Row>
             <Col md={7}>
               <SupportingText>
@@ -352,8 +360,11 @@ const IndexPage = () => (
                 All we need is you, your team, a maximum of 3 weeks blocked out
                 and a trees-worth of post-its!
               </P>
+              <LinkButton to="#" hasArrows>
+                Any questions? Contact us!
+              </LinkButton>
             </Col>
-            <Col md={4}>
+            <Col md={5}>
               <img src="https://via.placeholder.com/350x250" />
             </Col>
           </Row>
