@@ -9,7 +9,6 @@ import Tabs, {
   TabList,
   TabItem,
   TabContent,
-  ContentItem,
 } from '../components/navigation/Tabs'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import ValueBullet from '../components/bullets/ValueBullet'
