@@ -5,6 +5,12 @@ import Link from '../components/navigation/Link'
 import Header from '../components/layout/Header'
 import Section from '../components/layout/Section'
 import Ul, { Li } from '../components/layout/Ul'
+import Tabs, {
+  TabList,
+  TabItem,
+  TabContent,
+  ContentItem,
+} from '../components/navigation/Tabs'
 import ActivityBullet from '../components/bullets/ActivityBullet'
 import ValueBullet from '../components/bullets/ValueBullet'
 import BenefitBullet from '../components/bullets/BenefitBullet'
@@ -21,6 +27,10 @@ import {
   FONT_SIZE_LARGE,
   FONT_SIZE_LOWERQUARTILE,
 } from '../config/styles'
+
+const UX_SPRINT = 'UX_SPRINT'
+const REACT_SPRINT = 'REACT_SPRINT'
+const GRAPHQL_SPRINT = 'GRAPHQL_SPRINT'
 
 import {
   ALEX,
@@ -370,6 +380,23 @@ const IndexPage = () => (
           </Row>
         </Row>
         <Row />
+        <Tabs active={UX_SPRINT}>
+          <TabList>
+            <TabItem name={UX_SPRINT}>UX Sprint</TabItem>
+            <TabItem name={REACT_SPRINT}>React Sprint</TabItem>
+            <TabItem name={GRAPHQL_SPRINT}>GraphQL Sprint</TabItem>
+          </TabList>
+          <TabContent name={UX_SPRINT}>
+            <p>111</p>
+          </TabContent>
+          <TabContent name={REACT_SPRINT}>
+            <p>22</p>
+          </TabContent>
+          <TabContent name={GRAPHQL_SPRINT}>
+            <p>33</p>
+          </TabContent>
+        </Tabs>
+
         <SprintTabs>
           <Row>
             <Col md={12}>
