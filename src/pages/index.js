@@ -20,6 +20,9 @@ import {
   WHITE,
   DARKGREY,
   MEDIUMGREY,
+  REACTBLUE,
+  GRAPHQLPINK,
+  UXGREEN,
   SPACING_MEDIUM,
   SPACING_LARGE,
   FONT_SIZE_MEDIUM,
@@ -47,9 +50,12 @@ import { H2, H3a, H5, P, Strong, SupportingText } from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 import TeamBio from '../components/mugshots/TeamBio'
-import ReactIcon from '../components/logos/react_icon_circle'
-import UxIcon from '../components/logos/ux_icon_circle'
-import GraphqlIcon from '../components/logos/graphql_icon_circle'
+import ReactIconCircle from '../components/logos/react_icon_circle'
+import UxIconCircle from '../components/logos/ux_icon_circle'
+import GraphqlIconCircle from '../components/logos/graphql_icon_circle'
+import UxIcon from '../components/logos/ux_icon.js'
+import ReactIcon from '../components/logos/react_icon.js'
+import GraphqlIcon from '../components/logos/graphql_icon.js'
 
 const UX_SPRINT = 'UX_SPRINT'
 const REACT_SPRINT = 'REACT_SPRINT'
@@ -99,6 +105,11 @@ const SprintList = styled(Ul)`
 `
 
 const SprintTabs = styled.div``
+
+const DaySummarys = styled.div`
+  border-left: 10px solid ${UXGREEN};
+  padding-left: ${SPACING_STANDARD};
+`
 
 const IterationStages = props => (
   <React.Fragment>
@@ -171,7 +182,7 @@ const IndexPage = () => (
         <Row>
           <Col md={4}>
             <SprintCard>
-              <UxIcon />
+              <UxIconCircle />
               <H3a>UX Sprint - 1 Week</H3a>
               <Ul>
                 <Li>Day 1: Problem space & research</Li>
@@ -187,7 +198,7 @@ const IndexPage = () => (
           </Col>
           <Col md={4}>
             <SprintCard>
-              <ReactIcon />
+              <ReactIconCircle />
               <H3a>React Sprint - 1 Week</H3a>
               <Ul>
                 <Li>Day 1: Adv. patterns and FP </Li>
@@ -203,7 +214,7 @@ const IndexPage = () => (
           </Col>
           <Col md={4}>
             <SprintCard>
-              <GraphqlIcon />
+              <GraphqlIconCircle />
               <H3a>GraphQL Sprint - 1 Week</H3a>
               <Ul>
                 <Li>Day 1: GraphQL fundamentals</Li>
@@ -246,7 +257,7 @@ const IndexPage = () => (
         <Row>
           <Col md={4}>
             <Profile>
-              <PersonName>UX design Lead</PersonName>
+              <PersonName>UX Design Lead</PersonName>
               <br />
               <PersonName>Paul Woodley</PersonName>
               <img src="https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team%2FLJS_UX_Paul.png?alt=media" />
@@ -266,7 +277,7 @@ const IndexPage = () => (
           </Col>
           <Col md={4}>
             <Profile>
-              <PersonName>React & React Native Lead</PersonName>
+              <PersonName>React Lead</PersonName>
               <br />
               <PersonName>Alex Lobera</PersonName>
               <img src="https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team%2FLJS_React_Alex.png?alt=media" />
@@ -383,7 +394,7 @@ const IndexPage = () => (
             </Col>
           </Row>
         </Row>
-        <Row />
+        <H3a>Day-by-day breakdowns</H3a>
         <Tabs active={UX_SPRINT}>
           <TabList>
             <TabItem name={UX_SPRINT}>UX Sprint</TabItem>
@@ -397,35 +408,99 @@ const IndexPage = () => (
                   <H3a>Sprint 1 - UX design</H3a>
                 </Col>
               </Row>
-              <Row>
-                <Col>
-                  <H5>Day 1: Problem space / research</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence:
-                        'Stakeholder research using our unique Assumptions Canvas',
-                    },
-                    {
-                      image: 'caring',
-                      sentence:
-                        'User research, validation of the Assumptions Canvas',
-                    },
-                    {
-                      image: 'people',
-                      sentence:
-                        'Prioritise and decide upon key jobs-to-be-done to focus upon',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
+              <DaySummarys>
+                <Row>
+                  <Col>
+                    <H5>Day 1: Problem space / research</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Stakeholder research using our unique "Assumptions
+                          Canvas"
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Qualitative user research, validation of the
+                          Assumptions Canvas
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Prioritise and decide upon key jobs-to-be-done to
+                          focus upon
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys>
+                <Row>
+                  <Col>
+                    <H5>Day 2: Ideation</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Ideation workshop to create solutions based on user
+                          findings
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Design studio workshop bringing out all ideas and
+                          align expectations
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Create the design strategy document - no wireframes
+                          required!
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              {/* <Row>
                 <Col>
                   <H5>Day 2: Ideation</H5>
                 </Col>
@@ -452,7 +527,7 @@ const IndexPage = () => (
                     },
                   ]}
                 />
-              </Row>
+              </Row> */}
               <Row>
                 <Col>
                   <H5>Day 3: Prototyping in code</H5>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UxIcon = () => (
+const UxIconCircle = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="125"
@@ -20,4 +20,4 @@ const UxIcon = () => (
   </svg>
 )
 
-export default UxIcon
+export default UxIconCircle
