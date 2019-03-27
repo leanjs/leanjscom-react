@@ -397,17 +397,12 @@ const IndexPage = () => (
         <H3a>Day-by-day breakdowns</H3a>
         <Tabs active={UX_SPRINT}>
           <TabList>
-            <TabItem name={UX_SPRINT}>UX Sprint</TabItem>
-            <TabItem name={REACT_SPRINT}>React Sprint</TabItem>
-            <TabItem name={GRAPHQL_SPRINT}>GraphQL Sprint</TabItem>
+            <TabItem name={UX_SPRINT}>UX Design Sprint</TabItem>
+            <TabItem name={REACT_SPRINT}>React Development Sprint</TabItem>
+            <TabItem name={GRAPHQL_SPRINT}>GraphQL Development Sprint</TabItem>
           </TabList>
           <TabContent name={UX_SPRINT}>
             <SprintTabs>
-              <Row>
-                <Col md={12}>
-                  <H3a>Sprint 1 - UX design</H3a>
-                </Col>
-              </Row>
               <DaySummarys>
                 <Row>
                   <Col>
