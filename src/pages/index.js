@@ -10,54 +10,22 @@ import Tabs, {
   TabItem,
   TabContent,
 } from '../components/navigation/Tabs'
-import ActivityBullet from '../components/bullets/ActivityBullet'
 import ValueBullet from '../components/bullets/ValueBullet'
-import BenefitBullet from '../components/bullets/BenefitBullet'
-import LargeIconAndPoints from '../components/bulletedsections/LargeIconAndPoints'
-import SmallIconAndSentence from '../components/bulletedsections/SmallIconAndSentence'
 import SmallIconAndSentences from '../components/bulletedsections/SmallIconAndSentences'
 import {
-  WHITE,
-  DARKGREY,
-  MEDIUMGREY,
   REACTBLUE,
   GRAPHQLPINK,
   UXGREEN,
   SPACING_MEDIUM,
   SPACING_LARGE,
   FONT_SIZE_MEDIUM,
-  FONT_SIZE_LARGE,
-  FONT_SIZE_LOWERQUARTILE,
-  SPACING_SMALL,
   SPACING_STANDARD,
 } from '../config/styles'
-import {
-  ALEX,
-  LENA,
-  RICHARD,
-  HORACIO,
-  WILL,
-  LUIS,
-  PAUL,
-  ALEX_RICH_LAPTOP,
-  TEAMWORK,
-} from '../resources/images'
-import { ITERATION_DIAGRAM } from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import {
-  H2,
-  H2Ref,
-  H3a,
-  H5,
-  P,
-  Strong,
-  SupportingText,
-} from '../components/text'
-import Image from '../components/elements/Image'
+import { H2, H3a, H5, P, Strong, SupportingText } from '../components/text'
 import Instagram from '../components/feeds/Instagram'
-import TeamBio from '../components/mugshots/TeamBio'
 import ReactIconCircle from '../components/logos/react_icon_circle'
 import UxIconCircle from '../components/logos/ux_icon_circle'
 import GraphqlIconCircle from '../components/logos/graphql_icon_circle'

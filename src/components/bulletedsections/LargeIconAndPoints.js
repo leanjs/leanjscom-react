@@ -14,7 +14,7 @@ const Columns = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid ${LIGHTGREY}
-  // align-items: top; ul {
+  align-items: top; ul {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: ${SPACING_STANDARD};
