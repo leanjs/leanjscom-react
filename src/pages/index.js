@@ -46,7 +46,15 @@ import { ITERATION_DIAGRAM } from '../resources/images'
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import { H2, H3a, H5, P, Strong, SupportingText } from '../components/text'
+import {
+  H2,
+  H2Ref,
+  H3a,
+  H5,
+  P,
+  Strong,
+  SupportingText,
+} from '../components/text'
 import Image from '../components/elements/Image'
 import Instagram from '../components/feeds/Instagram'
 import TeamBio from '../components/mugshots/TeamBio'
@@ -97,17 +105,24 @@ const Coaches = styled.div`
   padding-bottom: 0;
 `
 
-const SprintList = styled(Ul)`
-  > li:not(:last-child) {
-    padding-bottom: ${SPACING_LARGE};
-  }
-  margin-top: ${SPACING_MEDIUM};
+const LinkSocials = styled(Link)`
+  width: 100%;
 `
 
 const SprintTabs = styled.div``
 
 const DaySummarys = styled.div`
-  border-left: 10px solid ${UXGREEN};
+  border-left: 10px solid;
+  border-color: ${props => {
+    if (props.ux) {
+      return `${UXGREEN}`
+    } else if (props.react) {
+      return `${REACTBLUE}`
+    } else if (props.graphql) {
+      return `${GRAPHQLPINK}`
+    }
+    return null
+  }}
   padding-left: ${SPACING_STANDARD};
 `
 
@@ -134,20 +149,19 @@ const IndexPage = () => (
     <Header
       titleLines={['LeanJS']}
       subtitle="Enabling product teams to innovate - rapidly!"
-      // subtitle="Home of the Full Stack Sprint series"
       bulletPoints={[
         {
           icon: 'development',
           sentence:
             'Our series of 1-week sprint trainings can revolutionise your UX, React and GraphQL processes',
           button: {
-            to: '#howitworks',
+            to: '#how-it-works',
             text: 'How it works',
           },
         },
       ]}
     />
-
+    <Link to="#sprint-types" name="sprint-types" />
     <Section>
       <Grid>
         <Row>
@@ -191,8 +205,8 @@ const IndexPage = () => (
                 <Li>Day 4: User testing</Li>
                 <Li>Day 5: Iterate on findings</Li>
               </Ul>
-              <LinkButton to="#" hasArrows dark>
-                Learn more
+              <LinkButton to="#sprint-breakdowns" hasArrows dark>
+                Day-by-day breakdown
               </LinkButton>
             </SprintCard>
           </Col>
@@ -207,8 +221,8 @@ const IndexPage = () => (
                 <Li>Day 4: Code improvement</Li>
                 <Li>Day 5: Final coding, and demos</Li>
               </Ul>
-              <LinkButton to="#" hasArrows dark>
-                Learn more
+              <LinkButton to="#sprint-breakdowns" hasArrows dark>
+                Day-by-day breakdown
               </LinkButton>
             </SprintCard>
           </Col>
@@ -223,15 +237,15 @@ const IndexPage = () => (
                 <Li>Day 4: Code improvement</Li>
                 <Li>Day 5: Final coding, and demos</Li>
               </Ul>
-              <LinkButton to="#" hasArrows dark>
-                Learn more
+              <LinkButton to="#sprint-breakdowns" hasArrows dark>
+                Day-by-day breakdown
               </LinkButton>
             </SprintCard>
           </Col>
         </Row>
       </Grid>
     </Section>
-
+    <Link to="#about-us" name="about-us" />
     <Section dark>
       <Grid>
         <Row>
@@ -248,7 +262,7 @@ const IndexPage = () => (
             </P>
           </Col>
           <Col md={4}>
-            <LinkButton to="#" hasArrows>
+            <LinkButton to="#contact-us" hasArrows>
               Any questions? Contact us!
             </LinkButton>
           </Col>
@@ -263,16 +277,18 @@ const IndexPage = () => (
               <img src="https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team%2FLJS_UX_Paul.png?alt=media" />
               <P>
                 Teaching is a real passion for Paul. Drawing on 10+ years of UX
-                and visual design experience working with clients like the Bank
-                of England, Thomas Cook and Boston University, Paul loves
-                sharing his skills and knowledge of the entire UX spectrum, from
-                User Research to Prototyping, Testing to UI Design and more.
+                and UI design experience working with clients like the Bank of
+                England, Thomas Cook and Boston University, Paul loves sharing
+                his skills and knowledge of the entire UX spectrum, from User
+                Research to Prototyping, Testing to UI and more.
               </P>
-              <Link to="https://twitter.com/paulw_design">Twitter</Link>
-              <br />
-              <Link to="https://www.linkedin.com/in/paulwoodleydesign/">
+              <LinkSocials to="https://twitter.com/paulw_design">
+                Twitter
+              </LinkSocials>
+
+              <LinkSocials to="https://www.linkedin.com/in/paulwoodleydesign/">
                 LinkedIn
-              </Link>
+              </LinkSocials>
             </Profile>
           </Col>
           <Col md={4}>
@@ -289,9 +305,13 @@ const IndexPage = () => (
                 as Tech Lead. He has brought his real-world, project-based
                 knowledge and Lean process advocacy to over 1,500 students.
               </P>{' '}
-              <Link to="https://twitter.com/alex_lobera">Twitter</Link>
+              <LinkSocials to="https://twitter.com/alex_lobera">
+                Twitter
+              </LinkSocials>
               <br />
-              <Link to="https://www.linkedin.com/in/alexlobera/">LinkedIn</Link>
+              <LinkSocials to="https://www.linkedin.com/in/alexlobera/">
+                LinkedIn
+              </LinkSocials>
             </Profile>
           </Col>
           <Col md={4}>
@@ -309,11 +329,13 @@ const IndexPage = () => (
                 online channel, ‘English Tutors Live’. Richard’s here to share
                 his GraphQL expertise.
               </P>{' '}
-              <Link to="#">Twitter</Link>
+              <LinkSocials to="https://twitter.com/ric9176">
+                Twitter
+              </LinkSocials>
               <br />
-              <Link to="https://www.linkedin.com/in/richard-moss-55881b82/">
+              <LinkSocials to="https://www.linkedin.com/in/richard-moss-55881b82/">
                 LinkedIn
-              </Link>
+              </LinkSocials>
             </Profile>
           </Col>
         </Row>
@@ -360,7 +382,7 @@ const IndexPage = () => (
         </Row>
       </Grid>
     </Section>
-
+    <Link to="#how-it-works" name="how-it-works" />
     <Section>
       <Grid>
         <Row>
@@ -385,15 +407,17 @@ const IndexPage = () => (
                 All we need is you, your team, a maximum of 3 weeks blocked out
                 and a trees-worth of post-its!
               </P>
-              <LinkButton to="#" hasArrows>
+              <LinkButton to="#contact-us" hasArrows>
                 Any questions? Contact us!
               </LinkButton>
             </Col>
-            <Col md={5}>
-              <img src="https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/full_stack_sprint_illustrations%2FFullStackSprint.jpg?alt=media" />
+            <Col md={1} />
+            <Col md={4}>
+              <img src="https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/alex_teaching.jpg?alt=media" />
             </Col>
           </Row>
         </Row>
+        <Link to="#sprint-breakdowns" name="sprint-breakdowns" />
         <H3a>Day-by-day breakdowns</H3a>
         <Tabs active={UX_SPRINT}>
           <TabList>
@@ -403,7 +427,7 @@ const IndexPage = () => (
           </TabList>
           <TabContent name={UX_SPRINT}>
             <SprintTabs>
-              <DaySummarys>
+              <DaySummarys ux>
                 <Row>
                   <Col>
                     <H5>Day 1: Problem space / research</H5>
@@ -449,7 +473,7 @@ const IndexPage = () => (
                   </Col>
                 </Row>
               </DaySummarys>
-              <DaySummarys>
+              <DaySummarys ux>
                 <Row>
                   <Col>
                     <H5>Day 2: Ideation</H5>
@@ -495,391 +519,572 @@ const IndexPage = () => (
                   </Col>
                 </Row>
               </DaySummarys>
-              {/* <Row>
-                <Col>
-                  <H5>Day 2: Ideation</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence:
-                        'Ideation workshop to create solutions based on user findings',
-                    },
-                    {
-                      image: 'caring',
-                      sentence:
-                        'Design studio workshop bringing out all ideas and align expectations',
-                    },
-                    {
-                      image: 'people',
-                      sentence:
-                        'Create the design strategy document - no wireframes required!',
-                    },
-                  ]}
-                />
-              </Row> */}
-              <Row>
-                <Col>
-                  <H5>Day 3: Prototyping in code</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence:
-                        'Minimum viable product creation and finalised strategy',
-                    },
-                    {
-                      image: 'caring',
-                      sentence:
-                        'Pairing sessions between designers and developers',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Demos and retros with the whole team',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 4: User testing</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence:
-                        'Usability testing with pre-sourced users to find issues',
-                    },
-                    {
-                      image: 'caring',
-                      sentence:
-                        'Any team members able to observe user behaviours',
-                    },
-                    {
-                      image: 'people',
-                      sentence:
-                        'Affinity mapping of usability testing findings',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 5: Iteration / retros</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence:
-                        'Review of testing, solutionising from insights',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Final design and dev pairing session',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Final demo and retro, handshakes and beers!',
-                    },
-                  ]}
-                />
-              </Row>
+              <DaySummarys ux>
+                <Row>
+                  <Col>
+                    <H5>Day 3: Prototyping in code</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Minimum viable product creation and finalised strategy
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Pairing sessions between designers and developers</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Demos and retros with the whole team</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys ux>
+                <Row>
+                  <Col>
+                    <H5>Day 4: User testing</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Usability testing with pre-sourced users to find
+                          issues
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Any team members able to observe user behaviours</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Affinity mapping of usability testing findings</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys ux>
+                <Row>
+                  <Col>
+                    <H5>Day 5: Iteration / retros</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Review of testing, solutionising from insights</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Final design and dev pairing session</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <UxIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Final demo and retro, handshakes and beers!</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
             </SprintTabs>
           </TabContent>
           <TabContent name={REACT_SPRINT}>
             <SprintTabs>
-              <Row>
-                <Col md={12}>
-                  <H3a>Sprint 2 - React Development</H3a>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 1: Advanced patterns, FP training</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 2: Testing and performance training</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 3: Auditing code, setting sprint goal</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence:
-                        'Audit your code base and set the React sprint goal                      ',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Us and your devs team up to improve code base',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 4: Collaborative improvement of code base</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 5: Final coding, demos and outcomes</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
+              <DaySummarys react>
+                <Row>
+                  <Col>
+                    <H5>
+                      Day 1: Advanced patterns, functional programming (FP)
+                    </H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>FP training - closure, currying and composition</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Creating advanced reusable and maintainable components
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Design systems and advanced styled components</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys react>
+                <Row>
+                  <Col>
+                    <H5>Day 2: Testing and performance training</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Testing APIs and Redux, testing principles and
+                          frameworks
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Testing in React - units, integration and snapshot
+                          testing, tooling
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Performance - profiling, avoiding renderings,
+                          windowing, memoization
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys react>
+                <Row>
+                  <Col>
+                    <H5>Day 3: Auditing code, setting sprint goal</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Code analysis and advice on best React practices</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Set the React sprint goal based on your business goals
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          On-demand workshops and pairing based on any arising
+                          issues
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys react>
+                <Row>
+                  <Col>
+                    <H5>Day 4: Collaborative improvement of code base</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Identify and advise on any ongoing issues in code base
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          More workshops, tailored on the fly to quickly solve
+                          problems
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Pair programming between our coaches and your
+                          developers
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys react>
+                <Row>
+                  <Col>
+                    <H5>Day 5: Final coding, demos and outcomes</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Final pairing sessions between coaches and your
+                          developers
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>As a team, coding is brought to a close</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <ReactIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Final touches, demo and improvements report</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
             </SprintTabs>
           </TabContent>
           <TabContent name={GRAPHQL_SPRINT}>
             <SprintTabs>
-              <Row>
-                <Col md={12}>
-                  <H3a>Sprint 2 - GraphQL Development</H3a>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 1: GraphQL fundamentals</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 2: Advanced GraphQL</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 3: Audit code, setting sprint goal</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence:
-                        'Audit your code base and set the GraphQL sprint goal',
-                    },
-                    {
-                      image: 'caring',
-                      sentence:
-                        'We team up with your devs to improve your code base',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 4: Collaborative improvement of code base</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Something',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Something',
-                    },
-                  ]}
-                />
-              </Row>
-              <Row>
-                <Col>
-                  <H5>Day 5: Final coding + demos and outcomes</H5>
-                </Col>
-              </Row>
-              <Row>
-                <SmallIconAndSentences
-                  wrapWithCols={true}
-                  bulletType={ValueBullet}
-                  items={[
-                    {
-                      image: 'learning',
-                      sentence: 'As a team, coding is brought to a close',
-                    },
-                    {
-                      image: 'caring',
-                      sentence: 'Demo',
-                    },
-                    {
-                      image: 'people',
-                      sentence: 'Outcomes report',
-                    },
-                  ]}
-                />
-              </Row>
+              <DaySummarys graphql>
+                <Row>
+                  <Col>
+                    <H5>Day 1: GraphQL fundamentals</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Thinking in GraphQL, the GraphQL schema and switching
+                          from REST
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Data sources - wrapping REST APIs & microservices with
+                          GraphQL
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Apollo Client fundamentals - client, query and
+                          mutation principles
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys graphql>
+                <Row>
+                  <Col>
+                    <H5>Day 2: Advanced GraphQL</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Advanced schema - unions, extensions, fragments,
+                          modularity
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Performance - data loaders, query batching, persisted
+                          and caching queries
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Advanced GraphQL with React - co-location, fragments,
+                          errors
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys graphql>
+                <Row>
+                  <Col>
+                    <H5>Day 3: Audit code, setting sprint goal</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Code analysis and advice on best GraphQL practices
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Set the GraphQL sprint goal based on your business
+                          goals
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          On-demand workshops and pairing based on any arising
+                          coding issues
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys graphql>
+                <Row>
+                  <Col>
+                    <H5>Day 4: Collaborative improvement of code base</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Identify and advise on any ongoing issues in code base
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          More workshops, tailored on the fly to quickly solve
+                          problems
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Pair programming between our coaches and your
+                          developers
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
+              <DaySummarys graphql>
+                <Row>
+                  <Col>
+                    <H5>Day 5: Final coding, demos and outcomes</H5>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>
+                          Final pairing sessions between coaches and your
+                          developers
+                        </P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>As a team, coding is brought to a close</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={4}>
+                    <Row>
+                      <Col md={4} sm={3} xs={3}>
+                        <GraphqlIcon />
+                      </Col>
+                      <Col md={8} sm={9} xs={9}>
+                        <P>Final touches, demo and improvements report</P>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </DaySummarys>
             </SprintTabs>
           </TabContent>
         </Tabs>
       </Grid>
     </Section>
+    <Link to="#contact-us" name="contact-us" />
   </React.Fragment>
 )
 

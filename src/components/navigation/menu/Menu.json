@@ -1,16 +1,16 @@
 [
   {
-    "to": "#",
+    "to": "#sprint-types",
     "text": "Sprint Types",
     "onlyOn": null
   },
   {
-    "to": "#",
+    "to": "#about-us",
     "text": "About Us",
     "onlyOn": null
   },
   {
-    "to": "#",
+    "to": "#how-it-works",
     "text": "How it works",
     "onlyOn": null
   },

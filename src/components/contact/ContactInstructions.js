@@ -58,10 +58,6 @@ const ContactInstructions = () => (
               <Link to="https://goo.gl/maps/jsLZCb4Yi352">See on map</Link>
             </Li>
           </LinkList>
-          <P>
-            Want to speak to one of our team about a specific subject?{' '}
-            <Link to="/team">Visit our team page</Link>
-          </P>
         </Col>
         <Col md={1} />
         <Col md={5}>

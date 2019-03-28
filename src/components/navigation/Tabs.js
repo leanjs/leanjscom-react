@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { BLACK, FONT_FAMILY, WHITE } from '../../config/styles'
+import {
+  BLACK,
+  FONT_FAMILY,
+  WHITE,
+  UXGREEN,
+  DARKGREY,
+} from '../../config/styles'
 import { SCREEN_XS_MAX, SCREEN_SM_MIN } from '../utils'
 
 const Ul = styled.ul`
@@ -63,9 +69,10 @@ const Li = styled.li`
         text-align:center;
       }
       @media (max-width: ${SCREEN_XS_MAX}) {
-        border: 1px solid ${BLACK}
+        border: 1px solid ${UXGREEN};
       }
-      background: red;
+      background: ${DARKGREY};
+      color: ${WHITE};
     `
       : ''};
 `

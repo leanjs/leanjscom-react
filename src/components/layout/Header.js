@@ -18,7 +18,7 @@ import {
   LAYOUT_SPACING_MEDIUM,
   LAYOUT_SPACING_EXTRALARGE,
   FONT_WEIGHT_EXTRABOLD,
-  PARAGRAPH_CHARACTER_WIDTH_NARROW,
+  PARAGRAPH_CHARACTER_WIDTH_VERYNARROW,
 } from '../../config/styles'
 import {
   SCREEN_XS_MAX,
@@ -136,7 +136,7 @@ const SubTitleBackground = styled.div`
 `
 
 const Subtitle = styled(H2Header)`
-  max-width: ${PARAGRAPH_CHARACTER_WIDTH_NARROW};
+  max-width: ${PARAGRAPH_CHARACTER_WIDTH_VERYNARROW};
 `
 
 const Intro = styled.div`
