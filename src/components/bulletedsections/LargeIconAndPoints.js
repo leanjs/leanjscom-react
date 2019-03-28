@@ -42,7 +42,6 @@ const PointsHeading = styled(Li)`
   font-weight: bold;
 `
 
-// TODO:WV:20190225:If there is no icon this should really be a different component; it would be more semantic
 const LargeIconAndPoints = ({ color, ...props }) => (
   <Columns color={color}>
     {props.image && (
