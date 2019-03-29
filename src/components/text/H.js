@@ -14,6 +14,8 @@ import {
   LINE_HEIGHT_EXTRALARGE,
 } from '../../config/styles'
 
+import P from './P'
+
 const REF = `
     :hover {
         a {
@@ -95,4 +97,9 @@ export const H5Ref = styled(H5)`
 
 export const H5a = styled(H5)`
   margin-bottom: ${SPACING_SMALL};
+`
+
+export const SupportingText = styled(P)`
+  font-size: ${FONT_SIZE_LOWERQUARTILE};
+  line-height: 2rem;
 `

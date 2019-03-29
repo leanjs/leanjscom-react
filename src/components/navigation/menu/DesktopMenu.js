@@ -26,13 +26,19 @@ const DesktopMenuItem = styled(Item)`
   margin: 0;
 `
 
+const MenuWrapper = styled.div`
+  display: inline-block;
+  margin-right: 0.5rem;
+`
+
 DesktopMenuItem.displayName = 'DesktopMenuItem'
 
 const DesktopMenuContainer = styled(Ul)``
 
 // 'wide' prop necessary because otherwise Li styles override Item styles for some reason (in production only)
 const DesktopMenu = () => (
-    <HideSingleComponentUsingCss xs sm>
+  <HideSingleComponentUsingCss xs sm>
+    <MenuWrapper>
       <Ul inline wide>
         {MenuData.map((item, i) => (
           <DesktopMenuItem key={i} to={item.to}>
@@ -43,7 +49,8 @@ const DesktopMenu = () => (
           <ContactButton />
         </Li>
       </Ul>
-    </HideSingleComponentUsingCss>
+    </MenuWrapper>
+  </HideSingleComponentUsingCss>
 )
 
 export default DesktopMenu

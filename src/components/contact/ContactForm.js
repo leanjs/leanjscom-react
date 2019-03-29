@@ -22,6 +22,9 @@ class ContactForm extends Component {
       interestedInDigitalSolutions: false,
       interestedInTraining: false,
       interestedInBothDigitalSolutionsAndTraining: false,
+      uxDesign: false,
+      graphQL: false,
+      react: false,
       allowMarketing: false,
       error: null,
       submitted: false,
@@ -42,6 +45,9 @@ class ContactForm extends Component {
           this.state.interestedInDigitalSolutions,
           this.state.interestedInTraining,
           this.state.interestedInBothDigitalSolutionsAndTraining,
+          this.state.uxDesign,
+          this.state.react,
+          this.state.graphQL,
           this.state.allowMarketing
         )
       )
@@ -67,6 +73,9 @@ class ContactForm extends Component {
       interestedInDigitalSolutions,
       interestedInTraining,
       interestedInBothDigitalSolutionsAndTraining,
+      uxDesign,
+      react,
+      graphQL,
       allowMarketing,
       message,
       error,
@@ -106,18 +115,23 @@ class ContactForm extends Component {
         <LabelledField
           fieldType="checkboxes"
           id="contact-form-interests"
-          label="How can we help you?"
+          label="Which sprint are you interested in?"
           onChange={this.handleCheckboxChanged}
           options={[
             {
-              name: 'interestedInDigitalSolutions',
-              checked: interestedInDigitalSolutions,
-              label: 'Digital solutions',
+              name: 'UX design',
+              checked: uxDesign,
+              label: 'UX design',
             },
             {
-              name: 'interestedInTraining',
-              checked: interestedInTraining,
-              label: 'Training',
+              name: 'React',
+              checked: react,
+              label: 'React',
+            },
+            {
+              name: 'GraphQL',
+              checked: graphQL,
+              label: 'GraphQL',
             },
           ]}
           onChange={this.handleCheckboxChanged}
@@ -144,10 +158,11 @@ class ContactForm extends Component {
           onChange={this.handleCheckboxChanged('allowMarketing')}
         />
         <P>
-              We do not spam - ever. But, if you're up for it, we'd love to tell
-              you about any cool new services or offers that we've got going on.
-              Interested? Tick the box! Not sure, here's our{' '}
-              <Link>Privacy Policy</Link></P>
+          We do not spam - ever. But, if you're up for it, we'd love to tell you
+          about any cool new services or offers that we've got going on.
+          Interested? Tick the box! Not sure, here's our{' '}
+          <Link>Privacy Policy</Link>
+        </P>
         <Button disabled={isInvalid} type="submit">
           Send
         </Button>

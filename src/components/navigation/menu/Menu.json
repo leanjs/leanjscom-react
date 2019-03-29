@@ -1,27 +1,17 @@
 [
   {
-    "to": "/case-studies",
-    "text": "Case Studies",
+    "to": "#sprint-types",
+    "text": "Sprint Types",
     "onlyOn": null
   },
   {
-    "to": "/building-solutions",
-    "text": "Building Solutions",
+    "to": "#about-us",
+    "text": "About Us",
     "onlyOn": null
   },
   {
-    "to": "/our-process",
-    "text": "Our Process",
-    "onlyOn": null
-  },
-  {
-    "to": "/training",
-    "text": "Training",
-    "onlyOn": null
-  },
-  {
-    "to": "/team-principles",
-    "text": "Our Team & Principles",
+    "to": "#how-it-works",
+    "text": "How it works",
     "onlyOn": null
   },
   {

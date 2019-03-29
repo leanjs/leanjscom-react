@@ -6,7 +6,7 @@ import MenuData from './Menu.json'
 import { LinkedLeanJSLogo } from '../../logos/LeanJS'
 import ContactButton from '../../buttons/ContactButton'
 import './PhoneMenu.css'
-import { SPACING_SMALL } from '../../../config/styles'
+import { SPACING_SMALL, MUSTARD } from '../../../config/styles'
 
 const Item = ({ children, scroll, ...rest }) => {
   const LinkType = scroll ? ScrollingLink : Link

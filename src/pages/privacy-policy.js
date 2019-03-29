@@ -32,7 +32,7 @@ const pageContentSections = [
         </P>
         <P>
           For more information about LeanJS’s people, visit the{' '}
-          <Link to="/team-principles/">Team & Principles</Link> page.
+          <Link to="/team/">Team & Principles</Link> page.
         </P>
       </React.Fragment>
     ),
@@ -79,7 +79,8 @@ const pageContentSections = [
           of a marketing nature that will future events/trainings/services that
           you may not have indicated to us that you are interested in but we
           feel will enrich your experience with us. If you would like to
-          unsubscribe, please email us at <Link to="mailto:hello@leanjs.com">hello@leanjs.com</Link>.
+          unsubscribe, please email us at{' '}
+          <Link to="mailto:hello@leanjs.com">hello@leanjs.com</Link>.
         </P>
       </React.Fragment>
     ),

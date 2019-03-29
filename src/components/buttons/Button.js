@@ -3,13 +3,14 @@ import {
   FONT_FAMILY,
   DARKGREY,
   WHITE,
+  MUSTARD,
   SPACING_SMALL,
   SPACING_STANDARD,
 } from '../../config/styles'
 
 import { SCREEN_SM_MAX } from '../utils'
 
-const getBackgroundColor = props => (props.dark ? DARKGREY : WHITE)
+const getBackgroundColor = props => (props.dark ? DARKGREY : MUSTARD)
 const getBoxshadowOpacity = props => (props.dark ? `0.24` : `0.45`)
 export const getForegroundColor = props => (props.dark ? WHITE : DARKGREY)
 
@@ -20,8 +21,7 @@ const setColours = props => `
       props
     )}), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 `
-const allowArrows = props =>
-  props.hasArrows ? `&:after { content: " >>"}` : ``
+const allowArrows = props => (props.hasArrows ? `&:after { content: " "}` : ``)
 const allowShrinkWrapOnMobile = props =>
   `${
     props.shrinkWrapOnMobile

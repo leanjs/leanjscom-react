@@ -7,61 +7,28 @@ import { arrayChunk } from '../utils'
 const photos = [
   {
     url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FRichAlex_Helmet.jpg?alt=media',
-      alt:'Rich and Alex (who is wearing a brightly coloured cycle helmet) on a remote video call',
+      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team%2FLJS_Horacio.png?alt=media',
+    alt: 'Horacio Hererra',
   },
   {
     url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FPaulWhiteboardCrazy.jpg?alt=media',
-      alt:'Paul, in front of a whiteboard with lots of writing and lines drawn on it, looking exasperated but having fun' ,
+      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team%2FLJS_Will.png?alt=media',
+    alt: 'Will Voelcker',
   },
   {
     url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FHoracioTraining.jpg?alt=media',
-      alt:'Horacio, taking a selfie, with a table-full of ReactJS Academy training students behind him eating lunch '
-    },
-  {
-    url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FAlexCycling.jpg?alt=media',
-      alt:'Alex, in cycle wear, looking anxiously at a fire warning sign behind him ' ,
+      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team%2FLJS_Lena.png?alt=media',
+    alt: 'Lena Tregub',
   },
   {
     url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FAlexRichThinking.jpg?alt=media',
-      alt:'Richard and Alex, looking intently at a laptop, trying to figure out a coding issue ' ,
+      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team%2FLJS_Francisco.png?alt=media',
+    alt: 'Francisco Gomes',
   },
   {
     url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FPaulTesting.jpg?alt=media',
-      alt:'Paul, usability testing on a tablet outside a pub with two men amongst' ,
-  },
-  {
-    url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FAlexLeanJSTShirt.jpg?alt=media',
-  },
-  {
-    url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FAlexRichCoding.jpg?alt=media',
-  },
-  {
-    url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FHoracioCoding.jpg?alt=media',
-  },
-  {
-    url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FPaulCardSort.jpg?alt=media',
-  },
-  {
-    url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FRicardoAlex.jpg?alt=media',
-  },
-  {
-    url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FRichCoding.jpg?alt=media',
-  },
-  {
-    url:
-      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/instagram%20feed%2FRichTeaching.jpg?alt=media',
+      'https://firebasestorage.googleapis.com/v0/b/leanjscom-web.appspot.com/o/team%2FLJS_Luis.png?alt=media',
+    alt: 'Luis Novella',
   },
 ]
 
