@@ -121,7 +121,7 @@ const IndexPage = () => (
         {
           icon: 'development',
           sentence:
-            'Our series of 1-week sprint trainings can revolutionise your UX, React and GraphQL processes',
+            'Our series of 1-week sprint trainings can revolutionise your UX, React and GraphQL products and teams',
           button: {
             to: '#how-it-works',
             text: 'How it works',
