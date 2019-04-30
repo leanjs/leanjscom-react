@@ -405,7 +405,11 @@ const IndexPage = () => (
             <SprintTabs>
               <P>
                 <strong>Take a deeper dive on our blog...</strong>{' '}
-                <Link to="#" dark hasArrows>
+                <Link
+                  to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c"
+                  dark
+                  hasArrows
+                >
                   Blog: What is the LeanJS UX Sprint?
                 </Link>
               </P>
