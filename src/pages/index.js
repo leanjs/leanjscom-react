@@ -19,6 +19,7 @@ import {
   SPACING_MEDIUM,
   SPACING_LARGE,
   FONT_SIZE_MEDIUM,
+  FONT_SIZE_SMALL,
   SPACING_STANDARD,
 } from '../config/styles'
 import LinkButton from '../components/buttons/LinkButton'
@@ -92,6 +93,12 @@ const DaySummarys = styled.div`
     return null
   }}
   padding-left: ${SPACING_STANDARD};
+  small {
+    font-size: ${FONT_SIZE_SMALL}
+    a {
+      font-size: ${FONT_SIZE_SMALL}
+    }
+  }
 `
 
 const IterationStages = props => (
@@ -375,6 +382,7 @@ const IndexPage = () => (
                 All we need is you, your team, a maximum of 3 weeks blocked out
                 and a trees-worth of post-its!
               </P>
+
               <LinkButton to="#contact-us" hasArrows>
                 Any questions? Contact us!
               </LinkButton>
@@ -395,6 +403,16 @@ const IndexPage = () => (
           </TabList>
           <TabContent name={UX_SPRINT}>
             <SprintTabs>
+              <P>
+                <strong>Take a deeper dive on our blog...</strong>{' '}
+                <Link
+                  to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c"
+                  dark
+                  hasArrows
+                >
+                  Blog: What is the LeanJS UX Sprint?
+                </Link>
+              </P>
               <DaySummarys ux>
                 <Row>
                   <Col>
@@ -439,6 +457,17 @@ const IndexPage = () => (
                       </Col>
                     </Row>
                   </Col>
+                  <small>
+                    <P>
+                      Learn more about Day 1:{' '}
+                      <Link to="https://youtu.be/itae5sD4OsU?t=782">Video</Link>
+                      {'   '}
+                      |{'   '}
+                      <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#b36f">
+                        Blog
+                      </Link>
+                    </P>
+                  </small>
                 </Row>
               </DaySummarys>
               <DaySummarys ux>
@@ -485,6 +514,19 @@ const IndexPage = () => (
                       </Col>
                     </Row>
                   </Col>
+                  <small>
+                    <P>
+                      Learn more about Day 2:{' '}
+                      <Link to="https://youtu.be/itae5sD4OsU?t=1240">
+                        Video
+                      </Link>
+                      {'   '}
+                      |{'   '}
+                      <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#157a">
+                        Blog
+                      </Link>
+                    </P>
+                  </small>
                 </Row>
               </DaySummarys>
               <DaySummarys ux>
@@ -524,6 +566,19 @@ const IndexPage = () => (
                       </Col>
                     </Row>
                   </Col>
+                  <small>
+                    <P>
+                      Learn more about Day 3:{' '}
+                      <Link to="https://youtu.be/itae5sD4OsU?t=1704">
+                        Video
+                      </Link>
+                      {'   '}
+                      |{'   '}
+                      <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#9a05">
+                        Blog
+                      </Link>
+                    </P>
+                  </small>
                 </Row>
               </DaySummarys>
               <DaySummarys ux>
@@ -564,6 +619,19 @@ const IndexPage = () => (
                       </Col>
                     </Row>
                   </Col>
+                  <small>
+                    <P>
+                      Learn more about Day 4:{' '}
+                      <Link to="https://youtu.be/itae5sD4OsU?t=1883">
+                        Video
+                      </Link>
+                      {'   '}
+                      |{'   '}
+                      <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#bf2f">
+                        Blog
+                      </Link>
+                    </P>
+                  </small>
                 </Row>
               </DaySummarys>
               <DaySummarys ux>
@@ -601,6 +669,19 @@ const IndexPage = () => (
                       </Col>
                     </Row>
                   </Col>
+                  <small>
+                    <P>
+                      Learn more about Day 5:{' '}
+                      <Link to="https://youtu.be/itae5sD4OsU?t=1936">
+                        Video
+                      </Link>
+                      {'   '}
+                      |{'   '}
+                      <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#6c46">
+                        Blog
+                      </Link>
+                    </P>
+                  </small>
                 </Row>
               </DaySummarys>
             </SprintTabs>
