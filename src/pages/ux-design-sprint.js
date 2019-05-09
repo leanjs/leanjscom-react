@@ -119,7 +119,7 @@ const IterationStages = props => (
   </React.Fragment>
 )
 
-const IndexPage = () => (
+const UXdesignSprint = () => (
   <React.Fragment>
     <Header
       titleLines={['LeanJS']}
@@ -460,7 +460,7 @@ const IndexPage = () => (
                   <small>
                     <P>
                       Learn more about Day 1:{' '}
-                      <Link to="https://youtu.be/UzoWqSvb49g?t=73">Video</Link>
+                      <Link to="https://youtu.be/itae5sD4OsU?t=782">Video</Link>
                       {'   '}
                       |{'   '}
                       <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#b36f">
@@ -517,7 +517,9 @@ const IndexPage = () => (
                   <small>
                     <P>
                       Learn more about Day 2:{' '}
-                      <Link to="https://youtu.be/UzoWqSvb49g?t=99">Video</Link>
+                      <Link to="https://youtu.be/itae5sD4OsU?t=1240">
+                        Video
+                      </Link>
                       {'   '}
                       |{'   '}
                       <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#157a">
@@ -567,7 +569,9 @@ const IndexPage = () => (
                   <small>
                     <P>
                       Learn more about Day 3:{' '}
-                      <Link to="https://youtu.be/UzoWqSvb49g?t=137">Video</Link>
+                      <Link to="https://youtu.be/itae5sD4OsU?t=1704">
+                        Video
+                      </Link>
                       {'   '}
                       |{'   '}
                       <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#9a05">
@@ -618,7 +622,9 @@ const IndexPage = () => (
                   <small>
                     <P>
                       Learn more about Day 4:{' '}
-                      <Link to="https://youtu.be/UzoWqSvb49g?t=167">Video</Link>
+                      <Link to="https://youtu.be/itae5sD4OsU?t=1883">
+                        Video
+                      </Link>
                       {'   '}
                       |{'   '}
                       <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#bf2f">
@@ -666,7 +672,9 @@ const IndexPage = () => (
                   <small>
                     <P>
                       Learn more about Day 5:{' '}
-                      <Link to="https://youtu.be/UzoWqSvb49g?t=205">Video</Link>
+                      <Link to="https://youtu.be/itae5sD4OsU?t=1936">
+                        Video
+                      </Link>
                       {'   '}
                       |{'   '}
                       <Link to="https://medium.com/leanjs/what-is-the-leanjs-ux-sprint-53b466541d1c/#6c46">
@@ -1129,4 +1137,4 @@ const IndexPage = () => (
   </React.Fragment>
 )
 
-export default IndexPage
+export default UXdesignSprint
