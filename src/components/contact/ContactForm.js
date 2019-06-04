@@ -63,16 +63,14 @@ class ContactForm extends Component {
     this.setState({ [name]: newValue })
   handleTextAreaChanged = name => event =>
     this.handleFormFieldChanged(name, event.target.value)
-  handleCheckboxChanged = name => event =>
-    this.handleFormFieldChanged(name, event.target.checked)
+  handleCheckboxChanged = name => event => {
+    return this.handleFormFieldChanged(name, event.target.checked)
+  }
 
   render() {
     const {
       name,
       email,
-      interestedInDigitalSolutions,
-      interestedInTraining,
-      interestedInBothDigitalSolutionsAndTraining,
       uxDesign,
       react,
       graphQL,
@@ -119,17 +117,17 @@ class ContactForm extends Component {
           onChange={this.handleCheckboxChanged}
           options={[
             {
-              name: 'UX design',
+              name: 'uxDesign',
               checked: uxDesign,
               label: 'UX design',
             },
             {
-              name: 'React',
+              name: 'react',
               checked: react,
               label: 'React',
             },
             {
-              name: 'GraphQL',
+              name: 'graphQL',
               checked: graphQL,
               label: 'GraphQL',
             },
