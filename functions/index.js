@@ -18,14 +18,12 @@ exports.sendEmail = functions.database
       body: JSON.stringify({
         text: `:tada: New contact :tada:\n\nEmail: ${
           snap.after.val().email
-        }\n Message: ${
-          snap.after.val().message
-        }\nInterested In Digital Solutions: ${
-          snap.after.val().interestedInDigitalSolutions
-        }\nInterested In Training: ${
-          snap.after.val().interestedInTraining
-        }\nInterested In Both Digital Solutions And Training: ${
-          snap.after.val().interestedInBothDigitalSolutionsAndTraining
+        }\n Message: ${snap.after.val().message}\nInterested In UX: ${
+          snap.after.val().uxDesign
+        }\nInterested In React: ${
+          snap.after.val().react
+        }\nInterested In GraphQL: ${
+          snap.after.val().graphQL
         }\nAllow Marketing: ${snap.after.val().allowMarketing}`,
       }),
     })
