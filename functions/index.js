@@ -7,7 +7,31 @@ admin.initializeApp(functions.config().firebase)
 exports.sendEmail = functions.database
   .ref('/contactSubmissions/{name}')
   .onWrite((snap, context) => {
-    console.log('snap val', snap.after.val())
+    // console.log('snap val', snap.after.val())
+    const AUTOPILOT_API_KEY = functions.config().autopilot.key
+
+    fetch(`https://api2.autopilothq.com/v1/contact`, {
+      method: 'POST',
+      headers: {
+        autopilotapikey: AUTOPILOT_API_KEY,
+      },
+      body: JSON.stringify({
+        contact: {
+          Email: snap.after.val().email,
+          LeadSource: 'LeanJS website',
+          _autopilot_list: 'contactlist_422dc7f5-9be5-425c-ab35-c19177d80d89',
+          custom: {
+            'boolean--UX--Interest': snap.after.val().uxDesign,
+            'boolean--React--Interest': snap.after.val().react,
+            'boolean--GraphQL--Interest': snap.after.val().graphQL,
+          },
+        },
+      }),
+    })
+      .then(res => res.json())
+      .then(json => console.log(json))
+      .catch(console.log('something went wrong'))
+
     const slackURL =
       'https://hooks.slack.com/services/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'
     fetch(slackURL, {
