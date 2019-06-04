@@ -6,16 +6,16 @@ export const doCreateMessage = (
   name,
   email,
   message,
-  interestedInDigitalSolutions,
-  interestedInTraining,
-  interestedInBothDigitalSolutionsAndTraining,
+  uxDesign,
+  react,
+  graphQL,
   allowMarketing
 ) =>
   db.ref(`contactSubmissions/${name}`).set({
     email,
     message,
-    interestedInDigitalSolutions,
-    interestedInTraining,
-    interestedInBothDigitalSolutionsAndTraining,
+    uxDesign,
+    react,
+    graphQL,
     allowMarketing,
   })
