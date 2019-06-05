@@ -12,6 +12,7 @@ export const doCreateMessage = (
   allowMarketing
 ) =>
   db.ref(`contactSubmissions/${name}`).set({
+    name,
     email,
     message,
     uxDesign,
