@@ -48,29 +48,13 @@ const H1 = styled(BaseH1)`
   margin-bottom: 0;
 `
 const HeaderSection = styled(Section)`
-
   background-color: ${EXTRADARKGREY};
   min-height: ${LAYOUT_SPACING_EXTRALARGE};
   position: relative;
-  z-index:2;
+  z-index: 2;
 
   /* Don't let the concentic circles extend below the header */
-  overflow:hidden;
-
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background-size: cover;
-  @media (min-width: ${SCREEN_SM_MIN}) {
-    height: 100vh;
-    padding: ${LAYOUT_SPACING_MEDIUM} 0;
-  }
+  overflow: hidden;
 `
 
 const HeaderTop = styled.div`
@@ -231,7 +215,7 @@ const BackgroundZigZag = styled.div`
   width: ${props => props.size + `em`};
   height: ${props => props.size * 1.6 + `em`};
   position: absolute;
-  top: 0;
+  top: -45px;
   right: 0;
 `
 
@@ -262,6 +246,7 @@ const Header = ({
 
   return (
     <HeaderSection top>
+      <Menu />
       <HeaderTop showCookieNotification={props.showCookieNotification}>
         {props.showCookieNotification ? (
           <CookiesNotification
@@ -269,19 +254,16 @@ const Header = ({
           />
         ) : null}
 
-        <Menu />
-
         <BackgroundCircles isMobile={isMobile} windowWidth={windowWidth}>
           <BackgroundZigZag
             size={backgroundCirclesSize({ isMobile, windowWidth })}
             imageName={imageName}
           />
         </BackgroundCircles>
-
         <Grid>
           <Row>
             <Col>
-              <H1>
+              <H1 style={{ marginTop: '100px' }}>
                 {titleLines.map((line, i) => (
                   <TitleBackground key={i} children={line} />
                 ))}
@@ -302,7 +284,6 @@ const Header = ({
           </Row>
         </Grid>
       </HeaderTop>
-
       <Grid>
         <Row>
           <Col>

@@ -1,7 +1,7 @@
 [
   {
-    "to": "#sprint-types",
-    "text": "Sprint Types",
+    "to": "#sprint",
+    "text": "Sprints",
     "onlyOn": null
   },
   {
@@ -10,8 +10,8 @@
     "onlyOn": null
   },
   {
-    "to": "#how-it-works",
-    "text": "How it works",
+    "to": "#academy",
+    "text": "Academy",
     "onlyOn": null
   },
   {

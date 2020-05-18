@@ -95,25 +95,30 @@ class ContactForm extends Component {
           id="contact-form-email"
           label="Phone number or email address"
           onChange={this.handleTextAreaChanged('email')}
-          placeholder="Email Address"
+          placeholder="Phone number or email address"
           value={email}
         />
 
-        <LabelledField
+        {/* <LabelledField
           fieldType="checkboxes"
           id="contact-form-interests"
-          label="Which sprint are you interested in?"
+          label="Which industry are you in?"
           onChange={this.handleCheckboxChanged}
           options={[
             {
-              name: 'uxDesign',
+              name: 'retail',
               checked: uxDesign,
-              label: 'UX design',
+              label: 'Retail',
             },
             {
-              name: 'react',
+              name: 'banking',
+              checked: uxDesign,
+              label: 'Finance',
+            },
+            {
+              name: 'advertising',
               checked: react,
-              label: 'React',
+              label: 'Advertising',
             },
             {
               name: 'graphQL',
@@ -122,7 +127,7 @@ class ContactForm extends Component {
             },
           ]}
           onChange={this.handleCheckboxChanged}
-        />
+        /> */}
 
         <LabelledField
           fieldType="textarea"
@@ -133,7 +138,7 @@ class ContactForm extends Component {
           value={message}
         />
 
-        <LabelledField
+        {/* <LabelledField
           fieldType="singlecheckbox"
           id="contact-form-allow-marketing"
           label={
@@ -143,13 +148,13 @@ class ContactForm extends Component {
           }
           checked={allowMarketing}
           onChange={this.handleCheckboxChanged('allowMarketing')}
-        />
-        <P>
+        /> */}
+        {/* <P>
           We do not spam - ever. But, if you're up for it, we'd love to tell you
           about any cool new services or offers that we've got going on.
           Interested? Tick the box! Not sure, here's our{' '}
           <Link>Privacy Policy</Link>
-        </P>
+        </P> */}
         <Button disabled={isInvalid} type="submit">
           Send
         </Button>

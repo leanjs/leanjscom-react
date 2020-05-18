@@ -12,10 +12,11 @@ export const LeanJSLogo = styled.div`
   height: ${getSize};
   background: transparent url(${LOGO_LEANJS}) center/contain no-repeat scroll;
   display: inline-block;
+  ${({ marginTop }) => marginTop && `margin-top:${marginTop}`};
 `
 
-export const LinkedLeanJSLogo = () => (
+export const LinkedLeanJSLogo = props => (
   <Link to="/">
-    <LeanJSLogo />
+    <LeanJSLogo {...props} />
   </Link>
 )

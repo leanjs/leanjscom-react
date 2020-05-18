@@ -14,7 +14,7 @@ import {
 } from '../../config/styles'
 import { SCREEN_XS_MAX } from '../utils'
 import ContactUsBullet from '../bullets/ContactUsBullet'
-import { H2, H3, P } from '../text'
+import { H2, H4, P } from '../text'
 import ContactForm from './ContactForm'
 import Ul, { Li } from '../layout/Ul'
 
@@ -61,7 +61,7 @@ const ContactInstructions = () => (
         </Col>
         <Col md={1} />
         <Col md={5}>
-          <H3>Or fill out our form :)</H3>
+          <H4>Or fill out our contact form</H4>
           <ContactForm />
         </Col>
       </Row>

@@ -7,10 +7,19 @@ import DesktopMenu from './DesktopMenu'
 import PhoneMenu from './PhoneMenu'
 import { WHITE, SPACING_STANDARD } from '../../../config/styles'
 import { styleChildLinkColor } from '../Link'
+import Grid from '../../layout/Grid'
 
 export { DesktopMenu, PhoneMenu }
 
-const MenuContainer = styled.nav`
+const MenuContainer = styled.div`
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99999;
+`
+
+const Nav = styled.nav`
+  background-color: #2b2b2b;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,7 +30,7 @@ const MenuContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 0 0.5rem;
   ${styleChildLinkColor(WHITE)};
 `
 
@@ -35,19 +44,23 @@ const Menu = ({ width }) => {
 
   return (
     <MenuContainer>
-      {canIGuessTheScreenSizeUsingJS && width <= MEDIUM ? (
-        <React.Fragment>
-          <LinkedLeanJSLogo />
-          <PhoneMenu />
-        </React.Fragment>
-      ) : (
-        <React.Fragment>
-          <LogoWrapper>
-            <LinkedLeanJSLogo />
-          </LogoWrapper>
-          <DesktopMenu />
-        </React.Fragment>
-      )}
+      <Grid>
+        <Nav>
+          {canIGuessTheScreenSizeUsingJS && width <= MEDIUM ? (
+            <React.Fragment>
+              <LinkedLeanJSLogo marginTop="5px" />
+              <PhoneMenu />
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <LogoWrapper>
+                <LinkedLeanJSLogo />
+              </LogoWrapper>
+              <DesktopMenu />
+            </React.Fragment>
+          )}
+        </Nav>
+      </Grid>
     </MenuContainer>
   )
 }

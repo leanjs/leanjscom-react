@@ -75,7 +75,6 @@ class PhoneMenu extends React.Component {
           </span>
         }
       >
-        <LinkedLeanJSLogo />
         {MenuData.map((item, i) => (
           <PhoneMenuItem onClick={closeMenu} key={i} to={item.to}>
             {item.text}

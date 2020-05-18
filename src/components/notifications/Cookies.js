@@ -24,6 +24,10 @@ const CookiesNotificationInner = styled.div`
   padding: ${SPACING_SMALL};
   color: ${WHITE};
   max-width: ${LAYOUT_SPACING_LARGE};
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2B2B2B;
 
   button {
   	width: ${FONT_SIZE_LARGE};
