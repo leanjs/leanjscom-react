@@ -81,7 +81,7 @@ const IndexPage = () => (
             </P>
             <H3a> How it works</H3a>
             <P>
-              Start incrementaly. Stop at any step. Optimize tech and processes
+              Start incrementally. Stop at any step. Optimize tech and processes
               and increase competitive advantage in 3 low-risk steps:
             </P>
           </Col>
