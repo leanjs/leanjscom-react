@@ -174,7 +174,7 @@ const BulletPoint = props => {
       ) : null}
 
       {props.includeButton && props.button ? (
-        <LinkButton to={props.button.to} hasArrows>
+        <LinkButton className="header-button" to={props.button.to} hasArrows>
           {props.button.text}
         </LinkButton>
       ) : null}
@@ -182,13 +182,13 @@ const BulletPoint = props => {
   )
 }
 
-const backgroundCirclesSize = ({ isMobile, windowWidth }) => {
-  if (windowWidth !== null) {
-    return (windowWidth * (isMobile ? 0.85 : 0.25) * 2) / 27
-  } else {
-    return 2000 / 27
-  }
-}
+// const backgroundCirclesSize = ({ isMobile, windowWidth }) => {
+//   if (windowWidth !== null) {
+//     return (windowWidth * (isMobile ? 0.85 : 0.25) * 2) / 27
+//   } else {
+//     return 2000 / 27
+//   }
+// }
 
 const BackgroundCircles = styled.div`
   position: absolute;
@@ -212,11 +212,15 @@ const BackgroundZigZag = styled.div`
   background: url(${props => headerImages[props.imageName]}) left top no-repeat
     scroll;
   background-size: contain;
-  width: ${props => props.size + `em`};
-  height: ${props => props.size * 1.6 + `em`};
+  width: 26.6667em;
+  height: 42.6667em;
   position: absolute;
   top: -45px;
   right: 0;
+  @media (max-width: ${SCREEN_SM_MAX}) {
+    width: ${props => props.size + `em`};
+    height: ${props => props.size * 1.6 + `em`};
+  }
 `
 
 const Dots = styled.div`
@@ -238,11 +242,11 @@ const Header = ({
   imageName = 'blue',
   ...props
 }) => {
-  const canIGuessTheScreenSizeUsingJS = typeof window !== 'undefined'
-  const isMobile =
-    canIGuessTheScreenSizeUsingJS &&
-    window.innerWidth <= parseFloat(SCREEN_SM_MAX)
-  const windowWidth = canIGuessTheScreenSizeUsingJS ? window.innerWidth : null
+  // const canIGuessTheScreenSizeUsingJS = typeof window !== 'undefined'
+  //   const isMobile =
+  //     canIGuessTheScreenSizeUsingJS &&
+  //     window.innerWidth <= parseFloat(SCREEN_SM_MAX)
+  //   const windowWidth = canIGuessTheScreenSizeUsingJS ? window.innerWidth : null
 
   return (
     <HeaderSection top>
@@ -253,10 +257,10 @@ const Header = ({
             onNotificationDismissed={props.handleDismissCookieNotification}
           />
         ) : null}
-
-        <BackgroundCircles isMobile={isMobile} windowWidth={windowWidth}>
+        <BackgroundCircles>
+          {/* <BackgroundCircles isMobile={isMobile} windowWidth={windowWidth}> */}
           <BackgroundZigZag
-            size={backgroundCirclesSize({ isMobile, windowWidth })}
+            // size={backgroundCirclesSize({ isMobile, windowWidth })}
             imageName={imageName}
           />
         </BackgroundCircles>

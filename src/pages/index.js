@@ -25,27 +25,7 @@ import {
 import LinkButton from '../components/buttons/LinkButton'
 import Line from '../components/sections/Line'
 import Grid, { Col, Row } from '../components/layout/Grid'
-import {
-  H2,
-  H3,
-  H4,
-  H3a,
-  H5,
-  P,
-  Strong,
-  SupportingText,
-} from '../components/text'
-import Instagram from '../components/feeds/Instagram'
-import ReactIconCircle from '../components/logos/react_icon_circle'
-import UxIconCircle from '../components/logos/ux_icon_circle'
-import GraphqlIconCircle from '../components/logos/graphql_icon_circle'
-import UxIcon from '../components/logos/ux_icon.js'
-import ReactIcon from '../components/logos/react_icon.js'
-import GraphqlIcon from '../components/logos/graphql_icon.js'
-
-const UX_SPRINT = 'UX_SPRINT'
-const REACT_SPRINT = 'REACT_SPRINT'
-const GRAPHQL_SPRINT = 'GRAPHQL_SPRINT'
+import { H2, H4, H3a, P, SupportingText } from '../components/text'
 
 const SprintCard = styled.div`
   border: 1px solid #ddd;
@@ -57,47 +37,6 @@ const SprintCard = styled.div`
     margin-top: ${SPACING_STANDARD};
   }
 `
-
-const SprintTabs = styled.div``
-
-const DaySummarys = styled.div`
-  border-left: 10px solid;
-  border-color: ${props => {
-    if (props.ux) {
-      return `${UXGREEN}`
-    } else if (props.react) {
-      return `${REACTBLUE}`
-    } else if (props.graphql) {
-      return `${GRAPHQLPINK}`
-    }
-    return null
-  }}
-  padding-left: ${SPACING_STANDARD};
-  small {
-    font-size: ${FONT_SIZE_SMALL}
-    a {
-      font-size: ${FONT_SIZE_SMALL}
-    }
-  }
-`
-
-const IterationStages = props => (
-  <React.Fragment>
-    {props.items.map((item, i) => (
-      <Line key={`iterationstage-${i}`}>
-        <H3a>{item.title}</H3a>
-        <P>{item.description}</P>
-        {item.button ? (
-          <P>
-            <LinkButton to={item.button.to} hasArrows>
-              {item.button.text}
-            </LinkButton>
-          </P>
-        ) : null}
-      </Line>
-    ))}
-  </React.Fragment>
-)
 
 const IndexPage = () => (
   <React.Fragment>
@@ -163,7 +102,12 @@ const IndexPage = () => (
                 <Li>Overview of the software architecture and code</Li>
                 <Li>Value proposition and recommendations</Li>
               </Ul>
-              <LinkButton to="#contact" hasArrows dark>
+              <LinkButton
+                className="sprint-contact-1"
+                to="#contact"
+                hasArrows
+                dark
+              >
                 Contact us
               </LinkButton>
             </SprintCard>
@@ -179,7 +123,12 @@ const IndexPage = () => (
                 <Li>Prototyping and coding with your team</Li>
                 <Li>Findings, Conclusions, and Recommendations</Li>
               </Ul>
-              <LinkButton to="#contact" hasArrows dark>
+              <LinkButton
+                className="sprint-contact-2"
+                to="#contact"
+                hasArrows
+                dark
+              >
                 Contact us
               </LinkButton>
             </SprintCard>
@@ -199,7 +148,12 @@ const IndexPage = () => (
                 <Li>Deployment & measurement plan</Li>
                 <Li>Final report and roll-out plan</Li>
               </Ul>
-              <LinkButton to="#contact" hasArrows dark>
+              <LinkButton
+                className="sprint-contact-3"
+                to="#contact"
+                hasArrows
+                dark
+              >
                 Contact us
               </LinkButton>
             </SprintCard>
@@ -270,7 +224,12 @@ const IndexPage = () => (
               Part-time or short time accelerated formats available.
             </P>
 
-            <LinkButton to="https://reactgraphql.academy/" hasArrow dark>
+            <LinkButton
+              className="visit-academy"
+              to="https://reactgraphql.academy/"
+              hasArrow
+              dark
+            >
               Visit the Academy
             </LinkButton>
           </Col>

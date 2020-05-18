@@ -15,6 +15,7 @@ const LinkButton = styled(({ hasArrows, dark, scroll, ...rest }) => {
   ${DEFAULT_BUTTON_STYLES};
   text-decoration: none !important;
   display: inline-block;
+  text-align: center;
   font-weight: ${FONT_WEIGHT_STANDARD};
   &:link {
     color: ${getForegroundColor} !important;

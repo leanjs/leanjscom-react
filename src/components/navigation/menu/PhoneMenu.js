@@ -76,7 +76,12 @@ class PhoneMenu extends React.Component {
         }
       >
         {MenuData.map((item, i) => (
-          <PhoneMenuItem onClick={closeMenu} key={i} to={item.to}>
+          <PhoneMenuItem
+            className="menu-item-mobile"
+            onClick={closeMenu}
+            key={i}
+            to={item.to}
+          >
             {item.text}
           </PhoneMenuItem>
         ))}
@@ -84,6 +89,7 @@ class PhoneMenu extends React.Component {
           onClick={closeMenu}
           key="phonemenu-contact"
           to="contact"
+          className="menu-contact-phone"
           scroll
         >
           Contact us

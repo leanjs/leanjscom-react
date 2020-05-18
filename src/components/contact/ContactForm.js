@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 
 import LabelledField from '../form/LabelledField'
-import { P, Strong } from '../text'
-import Link from '../navigation/Link'
+import { Strong } from '../text'
 import Button from '../buttons/Button'
 import { sendMessage } from '../../api'
 
@@ -87,7 +86,11 @@ class ContactForm extends Component {
           value={message}
         />
 
-        <Button disabled={isInvalid || submitting} type="submit">
+        <Button
+          className="submit-contact-message"
+          disabled={isInvalid || submitting}
+          type="submit"
+        >
           {submitting ? '...' : 'Send'}
         </Button>
 
