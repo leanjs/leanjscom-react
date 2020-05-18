@@ -1,58 +1,35 @@
 const functions = require('firebase-functions')
-const admin = require('firebase-admin')
-const fetch = require('node-fetch')
+const cors = require('cors')
+const express = require('express')
+const { WebClient } = require('@slack/web-api')
 
-admin.initializeApp(functions.config().firebase)
+const slackToken = functions.config().slack.token
+const slackBotIconUrl =
+  'https://avatars.slack-edge.com/2017-05-14/183274846643_04a16c14f97d4f0554a6_44.png'
 
-exports.sendEmail = functions.database
-  .ref('/contactSubmissions/{name}')
-  .onWrite((snap, context) => {
-    const AUTOPILOT_API_KEY = functions.config().autopilot.key
-    const slackURL =
-      'https://hooks.slack.com/services/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'
+const app = express()
+app.use(cors({ origin: true }))
 
-    fetch(slackURL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        text: `:tada: New contact :tada:\n\nEmail: ${
-          snap.after.val().email
-        }\n Message: ${snap.after.val().message}\nInterested In UX: ${
-          snap.after.val().uxDesign
-        }\nInterested In React: ${
-          snap.after.val().react
-        }\nInterested In GraphQL: ${
-          snap.after.val().graphQL
-        }\nAllow Marketing: ${snap.after.val().allowMarketing}`,
-      }),
-    })
-    if (snap.after.val().email) {
-      fetch(`https://api2.autopilothq.com/v1/contact`, {
-        method: 'POST',
-        headers: {
-          autopilotapikey: AUTOPILOT_API_KEY,
-        },
-        body: JSON.stringify({
-          contact: {
-            FirstName: snap.after.val().name,
-            Email: snap.after.val().email,
-            LeadSource: 'LeanJS website',
-            unsubscribed: true,
-            _autopilot_list: 'contactlist_422dc7f5-9be5-425c-ab35-c19177d80d89',
-            custom: {
-              'boolean--UX--Interest': snap.after.val().uxDesign,
-              'boolean--React--Interest': snap.after.val().react,
-              'boolean--GraphQL--Interest': snap.after.val().graphQL,
-              'boolean--Subscribed--LeanJS': snap.after.val().allowMarketing,
-              'string--Form--Message': snap.after.val().message,
-            },
-          },
-        }),
-      })
-        .then(res => res.json())
-        .then(json => console.log(json))
-        .catch(console.log('something went wrong with Autopilot post'))
-    }
+app.post('/', (req, res) => {
+  const message = req && req.body
+
+  if (!message) {
+    res.status(401).send('no message')
+  }
+
+  const web = new WebClient(slackToken)
+  // See: https://api.slack.com/methods/chat.postMessage
+  web.chat.postMessage({
+    channel: 'C8MTKU3NC',
+    icon_url: slackBotIconUrl,
+    text: `:tada: :tada: :tada: :tada: :tada: :tada: :tada: :tada: :tada: :tada: :tada:
+LeanJS Sprint REQUEST ${Object.keys(message).map(
+      key => `\n\n*${key}*: ${message[key]}`
+    )}
+            `,
   })
+
+  res.status(200).send('message sent')
+})
+
+exports.sendMessage = functions.https.onRequest(app)

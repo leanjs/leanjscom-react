@@ -59,9 +59,9 @@ const Link = ({ to = '', children = '', ...rest }) => {
     )
   } else if (to && to[0] === '#') {
     return (
-      <BasicLink href={to} {...rest}>
+      <ScrollingLink to={to.substr(1)} {...rest}>
         {children}
-      </BasicLink>
+      </ScrollingLink>
     )
   } else if (!to) {
     return <BasicLink {...rest}>{children}</BasicLink>

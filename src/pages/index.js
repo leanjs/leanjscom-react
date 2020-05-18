@@ -163,7 +163,7 @@ const IndexPage = () => (
                 <Li>Overview of the software architecture and code</Li>
                 <Li>Value proposition and recommendations</Li>
               </Ul>
-              <LinkButton to="#contact-us" hasArrows dark>
+              <LinkButton to="#contact" hasArrows dark>
                 Contact us
               </LinkButton>
             </SprintCard>
@@ -179,7 +179,7 @@ const IndexPage = () => (
                 <Li>Prototyping and coding with your team</Li>
                 <Li>Findings, Conclusions, and Recommendations</Li>
               </Ul>
-              <LinkButton to="#contact-us" hasArrows dark>
+              <LinkButton to="#contact" hasArrows dark>
                 Contact us
               </LinkButton>
             </SprintCard>
@@ -196,10 +196,10 @@ const IndexPage = () => (
                   team
                 </Li>
                 <Li>On-demand workshops based on any arising issues</Li>
-                <Li>Deployment plan</Li>
+                <Li>Deployment & measurement plan</Li>
                 <Li>Final report and roll-out plan</Li>
               </Ul>
-              <LinkButton to="#contact-us" hasArrows dark>
+              <LinkButton to="#contact" hasArrows dark>
                 Contact us
               </LinkButton>
             </SprintCard>
@@ -263,14 +263,14 @@ const IndexPage = () => (
               Upskill your team/s in the most effective way for your company
             </SupportingText>
             <P>
-              The Academy in-person and remote training offering can adapt to
-              any company regardless or the size or budget. From in-person
-              private team training to public bootcamps, in all cases your
+              The Academy is offering in-person and remote training which can
+              adapt to any company regardless of the size or budget. From
+              in-person private team training to public bootcamps, your
               developers work alongside experts on real-world problems.
-              Part-time or short time accelerated formats.
+              Part-time or short time accelerated formats available.
             </P>
 
-            <LinkButton to="#contact-us" hasArrow dark>
+            <LinkButton to="https://reactgraphql.academy/" hasArrow dark>
               Visit the Academy
             </LinkButton>
           </Col>
@@ -281,7 +281,6 @@ const IndexPage = () => (
         </Row>
       </Grid>
     </Section>
-    <Link to="#contact-us" name="contact-us" />
   </React.Fragment>
 )
 
